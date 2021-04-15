@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import store from "./core/redux/store/configStore";
 
 import "./assets/fonts/fontawsome.min.css";
+import "./assets/styles/common.scss";
 
 ReactDOM.render(
   <React.StrictMode>

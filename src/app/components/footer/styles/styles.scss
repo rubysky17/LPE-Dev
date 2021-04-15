@@ -1,14 +1,13 @@
+@import "../../../../assets/styles/common.scss";
+
 footer {
   padding-top: 60px;
+
   .logo {
     display: flex;
     justify-content: center;
   }
-  .container {
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+
   .name {
     text-transform: uppercase;
     text-align: center;
@@ -16,18 +15,47 @@ footer {
     margin-bottom: 16px;
     margin-top: 25px;
   }
+
   .f-line {
     font-size: 16px;
-    font-weight: 600;
-    color: #3b3b3b;
+    font-weight: bold;
+    color: $c-black-0;
     text-align: center;
     margin-bottom: 12px;
+    i {
+      margin-right: 5px;
+      font-size: 13px;
+    }
+    .f-line_phone {
+      margin-right: 8px;
+    }
+    .f-line_envelope {
+      i {
+        font-size: 15px;
+      }
+    }
   }
-}
 
-.foot {
-  background: #103e79;
-  line-height: 24px;
-  padding: 20px 0;
-  color: #fff;
+  .footer-connect {
+    border-top: 1px solid $c-gray-4;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 37px;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    
+    .footer-connect_left {
+      font-size: 14px;
+      font-weight: $fw-bold;
+    }
+  }
+
+  .foot {
+    background: $c-blue-0;
+    line-height: 24px;
+    padding: 20px 0;
+    color: #fff;
+  }
 }
