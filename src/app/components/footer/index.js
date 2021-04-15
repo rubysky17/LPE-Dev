@@ -11,7 +11,7 @@ function Footer() {
           <img src={logo3} alt title />
         </a>
       </div>
-      <h3 className="name">Công Ty TNHH Giáo Dục Leading Performance</h3>
+      <h3 className="name">Công Ty TNHH Giáo Dục Leading Performanc</h3>
 
       <div className="f-line">
         <i className="fa fa-map-marker" />
