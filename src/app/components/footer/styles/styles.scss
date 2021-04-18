@@ -42,6 +42,7 @@ footer {
     margin: 0 auto;
     margin-top: 37px;
     padding-top: 20px;
+    padding-bottom: 20px;
 
     display: flex;
     justify-content: space-between;
@@ -79,11 +80,24 @@ footer {
     }
 
     .footer-connect_right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
       .connect-right_list {
         list-style: none;
         display: flex;
-        li a {
-          border: none;
+        margin-bottom: 0px;
+        font-size: 14px;
+
+        li > a {
+          color: $c-black-0;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $c-green-1;
+            text-decoration: none !important;
+          }
         }
       }
     }
@@ -94,5 +108,26 @@ footer {
     line-height: 24px;
     padding: 20px 0;
     color: #fff;
+
+    .footer-text {
+      width: 70%;
+      margin: 0 auto;
+      font-size: 14px;
+
+      display: flex;
+      justify-content: space-between;
+
+      .footer-text_right {
+        text-align: right;
+        a {
+          transition: all 0.3s;
+          color: #fff;
+          &:hover {
+            color: $c-green-1;
+            text-decoration: none !important;
+          }
+        }
+      }
+    }
   }
 }

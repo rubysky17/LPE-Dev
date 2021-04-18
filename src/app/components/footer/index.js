@@ -1,29 +1,19 @@
 import React from "react";
 import "./styles/styles.scss";
 
-import logo3 from "../../../assets/images/logo3.png";
+import logo3 from "assets/images/logo3.png";
 
 function Footer() {
   const iconMedia = [
     {
       href: "https://www.facebook.com/lpe.vn.lifeuni/",
-      component: <i className="fab fa-facebook-f"></i>
-    }, {
-      href: "https://www.youtube.com/channel/UCY5TknGSpHSak7FOjJ5Mrng",
-      component: <i className="fab fa-youtube"></i>
-    }
-  ]
-
-  const linkMedia = [
+      component: <i className="fab fa-facebook-f"></i>,
+    },
     {
-      href: "/pages?id=13",
-      content: "Hỏi đáp - "
-    }, {
-      href: "/pages?id=2",
-      content: "Điều Khoản & Chính Sách"
-    }
-  ]
-
+      href: "https://www.youtube.com/channel/UCY5TknGSpHSak7FOjJ5Mrng",
+      component: <i className="fab fa-youtube"></i>,
+    },
+  ];
   return (
     <footer>
       <div className="text-center">
@@ -58,51 +48,45 @@ function Footer() {
           <div className="footer-connect_left">
             <span className="connect-left_text">Kết nối với chúng tôi:</span>
 
-            {
-              iconMedia.map((item, index) => {
-                return <div className="button-circle mr-2" key={index}>
-                  <a
-                    href={item.href}
-                    title
-                  >
+            {iconMedia.map((item, index) => {
+              return (
+                <div className="button-circle mr-2" key={index}>
+                  <a href={item.href} title>
                     {item.component}
                   </a>
                 </div>
-              })
-            }
+              );
+            })}
           </div>
         </div>
 
         <div className="col-md-6 col-xs-12 footer-connect_right">
           <ul className="connect-right_list">
-            {linkMedia.map((link, index) => {
-              return <li className="mr-2" key={index} >
-                <a href={link.href}>
-                  {link.content}
-                </a>
-              </li>
-            })}
+            <li className="mr-1">
+              <a href="/pages?id=13">Hỏi đáp</a>
+            </li>
+            {" - "}
+            <li className="ml-1">
+              <a href="/pages?id=2">Điều Khoản & Chính Sách</a>
+            </li>
           </ul>
         </div>
       </div>
 
       <div className="foot">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-8 sm-center">
-              Copyright © 2018 LPE. All rights reserved.
-            </div>
+        <div className="row footer-text">
+          <div className="col-sm-8">
+            Copyright © 2018 LPE. All rights reserved.
+          </div>
 
-            <div className="col-sm-4 text-right sm-center">
-              Thiết kế website:
-              <a className="" href="https://cnv.vn/" title="">
-                CNV.vn
-              </a>
-            </div>
+          <div className="col-sm-4 footer-text_right">
+            <span>Thiết kế website: </span>
+            <a className="mr-2" href="https://cnv.vn/" title="">
+              CNV.vn
+            </a>
           </div>
         </div>
       </div>
-
     </footer>
   );
 }
