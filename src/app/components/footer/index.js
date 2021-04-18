@@ -4,6 +4,26 @@ import "./styles/styles.scss";
 import logo3 from "../../../assets/images/logo3.png";
 
 function Footer() {
+  const iconMedia = [
+    {
+      href: "https://www.facebook.com/lpe.vn.lifeuni/",
+      component: <i className="fab fa-facebook-f"></i>
+    }, {
+      href: "https://www.youtube.com/channel/UCY5TknGSpHSak7FOjJ5Mrng",
+      component: <i className="fab fa-youtube"></i>
+    }
+  ]
+
+  const linkMedia = [
+    {
+      href: "/pages?id=13",
+      content: "Hỏi đáp - "
+    }, {
+      href: "/pages?id=2",
+      content: "Điều Khoản & Chính Sách"
+    }
+  ]
+
   return (
     <footer>
       <div className="text-center">
@@ -36,39 +56,32 @@ function Footer() {
       <div className="row footer-connect">
         <div className="col-md-6 col-xs-12 social">
           <div className="footer-connect_left">
-            <span>Kết nối với chúng tôi:</span>
+            <span className="connect-left_text">Kết nối với chúng tôi:</span>
 
-            <a
-              className="button-circle f"
-              href="https://www.facebook.com/lpe.vn.lifeuni/"
-              title
-            >
-              <i className="fab fa-facebook-f"></i>
-            </a>
-
-            <a
-              className="button-circle y"
-              href="https://www.youtube.com/channel/UCY5TknGSpHSak7FOjJ5Mrng"
-              title
-            >
-              <i className="fab fa-youtube"></i>
-            </a>
+            {
+              iconMedia.map((item, index) => {
+                return <div className="button-circle mr-2" key={index}>
+                  <a
+                    href={item.href}
+                    title
+                  >
+                    {item.component}
+                  </a>
+                </div>
+              })
+            }
           </div>
         </div>
 
-        <div className="col-md-6 col-xs-12 text-right">
-          <ul>
-            <li>
-              <a className="" href="/pages?id=13">
-                Hỏi đáp
-              </a>
-            </li>
-            -
-            <li>
-              <a className="" href="/pages?id=2">
-                Điều Khoản Chính Sách
-              </a>
-            </li>
+        <div className="col-md-6 col-xs-12 footer-connect_right">
+          <ul className="connect-right_list">
+            {linkMedia.map((link, index) => {
+              return <li className="mr-2" key={index} >
+                <a href={link.href}>
+                  {link.content}
+                </a>
+              </li>
+            })}
           </ul>
         </div>
       </div>
