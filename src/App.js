@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import useWindowDimensions from "./core/hooks/useWindowDimensions";
 
-import { HomeTemplate } from "./app/template/homeTemplate";
-// Khi có Template Component chúng ta sẽ sử dụng các route map ra theo đúng path của nó
+import { HomeTemplate } from "app/template/homeTemplate";
+
 // import {
 //   publicRoutes,
 //   privateRoutes,
@@ -14,6 +15,12 @@ import ErrorPage from "./app/page/error/";
 import HomePage from "./app/page/home/";
 
 function App() {
+  const { height } = useWindowDimensions()
+
+  useEffect(() => {
+    console.log(height)
+  }, [])
+
   return (
     <Router>
       <Switch>

@@ -37,7 +37,7 @@ function Footer() {
         <div className="col-md-6 col-xs-12 social">
           <div className="footer-connect_left">
             <span>Kết nối với chúng tôi:</span>
-            
+
             <a
               className="smooth f"
               href="https://www.facebook.com/lpe.vn.lifeuni/"
@@ -51,7 +51,7 @@ function Footer() {
               href="https://www.youtube.com/channel/UCY5TknGSpHSak7FOjJ5Mrng"
               title
             >
-             <i className="fab fa-youtube"></i>
+              <i className="fab fa-youtube"></i>
             </a>
           </div>
         </div>
@@ -74,22 +74,22 @@ function Footer() {
       </div>
 
       <div className="foot">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 sm-center">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-8 sm-center">
               Copyright © 2018 LPE. All rights reserved.
             </div>
 
-            <div class="col-sm-4 text-right sm-center">
+            <div className="col-sm-4 text-right sm-center">
               Thiết kế website:
-              <a class="smooth" href="https://cnv.vn/" title="">
+              <a className="smooth" href="https://cnv.vn/" title="">
                 CNV.vn
               </a>
             </div>
           </div>
         </div>
       </div>
-      
+
     </footer>
   );
 }
