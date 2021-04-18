@@ -49,6 +49,18 @@ footer {
     .footer-connect_left {
       font-size: 14px;
       font-weight: $fw-bold;
+
+      .button-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $c-green-1;
+        transition: all .3s;
+        
+        &:hover {
+          background-color: $c-gray-2;
+        }
+      }
     }
   }
 

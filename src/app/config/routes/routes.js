@@ -1,4 +1,4 @@
-import APP from "../../page/";
+import APP from "app/page/";
 
 export const URL_PATH = {
   LOGIN: "/login",

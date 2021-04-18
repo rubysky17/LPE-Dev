@@ -39,7 +39,7 @@ function Footer() {
             <span>Kết nối với chúng tôi:</span>
 
             <a
-              className="smooth f"
+              className="button-circle f"
               href="https://www.facebook.com/lpe.vn.lifeuni/"
               title
             >
@@ -47,7 +47,7 @@ function Footer() {
             </a>
 
             <a
-              className="smooth y"
+              className="button-circle y"
               href="https://www.youtube.com/channel/UCY5TknGSpHSak7FOjJ5Mrng"
               title
             >
@@ -59,14 +59,14 @@ function Footer() {
         <div className="col-md-6 col-xs-12 text-right">
           <ul>
             <li>
-              <a className="smooth" href="/pages?id=13">
+              <a className="" href="/pages?id=13">
                 Hỏi đáp
               </a>
             </li>
             -
             <li>
-              <a className="smooth" href="/pages?id=2">
-                Điều Khoản &amp; Chính Sách
+              <a className="" href="/pages?id=2">
+                Điều Khoản Chính Sách
               </a>
             </li>
           </ul>
@@ -82,7 +82,7 @@ function Footer() {
 
             <div className="col-sm-4 text-right sm-center">
               Thiết kế website:
-              <a className="smooth" href="https://cnv.vn/" title="">
+              <a className="" href="https://cnv.vn/" title="">
                 CNV.vn
               </a>
             </div>

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import useWindowDimensions from "./core/hooks/useWindowDimensions";
 
 import { HomeTemplate } from "app/template/homeTemplate";
 
@@ -15,12 +14,6 @@ import ErrorPage from "./app/page/error/";
 import HomePage from "./app/page/home/";
 
 function App() {
-  const { height } = useWindowDimensions()
-
-  useEffect(() => {
-    console.log(height)
-  }, [])
-
   return (
     <Router>
       <Switch>
