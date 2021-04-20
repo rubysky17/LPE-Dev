@@ -11,13 +11,13 @@ import { HomeTemplate } from "app/template/homeTemplate";
 // } from "../src/app/config/routes/routes";
 
 import ErrorPage from "./app/page/error/";
-import HomePage from "./app/page/home/";
+import CourseOne from "./app/page/courseOne/";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <HomeTemplate exact path="/" Component={HomePage} />
+        <HomeTemplate exact path="/" Component={CourseOne} />
 
         <Route path="*">
           <Switch>

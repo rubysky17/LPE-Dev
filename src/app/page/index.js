@@ -1,9 +1,9 @@
-import HomePage from "./home";
+import CourseOne from "./courseOne";
 import LoginPage from "./login";
 import ErrorPage from "./error";
 
 export default {
-  HomePage,
+  CourseOne,
   LoginPage,
   ErrorPage,
 };
