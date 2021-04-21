@@ -1,19 +1,25 @@
-.course-container {
-  width: 60%;
+.bg-content {
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
 }
+
 .problem-block {
   background-image: url("/assets/images/background1.png");
-  background-size: 100% 100%;
-  height: 335px;
+  max-width: 1280px;
+  height: 400px;
+  margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .change-block {
   background-image: url("/assets/images/background2.png");
   background-size: 100% 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 
   img {
     max-width: 100%;
@@ -35,13 +41,9 @@
   background-image: linear-gradient(to top, #e21b81, #49005d);
   background-size: 100% 100%;
   padding-top: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
-
-.bg-gradient-2 {
-    background-image: linear-gradient(to bottom, #e21b81, #49005d);
-    background-size: 100% 100%;
-    padding-top: 20px;
-  }
 
 .item-change_title2 {
   color: white;
@@ -52,42 +54,168 @@
   margin: 0 auto;
   font-size: 30px;
   text-align: center;
+  padding-top: 50px;
+}
+
+.bg-gradient-2 {
+  background-image: linear-gradient(to bottom, #e21b81, #49005d);
+  background-size: 100% 100%;
+  padding-top: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  .item-change_title-2 {
+    color: white;
+    text-shadow: 0 0 20px purple;
+    border: transparent;
+    font-style: italic;
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .img-vas {
+    display: flex;
+    justify-content: center;
+  }
+  .text-vas,
+  .text-giangThanh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-giangThanh-md {
+    display: none;
+  }
+  .img-giangThanh-lg {
+    display: block;
+  }
 }
 
 .benefits-block {
-    background-image: url("https://lpe.vn/storage/vip-lpe/backgroundcacvande.png");
-    background-size: cover;
-    text-align: center;
+  background-image: url("https://lpe.vn/storage/vip-lpe/backgroundcacvande.png");
+  background-size: 100% 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  .content-benefit {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .benefit-item {
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .areaMap-block {
-    background-image: url("https://lpe.vn/storage/vip-lpe/backgroundcacvande.png");
-    background-size: cover;
-    text-align: center;
+  background-image: url("https://lpe.vn/storage/vip-lpe/backgroundcacvande.png");
+  background-size: cover;
+  text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 50px 0;
 
-    .bg-white {
-        background-color: #fff;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
+  .bg-white {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
-
-
 .seatMap-block {
-    background-image: url("https://lpe.vn/storage/vip-lpe/backgroundcacvande.png");
-    background-size: cover;
-    text-align: center;
+  background-image: url("https://lpe.vn/storage/vip-lpe/backgroundcacvande.png");
+  background-size: cover;
+  text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 50px 0;
 
-    .bg-white {
-        background-color: #fff;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
+  .bg-white {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .endow-block {
-    background-image: linear-gradient(to bottom, #49005d,#e21b81);
-    background-size: 100% 100%;
-    padding-top: 20px;
+  background-image: linear-gradient(to bottom, #49005d, #e21b81);
+  background-size: 100% 100%;
+  padding-top: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .text-vas,
+  .text-giangThanh {
+    text-align: center;
+  }
+  .img-giangThanh-md {
+    display: block !important;
+  }
+  .img-giangThanh-lg {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .problem-block {
+    .problem-block_iframe {
+      width: 70%;
+    }
+  }
+
+  .change-block {
+    text-align: center;
+    .img-title {
+      max-width: 80%;
+    }
+  }
+
+  .bg-gradient-1 {
+    .problem-block_iframe {
+      height: 470px;
+    }
+  }
+
+  .content-benefit {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .problem-block {
+    .problem-block_iframe {
+      width: 90%;
+    }
+  }
+
+  .change-block {
+    text-align: center;
+    .img-title {
+      width: 100%;
+    }
+  }
+  .content-benefit {
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
