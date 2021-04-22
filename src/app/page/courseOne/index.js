@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { usePageTitle } from "core/hooks/usePageTitle";
 import Iframe from "react-iframe";
 import findPurposes from "assets/images/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-banner.jpeg";
-import { itemChange, imgArray, benefitArray, itemArray } from "app/const/Page";
+import RegisterButton from "app/components/registerButton";
+import ScrollButton from "app/components/scrollButton";
+import * as DATA from "app/const/Page";
 
 import "./styles/styles.scss";
 
 function CourseOne() {
   const title = "Tìm Lại Lẽ Sống Và Khát Vọng Thành Công";
-  usePageTitle(title);
+  usePageTitle(title.toUpperCase());
+
+  useEffect(() => {
+    const buttonDOM = document.querySelector(".scrollToTop");
+    if (buttonDOM) {
+      setInterval(() => {
+        buttonDOM.classList.toggle("button-light");
+      }, 500);
+    }
+  });
 
   return (
     <>
@@ -37,9 +48,12 @@ function CourseOne() {
         />
 
         <div className="row">
-          {itemChange.map((item, index) => {
+          {DATA.itemChange.map((item, index) => {
             return (
-              <div className="col-xl-4 col-lg-6 col-md-12" key={index}>
+              <div
+                className="col-xl-4 offset-xl-0 col-lg-6 offset-lg-3 col-md-6 offset-md-3"
+                key={index}
+              >
                 <img
                   src={item.src}
                   alt={item.src}
@@ -65,7 +79,7 @@ function CourseOne() {
               className="col-sm-10 col-md-8 col-lg-12 col-xl-12"
               style={{ margin: "0 auto" }}
             >
-              {imgArray.map((img, index) => {
+              {DATA.imgArray.map((img, index) => {
                 return (
                   <img
                     src={img.src}
@@ -224,7 +238,7 @@ function CourseOne() {
           />
 
           <div className="row content-benefit">
-            {benefitArray.map((item, index) => {
+            {DATA.benefitArray.map((item, index) => {
               return (
                 <div
                   className="col-xl-4 col-lg-4 col-md-12 benefit-item"
@@ -304,10 +318,13 @@ function CourseOne() {
         </div>
 
         <div className="col-lg-6 col-md-10">
-          <div className="row">
-            {itemArray.map((item, index) => {
+          <div className="row item-gift">
+            {DATA.itemArray.map((item, index) => {
               return (
-                <div className="col-lg-6 col-md-12" key={index}>
+                <div
+                  className="col-lg-6 col-md-6 offset-md-3 col-8"
+                  key={index}
+                >
                   <img src={item.src} alt={item.src} className="img-fluid" />
                   <h2 style={{ color: "#fff", textAlign: "center" }}>
                     {item.title}
@@ -339,6 +356,19 @@ function CourseOne() {
             </a>
           </div>
         </div>
+
+        <RegisterButton
+          src="https://lpe.vn/storage/vip-lpe/dang-ky.gif"
+          href="https://lpe.vn/register.php?type=general"
+          buttonClass="register-btn"
+          title="Đăng ký tìm lại lẽ sống và khát vọng thành công"
+        />
+
+        <ScrollButton
+          classIcon="far fa-angle-up"
+          classButton="scrollToTop"
+          href="#root"
+        />
       </div>
     </>
   );
