@@ -15,9 +15,10 @@ import CourseOne from "./app/page/courseOne/";
 
 function App() {
   return (
+    
     <Router>
       <Switch>
-        <HomeTemplate exact path="/" Component={CourseOne} />
+        <HomeTemplate exact Component={CourseOne} />
 
         <Route path="*">
           <Switch>
@@ -26,6 +27,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
+
   );
 }
 

@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  height: auto;
 }
 
 .problem-block {
@@ -248,6 +249,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  .bg-content {
+    img {
+      height: 250px!important;
+    }
+  }
   .problem-block {
     .problem-block_iframe {
       width: 90%;

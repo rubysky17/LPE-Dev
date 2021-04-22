@@ -314,6 +314,9 @@ function CourseOne() {
             src="https://lpe.vn/storage/vip-lpe/uudaipremium/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-s8-01.png"
             alt="tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-s8-01.png"
             className="img-fluid col-lg-6 col-md-10 col-12"
+            style={{
+              height: "250px",
+            }}
           />
         </div>
 
