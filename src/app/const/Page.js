@@ -82,7 +82,20 @@ export const benefitArray = [
   },
 ];
 
-export const itemArray = [
+export const itemArrayPremium = [
+  {
+    src:
+      "https://lpe.vn/storage/vip-lpe/uudaipremium/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-s8-03.png",
+    title: "Bình nước LifeUni",
+  },
+  {
+    src:
+      "https://lpe.vn/storage/vip-lpe/uudaipremium/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-s8-04.png",
+    title: "Tài liệu học tập",
+  },
+];
+
+export const itemArrayVip = [
   {
     src:
       "https://lpe.vn/storage/vip-lpe/uudaipremium/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-s8-03.png",

@@ -249,11 +249,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  .bg-content {
-    img {
-      height: 250px!important;
-    }
-  }
+  // .bg-content {
+  //   img {
+  //     height: 250px!important;
+  //   }
+  // }
+
   .problem-block {
     .problem-block_iframe {
       width: 90%;
@@ -279,6 +280,14 @@
   .endow-block {
     .item-gift {
       justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width:508px) { 
+  .bg-content {
+    img {
+      height: 250px!important;
     }
   }
 }

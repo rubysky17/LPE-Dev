@@ -301,6 +301,7 @@ function CourseOne() {
       </div>
 
       {/* ưu đãi học viên */}
+
       <div className="row endow-block">
         <div
           className="row"
@@ -315,17 +316,53 @@ function CourseOne() {
             alt="tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-s8-01.png"
             className="img-fluid col-lg-6 col-md-10 col-12"
             style={{
-              height: "250px",
+              height: "200px",
             }}
           />
         </div>
 
         <div className="col-lg-6 col-md-10">
           <div className="row item-gift">
-            {DATA.itemArray.map((item, index) => {
+            {DATA.itemArrayPremium.map((item, index) => {
               return (
                 <div
-                  className="col-lg-6 col-md-6 offset-md-3 col-8"
+                  className="col-lg-6 offset-lg-0 col-md-6 offset-md-3 col-8"
+                  key={index}
+                >
+                  <img src={item.src} alt={item.src} className="img-fluid" />
+                  <h2 style={{ color: "#fff", textAlign: "center" }}>
+                    {item.title}
+                  </h2>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div
+          className="row mt-5"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "50px",
+          }}
+        >
+          <img
+            src="https://lpe.vn/storage/vip-lpe/uudaivip/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-s8-02.png"
+            alt="tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-s8-02"
+            className="img-fluid col-lg-6 col-md-10 col-12"
+            style={{
+              height: "200px",
+            }}
+          />
+        </div>
+        
+        <div className="col-lg-6 col-md-10">
+          <div className="row item-gift">
+            {DATA.itemArrayVip.map((item, index) => {
+              return (
+                <div
+                  className="col-lg-6 offset-lg-0 col-md-6 offset-md-3 col-8"
                   key={index}
                 >
                   <img src={item.src} alt={item.src} className="img-fluid" />
