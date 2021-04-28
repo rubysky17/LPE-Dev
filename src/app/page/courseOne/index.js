@@ -1,16 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { usePageTitle } from "core/hooks/usePageTitle";
 import Iframe from "react-iframe";
 import findPurposes from "assets/images/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-banner.jpeg";
 import RegisterButton from "app/components/registerButton";
 import ScrollButton from "app/components/scrollButton";
 import * as DATA from "app/const/Page";
+import ModalVideo from "react-modal-video";
+import useWindowDimensions from "core/hooks/useWindowDimensions";
+
+// carousel
+import { Carousel } from "react-responsive-carousel";
 
 import "./styles/styles.scss";
 
 function CourseOne() {
   const title = "Tìm Lại Lẽ Sống Và Khát Vọng Thành Công";
   usePageTitle(title.toUpperCase());
+  const {  width  } = useWindowDimensions();
+  const [isOpen, setIsOpen] = useState(false);
+  const [videoId, setVideoId] = useState("");
+
+
+  // useEffect(() => {
+  //   effect
+  //   return () => {
+  //     cleanup
+  //   }
+  // }, [width])
 
   useEffect(() => {
     const buttonDOM = document.querySelector(".scrollToTop");
@@ -20,6 +36,11 @@ function CourseOne() {
       }, 500);
     }
   });
+
+  const handleOpenModal = (open, id) => {
+    setIsOpen(open);
+    setVideoId(id);
+  };
 
   return (
     <>
@@ -39,6 +60,80 @@ function CourseOne() {
         />
       </div>
 
+      {/* Clip giới thiệu */}
+      <div className="row intro-clip">
+
+      {width <= 768 ? <Carousel
+          autoPlay={true}
+          infiniteLoop={true}
+          showStatus={false}
+          showIndicators={false}
+          showArrows={false}
+          showThumbs={false}
+          interval={3000}
+          stopOnHover={true}
+        >
+          {DATA.videoArray.map((item, index) => {
+            return (
+              <>
+                <div className="intro-clip_logo" key={index}>
+                  <img
+                    src={item.img}
+                    alt={item.img}
+                    className={`img-fluid ${item.className}`}
+                  />
+
+                  <div className="intro-clip_play">
+                    <i
+                      className="far fa-play-circle"
+                      onClick={() => {
+                        handleOpenModal(true, item.videoId);
+                      }}
+                    ></i>
+                  </div>
+                </div>
+              </>
+            );
+          })}
+        </Carousel> : (
+          <>
+          {DATA.videoArray.map((item, index) => {
+            return (
+              <>
+                <div className="col-md-4 intro-clip_logo" key={index}>
+                  <img
+                    src={item.img}
+                    alt={item.img}
+                    className={`img-fluid ${item.className}`}
+                  />
+
+                  <div className="intro-clip_play">
+                    <i
+                      className="far fa-play-circle"
+                      onClick={() => {
+                        handleOpenModal(true, item.videoId);
+                      }}
+                    ></i>
+                  </div>
+                </div>
+              </>
+            );
+          })}
+          </>
+        ) }
+       
+      </div>
+
+      <ModalVideo
+        channel="youtube"
+        isOpen={isOpen}
+        autoplay
+        videoId={videoId}
+        onClose={() => {
+          setIsOpen(false);
+        }}
+      />
+
       {/* Các vấn đề */}
       <div className="row change-block">
         <img
@@ -50,14 +145,11 @@ function CourseOne() {
         <div className="row">
           {DATA.itemChange.map((item, index) => {
             return (
-              <div
-                className="col-xl-4 offset-xl-0 col-lg-6 offset-lg-3 col-md-6 offset-md-3"
-                key={index}
-              >
+              <div className="col-xl-4 col-lg-6 col-md-6 px-4 py-2" key={index}>
                 <img
                   src={item.src}
                   alt={item.src}
-                  className="img-fluid text-center"
+                  className="img-fluid text-center itemChange-img"
                 />
                 <p className="item-change_text">{item.text}</p>
               </div>
@@ -301,7 +393,6 @@ function CourseOne() {
       </div>
 
       {/* ưu đãi học viên */}
-
       <div className="row endow-block">
         <div
           className="row"
@@ -356,7 +447,7 @@ function CourseOne() {
             }}
           />
         </div>
-        
+
         <div className="col-lg-6 col-md-10">
           <div className="row item-gift">
             {DATA.itemArrayVip.map((item, index) => {

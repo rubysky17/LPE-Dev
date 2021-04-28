@@ -1,32 +1,35 @@
+import htvLogo from "assets/images/htv7.png";
+import vtvLogo from "assets/images/vtv3.png";
+
 export const itemChange = [
   {
     src:
-      "https://lpe.vn/storage/vip-lpe/s3-vande/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-khong-tai-gioi-787x787-102kb.png",
+      "https://s1.uphinh.org/2021/04/28/70049f20759c87c2de8d.jpg",
     text: "“Tôi không tài giỏi, tôi không thể làm điều gì lớn lao cả”",
   },
   {
     src:
-      "https://lpe.vn/storage/vip-lpe/s3-vande/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-cuoc-song-tam-toi-787x787-237kb.png",
+      "https://s1.uphinh.org/2021/04/28/32760a59e0e512bb4bf4.jpg",
     text: "“Cuộc đời tôi là những mảng đen mù mịt, không biết đi về đâu”",
   },
   {
     src:
-      "https://lpe.vn/storage/vip-lpe/s3-vande/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-muon-kiem-tien-787x787-399kb.png",
+      "https://s1.uphinh.org/2021/04/28/6193ec6a1ad6e888b1c7.jpg",
     text: "“Tôi muốn kiếm nhiều tiền nhưng không biết làm như thế nào”",
   },
   {
     src:
-      "https://lpe.vn/storage/vip-lpe/s3-vande/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-so-that-bai-787x787-211kb.png",
+      "https://s1.uphinh.org/2021/04/28/ccdbb5925f2ead70f43f.jpg",
     text: "“Tôi sợ, sợ rủi ro, sợ thất bại nên cứ e ngại mà không dám bắt đầu”",
   },
   {
     src:
-      "https://lpe.vn/storage/vip-lpe/s3-vande/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-tri-hoan-787x787-321kb.png",
+      "https://s1.uphinh.org/2021/04/28/298774a39e1f6c41350e.jpg",
     text: "“Tôi luôn bị vỡ kế hoạch bởi sự trì hoãn, cứ ngồi yên chờ thời cơ”",
   },
   {
     src:
-      "https://lpe.vn/storage/vip-lpe/s3-vande/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-ko-kiem-che-787x787-254kb.png",
+      "https://s1.uphinh.org/2021/04/28/d023b10b5bb7a9e9f0a6.jpg",
     text: "“Tôi không kiểm soát được mình, dễ bị cảm xúc tiêu cực chi phối”",
   },
 ];
@@ -117,3 +120,23 @@ export const itemArrayVip = [
     title: "2 Xuất Teabreak mỗi ngày",
   },
 ];
+
+export const videoArray = [
+  {
+    img: htvLogo,
+    videoId: 'k3wBrDLatPM',
+    className: "item-logo-htv"
+  },
+  {
+    img: htvLogo,
+    videoId: 'kgOXAuWkryM',
+    className: "item-logo-htv"
+
+  },
+  {
+    img: vtvLogo,
+    videoId: '',
+    className: "item-logo-vtv"
+
+  }
+]
