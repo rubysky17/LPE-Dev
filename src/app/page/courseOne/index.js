@@ -16,17 +16,10 @@ import "./styles/styles.scss";
 function CourseOne() {
   const title = "Tìm Lại Lẽ Sống Và Khát Vọng Thành Công";
   usePageTitle(title.toUpperCase());
-  const {  width  } = useWindowDimensions();
+
+  const { width } = useWindowDimensions();
   const [isOpen, setIsOpen] = useState(false);
   const [videoId, setVideoId] = useState("");
-
-
-  // useEffect(() => {
-  //   effect
-  //   return () => {
-  //     cleanup
-  //   }
-  // }, [width])
 
   useEffect(() => {
     const buttonDOM = document.querySelector(".scrollToTop");
@@ -62,66 +55,66 @@ function CourseOne() {
 
       {/* Clip giới thiệu */}
       <div className="row intro-clip">
+        {width <= 768 ? (
+          <Carousel
+            autoPlay={true}
+            infiniteLoop={true}
+            showStatus={false}
+            showIndicators={false}
+            showArrows={false}
+            showThumbs={false}
+            interval={3000}
+            stopOnHover={true}
+          >
+            {DATA.videoArray.map((item, index) => {
+              return (
+                <>
+                  <div className="intro-clip_logo" key={index}>
+                    <img
+                      src={item.img}
+                      alt={item.img}
+                      className={`img-fluid ${item.className}`}
+                    />
 
-      {width <= 768 ? <Carousel
-          autoPlay={true}
-          infiniteLoop={true}
-          showStatus={false}
-          showIndicators={false}
-          showArrows={false}
-          showThumbs={false}
-          interval={3000}
-          stopOnHover={true}
-        >
-          {DATA.videoArray.map((item, index) => {
-            return (
-              <>
-                <div className="intro-clip_logo" key={index}>
-                  <img
-                    src={item.img}
-                    alt={item.img}
-                    className={`img-fluid ${item.className}`}
-                  />
-
-                  <div className="intro-clip_play">
-                    <i
-                      className="far fa-play-circle"
-                      onClick={() => {
-                        handleOpenModal(true, item.videoId);
-                      }}
-                    ></i>
+                    <div className="intro-clip_play">
+                      <i
+                        className="far fa-play-circle"
+                        onClick={() => {
+                          handleOpenModal(true, item.videoId);
+                        }}
+                      ></i>
+                    </div>
                   </div>
-                </div>
-              </>
-            );
-          })}
-        </Carousel> : (
+                </>
+              );
+            })}
+          </Carousel>
+        ) : (
           <>
-          {DATA.videoArray.map((item, index) => {
-            return (
-              <>
-                <div className="col-md-4 intro-clip_logo" key={index}>
-                  <img
-                    src={item.img}
-                    alt={item.img}
-                    className={`img-fluid ${item.className}`}
-                  />
+            {DATA.videoArray.map((item, index) => {
+              return (
+                <>
+                  <div className="col-md-4 intro-clip_logo" key={index}>
+                    <img
+                      src={item.img}
+                      alt={item.img}
+                      className={`img-fluid ${item.className}`}
+                    />
 
-                  <div className="intro-clip_play">
-                    <i
-                      className="far fa-play-circle"
-                      onClick={() => {
-                        handleOpenModal(true, item.videoId);
-                      }}
-                    ></i>
+                    <div className="intro-clip_play">
+                      <i
+                        className="far fa-play-circle"
+                        onClick={() => {
+                          handleOpenModal(true, item.videoId);
+                        }}
+                      ></i>
+                    </div>
                   </div>
-                </div>
-              </>
-            );
-          })}
+                </>
+              );
+            })}
           </>
-        ) }
-       
+        )}
       </div>
 
       <ModalVideo
@@ -417,7 +410,7 @@ function CourseOne() {
             {DATA.itemArrayPremium.map((item, index) => {
               return (
                 <div
-                  className="col-lg-6 offset-lg-0 col-md-6 offset-md-3 col-8"
+                  className="col-lg-6 offset-lg-0 col-md-6 offset-md-3 col-6"
                   key={index}
                 >
                   <img src={item.src} alt={item.src} className="img-fluid" />
@@ -453,7 +446,7 @@ function CourseOne() {
             {DATA.itemArrayVip.map((item, index) => {
               return (
                 <div
-                  className="col-lg-6 offset-lg-0 col-md-6 offset-md-3 col-8"
+                  className="col-lg-6 offset-lg-0 col-md-6 offset-md-3 col-6"
                   key={index}
                 >
                   <img src={item.src} alt={item.src} className="img-fluid" />

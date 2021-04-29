@@ -124,19 +124,17 @@ export const itemArrayVip = [
 export const videoArray = [
   {
     img: htvLogo,
-    videoId: 'k3wBrDLatPM',
-    className: "item-logo-htv"
+    videoId: "k3wBrDLatPM",
+    className: "item-logo-htv",
   },
   {
     img: htvLogo,
-    videoId: 'kgOXAuWkryM',
-    className: "item-logo-htv"
-
+    videoId: "kgOXAuWkryM",
+    className: "item-logo-htv",
   },
   {
     img: vtvLogo,
-    videoId: '',
-    className: "item-logo-vtv"
-
-  }
-]
+    videoId: "gZHehgPfmVI",
+    className: "item-logo-vtv",
+  },
+];
