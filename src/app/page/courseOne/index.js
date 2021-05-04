@@ -6,10 +6,10 @@ import RegisterButton from "app/components/registerButton";
 import ScrollButton from "app/components/scrollButton";
 import * as DATA from "app/const/Page";
 import ModalVideo from "react-modal-video";
-import useWindowDimensions from "core/hooks/useWindowDimensions";
 
 // carousel
-import { Carousel } from "react-responsive-carousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 import "./styles/styles.scss";
 
@@ -17,7 +17,6 @@ function CourseOne() {
   const title = "Tìm Lại Lẽ Sống Và Khát Vọng Thành Công";
   usePageTitle(title.toUpperCase());
 
-  const { width } = useWindowDimensions();
   const [isOpen, setIsOpen] = useState(false);
   const [videoId, setVideoId] = useState("");
 
@@ -35,6 +34,21 @@ function CourseOne() {
     setVideoId(id);
   };
 
+  const classResponsive = {
+    desktop: {
+      breakpoint: { max: 2000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 768, min: 0 },
+      items: 1,
+    },
+  };
+
   return (
     <>
       {/* background VAS and Thanh */}
@@ -48,74 +62,53 @@ function CourseOne() {
           url="https://www.youtube.com/embed/op_f1QsI9Qs"
           height="315px"
           width="50%"
-          className="problem-block_iframe"
+          className="row problem-block_iframe"
           frameBorder="0"
         />
       </div>
 
       {/* Clip giới thiệu */}
-      <div className="row intro-clip">
-        {width <= 768 ? (
-          <Carousel
-            autoPlay={true}
-            infiniteLoop={true}
-            showStatus={false}
-            showIndicators={false}
-            showArrows={false}
-            showThumbs={false}
-            interval={3000}
-            stopOnHover={true}
-          >
-            {DATA.videoArray.map((item, index) => {
-              return (
-                <>
-                  <div className="intro-clip_logo" key={index}>
-                    <img
-                      src={item.img}
-                      alt={item.img}
-                      className={`img-fluid ${item.className}`}
-                    />
 
-                    <div className="intro-clip_play">
-                      <i
-                        className="far fa-play-circle"
-                        onClick={() => {
-                          handleOpenModal(true, item.videoId);
-                        }}
-                      ></i>
-                    </div>
-                  </div>
-                </>
-              );
-            })}
-          </Carousel>
-        ) : (
-          <>
-            {DATA.videoArray.map((item, index) => {
-              return (
-                <>
-                  <div className="col-md-4 intro-clip_logo" key={index}>
-                    <img
-                      src={item.img}
-                      alt={item.img}
-                      className={`img-fluid ${item.className}`}
-                    />
+      <Carousel
+        responsive={classResponsive}
+        className="intro-clip"
+        showDots={false}
+        arrows={false}
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={1500}
+      >
+        {DATA.videoArray.map((item, index) => {
+          return (
+            <>
+              <div className="intro-clip_logo" key={index}>
+                <img
+                  src={item.img}
+                  alt={item.img}
+                  className={`img-fluid ${item.className}`}
+                />
 
-                    <div className="intro-clip_play">
-                      <i
-                        className="far fa-play-circle"
-                        onClick={() => {
-                          handleOpenModal(true, item.videoId);
-                        }}
-                      ></i>
-                    </div>
+                {item.videoId ? (
+                  <div className="intro-clip_play">
+                    <i
+                      className="far fa-play-circle"
+                      onClick={() => {
+                        handleOpenModal(true, item.videoId);
+                      }}
+                    ></i>
                   </div>
-                </>
-              );
-            })}
-          </>
-        )}
-      </div>
+                ) : (
+                  <div className="intro-clip_play">
+                    <a href={item.newLink} target="_blank" rel="noreferrer">
+                      <i className="far fa-play-circle"></i>
+                    </a>
+                  </div>
+                )}
+              </div>
+            </>
+          );
+        })}
+      </Carousel>
 
       <ModalVideo
         channel="youtube"
@@ -128,7 +121,7 @@ function CourseOne() {
       />
 
       {/* Các vấn đề */}
-      <div className="row change-block">
+      <div className="row p-md-5 p-0 change-block">
         <img
           src="https://lpe.vn/storage/vip-lpe/s3-vande/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-s3-01.png"
           className="img-title"
@@ -185,7 +178,7 @@ function CourseOne() {
                 width="100%"
                 className="problem-block_iframe"
                 frameBorder="0"
-                style={{ "padding-right": "15px" }}
+              
               />
             </div>
           </div>
@@ -369,22 +362,7 @@ function CourseOne() {
         </div>
       </div>
 
-      {/* sơ đồ ghế ngồi */}
-      <div className="row seatMap-block">
-        <div className="col-lg-8 col-12" style={{ margin: "0 auto" }}>
-          <img
-            src="https://lpe.vn/storage/vip-lpe/sodochongoi/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-s8-08.png"
-            alt="tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-s8-08.png"
-            className="img-fluid"
-          />
-          <img
-            src="https://lpe.vn/storage/vip-lpe/sodochongoi/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-map.jpg"
-            alt="tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-map.jpg"
-            className="img-fluid"
-          />
-        </div>
-      </div>
-
+     
       {/* ưu đãi học viên */}
       <div className="row endow-block">
         <div

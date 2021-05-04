@@ -8,7 +8,8 @@ import store from "./core/redux/store/configStore";
 
 import "./assets/fonts/fontawsome.min.css";
 import "./assets/styles/common.scss";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import "react-multi-carousel/lib/styles.css";
 
 const meta = {
   title: 'TÌM LẠI LẼ SỐNG VÀ KHÁT VỌNG THÀNH CÔNG',

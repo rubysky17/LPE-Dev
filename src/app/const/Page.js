@@ -1,35 +1,39 @@
 import htvLogo from "assets/images/htv7.png";
 import vtvLogo from "assets/images/vtv3.png";
+import phuNuLogo from "assets/images/phuNu.png"
+import tienPhong from "assets/images/tienPhong.png"
+import doanhNhan from "assets/images/doanhNhan.png";
+
+import problem1 from "assets/images/problem1.png"
+import problem2 from "assets/images/problem2.png"
+import problem3 from "assets/images/problem3.png"
+import problem4 from "assets/images/problem4.png"
+import problem5 from "assets/images/problem5.png"
+import problem6 from "assets/images/problem6.png"
 
 export const itemChange = [
   {
-    src:
-      "https://s1.uphinh.org/2021/04/28/70049f20759c87c2de8d.jpg",
+    src: problem1,
     text: "“Tôi không tài giỏi, tôi không thể làm điều gì lớn lao cả”",
   },
   {
-    src:
-      "https://s1.uphinh.org/2021/04/28/32760a59e0e512bb4bf4.jpg",
+    src: problem2,
     text: "“Cuộc đời tôi là những mảng đen mù mịt, không biết đi về đâu”",
   },
   {
-    src:
-      "https://s1.uphinh.org/2021/04/28/6193ec6a1ad6e888b1c7.jpg",
+    src:problem3,
     text: "“Tôi muốn kiếm nhiều tiền nhưng không biết làm như thế nào”",
   },
   {
-    src:
-      "https://s1.uphinh.org/2021/04/28/ccdbb5925f2ead70f43f.jpg",
+    src: problem4,
     text: "“Tôi sợ, sợ rủi ro, sợ thất bại nên cứ e ngại mà không dám bắt đầu”",
   },
   {
-    src:
-      "https://s1.uphinh.org/2021/04/28/298774a39e1f6c41350e.jpg",
+    src:problem5,
     text: "“Tôi luôn bị vỡ kế hoạch bởi sự trì hoãn, cứ ngồi yên chờ thời cơ”",
   },
   {
-    src:
-      "https://s1.uphinh.org/2021/04/28/d023b10b5bb7a9e9f0a6.jpg",
+    src:problem6,
     text: "“Tôi không kiểm soát được mình, dễ bị cảm xúc tiêu cực chi phối”",
   },
 ];
@@ -128,13 +132,29 @@ export const videoArray = [
     className: "item-logo-htv",
   },
   {
+    img: vtvLogo,
+    videoId: "gZHehgPfmVI",
+    className: "item-logo-vtv",
+  },
+  {
     img: htvLogo,
     videoId: "kgOXAuWkryM",
     className: "item-logo-htv",
   },
   {
-    img: vtvLogo,
-    videoId: "gZHehgPfmVI",
-    className: "item-logo-vtv",
+    img: phuNuLogo,
+    newLink: "https://www.phunuonline.com.vn/la-ha-giang-thanh-tim-chan-gia-tri-de-co-cuoc-doi-y-nghia-a58767.html",
+    className: "item-logo-phunu",
   },
+  {
+    img: tienPhong,
+    newLink: "https://tienphong.vn/ra-mat-chuong-trinh-dao-tao-lap-trinh-ngon-ngu-neuron-post697893.tpo",
+    className: "item-logo-tienphong",
+  },
+  {
+    img: doanhNhan,
+    newLink: "https://doanhnhansaigon.vn/tro-chuyen-voi-doanh-nhan/ceo-leading-performance-la-ha-giang-thanh-moi-nguoi-la-mot-manh-ghep-hoan-hao-va-khac-biet-1087633.html",
+    className: "item-logo-doanhnhan",
+  },
+ 
 ];
