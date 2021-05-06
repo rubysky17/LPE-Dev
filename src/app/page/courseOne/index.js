@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { usePageTitle } from "core/hooks/usePageTitle";
 import Iframe from "react-iframe";
-import findPurposes from "assets/images/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-banner.jpeg";
+import findPurposes from "assets/images/banner.jpg";
 import RegisterButton from "app/components/registerButton";
 import ScrollButton from "app/components/scrollButton";
 import * as DATA from "app/const/Page";
