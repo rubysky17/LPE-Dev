@@ -2,23 +2,15 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { HomeTemplate } from "app/template/homeTemplate";
-
-// import {
-//   publicRoutes,
-//   privateRoutes,
-//   publicPaths,
-//   privatePaths,
-// } from "../src/app/config/routes/routes";
-
 import ErrorPage from "./app/page/error/";
-import CourseOne from "./app/page/courseOne/";
+import RunFaster from "./app/page/runFaster";
+
 
 function App() {
   return (
-    
     <Router>
       <Switch>
-        <HomeTemplate exact Component={CourseOne} />
+        <HomeTemplate exact Component={RunFaster} />
 
         <Route path="*">
           <Switch>
@@ -27,7 +19,6 @@ function App() {
         </Route>
       </Switch>
     </Router>
-
   );
 }
 
