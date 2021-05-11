@@ -24,7 +24,7 @@ function RunFaster() {
   const settings = {
     dots: true,
     infinite: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     fade: true,
     autoplay: true,
     slidesToShow: 1,
@@ -86,7 +86,7 @@ function RunFaster() {
         arrows={false}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={1500}
+        autoPlaySpeed={3000}
       >
         {DATA.videoArray.map((item, index) => {
           return (
