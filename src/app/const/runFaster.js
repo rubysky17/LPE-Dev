@@ -39,3 +39,69 @@ export const videoArray = [
     className: "item-logo-doanhnhan",
   },
 ];
+
+export const stepperDay1 = [
+  {
+    id: 1,
+    title: "Make a decision",
+    content:
+      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+  },
+  {
+    id: 2,
+    title: "Schedule a meeting",
+    content:
+      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+  },
+  {
+    id: 3,
+    title: "Transformation Completed",
+    content:
+      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+  },
+  {
+    id: 4,
+    title: "Show Commitment",
+    content:
+      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+  },
+  {
+    id: 5,
+    title: "Show Commitment",
+    content:
+      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+  },
+];
+
+export const stepperDay2 = [
+  {
+    id: 1,
+    title: "Make a decision2",
+    content:
+      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+  },
+  {
+    id: 2,
+    title: "Schedule a meeting2",
+    content:
+      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+  },
+  {
+    id: 3,
+    title: "Transformation Completed2",
+    content:
+      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+  },
+  {
+    id: 4,
+    title: "Show Commitment2",
+    content:
+      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+  },
+  {
+    id: 5,
+    title: "Show Commitment2",
+    content:
+      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+  },
+];

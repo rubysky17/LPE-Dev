@@ -82,7 +82,7 @@
 }
 
 .video-container {
-  margin-top: 100px;
+  margin: 100px auto;
 }
 .text-content {
   display: flex;
@@ -230,82 +230,126 @@
   }
 }
 
+.bg-item {
+  background-image: url("../../../../assets/images/bgItem.jpg");
+  background-attachment: fixed;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.buttonToggleDay {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  margin-right: 20px;
+  margin-top: 50px;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: all 0.3s;
+}
+.stepper {
+  display: flex;
+}
+
+.buttonToggleDay:hover {
+  background-color: #fff;
+  color: #000;
+}
+.center-content {
+  justify-content: center;
+}
+.text-heading {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "Noto Serif", serif;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.price {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  background: #e6e6e6;
+}
+
 @media screen and (max-width: 1550px) {
-   .carousel-text {
-       h1 {
-           font-size: 70px;
-       }
-       .text-2 {
-        font-size: 45px;
-       }
-   }
+  .carousel-text {
+    h1 {
+      font-size: 70px;
+    }
+    .text-2 {
+      font-size: 45px;
+    }
   }
-  
+}
 
 @media screen and (max-width: 1440px) {
-    .carousel-text {
-        h1 {
-            font-size: 60px;
-        }
-        p {
-            font-size: 25px;
-        }
-        .text-2 {
-         font-size: 40px;
-        }
+  .carousel-text {
+    h1 {
+      font-size: 60px;
+    }
+    p {
+      font-size: 25px;
+    }
+    .text-2 {
+      font-size: 40px;
     }
   }
-  
+}
 
 @media screen and (max-width: 992px) {
-    .carousel-text {
-        h1 {
-            font-size: 55px;
-        }
-        p {
-            font-size: 22px;
-        }
-        .text-2 {
-         font-size: 40px;
-        }
+  .carousel-text {
+    h1 {
+      font-size: 55px;
     }
+    p {
+      font-size: 22px;
+    }
+    .text-2 {
+      font-size: 40px;
+    }
+  }
   .video-content {
     margin-top: 30px;
   }
   .slick-dots {
-    display: none!important;
-}
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .carousel-text {
-        h1 {
-            font-size: 40px;
-        }
-        p {
-            font-size: 17px;
-            letter-spacing: 0.6rem;
-        }
-        .text-2 {
-         font-size: 30px;
-        }
+  .carousel-text {
+    h1 {
+      font-size: 40px;
     }
- 
+    p {
+      font-size: 17px;
+      letter-spacing: 0.6rem;
+    }
+    .text-2 {
+      font-size: 30px;
+    }
+  }
 }
 
-
 @media screen and (max-width: 550px) {
-    .carousel-text {
-        h1 {
-            font-size: 35px;
-        }
-        p {
-            font-size: 16px;
-            letter-spacing: 0.5rem;
-        }
-        .text-2 {
-         font-size: 24px;
-        }
+  .carousel-text {
+    h1 {
+      font-size: 35px;
     }
-  
+    p {
+      font-size: 16px;
+      letter-spacing: 0.5rem;
+    }
+    .text-2 {
+      font-size: 24px;
+    }
+  }
 }

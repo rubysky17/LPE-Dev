@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { usePageTitle } from "core/hooks/usePageTitle";
 
 import * as DATA from "../../const/runFaster";
@@ -15,10 +15,17 @@ import cloud2 from "../../../assets/images/cloud1.jpg";
 import bgVideo from "../../../assets/images/bgVideo.jpg";
 
 import "./styles/styles.scss";
+// import { Link } from "react-router-dom";
+import Stepper from "./component/stepper";
+import Card from "./component/card";
+import CardPrice from "./component/cardPrice";
 
 function RunFaster() {
   const title = "run faster - công ty tnhh giáo dục leading performance";
   const [isOpen, setIsOpen] = useState(false);
+  const [day, setDay] = useState(DATA.stepperDay1);
+  // const [dataSubmit, setDataSubmit] = useState();
+  // const refForm = useRef(null);
   usePageTitle(title.toUpperCase());
 
   const settings = {
@@ -44,6 +51,25 @@ function RunFaster() {
       breakpoint: { max: 768, min: 0 },
       items: 1,
     },
+  };
+
+  // const handleData = () => {
+  //   const name = refForm.current["name"].value;
+  //   const email = refForm.current["email"].value;
+  //   const ngaySinh = refForm.current["custom_bod"].value;
+  //   const mongMuon = refForm.current["custom_desire"].value;
+  //   const sdt = refForm.current["custom_dt"].value;
+  //   const congViec = refForm.current["custom_job"].value;
+
+  //   console.log(name, email, ngaySinh, mongMuon, sdt, congViec);
+  // };
+
+  const toggleDay = (day) => {
+    if (day === 1) {
+      setDay(DATA.stepperDay1);
+    } else {
+      setDay(DATA.stepperDay2);
+    }
   };
 
   return (
@@ -78,6 +104,7 @@ function RunFaster() {
           </div>
         </Slider>
       </div>
+
       {/* logo */}
       <Carousel
         responsive={classResponsive}
@@ -131,6 +158,86 @@ function RunFaster() {
           </div>
         </div>
       </div>
+
+      {/* Stepper */}
+      <div className="bg-item">
+        <div className="container py-5">
+          <div className="row stepper">
+            <div className="col-12">
+              <h1 className="text-center text-heading">Đã đến lúc phải chạy</h1>
+            </div>
+            <div className="col-md-6 text-center">
+              <Card name="info" />
+              <Card name="register" />
+            </div>
+
+            <div className="col-md-6">
+              <div className="row center-content">
+                {day.map((item, index) => (
+                  <Stepper
+                    numberStep={item.id}
+                    key={index}
+                    title={item.title}
+                    content={item.content}
+                  />
+                ))}
+              </div>
+
+              <div className="row center-content">
+                <button
+                  onClick={() => {
+                    toggleDay(1);
+                  }}
+                  className="buttonToggleDay"
+                >
+                  Day 1
+                </button>
+                <button
+                  onClick={() => {
+                    toggleDay(2);
+                  }}
+                  className="buttonToggleDay"
+                >
+                  Day 2
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Người dẫn đầu vượt bão */}
+      {/* cảm nhận */}
+      <section className="review">
+        <div className="container">
+          <div className="row">
+          <div className="col-12">
+            <h1 className="text-center text-uppercase">Cảm nhận của học viên</h1>
+          </div>
+          </div>
+        </div>
+      </section>
+      {/* Giá */}
+      <div className="price">
+      <div className="container ">
+        <div className="row">
+          <div className="col-12">
+            <h1 className="text-center text-uppercase">Học phí</h1>
+          </div>
+
+          <div className="col-4">
+            <CardPrice />
+          </div>
+          <div className="col-4">
+            <CardPrice special />
+          </div>
+          <div className="col-4">
+            <CardPrice />
+          </div>
+        </div>
+      </div>
+      </div>
+     
 
       <ModalVideo
         channel="youtube"
