@@ -26,15 +26,12 @@
     background-color: #fff;
     color: #f39c12;
     border: 1px solid #f39c12;
-
     }
   }
 }
 
-.scale-card {
-    transform: scale(1.1);
-  box-shadow: 0px 0px 10px 0px rgb(110, 110, 110);
-  border: none;
-
-
+@media screen and (max-width: 992px) {
+  .cardPrice-container {
+    padding: 40px 20px;
+  }
 }

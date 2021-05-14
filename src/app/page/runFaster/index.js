@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {  useState } from "react";
 import { usePageTitle } from "core/hooks/usePageTitle";
 
 import * as DATA from "../../const/runFaster";
@@ -26,8 +26,6 @@ function RunFaster() {
   const title = "run faster - công ty tnhh giáo dục leading performance";
   const [isOpen, setIsOpen] = useState(false);
   const [day, setDay] = useState(DATA.stepperDay1);
-  // const [dataSubmit, setDataSubmit] = useState();
-  // const refForm = useRef(null);
   usePageTitle(title.toUpperCase());
 
   const settings = {
@@ -69,18 +67,7 @@ function RunFaster() {
       items: 1,
     },
   };
-
-  // const handleData = () => {
-  //   const name = refForm.current["name"].value;
-  //   const email = refForm.current["email"].value;
-  //   const ngaySinh = refForm.current["custom_bod"].value;
-  //   const mongMuon = refForm.current["custom_desire"].value;
-  //   const sdt = refForm.current["custom_dt"].value;
-  //   const congViec = refForm.current["custom_job"].value;
-
-  //   console.log(name, email, ngaySinh, mongMuon, sdt, congViec);
-  // };
-
+  
   const toggleDay = (day) => {
     if (day === 1) {
       setDay(DATA.stepperDay1);
@@ -123,8 +110,8 @@ function RunFaster() {
       </div>
 
       {/* logo */}
-      <div className='title-logo'>
-        <p  className='title'>Truyền thông nói về chúng tôi</p>
+      <div className="title-logo">
+        <p className="title">Truyền thông nói về chúng tôi</p>
       </div>
       <Carousel
         responsive={classResponsive}
@@ -139,11 +126,13 @@ function RunFaster() {
           return (
             <>
               <div className="intro-clip_logo" key={index}>
-                <img
-                  src={item.img}
-                  alt={item.img}
-                  className={`img-fluid ${item.className}`}
-                />
+                <a href={item.newLink} alt={item.newLink} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={item.img}
+                    alt={item.img}
+                    className={`img-fluid ${item.className}`}
+                  />
+                </a>
               </div>
             </>
           );
@@ -186,12 +175,13 @@ function RunFaster() {
             <div className="col-12">
               <h1 className="text-center text-heading">Đã đến lúc phải chạy</h1>
             </div>
-            <div className="col-md-6 text-center">
+            
+            <div className="col-md-6 text-center dp-big">
               <Card name="info" />
               <Card name="register" />
             </div>
 
-            <div className="col-md-6">
+            <div className="col-12 col-md-12 col-lg-6">
               <div className="row center-content">
                 {day.map((item, index) => (
                   <Stepper
@@ -201,27 +191,34 @@ function RunFaster() {
                     content={item.content}
                   />
                 ))}
+
+               
               </div>
 
               <div className="row center-content">
-                <button
-                  onClick={() => {
-                    toggleDay(1);
-                  }}
-                  className="buttonToggleDay"
-                >
-                  Day 1
-                </button>
-                <button
-                  onClick={() => {
-                    toggleDay(2);
-                  }}
-                  className="buttonToggleDay"
-                >
-                  Day 2
-                </button>
-              </div>
+                  <button
+                    onClick={() => {
+                      toggleDay(1);
+                    }}
+                    className="buttonToggleDay"
+                  >
+                    Day 1
+                  </button>
+                  <button
+                    onClick={() => {
+                      toggleDay(2);
+                    }}
+                    className="buttonToggleDay"
+                  >
+                    Day 2
+                  </button>
+                </div>
             </div>
+            
+               <div className="col-12 col-md-8 text-center dp-small">
+                <Card name="info" />
+                <Card name="register" />
+              </div>
           </div>
         </div>
       </div>
@@ -232,21 +229,23 @@ function RunFaster() {
         <img src={giaTri} alt={giaTri} />
       </div>
 
-      {/* Giá */}
+      {/* Học phí */}
       <div className="price">
         <div className="container ">
           <div className="row">
             <div className="col-12">
-              <h1 className="text-center text-uppercase text-heading ">Học phí</h1>
+              <h1 className="text-center text-uppercase text-heading ">
+                Học phí
+              </h1>
             </div>
 
-            <div className="col-4">
+            <div className="col-12 col-md-4 col-lg-4">
               <CardPrice />
             </div>
-            <div className="col-4">
-              <CardPrice special />
+            <div className="col-12 col-md-4 col-lg-4">
+              <CardPrice />
             </div>
-            <div className="col-4">
+            <div className="col-12 col-md-4 col-lg-4">
               <CardPrice />
             </div>
           </div>
@@ -261,12 +260,12 @@ function RunFaster() {
           </h1>
         </div>
 
-        <div className="container">
+        <div className="container carousel-review">
           <Carousel
             responsive={commentResponsive}
             className="intro-clip"
             infinite={true}
-            showDots={true}
+            showDots={false}
           >
             {DATA.comment.map((item, index) => {
               return <Comment data={item} key={index} />;

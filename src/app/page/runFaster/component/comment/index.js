@@ -6,7 +6,7 @@ function Comment({ data }) {
     <div className="comment-container">
       <div className="comment-container_ava">
         <img
-          src="https://binhminhdigital.com/StoreData/PageData/3429/Tim-hieu-ve-ban-quyen-hinh-anh%20(3).jpg"
+          src="https://cdn2.iconfinder.com/data/icons/people-flat-design/64/Man-Person-People-Avatar-User-Happy-512.png"
           alt="ava"
         />
         <p className="comment-name">{data.name}</p>

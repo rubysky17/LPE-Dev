@@ -3,21 +3,22 @@ import vtvLogo from "assets/images/vtv3.png";
 import phuNuLogo from "assets/images/phuNu.png";
 import tienPhong from "assets/images/tienPhong.png";
 import doanhNhan from "assets/images/doanhNhan.png";
+import danTri from "assets/images/danTri.png";
 
 export const videoArray = [
   {
     img: htvLogo,
-    videoId: "k3wBrDLatPM",
+    newLink: "https://www.youtube.com/watch?v=k3wBrDLatPM",
     className: "item-logo-htv",
   },
   {
     img: vtvLogo,
-    videoId: "gZHehgPfmVI",
+    newLink: "https://www.youtube.com/watch?v=gZHehgPfmVI",
     className: "item-logo-vtv",
   },
   {
     img: htvLogo,
-    videoId: "kgOXAuWkryM",
+    newLink: "https://www.youtube.com/watch?v=kgOXAuWkryM",
     className: "item-logo-htv",
   },
   {
@@ -36,6 +37,12 @@ export const videoArray = [
     img: doanhNhan,
     newLink:
       "https://doanhnhansaigon.vn/tro-chuyen-voi-doanh-nhan/ceo-leading-performance-la-ha-giang-thanh-moi-nguoi-la-mot-manh-ghep-hoan-hao-va-khac-biet-1087633.html",
+    className: "item-logo-doanhnhan",
+  },
+  {
+    img: danTri,
+    newLink:
+      "https://dantri.com.vn/giao-duc-huong-nghiep/gap-go-chuyen-gia-dao-tao-cao-cap-lap-trinh-ngon-ngu-tu-duy-1377948663.htm?gidzl=TVO87H9ZkrXxu0qS5dspLdxZ31GFT-y3CU8AHLugwrPYvWyJ2NEv1M_eMaPITEK4FU03535VhOTo66AvNW",
     className: "item-logo-doanhnhan",
   },
 ];

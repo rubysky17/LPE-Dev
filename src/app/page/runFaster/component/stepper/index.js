@@ -3,7 +3,7 @@ import "./styles/styles.scss";
 
 function Stepper({ numberStep, title, content }) {
   return (
-    <div className="stepper-container row">
+    <div className="stepper-container">
       <div className=" stepper-number">{numberStep}</div>
       <div className="stepper-card">
         <div className="stepper-card_arrow"></div>

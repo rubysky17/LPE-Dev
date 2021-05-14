@@ -283,8 +283,9 @@
   background-color: transparent;
   margin-right: 20px;
   margin-top: 50px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   color: #fff;
+  font-weight: 700;
   transition: all 0.3s;
 }
 .stepper {
@@ -292,8 +293,8 @@
 }
 
 .buttonToggleDay:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #f39c12;
+  color: #fff;
 }
 .center-content {
   justify-content: center;
@@ -312,12 +313,14 @@
   padding-bottom: 80px;
   background: linear-gradient(45deg ,#f39c12 , #f1c40f );
 }
+
 .review {
   padding-top: 50px;
   padding-bottom: 80px;
   background: #fff;
 
 }
+
 .heading_person {
   font-weight: bold;
   font-size: 50px;
@@ -326,7 +329,24 @@
   margin-bottom: 32px;
   text-align: center;
 }
+.review {
 
+  .react-multiple-carousel__arrow.react-multiple-carousel__arrow--right {
+    background: rgba(0,0,0,0.3);
+    &:hover {
+    background: rgba(0,0,0,0.7);
+
+    }
+  }
+
+  .react-multiple-carousel__arrow.react-multiple-carousel__arrow--left {
+    background: rgba(0,0,0,0.3);
+    &:hover {
+      background: rgba(0,0,0,0.7);
+  
+      }
+  }
+}
 @media screen and (max-width: 1550px) {
   .carousel-text {
     h1 {
@@ -336,6 +356,13 @@
       font-size: 45px;
     }
   }
+}
+.dp-big {
+  display: block;
+}
+
+.dp-small {
+  display: none;
 }
 
 @media screen and (max-width: 1440px) {
@@ -353,6 +380,13 @@
 }
 
 @media screen and (max-width: 992px) {
+  .dp-big {
+    display: none;
+  }
+  .dp-small {
+    display: block;
+    margin: 0 auto;
+  }
   .carousel-text {
     h1 {
       font-size: 55px;
@@ -373,6 +407,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  .text-heading {
+    font-size: 35px;
+  }
+  .heading_person {
+    font-size: 35px;
+  }
   .carousel-item {
     height: 100vh;
   }
