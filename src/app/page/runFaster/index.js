@@ -25,6 +25,8 @@ import Comment from "./component/comment";
 function RunFaster() {
   const title = "run faster - công ty tnhh giáo dục leading performance";
   const [isOpen, setIsOpen] = useState(false);
+  const [activeClass1, setActiveClass1] = useState(true);
+  const [activeClass2, setActiveClass2] = useState(false);
   const [day, setDay] = useState(DATA.stepperDay1);
   usePageTitle(title.toUpperCase());
 
@@ -69,10 +71,14 @@ function RunFaster() {
   };
   
   const toggleDay = (day) => {
+    day === 1 ? setDay(DATA.stepperDay1) : setDay(DATA.stepperDay2);
+
     if (day === 1) {
-      setDay(DATA.stepperDay1);
+      setActiveClass2(false);
+      setActiveClass1(true);
     } else {
-      setDay(DATA.stepperDay2);
+      setActiveClass2(true);
+      setActiveClass1(false);
     }
   };
 
@@ -126,7 +132,12 @@ function RunFaster() {
           return (
             <>
               <div className="intro-clip_logo" key={index}>
-                <a href={item.newLink} alt={item.newLink} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={item.newLink}
+                  alt={item.newLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src={item.img}
                     alt={item.img}
@@ -175,7 +186,7 @@ function RunFaster() {
             <div className="col-12">
               <h1 className="text-center text-heading">Đã đến lúc phải chạy</h1>
             </div>
-            
+
             <div className="col-md-6 text-center dp-big">
               <Card name="info" />
               <Card name="register" />
@@ -191,34 +202,32 @@ function RunFaster() {
                     content={item.content}
                   />
                 ))}
-
-               
               </div>
 
-              <div className="row center-content">
-                  <button
-                    onClick={() => {
-                      toggleDay(1);
-                    }}
-                    className="buttonToggleDay"
-                  >
-                    Day 1
-                  </button>
-                  <button
-                    onClick={() => {
-                      toggleDay(2);
-                    }}
-                    className="buttonToggleDay"
-                  >
-                    Day 2
-                  </button>
-                </div>
+              <div className="row container-button ">
+                <button
+                  onClick={() => {
+                    toggleDay(1);
+                  }}
+                  className={`buttonToggleDay ${activeClass1 && "active"}`}
+                >
+                  Ngày 1
+                </button>
+                <button
+                  onClick={() => {
+                    toggleDay(2);
+                  }}
+                  className={`buttonToggleDay ${activeClass2 && "active"}`}
+                >
+                  Ngày 2
+                </button>
+              </div>
             </div>
-            
-               <div className="col-12 col-md-8 text-center dp-small">
-                <Card name="info" />
-                <Card name="register" />
-              </div>
+
+            <div className="col-12 col-md-8 text-center dp-small">
+              <Card name="info" />
+              <Card name="register" />
+            </div>
           </div>
         </div>
       </div>

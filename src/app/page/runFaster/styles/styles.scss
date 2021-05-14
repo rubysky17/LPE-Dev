@@ -281,12 +281,18 @@
   outline: none;
   border: none;
   background-color: transparent;
-  margin-right: 20px;
-  margin-top: 50px;
   border: 2px solid #fff;
   color: #fff;
   font-weight: 700;
   transition: all 0.3s;
+  margin-right: 20px;
+  &.active {
+    transform: scale(1.2);
+    background-color: #f39c12;
+  border: 2px solid #f39c12;
+
+    color: #fff;
+  }
 }
 .stepper {
   display: flex;
@@ -296,8 +302,10 @@
   background-color: #f39c12;
   color: #fff;
 }
-.center-content {
+.container-button {
+  display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 .text-heading {
   font-weight: bold;
