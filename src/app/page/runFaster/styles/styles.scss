@@ -82,17 +82,27 @@
 }
 
 .video-container {
-  margin: 100px auto;
+  margin: 80px auto;
 }
 .text-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   h2 {
     font-weight: bold;
     font-size: 28px;
     font-family: "Libre Baskerville", serif;
+    margin-bottom: 20px;
   }
+
+  p {
+    font-size: 16px;
+    line-height: 1.63;
+    font-kerning: normal;
+    margin: 0 0 2rem;
+  }
+
   .button-register {
     padding: 15px 32px;
     background-color: #f0932b;
@@ -102,15 +112,25 @@
     border: none;
     text-transform: uppercase;
     color: #fff;
+    border: 1px solid #f0932b;
+
+    &:hover {
+      background-color: #fff;
+    border: 1px solid #f0932b;
+    color: #f0932b;
+
+    }
   }
 }
 
-.button-register:hover {
-  background-color: #ffbe76;
-}
+
 
 .video-content {
   position: relative;
+
+  img {
+    border-radius: 16px;
+  }
 }
 
 .button-play {
@@ -148,11 +168,25 @@
   transform: translate(-50%, -50%);
   transition: all 0.3s;
 }
+.title {
+  margin: 0;
+  text-align: center;
+  color: #7E7E7E;
+  text-transform: uppercase;
+  padding-top: 10px;
+  font-family: "Noto Serif", serif;
+  font-weight: 700; 
+}
+.title-logo {
+  margin: 0 auto;
+  background-color: #F7F7F7;
+  color: #fff;
+}
 
 .intro-clip {
   background-size: 100% 100%;
   margin: 0 auto;
-  background-color: #dfdddd;
+  background-color: #F7F7F7;
 
   .react-multi-carousel-item {
     width: 0;
@@ -165,8 +199,8 @@
     position: relative !important;
 
     .item-logo-htv {
-      width: 230px;
-      height: 122px;
+      width: 200px;
+      height: 100px;
       padding: 20px;
       filter: grayscale(1);
       transition: all 0.3s;
@@ -177,8 +211,8 @@
     }
 
     .item-logo-vtv {
-      width: 210px;
-      height: 90px;
+      width: 180px;
+      height: 80px;
       padding: 20px;
       filter: grayscale(1);
       transition: all 0.3s;
@@ -190,8 +224,8 @@
     }
 
     .item-logo-tienphong {
-      width: 210px;
-      height: 90px;
+      width: 180px;
+      height: 80px;
       padding: 20px;
       filter: grayscale(1);
       transition: all 0.3s;
@@ -203,8 +237,8 @@
     }
 
     .item-logo-phunu {
-      width: 210px;
-      height: 90px;
+      width: 180px;
+      height: 80px;
       padding: 20px;
       filter: grayscale(1);
       transition: all 0.3s;
@@ -216,8 +250,8 @@
     }
 
     .item-logo-doanhnhan {
-      width: 210px;
-      height: 90px;
+      width: 180px;
+      height: 80px;
       padding: 20px;
       filter: grayscale(1);
       transition: all 0.3s;
@@ -276,7 +310,21 @@
 .price {
   padding-top: 50px;
   padding-bottom: 80px;
-  background: #e6e6e6;
+  background: linear-gradient(45deg ,#f39c12 , #f1c40f );
+}
+.review {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  background: #fff;
+
+}
+.heading_person {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "Noto Serif", serif;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  text-align: center;
 }
 
 @media screen and (max-width: 1550px) {
@@ -317,7 +365,7 @@
     }
   }
   .video-content {
-    margin-top: 30px;
+    margin-top: 50px;
   }
   .slick-dots {
     display: none !important;
@@ -325,16 +373,23 @@
 }
 
 @media screen and (max-width: 768px) {
+  .carousel-item {
+    height: 100vh;
+  }
+  .carousel-img {
+    height: 100vh;
+
+  }
   .carousel-text {
     h1 {
-      font-size: 40px;
+      font-size: 60px;
     }
     p {
-      font-size: 17px;
+      font-size: 20px;
       letter-spacing: 0.6rem;
     }
     .text-2 {
-      font-size: 30px;
+      font-size: 40px;
     }
   }
 }

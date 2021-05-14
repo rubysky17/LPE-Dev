@@ -105,3 +105,34 @@ export const stepperDay2 = [
       "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
   },
 ];
+
+export const comment = [
+  {
+    id: 1,
+    name: "Nông Van Dền",
+    desc: "Tuổi 47",
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies purus sit amet massa feugiat fermentum sit amet nec eros. Ut commodo elit in justo molestie bibendum. ",
+  },
+  {
+    id: 2,
+    name: "Nông Van Dậu",
+    desc: "Tuổi 47",
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies purus sit amet massa feugiat fermentum sit amet nec eros. Ut commodo elit in justo molestie bibendum. ",
+  },
+  {
+    id: 3,
+    name: "Nông Van Hâm",
+    desc: "Tuổi 47",
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies purus sit amet massa feugiat fermentum sit amet nec eros. Ut commodo elit in justo molestie bibendum. ",
+  },
+  {
+    id: 4,
+    name: "Nông Van Tiến",
+    desc: "Tuổi 47",
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies purus sit amet massa feugiat fermentum sit amet nec eros. Ut commodo elit in justo molestie bibendum. ",
+  },
+];

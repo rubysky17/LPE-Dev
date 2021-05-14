@@ -13,12 +13,14 @@ import sand from "../../../assets/images/sand.jpg";
 import cloud1 from "../../../assets/images/cloud2.jpg";
 import cloud2 from "../../../assets/images/cloud1.jpg";
 import bgVideo from "../../../assets/images/bgVideo.jpg";
+import giaTri from "../../../assets/images/giaTri.png";
 
 import "./styles/styles.scss";
 // import { Link } from "react-router-dom";
 import Stepper from "./component/stepper";
 import Card from "./component/card";
 import CardPrice from "./component/cardPrice";
+import Comment from "./component/comment";
 
 function RunFaster() {
   const title = "run faster - công ty tnhh giáo dục leading performance";
@@ -39,6 +41,21 @@ function RunFaster() {
   };
 
   const classResponsive = {
+    desktop: {
+      breakpoint: { max: 2000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 768, min: 0 },
+      items: 1,
+    },
+  };
+
+  const commentResponsive = {
     desktop: {
       breakpoint: { max: 2000, min: 1024 },
       items: 3,
@@ -106,6 +123,9 @@ function RunFaster() {
       </div>
 
       {/* logo */}
+      <div className='title-logo'>
+        <p  className='title'>Truyền thông nói về chúng tôi</p>
+      </div>
       <Carousel
         responsive={classResponsive}
         className="intro-clip"
@@ -207,37 +227,53 @@ function RunFaster() {
       </div>
 
       {/* Người dẫn đầu vượt bão */}
+      <div className="container py-5">
+        <h1 className="heading_person">Người dẫn dắt vượt bão</h1>
+        <img src={giaTri} alt={giaTri} />
+      </div>
+
+      {/* Giá */}
+      <div className="price">
+        <div className="container ">
+          <div className="row">
+            <div className="col-12">
+              <h1 className="text-center text-uppercase text-heading ">Học phí</h1>
+            </div>
+
+            <div className="col-4">
+              <CardPrice />
+            </div>
+            <div className="col-4">
+              <CardPrice special />
+            </div>
+            <div className="col-4">
+              <CardPrice />
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* cảm nhận */}
       <section className="review">
         <div className="container">
-          <div className="row">
-          <div className="col-12">
-            <h1 className="text-center text-uppercase">Cảm nhận của học viên</h1>
-          </div>
-          </div>
+          <h1 className="text-center text-uppercase py-5 heading_person">
+            Cảm nhận của học viên
+          </h1>
+        </div>
+
+        <div className="container">
+          <Carousel
+            responsive={commentResponsive}
+            className="intro-clip"
+            infinite={true}
+            showDots={true}
+          >
+            {DATA.comment.map((item, index) => {
+              return <Comment data={item} key={index} />;
+            })}
+          </Carousel>
         </div>
       </section>
-      {/* Giá */}
-      <div className="price">
-      <div className="container ">
-        <div className="row">
-          <div className="col-12">
-            <h1 className="text-center text-uppercase">Học phí</h1>
-          </div>
-
-          <div className="col-4">
-            <CardPrice />
-          </div>
-          <div className="col-4">
-            <CardPrice special />
-          </div>
-          <div className="col-4">
-            <CardPrice />
-          </div>
-        </div>
-      </div>
-      </div>
-     
 
       <ModalVideo
         channel="youtube"
