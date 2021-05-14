@@ -297,7 +297,9 @@
 .stepper {
   display: flex;
 }
-
+.center-content {
+  justify-content: center;
+}
 .buttonToggleDay:hover {
   background-color: #f39c12;
   color: #fff;
