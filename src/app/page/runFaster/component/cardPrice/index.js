@@ -10,7 +10,10 @@ function CardPrice({ href, item }) {
         <span>VNĐ</span>
       </p>
 
-      <button className="button-register">
+      <button
+        className={`button-register ${item.disabled && "disabled"}`}
+        disabled={item.disabled}
+      >
         <a href={href}>Đăng ký ngay</a>
       </button>
     </div>

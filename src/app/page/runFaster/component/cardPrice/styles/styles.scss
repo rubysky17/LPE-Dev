@@ -37,6 +37,17 @@
     color: #f39c12;
     border: 1px solid #f39c12;
     }
+
+    &.disabled {
+      background-color: #ccc
+      
+    }
+    &.disabled:hover {
+      background-color: #ccc;
+    border: 1px solid #fff;
+    color: #fff;
+
+    }
   }
 }
 
