@@ -15,8 +15,10 @@
     height: 56px;
   }
   .price-text {
-    font-size: 17px;
-
+    font-size: 30px;
+    span {
+      font-size: 17px;
+    }
   }
   .button-register {
     margin-top: 50px;

@@ -5,7 +5,10 @@ function CardPrice({ href, item }) {
   return (
     <div className="cardPrice-container">
       <p className="color-text">{item.name}</p>
-      <p className="price-text">{item.price?.toLocaleString()}VNĐ</p>
+      <p className="price-text">
+        {item.price?.toLocaleString()}
+        <span>VNĐ</span>
+      </p>
 
       <button className="button-register">
         <a href={href}>Đăng ký ngay</a>
