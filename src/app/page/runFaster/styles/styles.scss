@@ -15,7 +15,7 @@
   position: relative;
 
   animation: scalePicture infinite;
-  animation-duration: 20s;
+  animation-duration: 10s;
 }
 
 .dark-layout {
@@ -314,6 +314,8 @@
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 32px;
+  text-shadow: 2px 1px 1px #f39c12, 
+    0px -4px 10px #f39c12;
 }
 
 .price {
@@ -365,6 +367,32 @@
   background: #f39c12;
   padding: 10px 20px;
 }
+
+.container-vas {
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 80px 40px;
+  margin: 0;
+  position: relative;
+  margin-top: 120px;
+  margin-bottom: 164px;
+
+  .img-vas {
+    position: absolute;
+    top: -20%;
+    right: -5%;
+    width: 500px;
+    
+  }
+}
+.img-vas_big {
+  display: none;
+}
+.block-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 1550px) {
   .carousel-text {
     h1 {
@@ -391,8 +419,33 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .container-vas {
+    margin-bottom: 40px;
+    .img-vas {
+      position: absolute;
+      top: -20%;
+      right: -5%;
+      width: 450px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container-vas {
+    margin-bottom: 30px;
+    .img-vas {
+      top: -20%;
+      right: -2%;
+      width: 450px;
+    }
+  }
+}
+
+
 
 @media screen and (max-width: 992px) {
+  
   .dp-big {
     display: none;
   }
@@ -417,9 +470,52 @@
   .slick-dots {
     display: none !important;
   }
+
+  .container-vas {
+    margin-bottom: 30px;
+    .img-vas {
+      top: -27%;
+      right: -17%;
+      width: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 929px) {
+  .container-vas {
+    margin-bottom: 30px;
+    .img-vas {
+      top: -14%;
+      right: -10%;
+      width: 450px;
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .container-vas {
+    margin-bottom: 30px;
+    .img-vas {
+      top: 2%;
+      right: -5%;
+      width: 344px;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .img-vas_big {
+    display: block;
+    max-width: 100%;
+  }
+  .container-vas {
+    margin-top: 0px;
+    padding: 40px 20px;
+    .img-vas {
+    display: none;
+    }
+    
+  }
   .text-heading {
     font-size: 35px;
   }
@@ -460,3 +556,4 @@
     }
   }
 }
+

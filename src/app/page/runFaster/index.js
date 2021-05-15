@@ -12,7 +12,8 @@ import "react-multi-carousel/lib/styles.css";
 import sand from "../../../assets/images/sand.jpg";
 import cloud1 from "../../../assets/images/cloud2.jpg";
 import cloud2 from "../../../assets/images/cloud1.jpg";
-import bgVideo from "../../../assets/images/bgVideo.jpg";
+import bgVideo from "../../../assets/images/bgVideo.png";
+import mrVas from "../../../assets/images/mrVas.png";
 
 import "./styles/styles.scss";
 // import { Link } from "react-router-dom";
@@ -29,7 +30,7 @@ function RunFaster() {
   const settings = {
     dots: true,
     infinite: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 2000,
     fade: true,
     autoplay: true,
     slidesToShow: 1,
@@ -37,21 +38,6 @@ function RunFaster() {
   };
 
   const classResponsive = {
-    desktop: {
-      breakpoint: { max: 2000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 768 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 768, min: 0 },
-      items: 1,
-    },
-  };
-
-  const commentResponsive = {
     desktop: {
       breakpoint: { max: 2000, min: 1024 },
       items: 3,
@@ -89,8 +75,10 @@ function RunFaster() {
             <img src={cloud1} alt={cloud2} className="carousel-img" />
             <div className="dark-layout"></div>
             <div className="carousel-text">
-              <h1>RUN FASTER</h1>
-              <p>Chạy nhanh lên</p>
+              <h1>
+                <span className="text-1">THE STORM</span> IS COMING
+              </h1>
+              <p>Một cơn bão đang tới</p>
             </div>
           </div>
           <div className="carousel-item">
@@ -150,7 +138,7 @@ function RunFaster() {
 
       {/* Carousel */}
       <div className="container video-container">
-        <div className="row wow fadeInUp">
+        <div className="row wow fadeInUp" data-wow-delay="0.3s">
           <div className="col-md-12 col-lg-6 text-content">
             <h2>CƠN BÃO NÀO RỒI CŨNG SẼ QUA ĐI</h2>
             <p>
@@ -183,16 +171,16 @@ function RunFaster() {
       <div className="bg-item">
         <div className="container py-5">
           <div className="row stepper">
-            <div className="col-12 wow bounceIn">
+            <div className="col-12 wow bounceIn" data-wow-delay="0.3s">
               <h1 className="text-center text-heading">Đã đến lúc phải chạy</h1>
             </div>
 
-            <div className="col-md-6 text-center dp-big wow bounceInLeft">
+            <div className="col-md-6 text-center dp-big wow bounceInLeft" data-wow-delay="0.3s">
               <Card name="info" />
               <Card name="register" />
             </div>
 
-            <div className="col-12 col-md-12 col-lg-6  wow bounceInRight">
+            <div className="col-12 col-md-12 col-lg-6  wow bounceInRight" data-wow-delay="0.3s">
               <Carousel
                 responsive={stepperClass}
                 className="row"
@@ -203,7 +191,9 @@ function RunFaster() {
                 autoPlaySpeed={8000}
               >
                 <div className="row center-content wrapper-step">
-                  <h1 className="day-css">Ngày 1</h1>
+                  <div className="col-sm-12 text-center block-day">
+                    <h1 className="day-css">Ngày 1</h1>
+                  </div>
                   {DATA.stepperDay1.map((item, index) => {
                     return (
                       <Stepper
@@ -217,8 +207,9 @@ function RunFaster() {
                 </div>
 
                 <div className="row center-content wrapper-step">
-                  <h1 className="day-css">Ngày 2</h1>
-
+                                      <div className="col-sm-12 text-center block-day">
+                    <h1 className="day-css">Ngày 2</h1>
+                  </div>
                   {DATA.stepperDay2.map((item, index) => {
                     return (
                       <Stepper
@@ -243,7 +234,35 @@ function RunFaster() {
 
       {/* Người dẫn đầu vượt bão */}
       <div className="container py-5">
-        <h1 className="heading_person wow bounceIn">Người dẫn dắt vượt bão</h1>
+        <h1 className="heading_person wow bounceIn" data-wow-delay="0.3s">Người dẫn dắt vượt bão</h1>
+        <div className="col-12">
+          <img src={mrVas} alt={mrVas} className="img-vas_big"/>
+        </div>
+        <div className="row container-vas wow bounceInRight" data-wow-delay="0.3s">
+          <div className="col-12 col-md-8 content-vas">
+            <p>
+              Mr. Vas đã có gần 30 năm dẫn dắt quân đội tại Singapore & hơn 17
+              năm nghiên cứu, làm việc về lĩnh vực NLP, cùng các ngành khoa học
+              Tâm Trí khác. Ông đã huấn luyện, đào tạo, mang đến sự phát triển
+              vượt bậc cho hàng trăm ngàn người ở khắp Châu Á.
+            </p>
+            <p>
+              Với tầm nhìn “mang đến cuộc sống bình an & hạnh phúc cho nhân
+              loại”, Mr. Vas đã & đang không ngừng nghiên cứu, phát triển các
+              chương trình dạy của mình. Khi Covid hoành hành, Mr. Vas nhận thức
+              được rằng tất cả chúng ta không thể dậm chân tại chỗ & chờ đợi nó
+              trôi qua. Cần phải làm điều gì đó để mọi người có thể vực dậy mạnh
+              mẽ hơn & tiếp tục “chạy nhanh hơn” về phía trước.
+            </p>
+            <p>
+              Mr. Vas sẽ là Người đồng hành - dẫn dắt để tất cả chúng ta cùng
+              nhau vượt qua cơn bão mang tên Covid-19. Nhưng chỉ khi bạn thật sự
+              mong muốn “vượt bão” & sẵn sàng chấp nhận thách thức.
+            </p>
+          </div>
+          <div className="col-md-4"></div>
+          <img src={mrVas} alt={mrVas} className="img-vas" />
+        </div>
       </div>
 
       {/* Học phí */}
@@ -251,15 +270,21 @@ function RunFaster() {
         <div className="container ">
           <div className="row">
             <div className="col-12">
-              <h1 className="text-center text-uppercase text-heading wow bounceIn">
+              <h1 className="text-center text-uppercase text-heading wow bounceIn" data-wow-delay="0.3s">
                 Học phí
               </h1>
             </div>
 
-            {DATA.courseFee.map((item,index) => {
-              return <div className="col-12 col-md-4 col-lg-4 wow fadeInUp" key={index}>
-              <CardPrice item={item} />
-            </div>
+            {DATA.courseFee.map((item, index) => {
+              return (
+                <div
+                  className="col-12 col-md-4 col-lg-4 wow fadeInUp"
+                  data-wow-delay="0.3s"
+                  key={index}
+                >
+                  <CardPrice item={item} />
+                </div>
+              );
             })}
           </div>
         </div>
@@ -268,18 +293,17 @@ function RunFaster() {
       {/* cảm nhận */}
       <section className="review">
         <div className="container">
-          <h1 className="text-center text-uppercase py-5 heading_person wow bounceIn">
+          <h1 className="text-center text-uppercase py-5 heading_person wow bounceIn" data-wow-delay="0.3s">
             Cảm nhận của học viên
           </h1>
         </div>
         <div className="container">
-          <div className="row container carousel-review wow fadeInDown">
+          <div className="row container carousel-review wow fadeInUp" data-wow-delay="0.3s">
             {DATA.comment.map((item, index) => {
               return <Comment data={item} key={index} />;
             })}
           </div>
         </div>
-        
       </section>
 
       <ModalVideo
