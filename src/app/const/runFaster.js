@@ -50,96 +50,108 @@ export const videoArray = [
 export const stepperDay1 = [
   {
     id: 1,
-    title: "Make a decision",
+    title: "Become aware of the Storm you are in",
     content:
-      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+      "Trở nên nhận thức về thứ được gọi là “Cơn bão” – mà chúng ta đang phải sống trong đó.",
   },
   {
     id: 2,
-    title: "Schedule a meeting",
+    title: "What will happen if you do not Take Action Now",
     content:
-      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+      "Điều gì sẽ xảy ra nếu bạn không bắt đầu hành động ngay bây giờ.",
   },
   {
     id: 3,
-    title: "Transformation Completed",
+    title: "How to Eject yourself from the Storm",
     content:
-      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+      "Làm thế nào để đưa bản thân thoát ra khỏi Cơn bão.",
   },
   {
     id: 4,
-    title: "Show Commitment",
+    title: "What does it really mean to Run Faster",
     content:
-      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+      "Ý nghĩa thật sự của “Run Faster”",
   },
   {
     id: 5,
-    title: "Show Commitment",
+    title: "How to take Specific Actions to Become More",
     content:
-      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+      "Làm thế nào để thực hiện những hành động cụ thể và gặt hái được nhiều thành tựu hơn.",
   },
 ];
 
 export const stepperDay2 = [
   {
-    id: 1,
-    title: "Make a decision2",
+    id: 6,
+    title: "How to Produce More & Faster",
     content:
-      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+      "Làm thế nào để tăng năng suất, sản xuất nhiều & nhanh hơn nữa.",
   },
   {
-    id: 2,
-    title: "Schedule a meeting2",
+    id: 7,
+    title: "How to Engage the Unconscious Mind & Field Mind to Get More",
     content:
-      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+      "Làm thế nào để kết nối Vô Thức & Trường Năng Lượng để đạt được nhiều hơn.",
   },
   {
-    id: 3,
-    title: "Transformation Completed2",
+    id: 8,
+    title: "How to Create Specific Mind Processes to Get Exactly What you Want",
     content:
-      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+      "Làm thế nào để tạo nên những Quy Trình Tâm Trí cụ thể để có được chính xác những điều bạn muốn.",
   },
   {
-    id: 4,
-    title: "Show Commitment2",
+    id: 9,
+    title: "How to Stay Motivated & Keep Going till you are Successful",
     content:
-      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+      "Làm thế nào để luôn duy trì động lực & tiếp tục phát triển cho đến khi bạn đạt được thành công?",
   },
   {
-    id: 5,
-    title: "Show Commitment2",
+    id: 10,
+    title: "How to Create & Innovate ways to Keep Growing",
     content:
-      "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur, sonet vocibus lobortis has ad.",
+      "Kiến tạo & đổi mới nhiều cách thức khác nhau để tiếp tục phát triển",
   },
 ];
 
 export const comment = [
   {
     id: 1,
-    name: "Nông Van Dền",
-    desc: "Tuổi 47",
+    name: "Chị Nguyễn Minh Nghi",
+    desc: "28 tuổi",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies purus sit amet massa feugiat fermentum sit amet nec eros. Ut commodo elit in justo molestie bibendum. ",
+      "Các lớp học Online của LPE rất tuyệt vời, tôi được tương tác đặt câu hỏi ngay với Chuyên gia, giải quyết luôn vấn đề của mình, chứ lớp Offline thì không có cơ hội được hỏi. Tôi đã thay đổi bản thân hoàn toàn từ những lớp của thầy Vas và cô Thanh.",
   },
   {
     id: 2,
-    name: "Nông Van Dậu",
-    desc: "Tuổi 47",
+    name: "Anh Huỳnh Viết Minh",
+    desc: "38 tuổi",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies purus sit amet massa feugiat fermentum sit amet nec eros. Ut commodo elit in justo molestie bibendum. ",
+      "Nếu không có thầy chắc giờ này tôi vẫn đang làm nhân viên quèn và ngồi trách móc, than thở về cuộc đời. Thầy cho tôi thứ tôi không thể tìm ra được đó chính là mục tiêu sống của mình & động lực lớn lao để thực hiện nó.",
   },
   {
     id: 3,
-    name: "Nông Van Hâm",
-    desc: "Tuổi 47",
+    name: "Chị Dương Ánh Lan Vy",
+    desc: "34 tuổi",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies purus sit amet massa feugiat fermentum sit amet nec eros. Ut commodo elit in justo molestie bibendum. ",
-  },
-  {
-    id: 4,
-    name: "Nông Van Tiến",
-    desc: "Tuổi 47",
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies purus sit amet massa feugiat fermentum sit amet nec eros. Ut commodo elit in justo molestie bibendum. ",
+      "Tôi làm lại cuộc đời từ lớp học Online của thầy, tôi ở nước ngoài nên chỉ được học Online nhưng kết quả vượt ngoài mong đợi. Tôi đã không còn khổ đau, tiêu cực như trước và cuộc sống bây giờ vô cùng bình an, hạnh phúc. Vì tôi đã nhận ra được giá trị của mình.",
   },
 ];
+
+export const courseFee = [
+  {
+    id: 1,
+    name: "Vé gốc",
+    price: 3000000
+  },
+  {
+    id: 2,
+    name: "Vé hỗ trợ mùa covid",
+    price: 1500000
+  },
+  {
+    id: 3,
+    name: "Vé Earlybird (giới hạn)",
+    special: " (giới hạn)",
+    price: 1200000
+  }
+]

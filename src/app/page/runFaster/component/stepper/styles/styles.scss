@@ -67,6 +67,16 @@
     }
   }
 }
+@media screen and (max-width: 1200px) {
+  .stepper-number {
+    height:60px !important;
+    width:60px !important;
+  }
+  .stepper-card {
+    width: 360px!important;
+  }
+}
+
 
 @media screen and (max-width: 520px) {
   .stepper-card {

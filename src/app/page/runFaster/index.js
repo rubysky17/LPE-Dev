@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { usePageTitle } from "core/hooks/usePageTitle";
 
 import * as DATA from "../../const/runFaster";
@@ -13,7 +13,6 @@ import sand from "../../../assets/images/sand.jpg";
 import cloud1 from "../../../assets/images/cloud2.jpg";
 import cloud2 from "../../../assets/images/cloud1.jpg";
 import bgVideo from "../../../assets/images/bgVideo.jpg";
-import giaTri from "../../../assets/images/giaTri.png";
 
 import "./styles/styles.scss";
 // import { Link } from "react-router-dom";
@@ -25,9 +24,6 @@ import Comment from "./component/comment";
 function RunFaster() {
   const title = "run faster - công ty tnhh giáo dục leading performance";
   const [isOpen, setIsOpen] = useState(false);
-  const [activeClass1, setActiveClass1] = useState(true);
-  const [activeClass2, setActiveClass2] = useState(false);
-  const [day, setDay] = useState(DATA.stepperDay1);
   usePageTitle(title.toUpperCase());
 
   const settings = {
@@ -69,17 +65,20 @@ function RunFaster() {
       items: 1,
     },
   };
-  
-  const toggleDay = (day) => {
-    day === 1 ? setDay(DATA.stepperDay1) : setDay(DATA.stepperDay2);
 
-    if (day === 1) {
-      setActiveClass2(false);
-      setActiveClass1(true);
-    } else {
-      setActiveClass2(true);
-      setActiveClass1(false);
-    }
+  const stepperClass = {
+    desktop: {
+      breakpoint: { max: 2000, min: 1024 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 768, min: 0 },
+      items: 1,
+    },
   };
 
   return (
@@ -119,6 +118,7 @@ function RunFaster() {
       <div className="title-logo">
         <p className="title">Truyền thông nói về chúng tôi</p>
       </div>
+
       <Carousel
         responsive={classResponsive}
         className="intro-clip"
@@ -130,36 +130,36 @@ function RunFaster() {
       >
         {DATA.videoArray.map((item, index) => {
           return (
-            <>
-              <div className="intro-clip_logo" key={index}>
-                <a
-                  href={item.newLink}
-                  alt={item.newLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={item.img}
-                    alt={item.img}
-                    className={`img-fluid ${item.className}`}
-                  />
-                </a>
-              </div>
-            </>
+            <div className="intro-clip_logo" key={index}>
+              <a
+                href={item.newLink}
+                alt={item.newLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={item.img}
+                  alt={item.img}
+                  className={`img-fluid ${item.className}`}
+                />
+              </a>
+            </div>
           );
         })}
       </Carousel>
 
       {/* Carousel */}
       <div className="container video-container">
-        <div className="row">
+        <div className="row wow fadeInUp">
           <div className="col-md-12 col-lg-6 text-content">
-            <h2>FIND THE EVENT THAT’S RIGHT FOR YOU</h2>
+            <h2>CƠN BÃO NÀO RỒI CŨNG SẼ QUA ĐI</h2>
             <p>
-              Progress is the key to happiness – and Tony and his entire team
-              are committed to helping you make progress in every area of your
-              life so that you can go out and live the life you’ve always
-              dreamed of.
+              Không ai có thể dự đoán dược khi nào cả thế giới sẽ quay trở lại
+              bình thường như trước. Vậy điều chúng ta nên làm lúc này là chờ
+              đợi, cầu nguyện, hay tôi phải làm gì đây vì nếu nó diễn biến tệ
+              hơn thì tôi sẽ tiếp tục thất bại? Việc chờ đợi có vẻ như khá thoải
+              mái và an nhàn, nhưng chờ đợi có nghĩa là hoàn toàn thụ động trước
+              những tác nhân có thể ảnh hưởng đến cuộc đời tương lai của mình.
             </p>
             <div className="row pl-3">
               <button className="button-register">Đăng ký</button>
@@ -183,45 +183,54 @@ function RunFaster() {
       <div className="bg-item">
         <div className="container py-5">
           <div className="row stepper">
-            <div className="col-12">
+            <div className="col-12 wow bounceIn">
               <h1 className="text-center text-heading">Đã đến lúc phải chạy</h1>
             </div>
 
-            <div className="col-md-6 text-center dp-big">
+            <div className="col-md-6 text-center dp-big wow bounceInLeft">
               <Card name="info" />
               <Card name="register" />
             </div>
 
-            <div className="col-12 col-md-12 col-lg-6">
-              <div className="row center-content">
-                {day.map((item, index) => (
-                  <Stepper
-                    numberStep={item.id}
-                    key={index}
-                    title={item.title}
-                    content={item.content}
-                  />
-                ))}
-              </div>
+            <div className="col-12 col-md-12 col-lg-6  wow bounceInRight">
+              <Carousel
+                responsive={stepperClass}
+                className="row"
+                showDots={false}
+                arrows={false}
+                infinite={true}
+                autoPlay={true}
+                autoPlaySpeed={8000}
+              >
+                <div className="row center-content wrapper-step">
+                  <h1 className="day-css">Ngày 1</h1>
+                  {DATA.stepperDay1.map((item, index) => {
+                    return (
+                      <Stepper
+                        numberStep={item.id}
+                        key={index}
+                        title={item.title}
+                        content={item.content}
+                      />
+                    );
+                  })}
+                </div>
 
-              <div className="row container-button ">
-                <button
-                  onClick={() => {
-                    toggleDay(1);
-                  }}
-                  className={`buttonToggleDay ${activeClass1 && "active"}`}
-                >
-                  Ngày 1
-                </button>
-                <button
-                  onClick={() => {
-                    toggleDay(2);
-                  }}
-                  className={`buttonToggleDay ${activeClass2 && "active"}`}
-                >
-                  Ngày 2
-                </button>
-              </div>
+                <div className="row center-content wrapper-step">
+                  <h1 className="day-css">Ngày 2</h1>
+
+                  {DATA.stepperDay2.map((item, index) => {
+                    return (
+                      <Stepper
+                        numberStep={item.id}
+                        key={index}
+                        title={item.title}
+                        content={item.content}
+                      />
+                    );
+                  })}
+                </div>
+              </Carousel>
             </div>
 
             <div className="col-12 col-md-8 text-center dp-small">
@@ -234,8 +243,7 @@ function RunFaster() {
 
       {/* Người dẫn đầu vượt bão */}
       <div className="container py-5">
-        <h1 className="heading_person">Người dẫn dắt vượt bão</h1>
-        <img src={giaTri} alt={giaTri} />
+        <h1 className="heading_person wow bounceIn">Người dẫn dắt vượt bão</h1>
       </div>
 
       {/* Học phí */}
@@ -243,20 +251,16 @@ function RunFaster() {
         <div className="container ">
           <div className="row">
             <div className="col-12">
-              <h1 className="text-center text-uppercase text-heading ">
+              <h1 className="text-center text-uppercase text-heading wow bounceIn">
                 Học phí
               </h1>
             </div>
 
-            <div className="col-12 col-md-4 col-lg-4">
-              <CardPrice />
+            {DATA.courseFee.map((item,index) => {
+              return <div className="col-12 col-md-4 col-lg-4 wow fadeInUp" key={index}>
+              <CardPrice item={item} />
             </div>
-            <div className="col-12 col-md-4 col-lg-4">
-              <CardPrice />
-            </div>
-            <div className="col-12 col-md-4 col-lg-4">
-              <CardPrice />
-            </div>
+            })}
           </div>
         </div>
       </div>
@@ -264,30 +268,25 @@ function RunFaster() {
       {/* cảm nhận */}
       <section className="review">
         <div className="container">
-          <h1 className="text-center text-uppercase py-5 heading_person">
+          <h1 className="text-center text-uppercase py-5 heading_person wow bounceIn">
             Cảm nhận của học viên
           </h1>
         </div>
-
-        <div className="container carousel-review">
-          <Carousel
-            responsive={commentResponsive}
-            className="intro-clip"
-            infinite={true}
-            showDots={false}
-          >
+        <div className="container">
+          <div className="row container carousel-review wow fadeInDown">
             {DATA.comment.map((item, index) => {
               return <Comment data={item} key={index} />;
             })}
-          </Carousel>
+          </div>
         </div>
+        
       </section>
 
       <ModalVideo
         channel="youtube"
         isOpen={isOpen}
         autoplay
-        videoId="ntEoGvhoVac"
+        videoId="MvafPA1HJIw"
         onClose={() => {
           setIsOpen(false);
         }}

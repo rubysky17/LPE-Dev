@@ -3,7 +3,7 @@ import "./styles/styles.scss";
 
 function Comment({ data }) {
   return (
-    <div className="comment-container">
+    <div className="col-12 col-md-12 col-lg-4 comment-container">
       <div className="comment-container_ava">
         <img
           src="https://cdn2.iconfinder.com/data/icons/people-flat-design/64/Man-Person-People-Avatar-User-Happy-512.png"

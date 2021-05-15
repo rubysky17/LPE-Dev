@@ -3,18 +3,25 @@
   background-color: #fff;
   border: 1px solid #ccc;
   margin-top: 30px;
-  padding: 57px;
+  padding: 60px 30px;
   border-radius: 16px;
 
   .color-text {
     text-transform: uppercase;
     color: #f0932b;
+    font-size: 19px;
+    font-weight: 700;
+    font-family: sans-serif;
+  }
+  .price-text {
+    font-size: 17px;
+
   }
   .button-register {
     margin-top: 50px;
     background-color: #f39c12;
     font-size: 18px;
-    padding: 10px 25px;
+    padding: 12px 25px;
     border-radius: 16px;
     border: none;
     color: #fff;
