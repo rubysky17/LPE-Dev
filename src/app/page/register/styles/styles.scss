@@ -85,6 +85,9 @@
 }
 
 @media screen and (max-width: 650px) {
+    .bg-color {
+        background: #fff;
+    }
     .form-container {
         height: 100vh!important;
         border-radius: 0;
@@ -93,5 +96,6 @@
         flex-direction: column;
         width: 100%;
         padding: 20px;
+        margin: 50px 0;
     }
 }
