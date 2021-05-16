@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { usePageTitle } from "core/hooks/usePageTitle";
-import { Link } from "react-router-dom";
 
 import * as DATA from "../../const/runFaster";
 // slider
@@ -96,7 +95,7 @@ function RunFaster() {
   return (
     <>
       {isLoading ? (
-            <Loading />
+        <Loading />
       ) : (
         <>
           <div className="container-fluid" style={{ padding: 0 }}>
@@ -181,9 +180,37 @@ function RunFaster() {
                   đời tương lai của mình.
                 </p>
                 <div className="row pl-3">
-                  <Link to="/dang-ky">
+                  <a
+             
+             
+             
+             
+             
+             
+             
+             
+                                                                    href="https://lpe.vn/dang-ky-run-faster/"
+       
+       
+       
+       
+       
+       
+       
+       
+                                                                                                    target="_blank"
+                    rel="noopener noreferrer"
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  >
                     <button className="button-register">Đăng ký</button>
-                  </Link>
+                  </a>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 video-content">
@@ -363,27 +390,27 @@ function RunFaster() {
             </div>
           </section>
           <footer>
-          <div className="text-center">
-      </div>
-      <h3 className="name">Công Ty TNHH Giáo Dục Leading Performance</h3>
+            <div className="text-center"></div>
+            <h3 className="name">Công Ty TNHH Giáo Dục Leading Performance</h3>
 
-      <div className="f-line">
-        <i className="fas fa-map-marker-alt"></i>
-        <span>
-          490 Phạm Thái Bường, Khu Mỹ Toàn I, P. Tân Phong, Quận 7, TP. HCM.
-        </span>
-      </div>
+            <div className="f-line">
+              <i className="fas fa-map-marker-alt"></i>
+              <span>
+                490 Phạm Thái Bường, Khu Mỹ Toàn I, P. Tân Phong, Quận 7, TP.
+                HCM.
+              </span>
+            </div>
 
-      <div className="f-line">
-        Sáng: 7h00 - 11h30 <i className="far fa-clock"></i>
-        Chiều: 12h45 - 16h15
-      </div>
-      <div className="f-line mr-0">
-        <span className="f-line_phone">
-          <i className="fas fa-phone-alt"></i> 028 7303 9996 - 1900 636 034
-        </span>
-       
-      </div>
+            <div className="f-line">
+              Sáng: 7h00 - 11h30 <i className="far fa-clock"></i>
+              Chiều: 12h45 - 16h15
+            </div>
+            <div className="f-line mr-0">
+              <span className="f-line_phone">
+                <i className="fas fa-phone-alt"></i> 028 7303 9996 - 1900 636
+                034
+              </span>
+            </div>
           </footer>
           <ModalVideo
             channel="youtube"

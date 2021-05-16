@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./styles/styles.scss";
 
 function CardPrice({ item }) {
@@ -11,14 +10,15 @@ function CardPrice({ item }) {
         <span>VNĐ</span>
       </p>
 
-      <Link to="/dang-ky">
+      <a href="https://lpe.vn/dang-ky-run-faster/"   target="_blank"
+                    rel="noopener noreferrer">
         <button
           className={`button-register ${item.disabled && "disabled"}`}
           disabled={item.disabled}
         >
           Đăng ký ngay
         </button>
-      </Link>
+      </a>
     </div>
   );
 }

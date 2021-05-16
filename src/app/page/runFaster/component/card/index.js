@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import "./styles/styles.scss";
 function Card({ name }) {
@@ -13,9 +12,10 @@ function Card({ name }) {
             của chúng ta & tìm cho mình một hướng đi mới, đúng đắn, phù hợp &
             đem lại nguồn thu hiệu quả.
           </p>
-          <Link to="/dang-ky">
+          <a href="https://lpe.vn/dang-ky-run-faster/"   target="_blank"
+                    rel="noopener noreferrer">
             <button className="card-register">Đăng ký</button>
-          </Link>
+          </a>
         </div>
       )}
 
@@ -37,3 +37,31 @@ function Card({ name }) {
 }
 
 export default Card;
+
+                   
+                 
+                  
+                   
+                 
+                  
+                   
+                 
+                  
+                   
+                 
+                  
+                   
+                 
+                  
+                   
+                 
+                  
+                   
+                 
+                  
+                   
+                 
+                  
+                   
+                 
+                  
