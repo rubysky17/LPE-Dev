@@ -12,15 +12,14 @@ import "./assets/styles/common.scss";
 import "react-multi-carousel/lib/styles.css";
 
 const meta = {
-  title: 'TÌM LẠI LẼ SỐNG VÀ KHÁT VỌNG THÀNH CÔNG',
-  description: 'Nhấp vào link để tìm hiểu khóa học',
-  image: "https://lpe.vn/storage/vip-lpe/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-banner.jpg",
+  title: "CẢM ƠN BẠN ĐÃ ĐĂNG KÝ KHÓA HỌC - THÀNH CÔNG",
+  description: "Chúc mừng bạn đẵ đăng ký thành công khóa học",
   meta: {
-    charset: 'utf-8',
+    charset: "utf-8",
     name: {
-      keywords: 'react,meta,document,html,tags'
-    }
-  }
+      keywords: "react,meta,document,html,tags",
+    },
+  },
 };
 
 ReactDOM.render(
