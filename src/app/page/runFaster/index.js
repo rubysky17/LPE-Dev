@@ -73,8 +73,8 @@ function RunFaster() {
 
   useEffect(() => {
     const handleLoading = setTimeout(() => {
-      setIsLoading(false)
-    }, 1200);
+      setIsLoading(false);
+    }, 1500);
     return () => {
       clearTimeout(handleLoading)
     }
