@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch,Route } from "react-router-dom";
 import { HomeTemplate } from "app/template/homeTemplate";
 import RunFaster from "./app/page/runFaster";
 import RegisterPage from "app/page/register";
-import Loading from "app/components/loading";
 
 function App() {
   useEffect(() => {
@@ -21,10 +20,6 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/loading">
-          <Loading />
-        </Route>
-
         <HomeTemplate exact path="/run-faster" Component={RunFaster} />
 
         <Route exact path="/dang-ky">

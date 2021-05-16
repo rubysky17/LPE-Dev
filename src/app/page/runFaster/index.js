@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { usePageTitle } from "core/hooks/usePageTitle";
 import { Link } from "react-router-dom";
 
@@ -22,10 +22,13 @@ import Stepper from "./component/stepper";
 import Card from "./component/card";
 import CardPrice from "./component/cardPrice";
 import Comment from "./component/comment";
+import Loading from "../../components/loading";
+
 
 function RunFaster() {
   const title = "run faster - công ty tnhh giáo dục leading performance";
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   usePageTitle(title.toUpperCase());
 
   const settings = {
@@ -68,8 +71,18 @@ function RunFaster() {
     },
   };
 
+  useEffect(() => {
+    const handleLoading = setTimeout(() => {
+      setIsLoading(false)
+    }, 1200);
+    return () => {
+      clearTimeout(handleLoading)
+    }
+  }, []);
+  
   return (
     <>
+     {isLoading ? <Loading /> : <>
       <div className="container-fluid" style={{ padding: 0 }}>
         <Slider {...settings}>
           <div className="carousel-item">
@@ -338,6 +351,7 @@ function RunFaster() {
           setIsOpen(false);
         }}
       />
+     </>}
     </>
   );
 }
