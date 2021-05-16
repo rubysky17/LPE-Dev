@@ -1,26 +1,20 @@
-import React, { useEffect } from "react";
-import { WOW } from "wowjs";
+import React from "react";
 import { BrowserRouter as Router, Switch,Route } from "react-router-dom";
 
-import { HomeTemplate } from "app/template/homeTemplate";
 import RunFaster from "./app/page/runFaster";
 import RegisterPage from "app/page/register";
 
-function App() {
-  useEffect(() => {
-    const wow = new WOW({
-      offset: 100,
-      mobile: false,
-      live: true,
-    });
 
-    wow.init();
-  }, []);
+
+function App() {
+  
 
   return (
     <Router>
       <Switch>
-        <HomeTemplate exact path="/run-faster" Component={RunFaster} />
+        <Route exact path="/run-faster">
+          <RunFaster />
+        </Route>
 
         <Route exact path="/dang-ky">
           <RegisterPage />

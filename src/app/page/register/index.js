@@ -23,10 +23,16 @@ function RegisterPage() {
         <>
           <div className="bg-color container-fluid">
             <div className="form-container">
-              <h1 className="text-center heading-form">Thông tin đăng ký khóa học</h1>
-              <p className="desc-text">Bạn điền thông tin đăng ký khóa học Run Faster tại đây</p>
-              <p className="desc-text">LPE sẽ liên hệ với bạn trong thời gian sớm nhất</p>
-              
+              <h1 className="text-center heading-form">
+                Thông tin đăng ký khóa học
+              </h1>
+              <p className="desc-text">
+                Bạn điền thông tin đăng ký khóa học Run Faster tại đây
+              </p>
+              <p className="desc-text">
+                LPE sẽ liên hệ với bạn trong thời gian sớm nhất
+              </p>
+
               <form
                 action="https://app.getresponse.com/add_subscriber.html"
                 acceptCharset="utf-8"
@@ -59,7 +65,7 @@ function RegisterPage() {
                   <input
                     name="custom_bod"
                     type="text"
-                    placeholder="VD: 10/11/2000"
+                    placeholder="VD: 10/11/1993"
                   />
 
                   <p>Định dạng: dd/MM/YYYY</p>
