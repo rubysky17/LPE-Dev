@@ -21,7 +21,7 @@ function RegisterPage() {
         <Loading />
       ) : (
         <>
-          <div className="bg-color container-fluid">
+            <div className="bg-color"></div>
             <div className="form-container">
               <h1 className="text-center heading-form">
                 Thông tin đăng ký khóa học
@@ -119,7 +119,6 @@ function RegisterPage() {
                 </button>
               </form>
             </div>
-          </div>
         </>
       )}
     </>
