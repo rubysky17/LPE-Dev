@@ -21,9 +21,9 @@ function App() {
       <Switch>
         <HomeTemplate exact path="/run-faster" Component={RunFaster} />
 
-        <Route exact path="/dang-ky" >
-            <RegisterPage />
-          </Route>
+        <Route exact path="/dang-ky">
+          <RegisterPage />
+        </Route>
       </Switch>
     </Router>
   );

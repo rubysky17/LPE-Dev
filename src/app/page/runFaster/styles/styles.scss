@@ -113,8 +113,15 @@
     text-transform: uppercase;
     color: #fff;
     border: 1px solid #f0932b;
-
+    a {
+      text-decoration: none;
+      color: #fff;
+     
+    }
     &:hover {
+      a {
+      color: #f0932b;
+      }
       background-color: #fff;
       border: 1px solid #f0932b;
       color: #f0932b;
@@ -123,8 +130,6 @@
 }
 
 .video-content {
-  position: relative;
-
   img {
     border-radius: 16px;
   }
@@ -557,3 +562,11 @@
   }
 }
 
+@media screen and (max-width: 1200px) and (min-width: 992px){
+ .video-content {
+   .button-play {
+    top: 30%;
+    left: 50%;
+   }
+ } 
+}

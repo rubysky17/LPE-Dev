@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles/styles.scss";
 
-function CardPrice({ href, item }) {
+function CardPrice({ item }) {
   return (
     <div className="cardPrice-container">
       <p className="color-text">{item.name}</p>
@@ -10,12 +11,14 @@ function CardPrice({ href, item }) {
         <span>VNĐ</span>
       </p>
 
-      <button
-        className={`button-register ${item.disabled && "disabled"}`}
-        disabled={item.disabled}
-      >
-        <a href={href}>Đăng ký ngay</a>
-      </button>
+      <Link to="/dang-ky">
+        <button
+          className={`button-register ${item.disabled && "disabled"}`}
+          disabled={item.disabled}
+        >
+          Đăng ký ngay
+        </button>
+      </Link>
     </div>
   );
 }

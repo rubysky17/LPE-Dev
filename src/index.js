@@ -12,9 +12,9 @@ import "./assets/styles/common.scss";
 import "react-multi-carousel/lib/styles.css";
 
 const meta = {
-  title: 'TÌM LẠI LẼ SỐNG VÀ KHÁT VỌNG THÀNH CÔNG',
+  title: 'RUN FASTER - Chạy nhanh hơn nữa',
   description: 'Nhấp vào link để tìm hiểu khóa học',
-  image: "https://lpe.vn/storage/vip-lpe/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-banner.jpg",
+  image: "https://lpe.vn/run-faster/static/media/bgVideo.d259a1d4.png",
   meta: {
     charset: 'utf-8',
     name: {

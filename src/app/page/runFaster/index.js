@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { usePageTitle } from "core/hooks/usePageTitle";
+import { Link } from "react-router-dom";
 
 import * as DATA from "../../const/runFaster";
 // slider
@@ -150,7 +151,9 @@ function RunFaster() {
               những tác nhân có thể ảnh hưởng đến cuộc đời tương lai của mình.
             </p>
             <div className="row pl-3">
-              <button className="button-register">Đăng ký</button>
+              <Link to="/dang-ky">
+                <button className="button-register">Đăng ký</button>
+              </Link>
             </div>
           </div>
           <div className="col-md-12 col-lg-6 video-content">
@@ -175,12 +178,18 @@ function RunFaster() {
               <h1 className="text-center text-heading">Đã đến lúc phải chạy</h1>
             </div>
 
-            <div className="col-md-6 text-center dp-big wow bounceInLeft" data-wow-delay="0.3s">
+            <div
+              className="col-md-6 text-center dp-big wow bounceInLeft"
+              data-wow-delay="0.3s"
+            >
               <Card name="info" />
               <Card name="register" />
             </div>
 
-            <div className="col-12 col-md-12 col-lg-6  wow bounceInRight" data-wow-delay="0.3s">
+            <div
+              className="col-12 col-md-12 col-lg-6  wow bounceInRight"
+              data-wow-delay="0.3s"
+            >
               <Carousel
                 responsive={stepperClass}
                 className="row"
@@ -207,7 +216,7 @@ function RunFaster() {
                 </div>
 
                 <div className="row center-content wrapper-step">
-                                      <div className="col-sm-12 text-center block-day">
+                  <div className="col-sm-12 text-center block-day">
                     <h1 className="day-css">Ngày 2</h1>
                   </div>
                   {DATA.stepperDay2.map((item, index) => {
@@ -234,11 +243,16 @@ function RunFaster() {
 
       {/* Người dẫn đầu vượt bão */}
       <div className="container py-5">
-        <h1 className="heading_person wow bounceIn" data-wow-delay="0.3s">Người dẫn dắt vượt bão</h1>
+        <h1 className="heading_person wow bounceIn" data-wow-delay="0.3s">
+          Người dẫn dắt vượt bão
+        </h1>
         <div className="col-12">
-          <img src={mrVas} alt={mrVas} className="img-vas_big"/>
+          <img src={mrVas} alt={mrVas} className="img-vas_big" />
         </div>
-        <div className="row container-vas wow bounceInRight" data-wow-delay="0.3s">
+        <div
+          className="row container-vas wow bounceInRight"
+          data-wow-delay="0.3s"
+        >
           <div className="col-12 col-md-8 content-vas">
             <p>
               Mr. Vas đã có gần 30 năm dẫn dắt quân đội tại Singapore & hơn 17
@@ -270,7 +284,10 @@ function RunFaster() {
         <div className="container ">
           <div className="row">
             <div className="col-12">
-              <h1 className="text-center text-uppercase text-heading wow bounceIn" data-wow-delay="0.3s">
+              <h1
+                className="text-center text-uppercase text-heading wow bounceIn"
+                data-wow-delay="0.3s"
+              >
                 Học phí
               </h1>
             </div>
@@ -293,12 +310,18 @@ function RunFaster() {
       {/* cảm nhận */}
       <section className="review">
         <div className="container">
-          <h1 className="text-center text-uppercase py-5 heading_person wow bounceIn" data-wow-delay="0.3s">
+          <h1
+            className="text-center text-uppercase py-5 heading_person wow bounceIn"
+            data-wow-delay="0.3s"
+          >
             Cảm nhận của học viên
           </h1>
         </div>
         <div className="container">
-          <div className="row container carousel-review wow fadeInUp" data-wow-delay="0.3s">
+          <div
+            className="row carousel-review wow fadeInUp"
+            data-wow-delay="0.3s"
+          >
             {DATA.comment.map((item, index) => {
               return <Comment data={item} key={index} />;
             })}

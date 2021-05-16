@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./styles/styles.scss";
 function Card({ name }) {
   return (
@@ -7,11 +9,13 @@ function Card({ name }) {
         <div className="card-content">
           <h1 className="card-title">Bạn đã sẵn sàng?</h1>
           <p className="card-desc">
-          Trở nên nhận thức hơn về biến cố đang diễn ra ngay trong cuộc sống của chúng ta & tìm cho mình một hướng đi mới, đúng đắn, phù hợp & đem lại nguồn thu hiệu quả. 
+            Trở nên nhận thức hơn về biến cố đang diễn ra ngay trong cuộc sống
+            của chúng ta & tìm cho mình một hướng đi mới, đúng đắn, phù hợp &
+            đem lại nguồn thu hiệu quả.
           </p>
-          <button className="card-register">
-            <a href="/">Đăng ký</a>
-          </button>
+          <Link to="/dang-ky">
+            <button className="card-register">Đăng ký</button>
+          </Link>
         </div>
       )}
 
