@@ -277,46 +277,46 @@ function RunFaster() {
 
           {/* Người dẫn đầu vượt bão */}
           <div className="bg-nguoiVuotBao">
-          <div className="container py-5">
-            <h1 className="heading_person wow bounceIn" data-wow-delay="0.3s">
-              Người dẫn dắt vượt bão
-            </h1>
-            <div className="col-12">
-              <img src={mrVas} alt={mrVas} className="img-vas_big" />
-            </div>
-            <div
-              className="row container-vas wow bounceInRight"
-              data-wow-delay="0.3s"
-            >
-              <div className="col-12 col-md-8">
-                <p>
-                  Mr. Vas đã có gần 30 năm dẫn dắt quân đội tại Singapore & hơn
-                  17 năm nghiên cứu, làm việc về lĩnh vực NLP, cùng các ngành
-                  khoa học Tâm Trí khác. Ông đã huấn luyện, đào tạo, mang đến sự
-                  phát triển vượt bậc cho hàng trăm ngàn người ở khắp Châu Á.
-                </p>
-                <p>
-                  Với tầm nhìn “mang đến cuộc sống bình an & hạnh phúc cho nhân
-                  loại”, Mr. Vas đã & đang không ngừng nghiên cứu, phát triển
-                  các chương trình dạy của mình. Khi Covid hoành hành, Mr. Vas
-                  nhận thức được rằng tất cả chúng ta không thể dậm chân tại chỗ
-                  & chờ đợi nó trôi qua. Cần phải làm điều gì đó để mọi người có
-                  thể vực dậy mạnh mẽ hơn & tiếp tục “chạy nhanh hơn” về phía
-                  trước.
-                </p>
-                <p>
-                  Mr. Vas sẽ là Người đồng hành - dẫn dắt để tất cả chúng ta
-                  cùng nhau vượt qua cơn bão mang tên Covid-19. Nhưng chỉ khi
-                  bạn thật sự mong muốn “vượt bão” & sẵn sàng chấp nhận thách
-                  thức.
-                </p>
+            <div className="container py-5">
+              <h1 className="heading_person wow bounceIn" data-wow-delay="0.3s">
+                Người dẫn dắt vượt bão
+              </h1>
+              <div className="col-12">
+                <img src={mrVas} alt={mrVas} className="img-vas_big" />
               </div>
-              <div className="col-md-4"></div>
-              <img src={mrVas} alt={mrVas} className="img-vas" />
+              <div
+                className="row container-vas wow bounceInRight"
+                data-wow-delay="0.3s"
+              >
+                <div className="col-12 col-md-8">
+                  <p>
+                    Mr. Vas đã có gần 30 năm dẫn dắt quân đội tại Singapore &
+                    hơn 17 năm nghiên cứu, làm việc về lĩnh vực NLP, cùng các
+                    ngành khoa học Tâm Trí khác. Ông đã huấn luyện, đào tạo,
+                    mang đến sự phát triển vượt bậc cho hàng trăm ngàn người ở
+                    khắp Châu Á.
+                  </p>
+                  <p>
+                    Với tầm nhìn “mang đến cuộc sống bình an & hạnh phúc cho
+                    nhân loại”, Mr. Vas đã & đang không ngừng nghiên cứu, phát
+                    triển các chương trình dạy của mình. Khi Covid hoành hành,
+                    Mr. Vas nhận thức được rằng tất cả chúng ta không thể dậm
+                    chân tại chỗ & chờ đợi nó trôi qua. Cần phải làm điều gì đó
+                    để mọi người có thể vực dậy mạnh mẽ hơn & tiếp tục “chạy
+                    nhanh hơn” về phía trước.
+                  </p>
+                  <p>
+                    Mr. Vas sẽ là Người đồng hành - dẫn dắt để tất cả chúng ta
+                    cùng nhau vượt qua cơn bão mang tên Covid-19. Nhưng chỉ khi
+                    bạn thật sự mong muốn “vượt bão” & sẵn sàng chấp nhận thách
+                    thức.
+                  </p>
+                </div>
+                <div className="col-md-4"></div>
+                <img src={mrVas} alt={mrVas} className="img-vas" />
+              </div>
             </div>
           </div>
-          </div>
-         
 
           {/* Học phí */}
           <div className="price">
@@ -381,8 +381,8 @@ function RunFaster() {
             </div>
 
             <div className="f-line">
-              Sáng: 7h00 - 11h30 <i className="far fa-clock"></i>
-              Chiều: 12h45 - 16h15
+              Sáng: 7h30 - 12h00 <i className="far fa-clock"></i>
+              Chiều: 13h00 - 16h30
             </div>
             <div className="f-line mr-0">
               <span className="f-line_phone">
