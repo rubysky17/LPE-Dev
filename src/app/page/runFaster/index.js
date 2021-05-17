@@ -276,6 +276,7 @@ function RunFaster() {
           </div>
 
           {/* Người dẫn đầu vượt bão */}
+          <div className="bg-nguoiVuotBao">
           <div className="container py-5">
             <h1 className="heading_person wow bounceIn" data-wow-delay="0.3s">
               Người dẫn dắt vượt bão
@@ -287,7 +288,7 @@ function RunFaster() {
               className="row container-vas wow bounceInRight"
               data-wow-delay="0.3s"
             >
-              <div className="col-12 col-md-8 content-vas">
+              <div className="col-12 col-md-8">
                 <p>
                   Mr. Vas đã có gần 30 năm dẫn dắt quân đội tại Singapore & hơn
                   17 năm nghiên cứu, làm việc về lĩnh vực NLP, cùng các ngành
@@ -314,10 +315,12 @@ function RunFaster() {
               <img src={mrVas} alt={mrVas} className="img-vas" />
             </div>
           </div>
+          </div>
+         
 
           {/* Học phí */}
           <div className="price">
-            <div className='bg-adding'></div>
+            <div className="bg-adding"></div>
             <div className="container">
               <div className="row">
                 <div className="col-12">
@@ -348,7 +351,7 @@ function RunFaster() {
           <section className="review">
             <div className="container">
               <h1
-                className="text-center text-uppercase py-5 heading_person wow bounceIn"
+                className="text-center text-uppercase py-5 heading_fee wow bounceIn"
                 data-wow-delay="0.3s"
               >
                 Cảm nhận của học viên
@@ -388,7 +391,7 @@ function RunFaster() {
               </span>
             </div>
           </footer>
-          
+
           <ModalVideo
             channel="youtube"
             isOpen={isOpen}
