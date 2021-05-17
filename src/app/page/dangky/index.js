@@ -41,10 +41,11 @@ function RegisterPage() {
               {/* Tên */}
               <div className="input-container">
                 <label>Họ và tên</label>
-
                 <input
                   type="text"
                   name="name"
+                  pattern="/^[a-zA-Z!@#\$%\^\&*\)\(+=._-]{2,}$/g"
+                  minlength="4"
                   required
                   placeholder="VD: Nguyễn Văn A"
                 />
@@ -52,13 +53,23 @@ function RegisterPage() {
               {/* Trường email (bắt buộc) */}
               <div className="input-container">
                 <label>Địa chỉ Email</label>
-
                 <input
                   type="email"
                   name="email"
                   required
                   placeholder="VD: nguyenvana@gmail.com"
                 />
+              </div>
+              <div className="input-container">
+                <label>Số điện thoại:</label>
+                <input
+                  name="custom_dt"
+                  type="tel"
+                  pattern="[0]{1}[0-9]{9}"
+                  placeholder="VD: 0933333333"
+                  required
+                />
+                <p>Nhập đủ 10 chữ số điện thoại</p>
               </div>
               <div className="input-container">
                 <label>Ngày sinh</label>
@@ -71,27 +82,7 @@ function RegisterPage() {
 
                 <p>Định dạng: dd/MM/YYYY</p>
               </div>
-              <div className="input-container">
-                <label>Nguyện vọng</label>
-                <textarea
-                  name="custom_desire"
-                  type="text"
-                  placeholder="Nhập nguyện vọng mong muốn của bạn sau khóa học"
-                  required
-                />
-              </div>
-              <div className="input-container">
-                <label>Số điện thoại:</label>
-                <input
-                  name="custom_dt"
-                  type="tel"
-                  pattern="[0]{1}[0-9]{9}"
-                  placeholder="VD: 0933333333"
-                  required
-                />
-
-                <p>Nhập đủ 10 chữ số điện thoại</p>
-              </div>
+              
               <div className="input-container">
                 <label>Công việc hiện tại:</label>
                 <input
