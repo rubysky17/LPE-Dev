@@ -14,7 +14,7 @@ import { WOW } from "wowjs";
 import sand from "../../../assets/images/sand.jpg";
 import cloud1 from "../../../assets/images/cloud2.jpg";
 import cloud2 from "../../../assets/images/cloud1.jpg";
-import bgVideo from "../../../assets/images/bgVideo.png";
+import bgVideo from "../../../assets/images/bgVideo.jpg";
 import mrVas from "../../../assets/images/mrVas.png";
 // component
 import Stepper from "./component/stepper";
@@ -123,9 +123,8 @@ function RunFaster() {
               <div className="carousel-item">
                 <img src={sand} alt={sand} className="carousel-img" />
                 <div className="carousel-text shadow-text">
-                  <h1 className="text-2">UNLOCK YOUR</h1>
-                  <h1>MINE POWER</h1>
-                  <p>Mở khóa sức mạnh tâm trí</p>
+                  <h1 className="text-1">RUN FASTER</h1>
+                  <p>Chạy nhanh hơn</p>
                 </div>
               </div>
             </Slider>
@@ -169,7 +168,7 @@ function RunFaster() {
           <div className="container video-container">
             <div className="row wow fadeInUp" data-wow-delay="0.3s">
               <div className="col-md-12 col-lg-6 text-content">
-                <h2>CƠN BÃO NÀO RỒI CŨNG SẼ QUA ĐI</h2>
+                <h2>“CƠN BÃO NÀO RỒI CŨNG SẼ QUA ĐI”?!</h2>
                 <p>
                   Không ai có thể dự đoán dược khi nào cả thế giới sẽ quay trở
                   lại bình thường như trước. Vậy điều chúng ta nên làm lúc này
@@ -181,33 +180,9 @@ function RunFaster() {
                 </p>
                 <div className="row pl-3">
                   <a
-             
-             
-             
-             
-             
-             
-             
-             
-                                                                    href="https://lpe.vn/dang-ky-run-faster/"
-       
-       
-       
-       
-       
-       
-       
-       
-                                                                                                    target="_blank"
+                    href="https://lpe.vn/dang-ky-run-faster/"
+                    target="_blank"
                     rel="noopener noreferrer"
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
                   >
                     <button className="button-register">Đăng ký</button>
                   </a>
@@ -253,7 +228,7 @@ function RunFaster() {
                     responsive={stepperClass}
                     className="row"
                     showDots={false}
-                    arrows={false}
+                    arrows={true}
                     infinite={true}
                     autoPlay={true}
                     autoPlaySpeed={8000}
@@ -342,7 +317,8 @@ function RunFaster() {
 
           {/* Học phí */}
           <div className="price">
-            <div className="container ">
+            <div className='bg-adding'></div>
+            <div className="container">
               <div className="row">
                 <div className="col-12">
                   <h1
@@ -412,6 +388,7 @@ function RunFaster() {
               </span>
             </div>
           </footer>
+          
           <ModalVideo
             channel="youtube"
             isOpen={isOpen}

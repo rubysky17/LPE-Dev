@@ -5,10 +5,7 @@ function Comment({ data }) {
   return (
     <div className="col-12 col-md-12 col-lg-4 comment-container">
       <div className="comment-container_ava">
-        <img
-          src="https://cdn2.iconfinder.com/data/icons/people-flat-design/64/Man-Person-People-Avatar-User-Happy-512.png"
-          alt="ava"
-        />
+        <img src={data.img} alt="ava" />
         <p className="comment-name">{data.name}</p>
         <p className="comment-desc">{data.desc}</p>
       </div>

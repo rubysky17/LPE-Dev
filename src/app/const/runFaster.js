@@ -4,6 +4,9 @@ import phuNuLogo from "assets/images/phuNu.png";
 import tienPhong from "assets/images/tienPhong.png";
 import doanhNhan from "assets/images/doanhNhan.png";
 import danTri from "assets/images/danTri.png";
+import nam1 from "assets/images/nam1.PNG";
+import nuhr from "assets/images/nuhr.jpg";
+import nunvvp from "assets/images/nunvvp.jpg";
 
 export const videoArray = [
   {
@@ -117,21 +120,26 @@ export const comment = [
   {
     id: 1,
     name: "Chị Nguyễn Minh Nghi",
-    desc: "28 tuổi",
+    desc: "Nhân viên văn phòng",
+    img: nunvvp,
+
     comment:
       "Các lớp học Online của LPE rất tuyệt vời, tôi được tương tác đặt câu hỏi ngay với Chuyên gia, giải quyết luôn vấn đề của mình, chứ lớp Offline thì không có cơ hội được hỏi. Tôi đã thay đổi bản thân hoàn toàn từ những lớp của thầy Vas và cô Thanh.",
   },
   {
     id: 2,
     name: "Anh Huỳnh Viết Minh",
-    desc: "38 tuổi",
+    desc: "IT leader",
+    img: nam1,
     comment:
       "Nếu không có thầy chắc giờ này tôi vẫn đang làm nhân viên quèn và ngồi trách móc, than thở về cuộc đời. Thầy cho tôi thứ tôi không thể tìm ra được đó chính là mục tiêu sống của mình & động lực lớn lao để thực hiện nó.",
   },
   {
     id: 3,
     name: "Chị Dương Ánh Lan Vy",
-    desc: "34 tuổi",
+    desc: "HR manager",
+    img: nuhr,
+
     comment:
       "Tôi làm lại cuộc đời từ lớp học Online của thầy, tôi ở nước ngoài nên chỉ được học Online nhưng kết quả vượt ngoài mong đợi. Tôi đã không còn khổ đau, tiêu cực như trước và cuộc sống bây giờ vô cùng bình an, hạnh phúc. Vì tôi đã nhận ra được giá trị của mình.",
   },

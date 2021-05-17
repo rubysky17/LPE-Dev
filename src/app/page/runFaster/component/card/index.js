@@ -12,8 +12,11 @@ function Card({ name }) {
             của chúng ta & tìm cho mình một hướng đi mới, đúng đắn, phù hợp &
             đem lại nguồn thu hiệu quả.
           </p>
-          <a href="https://lpe.vn/dang-ky-run-faster/"   target="_blank"
-                    rel="noopener noreferrer">
+          <a
+            href="https://lpe.vn/dang-ky-run-faster/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button className="card-register">Đăng ký</button>
           </a>
         </div>
@@ -22,13 +25,13 @@ function Card({ name }) {
       {name === "info" && (
         <div className="card-content">
           <p className="card-content_text">
-            Ngày bắt đầu: <span>27.05.2021 – 28.05.2021</span>
+            Ngày ngày học: <span>27.05.2021 – 28.05.2021</span>
           </p>
           <p className="card-content_text">
             Thời gian: <span>18h30 – 22h30</span>
           </p>
           <p className="card-content_text">
-            Hình thức: <span>Học Online – 2 buổi tối</span>
+            Hình thức: <span>Học truyền hình trực tiếp</span>
           </p>
         </div>
       )}
