@@ -17,18 +17,29 @@ function RegisterPage() {
     };
   }, []);
 
+  const validateEmail = (email) => {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const validatePhone = (phone) => {
+    const regex = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+    return phone.match(regex);
+  };
+
   const handleForm = (data) => {
-       axios({
-        method: 'post',
-        url: 'https://sheet.best/api/sheets/a5d532ed-85e2-449d-a1e1-2c909555dabd',
-        data,
+    axios({
+      method: "post",
+      url: "https://sheet.best/api/sheets/a5d532ed-85e2-449d-a1e1-2c909555dabd",
+      data: data,
     })
-    .then(function (response) {
+      .then(function (response) {
         console.log(response);
-    })
-    .catch(function (error) {
+      })
+      .catch(function (error) {
         console.log(error);
-    });
+      });
   };
 
   const getDataSubmit = () => {
@@ -60,11 +71,19 @@ function RegisterPage() {
         }
       }
     }
-    
+
     // catching error when submit form
-    if (!name || !email || !custom_dt || !custom_bod || !custom_job) {
+    if (
+      !name ||
+      !email ||
+      !custom_dt ||
+      !custom_bod ||
+      !custom_job ||
+      !validateEmail(email) ||
+      !validatePhone(custom_dt)
+    ) {
       // if value is false action is return;
-      return
+      return;
     } else {
       handleForm(dataSubmit);
     }
