@@ -1,13 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import Loading from "../../components/loading";
-import { Redirect } from 'react-router-dom'
 
 import "./styles/styles.scss";
 
 function RegisterPage() {
   const [isLoading, setIsLoading] = useState(true);
-  const refForm = useRef(null)
+  const refForm = useRef(null);
 
   useEffect(() => {
     const handleLoading = setTimeout(() => {
@@ -19,42 +18,57 @@ function RegisterPage() {
   }, []);
 
   const handleForm = (data) => {
-    fetch('https://app.getresponse.com/add_subscriber.html', {
-      method: 'post',
-      body : JSON.stringify({
-        data
-      }),
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
+       axios({
+        method: 'post',
+        url: 'https://sheet.best/api/sheets/a5d532ed-85e2-449d-a1e1-2c909555dabd',
+        data,
     })
-    .then(res => console.log(res)) // It parses the output
-    .catch(function(error) {
-      console.log("error---", error)
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
     });
-  }
-  
+  };
 
-  const getDataSubmit = (e) => {
-    e.preventDefault()
-    const dataSubmit = [];
-    
+  const getDataSubmit = () => {
+    const dataSubmit = {};
+
+    const name = refForm.current["name"].value;
+    const email = refForm.current["email"].value;
+    const custom_dt = refForm.current["custom_dt"].value;
+    const custom_bod = refForm.current["custom_bod"].value;
+    const custom_job = refForm.current["custom_job"].value;
+
+    // Loop for get dataSubmit
     for (let index = 0; index < refForm.current.length; index++) {
       const { name, value } = refForm.current[index];
-      if (!value.length) {
+      if (!value.length || value === "") {
         refForm.current[index].focus();
       } else {
         switch (name) {
-            default:
-              dataSubmit[name] = value;
+          // bypass value
+          case "campaign_token":
+            break;
+          case "thankyou_url":
+            break;
+          case "start_day":
+            break;
+          default:
+            dataSubmit[name] = value;
             break;
         }
       }
     }
-
-    handleForm(dataSubmit)
-  }
+    
+    // catching error when submit form
+    if (!name || !email || !custom_dt || !custom_bod || !custom_job) {
+      // if value is false action is return;
+      return
+    } else {
+      handleForm(dataSubmit);
+    }
+  };
 
   return (
     <>
@@ -75,7 +89,6 @@ function RegisterPage() {
             </p>
 
             <form
-              // onSubmit={getDataSubmit}
               action="https://app.getresponse.com/add_subscriber.html"
               acceptCharset="utf-8"
               method="post"
@@ -125,7 +138,7 @@ function RegisterPage() {
 
                 <p>Định dạng: dd/MM/YYYY</p>
               </div>
-              
+
               <div className="input-container">
                 <label>Công việc hiện tại:</label>
                 <input
@@ -140,15 +153,21 @@ function RegisterPage() {
               {/* Nhận mã thông báo tại: https://app.getresponse.com/campaign_list.html https://app.getresponse.com/campaign_list.html */}
               <input type="hidden" name="campaign_token" defaultValue="5a3RU" />
               {/* Trang cảm ơn (tùy chọn) */}
-              {/* <input
+              <input
                 type="hidden"
                 name="thankyou_url"
                 defaultValue="https://lpe.vn/thank-you"
-              /> */}
+              />
               {/* Thêm người đăng ký vào chuỗi theo dõi với ngày được xác định (tùy chọn) */}
               <input type="hidden" name="start_day" defaultValue={0} />
               {/* Nút Người đăng ký */}
-              <button type="submit" defaultValue="Subscribe">
+              <button
+                type="submit"
+                defaultValue="Subscribe"
+                onClick={() => {
+                  getDataSubmit();
+                }}
+              >
                 Xác nhận
               </button>
             </form>
