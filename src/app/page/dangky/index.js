@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import axios from "axios";
 import Loading from "../../components/loading";
+import { Redirect } from 'react-router-dom'
 
 import "./styles/styles.scss";
 
 function RegisterPage() {
   const [isLoading, setIsLoading] = useState(true);
+  const refForm = useRef(null)
 
   useEffect(() => {
     const handleLoading = setTimeout(() => {
@@ -14,6 +17,44 @@ function RegisterPage() {
       clearTimeout(handleLoading);
     };
   }, []);
+
+  const handleForm = (data) => {
+    fetch('https://app.getresponse.com/add_subscriber.html', {
+      method: 'post',
+      body : JSON.stringify({
+        data
+      }),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => console.log(res)) // It parses the output
+    .catch(function(error) {
+      console.log("error---", error)
+    });
+  }
+  
+
+  const getDataSubmit = (e) => {
+    e.preventDefault()
+    const dataSubmit = [];
+    
+    for (let index = 0; index < refForm.current.length; index++) {
+      const { name, value } = refForm.current[index];
+      if (!value.length) {
+        refForm.current[index].focus();
+      } else {
+        switch (name) {
+            default:
+              dataSubmit[name] = value;
+            break;
+        }
+      }
+    }
+
+    handleForm(dataSubmit)
+  }
 
   return (
     <>
@@ -34,9 +75,11 @@ function RegisterPage() {
             </p>
 
             <form
+              // onSubmit={getDataSubmit}
               action="https://app.getresponse.com/add_subscriber.html"
               acceptCharset="utf-8"
               method="post"
+              ref={refForm}
             >
               {/* Tên */}
               <div className="input-container">
@@ -45,7 +88,7 @@ function RegisterPage() {
                   type="text"
                   name="name"
                   pattern="/^[a-zA-Z!@#\$%\^\&*\)\(+=._-]{2,}$/g"
-                  minlength="4"
+                  minLength="4"
                   required
                   placeholder="VD: Nguyễn Văn A"
                 />
@@ -97,12 +140,11 @@ function RegisterPage() {
               {/* Nhận mã thông báo tại: https://app.getresponse.com/campaign_list.html https://app.getresponse.com/campaign_list.html */}
               <input type="hidden" name="campaign_token" defaultValue="5a3RU" />
               {/* Trang cảm ơn (tùy chọn) */}
-              <input
+              {/* <input
                 type="hidden"
                 name="thankyou_url"
                 defaultValue="https://lpe.vn/thank-you"
-              />
-              <input type="hidden" name="forward_data" value="get" />
+              /> */}
               {/* Thêm người đăng ký vào chuỗi theo dõi với ngày được xác định (tùy chọn) */}
               <input type="hidden" name="start_day" defaultValue={0} />
               {/* Nút Người đăng ký */}
