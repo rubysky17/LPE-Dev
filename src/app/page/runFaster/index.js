@@ -279,10 +279,15 @@ function RunFaster() {
             <h1 className="text-center text-uppercase py-5 heading_fee wow bounceIn">Khóa học này giúp bạn</h1>
             <div className='row'>
               {DATA.itemIcon.map((item,index) => {
-                return <div className="col-6 col-md-3 wrapperIcon" key={index}>
-                <img src={item.src} alt={item.src} className="img-fluid" />
-                <p>{item.desc}</p>
-            </div>
+                return (
+                  <div
+                    className="col-6 col-md-3 wrapperIcon wow bounceIn"
+                    key={index}
+                  >
+                    <img src={item.src} alt={item.src} className="img-fluid" />
+                    <p>{item.desc}</p>
+                  </div>
+                );
               })}
             </div>
           </div>
