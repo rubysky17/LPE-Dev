@@ -170,7 +170,7 @@ function RunFaster() {
               <div className="col-md-12 col-lg-6 text-content">
                 <h2>“CƠN BÃO NÀO RỒI CŨNG SẼ QUA ĐI”?!</h2>
                 <p>
-                  Không ai có thể dự đoán dược khi nào cả thế giới sẽ quay trở
+                  Không ai có thể dự đoán được khi nào cả thế giới sẽ quay trở
                   lại bình thường như trước. Vậy điều chúng ta nên làm lúc này
                   là chờ đợi, cầu nguyện, hay tôi phải làm gì đây vì nếu nó diễn
                   biến tệ hơn thì tôi sẽ tiếp tục thất bại? Việc chờ đợi có vẻ
@@ -272,6 +272,18 @@ function RunFaster() {
                   <Card name="register" />
                 </div>
               </div>
+            </div>
+          </div>
+          {/* 4 item */}
+          <div className="container mb-5">
+            <h1 className="text-center text-uppercase py-5 heading_fee wow bounceIn">Khóa học này giúp bạn</h1>
+            <div className='row'>
+              {DATA.itemIcon.map((item,index) => {
+                return <div className="col-6 col-md-3 wrapperIcon" key={index}>
+                <img src={item.src} alt={item.src} className="img-fluid" />
+                <p>{item.desc}</p>
+            </div>
+              })}
             </div>
           </div>
 

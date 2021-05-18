@@ -7,6 +7,10 @@ import danTri from "assets/images/danTri.png";
 import nam1 from "assets/images/nam1.PNG";
 import nuhr from "assets/images/nuhr.jpg";
 import nunvvp from "assets/images/nunvvp.jpg";
+import checklist from "assets/images/checklist.png";
+import storm from "assets/images/storm.png";
+import trophy from "assets/images/trophy.png";
+import virus from "assets/images/virus.png";
 
 export const videoArray = [
   {
@@ -167,3 +171,26 @@ export const courseFee = [
     price: 1200000
   }
 ]
+
+export const itemIcon = [
+  {
+    id: 1,
+    desc: "Thấu hiểu được cơn bão của thực tại",
+    src: storm,
+  },
+  {
+    id: 2,
+    desc: "Vượt qua khủng hoảng trong đại dịch",
+    src: virus,
+  },
+  {
+    id: 3,
+    desc: "Đặt được các mục tiêu phát triển bản thân",
+    src: checklist,
+  },
+  {
+    id: 4,
+    desc: "Đạt được nhiều thành tựu từ nền tảng tâm trí mạnh mẽ",
+    src: trophy,
+  },
+];
