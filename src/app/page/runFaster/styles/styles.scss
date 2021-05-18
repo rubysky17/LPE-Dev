@@ -348,6 +348,7 @@
 }
 .bg-nguoiVuotBao {
   background-image: url("../../../../assets/images/bgNguoiVuotBao.jpg");
+  // background-repeat: no-repeat;
   width: 100%;
   height: 100%;
 }
@@ -678,9 +679,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .bg-adding {
-    display: none;
-  }
   .img-vas_big {
     display: block;
     max-width: 100%;
