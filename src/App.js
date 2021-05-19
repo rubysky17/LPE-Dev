@@ -2,13 +2,15 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { HomeTemplate } from "app/template/homeTemplate";
 
-import CourseOne from "./app/page/courseOne/";
+import BeautyFromWomen from "app/page/bfw";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <HomeTemplate exact Component={CourseOne} />
+        <Route exact path="/beauty-from-women">
+          <BeautyFromWomen />
+        </Route>
       </Switch>
     </Router>
   );
