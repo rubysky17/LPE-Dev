@@ -102,7 +102,6 @@ footer {
           transition: all 0.3s;
 
           &:hover {
-            color: $c-green-1;
             text-decoration: none !important;
           }
         }
@@ -111,7 +110,6 @@ footer {
   }
 
   .foot {
-    background: $c-blue-0;
     line-height: 24px;
     padding: 20px 0;
     color: #fff;
@@ -130,7 +128,6 @@ footer {
           transition: all 0.3s;
           color: #fff;
           &:hover {
-            color: $c-green-1;
             text-decoration: none !important;
           }
         }

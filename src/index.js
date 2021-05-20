@@ -12,14 +12,14 @@ import "./assets/styles/common.scss";
 import "react-multi-carousel/lib/styles.css";
 
 const meta = {
-  title: 'BEAUTY FROM WOMEN',
-  description: 'Nhấp vào link để tìm hiểu khóa học',
+  title: "BEAUTY FROM WITHIN",
+  description: "Nhấp vào link để tìm hiểu khóa học",
   meta: {
-    charset: 'utf-8',
+    charset: "utf-8",
     name: {
-      keywords: 'react,meta,document,html,tags'
-    }
-  }
+      keywords: "react,meta,document,html,tags",
+    },
+  },
 };
 
 ReactDOM.render(
