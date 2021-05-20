@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/beauty-from-women">
+        <Route exact path="/beauty-from-within">
           <BeautyFromWomen />
         </Route>
       </Switch>

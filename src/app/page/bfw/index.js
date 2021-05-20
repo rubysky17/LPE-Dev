@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/styles.scss";
 
+import hinhThu from "assets/images/hinhGiangThanh.jpg";
+import video from "assets/images/video.jpg";
+import bio from "assets/images/bio.jpg";
+import anh1 from "assets/images/anh1.jpg";
+import anh2 from "assets/images/anh2.jpg";
+import anh3 from "assets/images/anh3.jpg";
+import anh4 from "assets/images/anh4.jpg";
+
 function BeautyFromWomen() {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <>
       {/* navbar */}
       <nav className="navbar navbar-dp-big">
-        <ul className='listNavbar'>
+        <ul className="listNavbar">
           <li className="itemNavbar">
             <a href="/">Khóa học</a>
           </li>
@@ -15,28 +25,419 @@ function BeautyFromWomen() {
             <a href="/">Bio</a>
           </li>
 
-          <li className="itemNavbar">
-            <a href="/">Khóa học</a>
+          <li className="itemNavbar itemLogo">
+            <a href="/">LOGO</a>
           </li>
 
           <li className="itemNavbar">
-            <a href="/">Khóa học</a>
+            <a href="/">Học phí</a>
+          </li>
+
+          <li className="itemNavbar">
+            <a href="/">Đăng ký</a>
           </li>
         </ul>
       </nav>
 
+      <nav
+        className={`navbar navbarSmall navbar-dp-small ${
+          !!toggle && "nav-open"
+        }`}
+        style={{
+          opacity: toggle && "1",
+        }}
+      >
+        <ul className="listNavbar">
+          <li className="itemNavbar itemLogo">
+            <a href="/">LOGO</a>
+          </li>
+
+          <li
+            className="itemNavbar icon"
+            onClick={() => {
+              setToggle(!toggle);
+            }}
+          >
+            {!toggle ? (
+              <i className="far fa-bars"></i>
+            ) : (
+              <i className="far fa-times"></i>
+            )}
+          </li>
+        </ul>
+
+        {
+          <>
+            <ul className="navMobile">
+              <li className="itemNavbar">
+                <a href="/">Khóa học</a>
+              </li>
+              <li className="itemNavbar">
+                <a href="/">Bio</a>
+              </li>
+              <li className="itemNavbar">
+                <a href="/">Học phí</a>
+              </li>
+              <li className="itemNavbar">
+                <a href="/">Đăng ký</a>
+              </li>
+            </ul>
+          </>
+        }
+      </nav>
+
       {/* Content */}
-      <div className="mt-5">
-        <h1>THIS IS ENGLISH</h1>
-        <h1>ĐANG VIẾT TIẾNG VIỆT</h1>
-        <p>
-          Bản tin sáng 20/5 của Bộ Y tế cho biết có thêm 30 ca mắc COVD-19 trong
-          nước đều ghi nhận tại khu vực cách ly, phong toả, trong đó Bắc Ninh và
-          Bắc Giang vẫn chiếm nhiều nhất với 21 ca. Việt Nam hiện có 4.720 bệnh
-          nhân.
-        </p>
+      {/* background  */}
+      <div className="bg-course">
+        <div className="course">
+          <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit ?</h1>
+        </div>
       </div>
 
+      {/* Thư ngỏ */}
+      <div className="container letter my-5">
+        <div className="row">
+          <div className="col-md-6 col-12">
+            <img src={hinhThu} alt={hinhThu} className="img-fluid" />
+          </div>
+          <div className="col-md-6 col-12 letter-text">
+            <h1 className="text-center">title</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+              provident, amet, voluptatem explicabo nostrum cupiditate nam culpa
+              facere voluptates perferendis possimus minus sed repellendus et
+              officiis quia quisquam voluptas. Nihil! Quis magnam necessitatibus
+              eius debitis doloribus, inventore quia exercitationem quas.
+              Maxime, cum? Animi officia ducimus, asperiores sed accusantium ut,
+              dolor voluptas, vel nobis quas omnis distinctio natus laboriosam
+              debitis repudiandae. Quis magnam necessitatibus eius debitis
+              doloribus, inventore quia exercitationem quas. Maxime, cum? Animi
+              officia ducimus, asperiores sed accusantium ut, dolor voluptas,
+              vel nobis quas omnis distinctio natus laboriosam debitis
+              repudiandae.
+            </p>
+            <button
+              type="button"
+              className="btn btn-outline-primary btn-scroll"
+            >
+              <a href="/"> Tìm hiểm thêm </a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Giới thiệu chương trình */}
+      <div className="container route my-5">
+        <h1 className="text-center my-5">Giới thiệu chương trình</h1>
+        <div className="row">
+          <div className="col-12">
+            <h2 className="text-center">Level 1</h2>
+          </div>
+          <div className="col-12 col-md-6 my-3 route-text">
+            <h3 className="text-center">Mô tả</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+              cum, dolores vero fuga eius ut nam? Quibusdam, in nisi! Blanditiis
+              molestias illo, accusamus minima quo recusandae magni omnis autem
+              vel.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+              cum, dolores vero fuga eius ut nam? Quibusdam, in nisi! Blanditiis
+              molestias illo, accusamus minima quo recusandae magni omnis autem
+              vel.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+              cum, dolores vero fuga eius ut nam? Quibusdam, in nisi! Blanditiis
+              molestias illo, accusamus minima quo recusandae magni omnis autem
+              vel.
+            </p>
+          </div>
+          <div className="col-12 col-md-6 my-3">
+            <div className="route-video">
+              <img src={video} alt={video} className="img-fluid" />
+            </div>
+          </div>
+        </div>
+        <div className="row mt-5">
+          <div className="col-12">
+            <h2 className="text-center">Level 2</h2>
+          </div>
+          <div className="col-12 col-md-6 route-text">
+            <h3 className="text-center">Mô tả</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+              cum, dolores vero fuga eius ut nam? Quibusdam, in nisi! Blanditiis
+              molestias illo, accusamus minima quo recusandae magni omnis autem
+              vel.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+              cum, dolores vero fuga eius ut nam? Quibusdam, in nisi! Blanditiis
+              molestias illo, accusamus minima quo recusandae magni omnis autem
+              vel.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+              cum, dolores vero fuga eius ut nam? Quibusdam, in nisi! Blanditiis
+              molestias illo, accusamus minima quo recusandae magni omnis autem
+              vel.
+            </p>
+          </div>
+          <div className="col-12 col-md-6">
+            <div className="route-video">
+              <img src={video} alt={video} className="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Background description */}
+      <div class="bg-description my-5">
+        <div class="container">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
+            veniam ab quaerat pariatur nihil modi? Ipsam odit velit ab
+            consectetur facilis qui, officiis, excepturi esse saepe culpa a!
+            Deserunt, voluptatibus!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
+            veniam ab quaerat pariatur nihil modi? Ipsam odit velit ab
+            consectetur facilis qui, officiis, excepturi esse saepe culpa a!
+            Deserunt, voluptatibus!
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
+            veniam ab quaerat pariatur nihil modi? Ipsam odit velit ab
+            consectetur facilis qui, officiis, excepturi esse saepe culpa a!
+            Deserunt, voluptatibus!
+          </p>
+        </div>
+      </div>
+
+      {/* Card lật */}
+      <div className="container-fluid">
+        <div className="row text-center">
+          <div className="col-12 col-md-4 wrapper-card">
+            <div className="center">
+              <div className="front-face">
+                <div className="contents front">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo, quae!
+                  </p>
+                  <span>LOREM</span>
+                </div>
+              </div>
+              <div className="back-face">
+                <div className="contents back">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Harum vitae repellat aut, ratione quidem ipsum quos nam
+                    assumenda possimus voluptates.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Harum vitae repellat aut, ratione quidem ipsum quos nam
+                    assumenda possimus voluptates.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-12 col-md-4 wrapper-card ">
+            <div className="center">
+              <div className="front-face">
+                <div className="contents front">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo, quae!
+                  </p>
+                  <span>LOREM</span>
+                </div>
+              </div>
+              <div className="back-face">
+                <div className="contents back">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Harum vitae repellat aut, ratione quidem ipsum quos nam
+                    assumenda possimus voluptates.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Harum vitae repellat aut, ratione quidem ipsum quos nam
+                    assumenda possimus voluptates.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-12 col-md-4 wrapper-card">
+            <div className="center">
+              <div className="front-face">
+                <div className="contents front">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo, quae!
+                  </p>
+                  <span>LOREM</span>
+                </div>
+              </div>
+              <div className="back-face">
+                <div className="contents back">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Harum vitae repellat aut, ratione quidem ipsum quos nam
+                    assumenda possimus voluptates.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Harum vitae repellat aut, ratione quidem ipsum quos nam
+                    assumenda possimus voluptates.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row text-center">
+          <div className="col-12 col-md-4 wrapper-card ">
+            <div className="center">
+              <div className="front-face">
+                <div className="contents front">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo, quae!
+                  </p>
+                  <span>LOREM</span>
+                </div>
+              </div>
+              <div className="back-face">
+                <div className="contents back">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Harum vitae repellat aut, ratione quidem ipsum quos nam
+                    assumenda possimus voluptates.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Harum vitae repellat aut, ratione quidem ipsum quos nam
+                    assumenda possimus voluptates.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-12 col-md-4 wrapper-card ">
+            <div className="center">
+              <div className="front-face">
+                <div className="contents front">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo, quae!
+                  </p>
+                  <span>LOREM</span>
+                </div>
+              </div>
+              <div className="back-face">
+                <div className="contents back">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Harum vitae repellat aut, ratione quidem ipsum quos nam
+                    assumenda possimus voluptates.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Harum vitae repellat aut, ratione quidem ipsum quos nam
+                    assumenda possimus voluptates.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-12 col-md-4 wrapper-card">
+            <div className="center">
+              <div className="front-face">
+                <div className="contents front">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nemo, quae!
+                  </p>
+                  <span>LOREM</span>
+                </div>
+              </div>
+              <div className="back-face">
+                <div className="contents back">
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Harum vitae repellat aut, ratione quidem ipsum quos nam
+                    assumenda possimus voluptates.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Harum vitae repellat aut, ratione quidem ipsum quos nam
+                    assumenda possimus voluptates.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bio */}
+      <div className="container my-5">
+        <h1 className="text-center mb-5">Bio</h1>
+        <div className="row wrapper-bio">
+          <div className="col-12 col-md-6">
+            <img src={bio} alt={bio} className="img-fluid" />
+          </div>
+          <div className="col-12 col-md-6">
+            <h2 className="text-center mb-3">Ms. La Hạ Giang Thanh</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              possimus, sapiente inventore odio rerum, sunt qui perferendis
+              ducimus cum expedita illo debitis quia quas! Architecto
+              repudiandae expedita reiciendis modi pariatur.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              possimus, sapiente inventore odio rerum, sunt qui perferendis
+              ducimus cum expedita illo debitis quia quas! Architecto
+              repudiandae expedita reiciendis modi pariatur.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              possimus, sapiente inventore odio rerum, sunt qui perferendis
+              ducimus cum expedita illo debitis quia quas! Architecto
+              repudiandae expedita reiciendis modi pariatur.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Ảnh */}
+      <div className="container-fluid mb-5">
+        <h1 className="text-center mb-5">Ảnh</h1>
+        <div className="row">
+          <div className="col-3">
+            <img src={anh1} alt={anh1} className="img-fluid" />
+          </div>
+          <div className="col-3">
+            <img src={anh2} alt={anh2} className="img-fluid" />
+          </div>
+          <div className="col-3">
+            <img src={anh3} alt={anh3} className="img-fluid" />
+          </div>
+          <div className="col-3">
+            <img src={anh4} alt={anh4} className="img-fluid" />
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
       <footer>
         <div className="text-center"></div>
         <h3 className="name">Công Ty TNHH Giáo Dục Leading Performance</h3>

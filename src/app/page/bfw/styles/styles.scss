@@ -7,7 +7,6 @@ footer {
   color: #fff;
   background: #efbbcf;
 
-
   .bg-light {
     background: #000;
   }
@@ -71,7 +70,6 @@ footer {
         font-size: 16px;
         width: 40px !important;
         height: 40px !important;
-        border-radius: 50%;
         background-color: #000;
         transition: all 0.3s;
         display: flex;
@@ -135,24 +133,44 @@ footer {
   }
 }
 
-
 // navbar
-.navbar-custom {
+.navbar {
+  background: $c-white-0;
   position: fixed;
   top: 0;
-  background: red;
+  right: 0;
   width: 100%;
-  height: 60px;
- 
+  opacity: 0.78;
+  transition: 0.5s;
+  margin-bottom: 60px;
+  z-index: 99;
 
-  a {
-    color: $c-black-0;
+  &:hover {
+    opacity: 1;
   }
 
-  button {
-    span {
-      color: $c-black-0;
+  
+  .listNavbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .itemNavbar {
+      padding: 10px 20px;
+
+      &:hover a{
+        color: $c-lightPink-1;
+      }
     }
+
+    .itemLogo {
+      padding: 10px 30px;
+    }
+  }
+  a {
+    color: $c-black-0;
+    text-decoration: none;
+    transition: all .5s;
   }
 
   .navbar-collapse {
@@ -165,4 +183,242 @@ footer {
     width: 100%;
     margin: 0 auto;
   }
+}
+
+.navbar-dp-small {
+  display: none;
+}
+
+.navbar-dp-big {
+  display: block;
+}
+
+.navMobile {
+  height: 0;
+  transition: all .5s;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-dp-big {
+    display: none;
+  }
+
+  .navbar-dp-small {
+    display: block;
+  }
+
+  .navbar {
+    &.navbarSmall {
+      .listNavbar {
+        justify-content: space-between;
+        .itemNavbar {
+          cursor: pointer;
+          i {
+            color: $c-black-0;
+          }
+        }
+      }
+    }
+  }
+
+  .navMobile {
+    display: none;
+  }
+
+  .nav-open {
+    .navMobile {
+      display: block;
+      height: 100%;
+      transition: all .5s;
+      .itemNavbar {
+        padding: 10px 20px;
+        transition: all .3s;
+        &:hover {
+          background-color: $c-lightPink-1;
+          cursor: pointer;
+        }
+
+        a {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+  .navbarSmall  {
+    padding: 0;
+  }
+  .bg-course {
+    margin-top: 44px!important;
+  }
+}
+
+
+.letter-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-scroll {
+  margin-top: 50px;
+  padding:20px;
+  font-weight: 500;
+}
+
+.btn-scroll:hover a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+
+// BG
+.bg-course {
+  background-image: url("../../../../assets/images/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  text-align: center;
+}
+
+// Giới thiệu chương trình
+
+.route-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bg-description {
+  background-color: #f8c291;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.bg-description p{
+font-size: 20px;
+
+}
+
+
+// Card lật
+
+.front-face,
+.contents,.back-face{
+  position: absolute;
+}
+
+.center{
+  height: 400px;
+  width: 80%;
+  transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.front-face, .back-face{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: #4a69bd;
+  background-size: cover;
+  background-position: center;
+  transform: translateY(0deg);
+  border-radius: 10px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform .7s cubic-bezier(.4,.2,.2,1);
+}
+
+.contents{
+  left: 0%;
+  top: 50%;
+  width: 100%;
+  perspective: 1000px;
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+}
+
+.front p{
+  font-size: 35px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.front span{
+  font-size: 23px;
+  color: white;
+}
+
+.front p:after{
+  content: '';
+  display: block;
+  left: 0;
+  right: 0;
+  width: 100px;
+  height: 2px;
+  background: white;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.back-face{
+  transform: rotateY(180deg);
+  background: linear-gradient(45deg,#043348 0%,#032535 100%);
+}
+
+.back {
+  color: white;
+}
+
+.back h2{
+  font-size: 33px;
+  padding-bottom: 5px;
+}
+
+.back span{
+  font-size: 25px;
+}
+
+.icons{
+  margin: 10px 0;
+  display: block;
+}
+
+i.fab{
+  color:  #042f4b;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  background: white;
+  border-radius: 50%;
+  margin: 0 5px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.center:hover > .back-face{
+  transform: rotateY(0deg);
+}
+
+.center:hover > .front-face{
+  transform: rotateY(-180deg);
+}
+
+.wrapper-card {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+.wrapper-bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

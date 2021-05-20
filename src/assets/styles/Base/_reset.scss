@@ -10,6 +10,23 @@
     box-sizing: border-box;
 }
 
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+}
+
+ul > li {
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 html,
 body {
     font-family: 'SF-font', sans-serif;
