@@ -18,23 +18,23 @@ function BeautyFromWomen() {
       <nav className="navbar navbar-dp-big">
         <ul className="listNavbar">
           <li className="itemNavbar">
-            <a href="/">Khóa học</a>
+            <a href="#gioiThieu">Khóa học</a>
           </li>
 
           <li className="itemNavbar">
-            <a href="/">Bio</a>
+            <a href="#bio">Bio</a>
           </li>
 
           <li className="itemNavbar itemLogo">
-            <a href="/">LOGO</a>
+            <a href="#root">LOGO</a>
           </li>
 
           <li className="itemNavbar">
-            <a href="/">Học phí</a>
+            <a href="#hocPhi">Học phí</a>
           </li>
 
           <li className="itemNavbar">
-            <a href="/">Đăng ký</a>
+            <a href="#dangKy">Đăng ký</a>
           </li>
         </ul>
       </nav>
@@ -49,7 +49,7 @@ function BeautyFromWomen() {
       >
         <ul className="listNavbar">
           <li className="itemNavbar itemLogo">
-            <a href="/">LOGO</a>
+            <a href="#root">LOGO</a>
           </li>
 
           <li
@@ -70,16 +70,16 @@ function BeautyFromWomen() {
           <>
             <ul className="navMobile">
               <li className="itemNavbar">
-                <a href="/">Khóa học</a>
+                <a href="#khoaHoc">Khóa học</a>
               </li>
               <li className="itemNavbar">
-                <a href="/">Bio</a>
+                <a href="#bio">Bio</a>
               </li>
               <li className="itemNavbar">
-                <a href="/">Học phí</a>
+                <a href="#hocPhi">Học phí</a>
               </li>
               <li className="itemNavbar">
-                <a href="/">Đăng ký</a>
+                <a href="#dangKy">Đăng ký</a>
               </li>
             </ul>
           </>
@@ -127,7 +127,7 @@ function BeautyFromWomen() {
       </div>
 
       {/* Giới thiệu chương trình */}
-      <div className="container route my-5">
+      <div className="container route my-5" id="gioiThieu">
         <h1 className="text-center my-5">Giới thiệu chương trình</h1>
         <div className="row">
           <div className="col-12">
@@ -388,7 +388,7 @@ function BeautyFromWomen() {
       </div>
 
       {/* Bio */}
-      <div className="container my-5">
+      <div className="container my-5" id="bio">
         <h1 className="text-center mb-5">Bio</h1>
         <div className="row wrapper-bio">
           <div className="col-12 col-md-6">
@@ -414,6 +414,104 @@ function BeautyFromWomen() {
               ducimus cum expedita illo debitis quia quas! Architecto
               repudiandae expedita reiciendis modi pariatur.
             </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Form đăng ký */}
+      <div className="container-fluid">
+        <h1 className="text-center">Đăng ký khóa học</h1>
+        <div className="row">
+          <div className="col-12 wrapper-form">
+            <form
+              action="https://app.getresponse.com/add_subscriber.html"
+              accept-charset="utf-8"
+              method="post"
+              className="borderForm"
+            >
+              <div className="form-item">
+                <label>Họ và Tên *</label>
+                <input
+                  type="text"
+                  name="name"
+                  pattern="/^[a-zA-Z!@#\$%\^\&*\)\(+=._-]{2,}$/g"
+                  minLength="4"
+                  required
+                  placeholder="VD: Nguyễn Thị A"
+                />
+              </div>
+
+              <div className="form-item">
+                <label>Địa chỉ email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="VD: nguyenthia@gmail.com"
+                />
+              </div>
+
+              <div className="form-item">
+                <label>Số điện thoại * </label>
+                <input
+                  name="custom_dt"
+                  type="tel"
+                  pattern="[0]{1}[0-9]{9}"
+                  placeholder="VD: 0933333333"
+                  required
+                />
+              </div>
+
+              <div className="form-item">
+                <label>Công việc hiện tại * </label>
+                <input
+                  name="custom_job"
+                  type="text"
+                  placeholder="Nhập công việc của bạn"
+                  required
+                />
+              </div>
+
+              <div className="form-item">
+                <label>Ngày sinh * </label>
+                <input
+                  name="custom_bod"
+                  type="date"
+                  placeholder="VD: 10/11/1993"
+                  required
+                />
+              </div>
+
+              <div className="form-item">
+                <label>Vấn đề gặp phải * </label>
+                <select name="custom_desire">
+                  <option value="Cảm thấy bản thân thiệt thòi vì không có ngoại hình xinh đẹp như người phụ nữ khác">
+                    Cảm thấy bản thân thiệt thòi vì không có ngoại hình xinh đẹp
+                    như người phụ nữ khác.
+                  </option>
+                  <option value="Phải gồng mình thay đổi bản thân để đạt được chuẩn đẹp">
+                    Phải gồng mình thay đổi bản thân để đạt được “chuẩn đẹp”.
+                  </option>
+                  <option value="Mang trên vai những vai trò trách nhiệm, không có thời gian chăm sóc chính mình">
+                    Mang trên vai những vai trò trách nhiệm, không có thời gian
+                    chăm sóc chính mình.
+                  </option>
+                  <option value="Cảm thấy việc làm đẹp là quá xa xỉ, mất thời gian, không cần thiết">Cảm thấy việc làm đẹp là quá xa xỉ, mất thời gian, không cần thiết.</option>
+                  <option value="Không dám chi tiền cho vẻ bề ngoài, vì sợ sẽ bị đánh giá">Không dám chi tiền cho vẻ bề ngoài, vì sợ sẽ bị đánh giá?!</option>
+                  <option value="Lý tưởng hoá vẻ đẹp người phụ nữ">“Lý tưởng hoá” vẻ đẹp người phụ nữ?</option>
+                  <option value="Chạy theo chuẩn mực cái đẹp do xã hội tạo ra.">Chạy theo chuẩn mực cái đẹp do xã hội tạo ra.</option>
+                  <option value="Đã từng biến đổi vẻ bề ngoài rất nhiều lần nhưng vẫn không cảm thấy đủ đầy hay hài lòng">Đã từng “biến đổi” vẻ bề ngoài rất nhiều lần nhưng vẫn không cảm thấy đủ đầy hay hài lòng?.</option>
+                 
+                </select>
+              </div>
+
+              <input type="hidden" name="campaign_token" value="5okzY" />
+              <input type="hidden" name="thankyou_url" value="" />
+              <input type="hidden" name="start_day" value="0" />
+              <button type="submit" defaultValue="Subscribe">
+                Xác nhận
+              </button>
+            </form>
           </div>
         </div>
       </div>

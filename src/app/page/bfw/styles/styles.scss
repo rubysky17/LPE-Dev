@@ -422,3 +422,63 @@ i.fab{
   justify-content: center;
   align-items: center;
 }
+
+// Form dang ky 
+.wrapper-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+
+  .borderForm {
+    border: 1px solid $c-black-0;
+    padding: 20px 100px;
+    width: 600px;
+  }
+
+  button {
+    color: $c-white-0;
+    margin-top: 20px;
+    background-color: $c-lightPink-1;
+    padding: 10px 20px;
+    transition: all .5s;
+    border: none;
+
+    &:hover {
+    background-color: #fdb6a8;
+
+    }
+  }
+}
+
+.form-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 20px;
+
+  label {
+    text-transform: uppercase;
+    color: $c-lightPink-2;
+    font-weight: 600;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    border: 2px solid $c-gray-4;
+
+    &:focus {
+      border: 2px solid $c-lightPink-2;
+    }
+
+    
+  }
+
+  ::placeholder {
+    color: $c-gray-3;
+    font-size: 15px;
+    opacity: 1;
+  }
+}
