@@ -44,6 +44,7 @@ function RegisterPage() {
 
   const getDataSubmit = () => {
     const dataSubmit = {};
+    const custom_register = new Date().toLocaleString();
 
     const name = refForm.current["name"].value;
     const email = refForm.current["email"].value;
@@ -71,7 +72,7 @@ function RegisterPage() {
         }
       }
     }
-
+    dataSubmit["custom_register"] = custom_register;
     // catching error when submit form
     if (
       !name ||
