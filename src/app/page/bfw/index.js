@@ -8,6 +8,8 @@ import anh1 from "assets/images/anh1.jpg";
 import anh2 from "assets/images/anh2.jpg";
 import anh3 from "assets/images/anh3.jpg";
 import anh4 from "assets/images/anh4.jpg";
+import thuNgo from "assets/images/thuNgo.gif";
+import FormDangKy from "./component/formDangKy";
 
 function BeautyFromWomen() {
   const [toggle, setToggle] = useState(false);
@@ -98,7 +100,7 @@ function BeautyFromWomen() {
       <div className="container letter my-5">
         <div className="row">
           <div className="col-md-6 col-12">
-            <img src={hinhThu} alt={hinhThu} className="img-fluid" />
+            <img src={thuNgo} alt={thuNgo} className="img-fluid" />
           </div>
           <div className="col-md-6 col-12 letter-text">
             <h1 className="text-center">title</h1>
@@ -419,117 +421,32 @@ function BeautyFromWomen() {
       </div>
 
       {/* Form đăng ký */}
-      <div className="container-fluid">
+      <div className="bg-dangKy">
+      <div className="container-fluid py-5" id="dangKy">
         <h1 className="text-center">Đăng ký khóa học</h1>
         <div className="row">
           <div className="col-12 wrapper-form">
-            <form
-              action="https://app.getresponse.com/add_subscriber.html"
-              accept-charset="utf-8"
-              method="post"
-              className="borderForm"
-            >
-              <div className="form-item">
-                <label>Họ và Tên *</label>
-                <input
-                  type="text"
-                  name="name"
-                  pattern="/^[a-zA-Z!@#\$%\^\&*\)\(+=._-]{2,}$/g"
-                  minLength="4"
-                  required
-                  placeholder="VD: Nguyễn Thị A"
-                />
-              </div>
-
-              <div className="form-item">
-                <label>Địa chỉ email *</label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="VD: nguyenthia@gmail.com"
-                />
-              </div>
-
-              <div className="form-item">
-                <label>Số điện thoại * </label>
-                <input
-                  name="custom_dt"
-                  type="tel"
-                  pattern="[0]{1}[0-9]{9}"
-                  placeholder="VD: 0933333333"
-                  required
-                />
-              </div>
-
-              <div className="form-item">
-                <label>Công việc hiện tại * </label>
-                <input
-                  name="custom_job"
-                  type="text"
-                  placeholder="Nhập công việc của bạn"
-                  required
-                />
-              </div>
-
-              <div className="form-item">
-                <label>Ngày sinh * </label>
-                <input
-                  name="custom_bod"
-                  type="date"
-                  placeholder="VD: 10/11/1993"
-                  required
-                />
-              </div>
-
-              <div className="form-item">
-                <label>Vấn đề gặp phải * </label>
-                <select name="custom_desire">
-                  <option value="Cảm thấy bản thân thiệt thòi vì không có ngoại hình xinh đẹp như người phụ nữ khác">
-                    Cảm thấy bản thân thiệt thòi vì không có ngoại hình xinh đẹp
-                    như người phụ nữ khác.
-                  </option>
-                  <option value="Phải gồng mình thay đổi bản thân để đạt được chuẩn đẹp">
-                    Phải gồng mình thay đổi bản thân để đạt được “chuẩn đẹp”.
-                  </option>
-                  <option value="Mang trên vai những vai trò trách nhiệm, không có thời gian chăm sóc chính mình">
-                    Mang trên vai những vai trò trách nhiệm, không có thời gian
-                    chăm sóc chính mình.
-                  </option>
-                  <option value="Cảm thấy việc làm đẹp là quá xa xỉ, mất thời gian, không cần thiết">Cảm thấy việc làm đẹp là quá xa xỉ, mất thời gian, không cần thiết.</option>
-                  <option value="Không dám chi tiền cho vẻ bề ngoài, vì sợ sẽ bị đánh giá">Không dám chi tiền cho vẻ bề ngoài, vì sợ sẽ bị đánh giá?!</option>
-                  <option value="Lý tưởng hoá vẻ đẹp người phụ nữ">“Lý tưởng hoá” vẻ đẹp người phụ nữ?</option>
-                  <option value="Chạy theo chuẩn mực cái đẹp do xã hội tạo ra.">Chạy theo chuẩn mực cái đẹp do xã hội tạo ra.</option>
-                  <option value="Đã từng biến đổi vẻ bề ngoài rất nhiều lần nhưng vẫn không cảm thấy đủ đầy hay hài lòng">Đã từng “biến đổi” vẻ bề ngoài rất nhiều lần nhưng vẫn không cảm thấy đủ đầy hay hài lòng?.</option>
-                 
-                </select>
-              </div>
-
-              <input type="hidden" name="campaign_token" value="5okzY" />
-              <input type="hidden" name="thankyou_url" value="" />
-              <input type="hidden" name="start_day" value="0" />
-              <button type="submit" defaultValue="Subscribe">
-                Xác nhận
-              </button>
-            </form>
+            <FormDangKy />
           </div>
         </div>
       </div>
+      </div>
+    
 
       {/* Ảnh */}
       <div className="container-fluid mb-5">
-        <h1 className="text-center mb-5">Ảnh</h1>
+        <h1 className="text-center my-5">Ảnh</h1>
         <div className="row">
-          <div className="col-3">
+          <div className="col-6 col-md-3">
             <img src={anh1} alt={anh1} className="img-fluid" />
           </div>
-          <div className="col-3">
+          <div className="col-6 col-md-3">
             <img src={anh2} alt={anh2} className="img-fluid" />
           </div>
-          <div className="col-3">
+          <div className="col-6 col-md-3">
             <img src={anh3} alt={anh3} className="img-fluid" />
           </div>
-          <div className="col-3">
+          <div className="col-6 col-md-3">
             <img src={anh4} alt={anh4} className="img-fluid" />
           </div>
         </div>

@@ -12,7 +12,7 @@ import "./assets/styles/common.scss";
 import "react-multi-carousel/lib/styles.css";
 
 const meta = {
-  title: "BEAUTY FROM WITHIN",
+  title: "BEAUTY FROM WITHIN - Đẹp từ bên trong",
   description: "Nhấp vào link để tìm hiểu khóa học",
   meta: {
     charset: "utf-8",

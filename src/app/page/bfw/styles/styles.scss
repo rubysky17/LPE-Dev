@@ -299,7 +299,7 @@ footer {
 }
 
 .bg-description {
-  background-color: #f8c291;
+  background-color: $c-lightPurple-1;
   text-align: center;
   padding: 50px 0;
 }
@@ -328,7 +328,7 @@ font-size: 20px;
   height: 100%;
   width: 100%;
   text-align: center;
-  background: #4a69bd;
+  background: $c-lightPink-1;
   background-size: cover;
   background-position: center;
   transform: translateY(0deg);
@@ -371,7 +371,7 @@ font-size: 20px;
 
 .back-face{
   transform: rotateY(180deg);
-  background: linear-gradient(45deg,#043348 0%,#032535 100%);
+  background: $c-lightPink-2;
 }
 
 .back {
@@ -431,11 +431,16 @@ i.fab{
   padding: 50px 0;
 
   .borderForm {
-    border: 1px solid $c-black-0;
+    background: #fff;
+    border-radius: 20px;
     padding: 20px 100px;
     width: 600px;
   }
-
+.wrapper-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   button {
     color: $c-white-0;
     margin-top: 20px;
@@ -443,12 +448,16 @@ i.fab{
     padding: 10px 20px;
     transition: all .5s;
     border: none;
+    margin-bottom: 20px;
+    border-radius: 10px;
 
     &:hover {
     background-color: #fdb6a8;
 
     }
   }
+}
+
 }
 
 .form-item {
@@ -459,7 +468,7 @@ i.fab{
 
   label {
     text-transform: uppercase;
-    color: $c-lightPink-2;
+    color: #ffbfb3;
     font-weight: 600;
   }
 
@@ -481,4 +490,8 @@ i.fab{
     font-size: 15px;
     opacity: 1;
   }
+}
+
+.bg-dangKy {
+  background: $c-lightPink-1;
 }
