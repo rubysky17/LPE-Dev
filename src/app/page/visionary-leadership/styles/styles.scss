@@ -1,0 +1,65 @@
+@import "../../../../assets/styles/common.scss";
+
+// navbar
+.navbar {
+  background: $c-white-0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  transition: 0.5s;
+  margin-bottom: 60px;
+  z-index: 99;
+
+  .listNavbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .itemNavbar {
+      padding: 10px 60px;
+
+      &:hover a {
+        color: $c-lightPink-1;
+      }
+    }
+
+    .img-logo {
+      height: 60px;
+    }
+
+    .itemLogo {
+      padding: 10px 30px;
+    }
+  }
+  a {
+    color: $c-black-0;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.5s;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.navbar-dp-small {
+  display: none;
+}
+
+.navbar-dp-big {
+  display: block;
+}
+
+.navMobile {
+  height: 0;
+  transition: all 0.5s;
+}
