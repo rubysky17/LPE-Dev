@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
+import {WOW} from 'wowjs'
 import "./styles/styles.scss";
 
 import video from "assets/images/video.jpg";
-import bio from "assets/images/bio.jpg";
+import bio from "assets/images/bio.png";
 import anh1 from "assets/images/anh1.jpg";
 import anh2 from "assets/images/anh2.jpg";
 import anh3 from "assets/images/anh3.jpg";
 import anh4 from "assets/images/anh4.jpg";
 import logo from "assets/images/lahagiangthanh.png";
 import thuNgo from "assets/images/thuNgo.gif";
+import hocPhi from "assets/images/hocPhi.png"
+
 import FormDangKy from "./component/formDangKy";
 import Loading from "./component/loading";
 
@@ -17,7 +20,7 @@ function BeautyFromWomen() {
   const [onLoading, setOnLoading] = useState(true);
   const menu = [
     {
-      link: "#khoaHoc",
+      link: "#gioiThieu",
       content: "Khóa học",
     },
     {
@@ -55,7 +58,6 @@ function BeautyFromWomen() {
       video: "",
     },
   ];
-
   const flipCardCourse1 = [
     {
       id: 1,
@@ -73,7 +75,6 @@ function BeautyFromWomen() {
       back: "",
     },
   ];
-
   const flipCardCourse2 = [
     {
       id: 1,
@@ -100,6 +101,15 @@ function BeautyFromWomen() {
       clearTimeout(handleLoading);
     };
   }, []);
+
+  useEffect(() => {
+    const wow = new WOW({
+      offset: 100,
+      live: true,
+  })
+
+  wow.init();
+  }, [onLoading])
 
   return (
     <>
@@ -185,11 +195,11 @@ function BeautyFromWomen() {
           {/* Thư ngỏ */}
           <div className="container letter my-5">
             <div className="row">
-              <div className="col-md-6 col-12">
+              <div className="col-md-6 col-12 wow fadeInLeft" data-wow-delay=".25s">
                 <img src={thuNgo} alt={thuNgo} className="img-fluid" />
               </div>
-              <div className="col-md-6 col-12 letter-text">
-                <div className="bg-xinChao mb-5 mt-md-3">
+              <div className="col-md-6 col-12 letter-text wow fadeInRight" data-wow-delay=".25s">
+                <div className="mb-2">
                   <p className="letter-title">Xin chào người đẹp</p>
                 </div>
                 <p>
@@ -200,29 +210,26 @@ function BeautyFromWomen() {
                   magnam necessitatibus eius debitis doloribus, inventore quia
                   exercitationem quas.
                 </p>
-                <button type="button" className="btn-scroll">
-                  <a href="#bio">Về tôi</a>
-                </button>
               </div>
             </div>
           </div>
 
           {/* Giới thiệu chương trình */}
           <div className="container route my-5" id="gioiThieu">
-            <h1 className="text-center my-5">Giới thiệu chương trình</h1>
+            <h1 className="text-center my-5 heading-title wow fadeInUp" data-wow-delay=".25s">Giới thiệu chương trình</h1>
             {program.map((ele, index) => {
               return (
                 <div className="row" key={index}>
                   <div className="col-12">
-                    <h2 className="text-center">Level {ele.level}</h2>
+                    <h2 className="text-center wow fadeInUp">Level {ele.level}</h2>
                   </div>
-                  <div className="col-12 col-md-6 my-3 route-text">
+                  <div className="col-12 col-md-6 my-3 route-text  wow fadeInLeft">
                     <h3 className="text-center">Mô tả</h3>
                     <p>{ele.description}</p>
                     <p>{ele.description}</p>
                     <p>{ele.description}</p>
                   </div>
-                  <div className="col-12 col-md-6 my-3">
+                  <div className="col-12 col-md-6 my-3  wow fadeInRight">
                     <div className="route-video">
                       <img src={ele.img} alt={ele.img} className="img-fluid" />
                     </div>
@@ -232,9 +239,9 @@ function BeautyFromWomen() {
             })}
           </div>
 
-          {/* Background descrip`tion */}
-          <div className="bg-description my-5">
-            <div className="container">
+          {/* Background description */}
+          <div className="bg-description my-5 ">
+            <div className="container wow fadeInUp">
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
                 veniam ab quaerat pariatur nihil modi? Ipsam odit velit ab
@@ -294,93 +301,90 @@ function BeautyFromWomen() {
             </div>
           </div>
 
+          
+
           {/* Card lật */}
           <div className="container">
             <div className="row text-center">
-              <h2 className="text-center col-12">Khóa 1</h2>
-              {
-                flipCardCourse1.map((card, index) => {
-                  return (
-                    <div className="col-12 col-lg-4 wrapper-card" key={index}>
-                      <div className="center">
-                        <div className="front-face">
-                          <div className="contents front">
-                            <p>
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Nemo, quae!
-                            </p>
-                            <span>LOREM</span>
-                          </div>
-                        </div>
-                        <div className="back-face">
-                          <div className="contents back">
-                            <p>
-                              Lorem ipsum dolor, sit amet consectetur
-                              adipisicing elit. Harum vitae repellat aut,
-                              ratione quidem ipsum quos nam assumenda possimus
-                              voluptates.
-                            </p>
-                            <p>
-                              Lorem ipsum dolor, sit amet consectetur
-                              adipisicing elit. Harum vitae repellat aut,
-                              ratione quidem ipsum quos nam assumenda possimus
-                              voluptates.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })
-              }
-              <h2 className="text-center col-12">Khóa 2</h2>;
+              
+              <h2 className="text-center col-12 heading-title wow fadeInUp">Khóa 1</h2>
 
-              {
-                flipCardCourse2.map((card, index) => {
-                  return (
-                    <div className="col-12 col-lg-4 wrapper-card" key={index}>
-                      <div className="center">
-                        <div className="front-face">
-                          <div className="contents front">
-                            <p>
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Nemo, quae!
-                            </p>
-                            <span>LOREM</span>
-                          </div>
+              {flipCardCourse1.map((card, index) => {
+                return (
+                  <div className="col-12 col-lg-4 wrapper-card wow fadeInLeft" key={index}>
+                    <div className="center">
+                      <div className="front-face">
+                        <div className="contents front">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nemo, quae!
+                          </p>
+                          <span>LOREM</span>
                         </div>
-                        <div className="back-face">
-                          <div className="contents back">
-                            <p>
-                              Lorem ipsum dolor, sit amet consectetur
-                              adipisicing elit. Harum vitae repellat aut,
-                              ratione quidem ipsum quos nam assumenda possimus
-                              voluptates.
-                            </p>
-                            <p>
-                              Lorem ipsum dolor, sit amet consectetur
-                              adipisicing elit. Harum vitae repellat aut,
-                              ratione quidem ipsum quos nam assumenda possimus
-                              voluptates.
-                            </p>
-                          </div>
+                      </div>
+                      <div className="back-face">
+                        <div className="contents back">
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Harum vitae repellat aut, ratione quidem ipsum
+                            quos nam assumenda possimus voluptates.
+                          </p>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Harum vitae repellat aut, ratione quidem ipsum
+                            quos nam assumenda possimus voluptates.
+                          </p>
                         </div>
                       </div>
                     </div>
-                  );
-                })
-              }
+                  </div>
+                );
+              })}
+
+              <h2 className="text-center col-12 heading-title wow fadeInUp">Khóa 2</h2>
+
+              {flipCardCourse2.map((card, index) => {
+                return (
+                  <div className="col-12 col-lg-4 wrapper-card wow fadeInLeft" key={index}>
+                    <div className="center">
+                      <div className="front-face">
+                        <div className="contents front">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nemo, quae!
+                          </p>
+                          <span>LOREM</span>
+                        </div>
+                      </div>
+                      <div className="back-face">
+                        <div className="contents back">
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Harum vitae repellat aut, ratione quidem ipsum
+                            quos nam assumenda possimus voluptates.
+                          </p>
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Harum vitae repellat aut, ratione quidem ipsum
+                            quos nam assumenda possimus voluptates.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
           {/* Bio */}
           <div className="container my-5" id="bio">
-            <h1 className="text-center mb-5">Bio</h1>
+            <h1 className="text-center mb-5 heading-title wow fadeInUp">Bio</h1>
             <div className="row wrapper-bio">
-              <div className="col-12 col-md-6">
+              <div className="col-12 col-md-6 wow fadeInLeft" >
                 <img src={bio} alt={bio} className="img-fluid" />
               </div>
-              <div className="col-12 col-md-6">
+              <div className="col-12 col-md-6 wow fadeInRight">
                 <h2 className="text-center mb-3">Ms. La Hạ Giang Thanh</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
@@ -404,12 +408,21 @@ function BeautyFromWomen() {
             </div>
           </div>
 
+          {/* Học phí */}
+          <div className="container-fluid" id="hocPhi">
+            <h1 className="text-center heading-title wow fadeInUp">Học phí</h1>
+            <div className='row wow fadeInLeft'>
+            <img src={hocPhi} alt={hocPhi} className="img-fluid"/> 
+            </div>
+            
+          </div>
+
           {/* Form đăng ký */}
           <div className="bg-dangKy">
             <div className="container-fluid py-5" id="dangKy">
-              <h1 className="text-center">Đăng ký khóa học</h1>
+              <h1 className="text-center heading-title wow fadeInUp">Đăng ký khóa học</h1>
               <div className="row">
-                <div className="col-12 wrapper-form">
+                <div className="col-12 wrapper-form wow zoomInLeft">
                   <FormDangKy />
                 </div>
               </div>
@@ -418,25 +431,25 @@ function BeautyFromWomen() {
 
           {/* Ảnh */}
           <div className="container-fluid mb-5">
-            <h1 className="text-center my-5">Ảnh</h1>
-            <div className="row">
-              <div className="col-12 col-sm-6 col-md-3">
+            <h1 className="text-center my-5 heading-title">Ảnh</h1>
+            <div className="row wow fadeInUp">
+              <div className="col-12 col-md-3 mt-1">
                 <img src={anh1} alt={anh1} className="img-fluid" />
               </div>
-              <div className="col-12 col-sm-6 col-md-3">
+              <div className="col-12  col-md-3 mt-1">
                 <img src={anh2} alt={anh2} className="img-fluid" />
               </div>
-              <div className="col-12 col-sm-6 col-md-3">
+              <div className="col-12  col-md-3 mt-1">
                 <img src={anh3} alt={anh3} className="img-fluid" />
               </div>
-              <div className="col-12 col-sm-6 col-md-3">
+              <div className="col-12  col-md-3 mt-1">
                 <img src={anh4} alt={anh4} className="img-fluid" />
               </div>
             </div>
           </div>
 
           {/* Footer */}
-          <footer>
+          <footer className="wow fadeInUp">
             <div className="text-center"></div>
             <h3 className="name">Công Ty TNHH Giáo Dục Leading Performance</h3>
 
