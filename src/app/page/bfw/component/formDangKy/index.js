@@ -18,7 +18,7 @@ function FormDangKy() {
   const handleForm = (data) => {
     axios({
       method: "post",
-      url: "https://sheetdb.io/api/v1/jhj6jfw8053vf",
+      url: "https://sheet.best/api/sheets/b659a074-c4d5-441a-ad0e-5bf84d0c6dc8",
       data: data,
     })
       .then(function (response) {
@@ -59,6 +59,7 @@ function FormDangKy() {
         }
       }
     }
+
     dataSubmit["custom_register"] = custom_register;
     // catching error when submit form
     if (
@@ -80,7 +81,7 @@ function FormDangKy() {
   return (
     <form
       action="https://app.getresponse.com/add_subscriber.html"
-      accept-charset="utf-8"
+      acceptCharset="utf-8"
       method="post"
       className="borderForm"
       ref={refForm}
@@ -172,7 +173,11 @@ function FormDangKy() {
       </div>
 
       <input type="hidden" name="campaign_token" value="5okzY" />
-      <input type="hidden" name="thankyou_url" value="" />
+      <input
+        type="hidden"
+        name="thankyou_url"
+        value="https://lpe.vn/thank-you-beauty-from-within/"
+      />
       <input type="hidden" name="start_day" value="0" />
 
       <div className="wrapper-button">

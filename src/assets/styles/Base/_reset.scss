@@ -3,6 +3,11 @@
     src: url("../../fonts/SF-UI-Text-Regular.ttf");
 }
 
+@font-face {
+    font-family: Signwriter;
+    src: url("../../fonts/UTM A&S Signwriter.ttf");
+}
+
 
 * {
     margin: 0;
@@ -33,3 +38,24 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ffd5cd; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: 
+    #ffa795; 
+  }
