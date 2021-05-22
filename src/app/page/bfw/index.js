@@ -19,7 +19,7 @@ function BeautyFromWomen() {
   const menu = [
     {
       link: "#gioiThieu",
-      content: "Khóa học",
+      content: "BFW",
     },
     {
       link: "#bio",
@@ -31,7 +31,7 @@ function BeautyFromWomen() {
     },
     {
       link: "#hocPhi",
-      content: "Học phí",
+      content: "Khóa học",
     },
     {
       link: "#dangKy",
@@ -167,13 +167,13 @@ function BeautyFromWomen() {
               <>
                 <ul className="navMobile">
                   <li className="itemNavbar">
-                    <a href="#gioiThieu">Khóa học</a>
+                    <a href="#gioiThieu">BFWc</a>
                   </li>
                   <li className="itemNavbar">
                     <a href="#bio">Bio</a>
                   </li>
                   <li className="itemNavbar">
-                    <a href="#hocPhi">Học phí</a>
+                    <a href="#hocPhi">Khóa học</a>
                   </li>
                   <li className="itemNavbar">
                     <a href="#dangKy">Đăng ký</a>
@@ -197,6 +197,10 @@ function BeautyFromWomen() {
                 data-wow-delay=".25s"
               >
                 <img src={thuNgo} alt={thuNgo} className="img-fluid" />
+
+                <p className="mb-2">
+                Nếu bạn đang nhìn thấy hình ảnh đó ở mình, có lẽ bạn đã không thật sự yêu thương & nhìn thấy được giá trị ở chính mình trong một thời gian dài.
+                </p>
               </div>
               <div
                 className="col-12 col-lg-6  letter-text wow fadeInRight"
@@ -208,19 +212,17 @@ function BeautyFromWomen() {
                 <p className="text-bolder">
                 Là Giang Thanh đây & thật tuyệt vời khi bạn đang đọc những dòng này.
                 </p>
-                <p>
+                <p className="mb-2">
                 Giang Thanh là Nhà tư vấn trị liệu, Chuyên gia đào tạo & là Diễn giả trong các lĩnh vực khác nhau như khoa học NLP, Time Line Therapist, Hypnotherapist, Thiền định & Yoga.
                 </p>
-                <p>
+                <p className="mb-2">
                   Trong hơn 10 năm qua, Thanh đã có cơ hội được làm việc cùng hàng ngàn chị em phụ nữ. Và Thanh nhận ra một điều đáng buồn là, hầu hết phụ nữ chúng ta thường thiếu tự tin bởi chính bản thân mình. Nhan sắc thường là điểm lớn nhất cản trở chị em phụ nữ, khiến họ dần trở nên tự ti, sống khép mình hoặc suy nghĩ tiêu cực.
                 </p>
-                <p>
+                <p className="mb-2">
                 Biểu hiện thường gặp nhất của phụ nữ chính là chúng ta không hài lòng với cơ thể của mình & đôi khi hay ganh tị, tủi thân vì không được hoàn mỹ như người khác. 
                 </p>
-                <p>
-                Nếu bạn đang nhìn thấy hình ảnh đó ở mình, có lẽ bạn đã không thật sự yêu thương & nhìn thấy được giá trị ở chính mình trong một thời gian dài.
-                </p>
-                <p>
+                
+                <p className="mb-2">
                 Và bạn chính là lý do để Giang Thanh tiếp tục hành trình của mình, giúp cho tất cả những người phụ nữ trở nên tự tin đẹp từ bên trong ra ngoài & yêu thương chính mình thật đúng cách.
                 </p>
               </div>
