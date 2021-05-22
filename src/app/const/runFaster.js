@@ -154,23 +154,16 @@ export const courseFee = [
     id: 1,
     name: "Vé gốc",
     disabled: true,
-    
-    price: 3000000
+
+    price: 3000000,
   },
   {
     id: 2,
     name: "Vé hỗ trợ mùa covid",
-    disabled: true,
-    price: 1500000
-  },
-  {
-    id: 3,
-    name: "Vé Earlybird (giới hạn)",
-    special: " (giới hạn)",
     disabled: false,
-    price: 1200000
-  }
-]
+    price: 1500000,
+  },
+];
 
 export const itemIcon = [
   {

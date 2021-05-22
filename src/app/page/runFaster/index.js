@@ -352,7 +352,7 @@ function RunFaster() {
                 {DATA.courseFee.map((item, index) => {
                   return (
                     <div
-                      className="col-12 col-md-4 col-lg-4 wow fadeInUp"
+                      className="col-12 col-md-6 col-lg-6 wow fadeInUp"
                       data-wow-delay="0.3s"
                       key={index}
                     >
