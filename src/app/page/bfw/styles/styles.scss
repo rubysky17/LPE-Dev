@@ -257,8 +257,16 @@ footer {
   font-family: 'Signwriter', sans-serif;
   font-size: 90px;
   color: #696969;
+  &.thank-you {
+    font-size: 60px;
+    margin: 40px 0;
+  }
 }
 
+.text-bolder {
+  font-weight: 600;
+  text-align: center;
+}
 .letter-text {
   display: flex;
   justify-content: center;
@@ -268,20 +276,16 @@ footer {
 
 // BG
 .bg-course {
-  background-image: url("../../../../assets/images/bg.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 96px;
-  text-align: center;
+  img {
+    width: 100%;
+    height: auto;
+  }
+
 }
 .course {
   h1 {
-    color: $c-white-0;
+    color: $c-lightPurple-2;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 50px;
@@ -349,14 +353,10 @@ footer {
 }
 
 .front p {
-  font-size: 35px;
+  font-size: 20px;
+  padding: 10px;
   margin-bottom: 15px;
-  color: white;
-}
-
-.front span {
-  font-size: 23px;
-  color: white;
+  color: $c-white-0;
 }
 
 .front p:after {
@@ -366,7 +366,7 @@ footer {
   right: 0;
   width: 100px;
   height: 2px;
-  background: white;
+  background: $c-white-0;
   margin: 0 auto;
   margin-top: 10px;
 }
@@ -377,16 +377,12 @@ footer {
 }
 
 .back {
-  color: white;
+  color: $c-white-0;
 }
 
-.back h2 {
-  font-size: 33px;
-  padding-bottom: 5px;
-}
-
-.back span {
-  font-size: 25px;
+.back p {
+  padding: 10px;
+  font-size: 16px;
 }
 
 .icons {
@@ -399,7 +395,7 @@ i.fab {
   font-size: 20px;
   height: 40px;
   width: 40px;
-  background: white;
+  background: $c-white-0;
   border-radius: 50%;
   margin: 0 5px;
   line-height: 40px;
@@ -606,6 +602,12 @@ i.fab {
   }
 }
 
+@media screen  and (max-width: 470px) {
+  .letter-title {
+    font-size: 60px;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   .heading-title {
@@ -615,4 +617,11 @@ i.fab {
   .wrapper-form .borderForm {
     border-radius: 0;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .heading-title {
+    font-size: 35px;
+  }
+
 }
