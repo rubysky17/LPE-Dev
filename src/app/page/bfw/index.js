@@ -193,13 +193,13 @@ function BeautyFromWomen() {
           <div className="container letter my-5">
             <div className="row">
               <div
-                className="col-md-6 col-12 wow fadeInLeft"
+                className="col-12 col-lg-6 img-gif wow fadeInLeft"
                 data-wow-delay=".25s"
               >
                 <img src={thuNgo} alt={thuNgo} className="img-fluid" />
               </div>
               <div
-                className="col-md-6 col-12 letter-text wow fadeInRight"
+                className="col-12 col-lg-6  letter-text wow fadeInRight"
                 data-wow-delay=".25s"
               >
                 <div className="mb-2">
@@ -424,7 +424,7 @@ function BeautyFromWomen() {
             </div>
           </div>
 
-          <h1 className='text-center letter-title thank-you wow fadeInUp'>
+          <h1 className='text-center letter-title thank-you wow fadeInUp thank-text'>
           “Cảm ơn tất cả những quý cô suốt thời gian qua đã tin tưởng để đồng hành với Thanh. Nếu không có những quý cô thì sẽ không thể nào có Giang Thanh ngày hôm nay!”
           </h1>
 
