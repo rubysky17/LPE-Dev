@@ -259,7 +259,7 @@ footer {
   color: #696969;
   &.thank-you {
     font-size: 60px;
-    margin: 40px 0;
+    margin: 20px 0;
   }
 }
 
@@ -344,6 +344,14 @@ footer {
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+
+  
+}
+.back-face {
+  &.purple {
+    background: $c-lightPurple-1!important;
+
+  }
 }
 
 .contents {
@@ -596,6 +604,7 @@ i.fab {
   font-size: 50px;
   text-transform: uppercase;
   font-weight: 700;
+  color: #696969;
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
@@ -633,6 +642,11 @@ i.fab {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+    p {
+      text-align: center;
+    }
   }
   .thank-text {
     font-size: 50px!important;
@@ -645,5 +659,40 @@ i.fab {
     font-size: 40px!important;
     padding: 0 20px;
   }
+
+  .quote {
+    font-size: 20px!important;
+  }
 }
 
+.heading-writer {
+  font-family: 'Signwriter', sans-serif;
+  color: #696969;
+  font-size: 70px;
+}
+
+.text-level {
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.quote {
+  font-size: 25px!important;
+}
+
+.img-khoa_1 {
+  width: 150px;
+  height: 150px;
+}
+
+.text-thank {
+  font-size: 30px;
+  margin-top: 40px;
+}
+@media screen and (max-width: 552px) {
+  
+.text-thank {
+  font-size: 20px;
+}
+}
