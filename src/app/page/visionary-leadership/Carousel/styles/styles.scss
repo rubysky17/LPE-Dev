@@ -1,0 +1,13 @@
+@import "../../../../../assets/styles/common.scss";
+
+.slider{
+    // margin-top:85px;
+    img{
+        width:1903x;
+    }
+}
+@media screen and (max-width: 768px) {
+    .slider{
+    // margin-top:80px;
+}
+}

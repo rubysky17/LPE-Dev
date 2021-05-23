@@ -1,0 +1,106 @@
+@import "../../../../../assets/styles/common.scss";
+
+// Form dang ky
+.wrapper-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+
+  .borderForm {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px 50px;
+    width: 600px;
+  }
+  .wrapper-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      color: $c-white-0;
+      margin-top: 20px;
+      background-color: $c-beyge-1;
+      padding: 10px 20px;
+      transition: all 0.5s;
+      border: none;
+      margin-bottom: 20px;
+      border-radius: 10px;
+
+      &:hover {
+        background-color:  $c-beyge-2;
+      }
+    }
+  }
+}
+
+.form-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 20px;
+
+  label {
+    text-transform: uppercase;
+    color: $c-beyge-1;
+    font-weight: 600;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    border: 2px solid $c-gray-4;
+
+    &:focus {
+      border: 2px solid $c-beyge-2;
+    }
+  }
+
+  ::placeholder {
+    color: $c-gray-3;
+    font-size: 15px;
+    opacity: 1;
+  }
+}
+
+.bg-dangKy {
+  background: $c-beyge-1;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  bottom: -60px;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}

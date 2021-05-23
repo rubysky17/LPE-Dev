@@ -1,0 +1,55 @@
+@import "../../../../../assets/styles/common.scss";
+
+.aboutMrVas{
+    position:relative;
+    // background: #1c1c24;
+    background: linear-gradient(to right, #1c1c24 40%, white) ;
+   
+    p{
+        color:white;
+    }
+    .contentLeft{
+        width:50%;
+        z-index:2;
+    }
+    .row{
+        img{
+            height:100%;
+            position: absolute;
+            right: 0%;
+            top: 50%;
+            transform: translate(0%, -50%);
+            z-index:1;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1199px) {
+    .aboutMrVas{
+        background:#1c1c24;
+        .contentLeft{
+            width:100% !important;
+            padding: 15px;
+        }
+        .row{
+            img{
+                position:unset;
+                top:unset;
+                right: unset;
+                transform:unset;
+                height:unset;
+            }
+        }
+    }
+}
+// @media screen and (max-width: 991px) {
+//     .aboutMrVas{
+//         .row{
+//             .img{
+//                 height:unset;
+//             }
+//         }
+//     }  
+// }
+

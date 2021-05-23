@@ -1,0 +1,61 @@
+@import "../../../../../assets/styles/common.scss";
+
+.story{
+    p{
+        font-size:$fs-3;
+    }
+    .content01{
+        .video{
+            width:100%;
+            padding:10px;
+            min-height: 315px;
+        }
+        position: relative;
+        margin-bottom:30px;
+        div:first-child {
+            position:absolute;
+            right:0%;
+            top:50%;
+            transform: translate(0%, -50%);
+        }
+       
+        div:nth-child(2){
+            text-align:center;
+            img{
+            display:inline-flex;
+            }
+        }
+    }
+    .content02{
+         div:first-child {
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-direction: column;
+            
+        }
+        div:nth-child(2){
+            text-align:center;
+            img{
+            display:inline-flex;
+            }
+        }
+        
+    }
+}
+// @media screen and (max-width: 768px) {
+
+// }
+
+@media screen and (max-width: 768px) {
+    .story{
+        .content01{
+            position: relative;
+            div:first-child {
+                position: relative;
+                transform: unset;
+                margin-bottom:30px;
+            }
+        }
+    }
+}

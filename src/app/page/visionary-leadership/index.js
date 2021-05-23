@@ -1,101 +1,40 @@
-import React , { useEffect, useState} from 'react'
+import React  from 'react'
 import "./styles/styles.scss";
-import logo from "assets/images/doanhNhan.png";
-
+import NavBar from "./navBar/index";
+import Carousel from "./Carousel/index";
+import ProblemBusiness from "./ProblemBusiness/index";
+import Story from "./Story/index";
+import JourneyCourse from "./JourneyCourse/index";
+import SkillOfCourse from "./SkillOfCourse/index";
+import Pricing from "./Pricing/index";
+import AboutMrVas from "./AboutMrVas/index";
+import FormRegister from "./FormRegister/index";
+import temPlate from "assets/images/template.jpeg";
+import BenefitAfterCourse from "./BenefitAfterCourse/index";
 function VisionaryLeadership() {
-     const [toggle, setToggle] = useState(false);
-     const menu = [
-    {
-      link: "#gioiThieu",
-      content: "Practice Areas",
-    },
-    {
-      link: "#bio",
-      content: "Bio",
-    },
-    {
-      link: "#root",
-      img: logo,
-    },
-    {
-      link: "#hocPhi",
-      content: "Học phí",
-    },
-    {
-      link: "#dangKy",
-      content: "Đăng ký",
-    },
-  ];
+     
     return (
-        <div>
-         
-        <nav className="navbar navbar-dp-big">
-         {/* navbar */}
-            <ul className="listNavbar">
-              {menu.map((item, index) => {
-                return (
-                  <li className="itemNavbar" key={index}>
-                    <a href={item.link}>
-                      {!item.img ? (
-                        item.content
-                      ) : (
-                        <img src={logo} alt={logo} className="img-logo" />
-                      )}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-          <nav
-            className={`navbar navbarSmall navbar-dp-small ${
-              !!toggle && "nav-open"
-            }`}
-            style={{
-              opacity: toggle && "1",
-            }}
-          >
-            <ul className="listNavbar">
-              <li className="itemNavbar itemLogo">
-                <a href="#root">
-                  <img src={logo} alt={logo} className="img-logo" />
-                </a>
-              </li>
-
-              <li
-                className="itemNavbar icon"
-                onClick={() => {
-                  setToggle(!toggle);
-                }}
-              >
-                {!toggle ? (
-                  <i className="far fa-bars"></i>
-                ) : (
-                  <i className="far fa-times"></i>
-                )}
-              </li>
-            </ul>
-
-            {
-              <>
-                <ul className="navMobile">
-                  <li className="itemNavbar">
-                    <a href="#khoaHoc">Khóa học</a>
-                  </li>
-                  <li className="itemNavbar">
-                    <a href="#bio">Bio</a>
-                  </li>
-                  <li className="itemNavbar">
-                    <a href="#hocPhi">Học phí</a>
-                  </li>
-                  <li className="itemNavbar">
-                    <a href="#dangKy">Đăng ký</a>
-                  </li>
-                </ul>
-              </>
-            }
-          </nav>
+      <div>
+        {/* <NavBar/> */}
+        <Carousel />
+        <ProblemBusiness/>
+        <Story/>
+        <JourneyCourse/>
+        <SkillOfCourse/>
+        <AboutMrVas/>
+        <Pricing/>
+        <BenefitAfterCourse/>
+        <div className="bg-dangKy">
+          <div className="container-fluid py-5" id="dangKy">
+            <h1 className="text-center heading-title wow fadeInUp">Đăng ký khóa học</h1>
+            <div className="row">
+              <div className="col-12 wrapper-form wow zoomInLeft">
+                <FormRegister/>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
     )
 }
 

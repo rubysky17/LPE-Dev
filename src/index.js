@@ -12,7 +12,7 @@ import "./assets/styles/common.scss";
 import "react-multi-carousel/lib/styles.css";
 
 const meta = {
-  title: 'TÌM LẠI LẼ SỐNG VÀ KHÁT VỌNG THÀNH CÔNG',
+  title: 'Visionary Leadership',
   description: 'Nhấp vào link để tìm hiểu khóa học',
   image: "https://lpe.vn/storage/vip-lpe/tim-lai-le-song-va-khat-vong-thanh-cong-po-lpe-banner.jpg",
   meta: {

@@ -33,3 +33,55 @@ body {
 {
 	background-image: linear-gradient(to top, #49005d, #e21b81);
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+}
+
+ul > li {
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html,
+body {
+    // font-family: 'SF-font', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ffd5cd; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: 
+    #ffa795; 
+  }

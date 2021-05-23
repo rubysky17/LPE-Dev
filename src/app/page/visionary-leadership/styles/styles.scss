@@ -1,4 +1,12 @@
 @import "../../../../assets/styles/common.scss";
+$c-lightPink-1: #ffd5cd;
+
+// default
+
+h2{
+  color:$c-beyge-1;
+}
+
 
 // navbar
 .navbar {
@@ -62,4 +70,90 @@
 .navMobile {
   height: 0;
   transition: all 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-dp-big {
+    display: none;
+  }
+
+  .navbar-dp-small {
+    display: block;
+  }
+
+  .navbar {
+    &.navbarSmall {
+      .listNavbar {
+        justify-content: space-between;
+        .itemNavbar {
+          cursor: pointer;
+          i {
+            color: $c-black-0;
+          }
+        }
+      }
+    }
+  }
+
+  .navMobile {
+    display: none;
+  }
+
+  .nav-open {
+    .navMobile {
+      display: block;
+      height: 100%;
+      transition: all 0.5s;
+      .itemNavbar {
+        padding: 10px 20px;
+        transition: all 0.3s;
+        &:hover {
+          background-color: $c-lightPink-1;
+          cursor: pointer;
+        }
+
+        a {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+  .navbarSmall {
+    padding: 0;
+  }
+  .bg-course {
+    margin-top: 44px !important;
+  }
+}
+
+.letter-title {
+  font-family: 'Signwriter', sans-serif;
+  font-size: 90px;
+  color: #696969;
+}
+
+.letter-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+// slider
+.slider img{
+    width:100%
+}
+
+.area-pd{
+  padding: 30px 0;
+}
+.area-pt{
+  padding-top: 30px;
+}
+.area-pb{
+  padding-top: 30px;
+}
+.area-mb{
+  margin-bottom:30px;
 }

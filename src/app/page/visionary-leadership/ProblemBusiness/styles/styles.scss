@@ -1,0 +1,41 @@
+@import "../../../../../assets/styles/common.scss";
+
+.problemBusiness {
+    .content01{
+       
+        background:$c-beyge-1;
+        color:white;
+        padding: 30px 0;
+        position: relative;
+         h2{
+             color:black;
+         }
+        .container{
+            button{
+                position:absolute;
+                left:50%;
+                top:50%;
+                transform: translate(-50%, -50%);
+                background:#25252d;
+                color:white;
+                font-size:$fs-3;
+            }
+        }
+    }
+    .content02{
+        padding: 30px 0;
+        background: #25252d;
+        color: $c-beyge-1;
+        text-align:justify;
+        .details{
+            display: inline-block;
+            margin-bottom:20px;
+            .icon{
+                margin-top:10px;
+                padding-right:10px;
+                width:50px;
+                float:left;
+            }
+        }
+    }
+}
