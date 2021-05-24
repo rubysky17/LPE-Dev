@@ -77,7 +77,6 @@ $main-font-weight: 300;
     color: $main-font-color;
     font-weight: $main-font-weight;
   }
-
 }
 
 // Price
@@ -121,5 +120,18 @@ $main-font-weight: 300;
 }
 }
 
-// Tables
+// mobile
 
+@media screen and (max-width: 540px) {
+    .pricing {
+      .container{
+        display:block;
+        text-align:center;
+        height:auto;
+        img{
+          display:unset;
+          width:90%;
+        }
+      }
+    }
+  }

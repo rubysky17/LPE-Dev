@@ -1,11 +1,13 @@
 import React from 'react'
 import "./styles/styles.scss"
-import price from "assets/images/price01.png";
+import price01 from "assets/images/price01.png";
+import price02 from "assets/images/price02.png";
 function Princing() {
     return (
         <div className="pricing area-pd">
         <div className="container">
-    <img src={price} className="img-responsive" alt="Image"/>
+          <img src={price01} className="img-responsive" alt="Image"/>
+          <img src={price02} className="img-responsive" alt="Image"/>
 
   {/* <div className="row flex-items-xs-middle flex-items-xs-center">
 

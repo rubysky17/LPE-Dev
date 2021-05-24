@@ -64,6 +64,9 @@ function JourneyCourse() {
         <img src={JC02} alt="Book Open"  />
       </article>
     </div>
+    <div className="video">
+      <iframe src="https://www.youtube.com/embed/5tIZsrqFCAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </section>
         </div>
         </div>
