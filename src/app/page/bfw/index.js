@@ -94,7 +94,7 @@ function BeautyFromWomen() {
               <>
                 <ul className="navMobile">
                   <li className="itemNavbar">
-                    <a href="#gioiThieu">BFWc</a>
+                    <a href="#gioiThieu">BFW</a>
                   </li>
                   <li className="itemNavbar">
                     <a href="#bio">Bio</a>
@@ -123,12 +123,7 @@ function BeautyFromWomen() {
                 data-wow-delay=".25s"
               >
                 <img src={thuNgo} alt={thuNgo} className="img-fluid" />
-
-                <p className="mb-2">
-                  Nếu bạn đang nhìn thấy hình ảnh đó ở mình, có lẽ bạn đã không
-                  thật sự yêu thương & nhìn thấy được giá trị ở chính mình trong
-                  một thời gian dài.
-                </p>
+              
               </div>
               <div
                 className="col-12 col-lg-6  letter-text wow fadeInRight"
@@ -159,7 +154,14 @@ function BeautyFromWomen() {
                   hài lòng với cơ thể của mình & đôi khi hay ganh tị, tủi thân
                   vì không được hoàn mỹ như người khác.
                 </p>
+              </div>
 
+              <div className="col-12 mt-3 text-center wow fadeInLeft" data-wow-delay=".25s">
+                <p className="mb-2">
+                  Nếu bạn đang nhìn thấy hình ảnh đó ở mình, có lẽ bạn đã không
+                  thật sự yêu thương & nhìn thấy được giá trị ở chính mình trong
+                  một thời gian dài.
+                </p>
                 <p className="mb-2">
                   Và bạn chính là lý do để Giang Thanh tiếp tục hành trình của
                   mình, giúp cho tất cả những người phụ nữ trở nên tự tin đẹp từ
@@ -189,9 +191,12 @@ function BeautyFromWomen() {
                     <p>{ele.description}</p>
                   </div>
                   <div className="col-12 col-md-6 my-3  wow fadeInRight">
-                    <div className="route-video">
-                      <img src={ele.img} alt={ele.img} className="img-fluid" />
-                    </div>
+                    <iframe
+                      width="100%"
+                      height="315"
+                      src={ele.video}
+                      title="YouTube video player"
+                    ></iframe>
                   </div>
                 </div>
               );
@@ -406,12 +411,13 @@ function BeautyFromWomen() {
           <div className="container-fluid mb-5">
             <h1 className="text-center my-5 heading-title">Ảnh</h1>
             <div className="row">
-              {picture.map((pic,index) => {
-                return <div className="col-12 col-md-3 mt-3" key={index}>
-                <img src={pic} alt={pic} className="img-fluid" />
-              </div>
+              {picture.map((pic, index) => {
+                return (
+                  <div className="col-12 col-md-3 mt-3" key={index}>
+                    <img src={pic} alt={pic} className="img-fluid" />
+                  </div>
+                );
               })}
-              
             </div>
           </div>
 

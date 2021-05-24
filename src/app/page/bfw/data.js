@@ -1,4 +1,3 @@
-import video from "assets/images/video.jpg";
 import card1 from "assets/images/card1.png";
 import card2 from "assets/images/card2.png";
 import card3 from "assets/images/card3.png";
@@ -43,16 +42,14 @@ const program = [
     level: "Level 1: BEAUTY FROM WITHIN - ĐẸP TỪ BÊN TRONG",
     description:
       "Phụ nữ luôn mang trên vai những gánh nặng khác nhau trong cuộc sống. Điều này đôi khi vô tình ngăn cản chúng ta yêu thương hoặc nhìn nhận bản thân đúng cách. Hoặc chúng ta đã bận “sống chuẩn mực”, bận “sống cho người khác” suốt thời gian qua. Nhưng, một lúc bất chợt nhìn vào gương, thật lòng bạn thấy gì trong gương?",
-    img: video,
-    video: "",
+    video: "https://www.youtube.com/embed/va0sSA9UG-8",
   },
   {
     id: 2,
     level: "Level 2: LOVE AND BELOVED - YÊU VÀ ĐƯỢC YÊU",
     description:
       "Chúng ta không thể mong cầu tình yêu thương từ người khác nếu bản thân chưa hiểu, chưa biết cách thực hành tình yêu chân thành với chính mình. Bất kỳ ai cũng xứng đáng ở bên cạnh một người dành cho mình tình yêu trọn vẹn, bất kỳ ai cũng có quyền xinh đẹp, được yêu & viên mãn.",
-    img: video,
-    video: "",
+    video: "https://www.youtube.com/embed/AUKyFY9Yhbg",
   },
 ];
 const flipCardCourse1 = [
