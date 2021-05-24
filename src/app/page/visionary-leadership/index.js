@@ -26,7 +26,7 @@ function VisionaryLeadership() {
         <BenefitAfterCourse/>
         <div className="bg-dangKy">
           <div className="container-fluid py-5" id="dangKy">
-            <h1 className="text-center heading-title wow fadeInUp">Đăng ký khóa học</h1>
+            <h1 className="text-center heading-title wow fadeInUp">Nhận Tư Vấn Về Khóa Học</h1>
             <div className="row">
               <div className="col-12 wrapper-form wow zoomInLeft">
                 <FormRegister/>
