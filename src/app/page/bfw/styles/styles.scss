@@ -344,8 +344,17 @@ footer {
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-
-  
+}
+.front-face::after {
+  content: "";
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  opacity: 0.5;
 }
 .back-face {
   &.purple {
@@ -637,8 +646,19 @@ i.fab {
 
 }
 
+.img-gif_big {
+display: block;
+}
+
+.img-gif_small {
+  display: none;
+}
+
 @media screen and (max-width: 992px) {
-  .img-gif {
+  .img-gif_big {
+display: none;
+  }
+  .img-gif_small {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -655,6 +675,9 @@ i.fab {
 }
 
 @media screen and (max-width: 768px) {
+  .img-fee {
+    height: 140px!important;
+  }
   .thank-text {
     font-size: 40px!important;
     padding: 0 20px;
@@ -669,6 +692,10 @@ i.fab {
   font-family: 'Signwriter', sans-serif;
   color: #696969;
   font-size: 70px;
+
+  .margin-text {
+    margin: 50px!important;
+  }
 }
 
 .text-level {

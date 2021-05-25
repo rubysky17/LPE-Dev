@@ -119,11 +119,10 @@ function BeautyFromWomen() {
           <div className="container letter my-5">
             <div className="row">
               <div
-                className="col-12 col-lg-6 img-gif wow fadeInLeft"
+                className="col-12 col-lg-6 img-gif_big wow fadeInLeft"
                 data-wow-delay=".25s"
               >
                 <img src={thuNgo} alt={thuNgo} className="img-fluid" />
-              
               </div>
               <div
                 className="col-12 col-lg-6  letter-text wow fadeInRight"
@@ -155,8 +154,16 @@ function BeautyFromWomen() {
                   vì không được hoàn mỹ như người khác.
                 </p>
               </div>
-
-              <div className="col-12 mt-3 text-center wow fadeInLeft" data-wow-delay=".25s">
+              <div
+                className="col-12 col-lg-6 img-gif_small wow fadeInLeft"
+                data-wow-delay=".25s"
+              >
+                <img src={thuNgo} alt={thuNgo} className="img-fluid" />
+              </div>
+              <div
+                className="col-12 mt-3 text-center wow fadeInLeft"
+                data-wow-delay=".25s"
+              >
                 <p className="mb-2">
                   Nếu bạn đang nhìn thấy hình ảnh đó ở mình, có lẽ bạn đã không
                   thật sự yêu thương & nhìn thấy được giá trị ở chính mình trong
@@ -174,7 +181,7 @@ function BeautyFromWomen() {
           {/* Giới thiệu chương trình */}
           <div className="container route my-5" id="gioiThieu">
             <h1
-              className="text-center my-5 heading-writer wow fadeInUp"
+              className="text-center heading-writer margin-text wow fadeInUp"
               data-wow-delay=".25s"
             >
               Món quà giá trị Giang Thanh dành cho bạn!
@@ -183,7 +190,11 @@ function BeautyFromWomen() {
               return (
                 <div className="row" key={index}>
                   <div className="col-12">
-                    <h3 className="text-level text-center wow fadeInUp">
+                    <h3 className="text-level text-center wow fadeInUp" style={{
+
+                      color: ele.level === "Level 1: BEAUTY FROM WITHIN - ĐẸP TỪ BÊN TRONG" ? "#efbbcf" : "#8675a9",
+
+                    }}>
                       {ele.level}
                     </h3>
                   </div>
@@ -292,7 +303,7 @@ function BeautyFromWomen() {
                           <p>{card.front}</p>
                         </div>
                       </div>
-                      <div className="back-face">
+                      <div className="back-face purple">
                         <div className="contents back">
                           <p>{card.back}</p>
                         </div>
@@ -327,7 +338,7 @@ function BeautyFromWomen() {
                           <p>{card.front}</p>
                         </div>
                       </div>
-                      <div className="back-face purple">
+                      <div className="back-face">
                         <div className="contents back">
                           <p>{card.back}</p>
                         </div>
@@ -378,7 +389,7 @@ function BeautyFromWomen() {
               Khóa học
             </h1>
             <div className="row wow fadeInLeft">
-              <img src={hocPhi} alt={hocPhi} className="img-fluid" />
+              <img src={hocPhi} alt={hocPhi} className="img-fluid img-fee" />
             </div>
           </div>
 
@@ -386,7 +397,7 @@ function BeautyFromWomen() {
           <div className="bg-dangKy">
             <div className="container-fluid py-5" id="dangKy">
               <h1 className="text-center heading-title wow fadeInUp">
-                Đăng ký khóa học
+                Đăng ký tư vấn khóa học
               </h1>
               <div className="row">
                 <div className="col-12 wrapper-form wow zoomInLeft">
@@ -409,7 +420,6 @@ function BeautyFromWomen() {
 
           {/* Ảnh */}
           <div className="container-fluid mb-5">
-            <h1 className="text-center my-5 heading-title">Ảnh</h1>
             <div className="row">
               {picture.map((pic, index) => {
                 return (
