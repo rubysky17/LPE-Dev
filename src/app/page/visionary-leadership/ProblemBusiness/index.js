@@ -1,88 +1,122 @@
-import React, { Component } from 'react';
+import React, { useState, useRef } from "react";
 import "./styles/styles.scss";
-import icon01 from "assets/images/problemBusiness/icon01.png"
-import icon02 from "assets/images/problemBusiness/icon02.png"
-import icon03 from "assets/images/problemBusiness/icon03.png"
-import icon04 from "assets/images/problemBusiness/icon04.png"
-import icon05 from "assets/images/problemBusiness/icon05.png"
-import icon06 from "assets/images/problemBusiness/icon06.png"
-const problemBusiness =[
-    {
-        id:1,
-        icon: icon01,
-        title: "Hết đam mê với ngành nghề kinh doanh của mình",
-        desc:"Sau một thời gian làm việc & đạt được những thành tựu nhất định, hầu hết các doanh nghiệp sẽ rơi vào giai đoạn “hoang mang” không biết mình nên làm điều gì tiếp theo. Có thể bạn đang mất đi động lực vốn có ban đầu, hoặc đã dần hết đam mê với việc kinh doanh đó.",
-    },
-     {
-        id:2,
-        icon: icon02,
-        title: "Mệt mỏi vì chạy theo gánh nặng tài chính",
-        desc:"Bạn đã bỏ rất nhiều sự cống hiến, mất đi thời gian & công sức nhưng kết quả đạt lại không như mong đợi. Những gì bạn nhận lại được không xứng đáng với thứ bạn đã bỏ ra. Bạn băn khoăn liệu đây có phải là ngành nghề thật sự đưa bạn trở thành người thành công?!",
-    },
-     {
-        id:3,
-        icon: icon03,
-        title: "Tầm nhìn chưa đủ rộng.",
-        desc:"Bạn có kỹ năng chuyên môn tốt, nhưng không biết mình nên đi về hướng nào tiếp theo trong tương lai? Bạn lại thường bâng khuâng trước những sự lựa chọn khác nhau để mở rộng doanh nghiệp. Nếu bạn không thể xác định được rõ đường đi nước bước tiếp theo, có nghĩa bạn đang chưa có tầm nhìn đủ lớn cho mình.",
-    },
-     {
-        id:4,
-        icon: icon04,
-        title: "Không kiểm soát tốt về mặt Tâm lý bản thân",
-        desc:"Mỗi khi gặp phải vấn đề khó khăn, trắc trở, bạn sẽ khó có thể bình tình để giải quyết, hoặc chỉ đổ lỗi cho người khác. Đôi khi, bạn cảm thấy áp lực đè nặng đến mức bản thân dường như không thể thoát ra khỏi những suy nghĩ tiêu cực.",
-    },
-     {
-        id:5,
-        icon: icon05,
-        title: "Không biết cách xây dựng Tâm lý vững mạnh cho đội nhóm",
-        desc:"Khi công ty gặp khó khăn, nhân viên của bạn lần lượt rời bỏ bạn đi. Điều đó có thể ảnh hưởng đến việc đưa ra quyết định của các nhà lãnh đạo, đặc biệt là ở giai đoạn khủng hoảng. Làm thế nào để xây dựng sự đồng lòng vượt khó cho cả một đội nhóm?",
-    },
-     {
-        id:6,
-        icon: icon06,
-        title: "Không thể áp dụng thực tế",
-        desc:"Bạn đã trau dồi cho mình rất nhiều kỹ năng lãnh đạo, tham gia các lớp học phát triển bản thân; nhưng khi đi vào tình huống thực tế, bạn thấy bối rối, không biết cần phải sử dụng kiến thức nào thì sẽ đạt được hiệu quả cao.",
-    },
-]
-class index extends Component {
-    render() {
-        return (
-            <div className="problemBusiness area-mb">
-                    {/* <div className="content01">
-                        <div className="container"> 
-                            <div className="col-md-9"> 
-                                <h2> Want to Learn More About How We Help Clients In Rish? </h2>
-                            </div>
-                            <div className="col-md-3">    
-                                <button type="button" className="btn btn-default">LEARN MORE</button>
-                            </div>
-                        </div>
-                    </div> */}
-                    <div className="content02">
-                        <div className="container"> 
-                            <h2>VẤN ĐỀ & NỖI LÒNG CỦA NHỮNG NHÀ KINH DOANH HIỆN TẠI</h2>
-                            <hr/>
-                            <div className="row">
-                            {problemBusiness.map((ele, index) => {
-                                return (
-                                    <div className="col-sm-6 col-xs-12 col-md-4 col-lg-4 details" key={index}>
-                                        <div className="icon">
-                                            <img src={ele.icon} class="img-responsive" alt="Image"/>
-                                        </div>
-                                        <div className="description">
-                                            <h3>{ele.title}</h3>
-                                            <p>{ele.desc}</p>
-                                        </div>
-                                    </div>
-                                );
-                                })}
-                            </div>    
-                        </div>
-                    </div>
-                </div>
-       
-        );
+
+import icon01 from "assets/images/problemBusiness/icon01.png";
+import icon02 from "assets/images/problemBusiness/icon02.png";
+import icon03 from "assets/images/problemBusiness/icon03.png";
+import icon04 from "assets/images/problemBusiness/icon04.png";
+import icon05 from "assets/images/problemBusiness/icon05.png";
+import icon06 from "assets/images/problemBusiness/icon06.png";
+
+const problemBusiness = [
+  {
+    id: 1,
+    icon: icon01,
+    title: "Hết đam mê với ngành nghề kinh doanh của mình",
+    desc: "Sau một thời gian làm việc & đạt được những thành tựu nhất định, hầu hết các doanh nghiệp sẽ rơi vào giai đoạn “hoang mang” không biết mình nên làm điều gì tiếp theo. Có thể bạn đang mất đi động lực vốn có ban đầu, hoặc đã dần hết đam mê với việc kinh doanh đó.",
+  },
+  {
+    id: 2,
+    icon: icon02,
+    title: "Mệt mỏi vì chạy theo gánh nặng tài chính",
+    desc: "Bạn đã bỏ rất nhiều sự cống hiến, mất đi thời gian & công sức nhưng kết quả đạt lại không như mong đợi. Những gì bạn nhận lại được không xứng đáng với thứ bạn đã bỏ ra. Bạn băn khoăn liệu đây có phải là ngành nghề thật sự đưa bạn trở thành người thành công?!",
+  },
+  {
+    id: 3,
+    icon: icon03,
+    title: "Tầm nhìn chưa đủ rộng",
+    desc: "Bạn có kỹ năng chuyên môn tốt, nhưng không biết mình nên đi về hướng nào tiếp theo trong tương lai? Bạn lại thường bâng khuâng trước những sự lựa chọn khác nhau để mở rộng doanh nghiệp. Nếu bạn không thể xác định được rõ đường đi nước bước tiếp theo, có nghĩa bạn đang chưa có tầm nhìn đủ lớn cho mình.",
+  },
+  {
+    id: 4,
+    icon: icon04,
+    title: "Không kiểm soát tốt về mặt Tâm lý bản thân",
+    desc: "Mỗi khi gặp phải vấn đề khó khăn, trắc trở, bạn sẽ khó có thể bình tình để giải quyết, hoặc chỉ đổ lỗi cho người khác. Đôi khi, bạn cảm thấy áp lực đè nặng đến mức bản thân dường như không thể thoát ra khỏi những suy nghĩ tiêu cực.",
+  },
+  {
+    id: 5,
+    icon: icon05,
+    title: "Không biết cách xây dựng Tâm lý vững mạnh cho đội nhóm",
+    desc: "Khi công ty gặp khó khăn, nhân viên của bạn lần lượt rời bỏ bạn đi. Điều đó có thể ảnh hưởng đến việc đưa ra quyết định của các nhà lãnh đạo, đặc biệt là ở giai đoạn khủng hoảng. Làm thế nào để xây dựng sự đồng lòng vượt khó cho cả một đội nhóm?",
+  },
+  {
+    id: 6,
+    icon: icon06,
+    title: "Không thể áp dụng thực tế",
+    desc: "Bạn đã trau dồi cho mình rất nhiều kỹ năng lãnh đạo, tham gia các lớp học phát triển bản thân; nhưng khi đi vào tình huống thực tế, bạn thấy bối rối, không biết cần phải sử dụng kiến thức nào thì sẽ đạt được hiệu quả cao.",
+  },
+];
+
+function Problem() {
+  const [onToggle, setOnToggle] = useState(false);
+  const [height, setHeight] = useState("0px")
+  const refHeight = useRef(null);
+
+  const handleToggle = () => {
+    setOnToggle(!onToggle);
+    console.log(refHeight)
+
+    if (refHeight.current !== null) {
+    setHeight(onToggle ? "0px" : `${refHeight.current.scrollHeight}px`)
     }
+  };
+  
+  return (
+    <div className="problemBusiness area-mb">
+      <div className="content01">
+        <div className="container wrapper-content">
+          <div className="row">
+            <div className="col-12 col-md-9 text-heading">
+              <h2>vấn đề & nỗi lòng của những nhà kinh doanh hiện tại</h2>
+            </div>
+
+            <div className="col-12 col-md-3 class-button">
+              <button
+                type="button"
+                className="btn-default"
+                onClick={handleToggle}
+              >
+                xem thêm
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {
+        <div className="content02" ref={refHeight} style={{
+            maxHeight: `${height}`
+        }}>
+          <div className="container padding-body">
+
+            <div className="row">
+              {problemBusiness.map((ele, index) => {
+                return (
+                  <div
+                    className="col-sm-12 col-md-6 col-lg-4 wrapper-detail"
+                    key={index}
+                  >
+                    <div className="icon">
+                      <img
+                        src={ele.icon}
+                        className="img-responsive"
+                        alt={ele.icon}
+                      />
+                    </div>
+
+                    <div className="description">
+                      <h3>{ele.title}</h3>
+                      <p>{ele.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  );
 }
 
-export default index;
+export default Problem;

@@ -1,41 +1,94 @@
 @import "../../../../../assets/styles/common.scss";
 
 .problemBusiness {
-    .content01{
-       
-        background:$c-beyge-1;
-        color:white;
-        padding: 30px 0;
-        position: relative;
-         h2{
-             color:black;
-         }
-        .container{
-            button{
-                position:absolute;
-                left:50%;
-                top:50%;
-                transform: translate(-50%, -50%);
-                background:#25252d;
-                color:white;
-                font-size:$fs-3;
-            }
-        }
+  .content01 {
+    background: $c-beyge-1;
+    color: white;
+    padding: 40px 0;
+
+    h2 {
+      color: black;
+      margin: 0;
+      font-size: 25px;
     }
-    .content02{
-        padding: 30px 0;
-        background: #25252d;
-        color: $c-beyge-1;
-        text-align:justify;
-        .details{
-            display: inline-block;
-            margin-bottom:20px;
-            .icon{
-                margin-top:10px;
-                padding-right:10px;
-                width:50px;
-                float:left;
-            }
-        }
+  }
+  .content02 {
+    background: #25252d;
+    color: $c-beyge-1;
+    text-align: justify;
+  }
+
+  .wrapper-content {
+    .class-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+    .btn-default {
+      padding: 8px 20px;
+      text-transform: uppercase !important;
+      font-size: 14px !important;
+      border: none;
+      outline: none;
+      font-weight: 600;
+      transition: all 0.3s;
+
+      &:hover {
+        background: #333;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.wrapper-detail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: justify;
+  margin-top: 15px;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .description {
+    h3 {
+      margin-top: 10px;
+    }
+
+    p {
+        color: $c-white-0;
+    }
+  }
+}
+
+.text-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.content02 {
+  overflow: auto;
+  transition: max-height 0.6s ease;
+  .padding-body {
+      padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper-content {
+    text-align: center;
+    .btn-default {
+      margin-top: 20px;
+    }
+  }
+
+  .description {
+    h3 {
+      height: unset;
+      text-align: center;
+    }
+  }
 }
