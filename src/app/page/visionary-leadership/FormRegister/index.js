@@ -16,19 +16,19 @@ function FormDangKy() {
     return phone.match(regex);
   };
 
-  const handleForm = (data) => {
-    axios({
-      method: "post",
-      url: "https://sheet.best/api/sheets/b659a074-c4d5-441a-ad0e-5bf84d0c6dc8",
-      data: data,
-    })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
+  // const handleForm = (data) => {
+  //   axios({
+  //     method: "post",
+  //     url: "https://sheet.best/api/sheets/b659a074-c4d5-441a-ad0e-5bf84d0c6dc8",
+  //     data: data,
+  //   })
+  //     .then(function (response) {
+  //       console.log(response);
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // };
 
   const getDataSubmit = () => {
     const dataSubmit = {};
@@ -75,7 +75,7 @@ function FormDangKy() {
       // if value is false action is return;
       return;
     } else {
-      handleForm(dataSubmit);
+      // handleForm(dataSubmit);
     }
   };
 
