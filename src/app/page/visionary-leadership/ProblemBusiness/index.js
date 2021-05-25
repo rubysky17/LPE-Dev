@@ -54,12 +54,12 @@ function Problem() {
 
   const handleToggle = () => {
     setOnToggle(!onToggle);
-    console.log(refHeight)
 
     if (refHeight.current !== null) {
-    setHeight(onToggle ? "0px" : `${refHeight.current.scrollHeight}px`)
+      setHeight(onToggle ? "0px" : `${refHeight.current.scrollHeight}px`);
     }
   };
+
   
   return (
     <div className="problemBusiness area-mb">
@@ -76,19 +76,18 @@ function Problem() {
                 className="btn-default"
                 onClick={handleToggle}
               >
-                xem thêm
+                {!onToggle ? "Xem thêm" : "Thu gọn"}
               </button>
             </div>
           </div>
         </div>
       </div>
       
-      {
+      
         <div className="content02" ref={refHeight} style={{
             maxHeight: `${height}`
         }}>
           <div className="container padding-body">
-
             <div className="row">
               {problemBusiness.map((ele, index) => {
                 return (
@@ -103,7 +102,6 @@ function Problem() {
                         alt={ele.icon}
                       />
                     </div>
-
                     <div className="description">
                       <h3>{ele.title}</h3>
                       <p>{ele.desc}</p>
@@ -114,7 +112,7 @@ function Problem() {
             </div>
           </div>
         </div>
-      }
+      
     </div>
   );
 }
