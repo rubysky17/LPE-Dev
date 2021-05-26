@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import { Fade, Zoom } from "react-reveal";
+import Iframe from "react-iframe";
 
 import Carousel from "./Carousel";
 import ProblemBusiness from "./ProblemBusiness";
@@ -15,7 +16,6 @@ import Footer from "app/components/footer";
 
 import "./styles/styles.scss";
 
-
 function VisionaryLeadership() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -28,23 +28,25 @@ function VisionaryLeadership() {
       <Story />
       <JourneyCourse />
 
-      {/* <div className="video">
-              <iframe
-                src="https://www.youtube.com/embed/5tIZsrqFCAk"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div> */}
+      <Fade left>
+        <div className="container py-5">
+          <div className="wrapper-video">
+            <Iframe
+              className="video-vas"
+              url="https://www.youtube.com/embed/5tIZsrqFCAk"
+              width="70%"
+              height="450px"
+              frameborder="0"
+            />
+          </div>
+        </div>
+      </Fade>
 
       <SkillOfCourse />
       <AboutMrVas />
       <Pricing />
       <BenefitAfterCourse />
-      
-   
-      
+
       <div className="bg-dangKy">
         <div className="container-fluid py-5" id="dangKy">
           <Fade left>

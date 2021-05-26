@@ -216,10 +216,37 @@
     opacity: 1;
   }
 }
+
+.wrapper-modal {
+  
+  .wrapper-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    .button-modal {
+      padding: 10px;
+      outline: none;
+      border: none;
+      background: #000;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+}
+
 @media screen and (max-width: 1000px) {
     .slide__headline {
         font-size: 44px;
     }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper-text {
+    p {
+      font-size: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
