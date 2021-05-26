@@ -11,9 +11,10 @@ import Pricing from "./Pricing";
 import AboutMrVas from "./AboutMrVas";
 import FormRegister from "./FormRegister";
 import BenefitAfterCourse from "./BenefitAfterCourse";
+import Footer from "app/components/footer";
 
 import "./styles/styles.scss";
-import Footer from "app/components/footer";
+
 
 function VisionaryLeadership() {
   useEffect(() => {
@@ -26,11 +27,24 @@ function VisionaryLeadership() {
       <ProblemBusiness />
       <Story />
       <JourneyCourse />
+
+      {/* <div className="video">
+              <iframe
+                src="https://www.youtube.com/embed/5tIZsrqFCAk"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div> */}
+
       <SkillOfCourse />
       <AboutMrVas />
       <Pricing />
       <BenefitAfterCourse />
-
+      
+   
+      
       <div className="bg-dangKy">
         <div className="container-fluid py-5" id="dangKy">
           <Fade left>
@@ -48,7 +62,6 @@ function VisionaryLeadership() {
           </div>
         </div>
       </div>
-
       <Footer />
     </>
   );

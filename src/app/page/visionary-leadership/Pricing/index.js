@@ -15,12 +15,11 @@ function Princing() {
       <div className="row wrapper-card">
         {imgPrice.map((img, index) => {
           return (
-            <Zoom>
-            <div className="col-12 col-md-6 card-item" key={index}>
-              <img src={img} className="img-fluid img" alt={img} />
-            </div>
-          </Zoom>
-           
+            <Zoom key={index}>
+              <div className="col-12 col-md-6 card-item">
+                <img src={img} className="img-fluid img" alt={img} />
+              </div>
+            </Zoom>
           );
         })}
       </div>

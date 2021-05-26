@@ -68,8 +68,8 @@ function SkillOfCourse() {
         <div className="row">
           {skillOfCourse.map((ele, index) => {
             return (
-              <Fade left cascade>
-                <div className="col-12 col-md-6 col-lg-4 " key={index}>
+              <Fade left cascade key={index}>
+                <div className="col-12 col-md-6 col-lg-4 ">
                   <div className="details my-4">
                     <div className="icon">
                       <img

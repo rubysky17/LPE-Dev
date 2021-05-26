@@ -7,12 +7,12 @@ function Carousel() {
   const [onLoad, setOnLoad] = useState(false);
 
   return (
-    <div className="slider">
-      <div id="myCarousel" className="carousel slide" data-ride="carousel">
+    <div className="wrapper-slider">
+      <div id="myCarousel" className="carousel" data-ride="carousel">
         {!onLoad && (
           <>
-              <div className="loading">
-                <Loading />
+            <div className="loading">
+              <Loading />
             </div>
           </>
         )}

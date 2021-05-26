@@ -42,13 +42,15 @@
         }
     }
 }
-// @media screen and (max-width: 991px) {
-//     .aboutMrVas{
-//         .row{
-//             .img{
-//                 height:unset;
-//             }
-//         }
-//     }  
-// }
+@media screen and (max-width: 992px) {
+    .aboutMrVas{
+        padding: 0!important;
+        
+        .row{
+            .img{
+                height:unset;
+            }
+        }
+    }  
+}
 
