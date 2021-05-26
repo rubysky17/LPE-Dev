@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 
+import { Fade, Zoom } from "react-reveal";
+
 import Carousel from "./Carousel";
 import ProblemBusiness from "./ProblemBusiness";
 import Story from "./Story";
@@ -11,14 +13,15 @@ import FormRegister from "./FormRegister";
 import BenefitAfterCourse from "./BenefitAfterCourse";
 
 import "./styles/styles.scss";
+import Footer from "app/components/footer";
 
 function VisionaryLeadership() {
   useEffect(() => {
-    window.scrollTo(0, 0);;
-  }, []);;
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
-    <div>
+    <>
       <Carousel />
       <ProblemBusiness />
       <Story />
@@ -30,17 +33,24 @@ function VisionaryLeadership() {
 
       <div className="bg-dangKy">
         <div className="container-fluid py-5" id="dangKy">
-          <h1 className="text-center heading-title wow fadeInUp">
-            Nhận Tư Vấn Về Khóa Học
-          </h1>
+          <Fade left>
+            <h1 className="text-center heading-title wow fadeInUp">
+              Nhận Tư Vấn Về Khóa Học
+            </h1>
+          </Fade>
+
           <div className="row">
-            <div className="col-12 wrapper-form wow zoomInLeft">
-              <FormRegister />
-            </div>
+            <Zoom bottom>
+              <div className="col-12 wrapper-form wow zoomInLeft">
+                <FormRegister />
+              </div>
+            </Zoom>
           </div>
         </div>
       </div>
-    </div>
+
+      <Footer />
+    </>
   );
 }
 

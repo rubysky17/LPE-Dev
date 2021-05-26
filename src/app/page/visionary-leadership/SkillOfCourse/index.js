@@ -1,4 +1,8 @@
 import React from "react";
+
+import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
+
 // import media
 import icon01 from "assets/images/SkillOfCourse/skillOfCourse01.png";
 import icon02 from "assets/images/SkillOfCourse/skillOfCourse02.png";
@@ -58,26 +62,30 @@ function SkillOfCourse() {
   return (
     <div className="skillOfCourse py-5">
       <div className="container">
-        <h2 className="mb-5">Kỹ Năng Từ Khóa Học</h2>
+        <Zoom bottom cascade>
+          <h2 className="mb-5">Kỹ Năng Từ Khóa Học</h2>
+        </Zoom>
         <div className="row">
           {skillOfCourse.map((ele, index) => {
             return (
-              <div
-                className="col-12 col-md-6 col-lg-4 "
-                key={index}
-              >
+              <Fade left cascade>
+                <div className="col-12 col-md-6 col-lg-4 " key={index}>
                   <div className="details my-4">
-                  <div className="icon">
-                  <img src={ele.icon} className="img-fluid" alt={ele.icon} />
-                </div>
-                
-                <div className="description">
-                  <h3>{ele.title}</h3>
-                  <p>{ele.desc}</p>
-                </div>
+                    <div className="icon">
+                      <img
+                        src={ele.icon}
+                        className="img-fluid"
+                        alt={ele.icon}
+                      />
+                    </div>
+
+                    <div className="description">
+                      <h3>{ele.title}</h3>
+                      <p>{ele.desc}</p>
+                    </div>
                   </div>
-              
-              </div>
+                </div>
+              </Fade>
             );
           })}
         </div>

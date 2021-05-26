@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 
 import Fade from "react-reveal/Zoom";
+import Jello from 'react-reveal/Jello';
 
 import icon01 from "assets/images/problemBusiness/icon01.png";
 import icon02 from "assets/images/problemBusiness/icon02.png";
@@ -97,7 +98,8 @@ function Problem() {
             <div className="row">
               {problemBusiness.map((ele, index) => {
                 return (
-                  <div
+                  <Jello>
+<div
                     className="col-sm-12 col-md-6 col-lg-4 wrapper-detail"
                     key={index}
                   >
@@ -113,6 +115,8 @@ function Problem() {
                       <p>{ele.desc}</p>
                     </div>
                   </div>
+                  </Jello>
+                  
                 );
               })}
             </div>
