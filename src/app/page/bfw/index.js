@@ -190,11 +190,16 @@ function BeautyFromWomen() {
               return (
                 <div className="row" key={index}>
                   <div className="col-12">
-                    <h3 className="text-level text-center wow fadeInUp" style={{
-
-                      color: ele.level === "Level 1: BEAUTY FROM WITHIN - ĐẸP TỪ BÊN TRONG" ? "#efbbcf" : "#8675a9",
-
-                    }}>
+                    <h3
+                      className="text-level text-center wow fadeInUp"
+                      style={{
+                        color:
+                          ele.level ===
+                          "Level 1: BEAUTY FROM WITHIN - ĐẸP TỪ BÊN TRONG"
+                            ? "#efbbcf"
+                            : "#8675a9",
+                      }}
+                    >
                       {ele.level}
                     </h3>
                   </div>
@@ -279,6 +284,7 @@ function BeautyFromWomen() {
             </h1>
             <div className="row text-center">
               <div className="col-12">
+                <p className="text-level wow fadeInUp ">Level 1</p>
                 <img
                   src={khoa1}
                   alt={khoa1}
@@ -314,6 +320,8 @@ function BeautyFromWomen() {
               })}
 
               <div className="col-12">
+                  <p  className="text-level wow fadeInUp ">Level 2</p>
+
                 <img
                   src={khoa2}
                   alt={khoa2}

@@ -71,7 +71,7 @@ const flipCardCourse1 = [
     id: 3,
     hinhAnh: card3,
     front:
-      "Đẹp từ “bên trong” lẫn “bên ngoài” có nghĩa là bạn cần phú ý đến những nguồn thức ăn được nạp vào cơ thể (Bên trong) và cách làm đẹp cho cơ thể, khuôn mặt của mình (Bên ngoài)",
+      "Đẹp từ “bên trong” lẫn “bên ngoài” có nghĩa là bạn cần chú ý đến những nguồn thức ăn được nạp vào cơ thể (Bên trong) và cách làm đẹp cho cơ thể, khuôn mặt của mình (Bên ngoài)",
     back: "Học cách chăm sóc cho cả cơ thể. Tìm hiểu bí quyết ăn uống hiệu quả, nạp chất dinh dưỡng hợp lý và giúp cơ thể hấp thụ đầy đủ, đào thải độc tố. Học & thực hành nghệ thuật trang điểm tôn lên vẻ đẹp cả nhân với phong cách ăn mặc phù hợp để mỗi quý cô trở nên xinh đẹp theo cách riêng.",
   },
 ];
