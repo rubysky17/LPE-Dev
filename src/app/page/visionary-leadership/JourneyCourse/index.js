@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from "app/components/slider";
+import Slider from "app/components/slider/";
 
 
 import JC01 from "assets/images/journeyCourse/journeyCourse01.jpeg";
@@ -30,9 +30,7 @@ function JourneyCourse() {
           <h2>HÀNH TRÌNH XÂY DỰNG TẦM NHÌN LÃNH ĐẠO</h2>
           <section>
             <div className="area-pd">
-              
               <Slider heading="Heading Slider" slides={slideData} />
-
             </div>
           </section>
         </div>

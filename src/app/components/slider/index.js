@@ -1,24 +1,20 @@
-import React, { Component } from "react";
+import React, { useState,useRef } from "react";
 
 import "./styles/styles.scss";
 
-// =========================
-// Slide
-// =========================
 
-class Slide extends Component {
-  constructor(props) {
-    super(props);
+const Slide = ({ slide, current, handleSlideClick }) => {
+  const slideRef = useRef()
+  const { src, button, headline, index } = slide;
 
-    this.handleMouseMove = this.handleMouseMove.bind(this);
-    this.handleMouseLeave = this.handleMouseLeave.bind(this);
-    this.handleSlideClick = this.handleSlideClick.bind(this);
-    this.imageLoaded = this.imageLoaded.bind(this);
-    this.slide = React.createRef();
-  }
+  let classNames = "slide";
+  
+  if (current === index) classNames += " slide--current";
+  else if (current - 1 === index) classNames += " slide--previous";
+  else if (current + 1 === index) classNames += " slide--next";
 
-  handleMouseMove(event) {
-    const el = this.slide.current;
+  const handleMouseMove = (event) => {
+    const el = slideRef.current;
     const r = el.getBoundingClientRect();
 
     el.style.setProperty(
@@ -30,146 +26,81 @@ class Slide extends Component {
       event.clientY - (r.top + Math.floor(r.height / 2))
     );
   }
-
-  handleMouseLeave(event) {
-    this.slide.current.style.setProperty("--x", 0);
-    this.slide.current.style.setProperty("--y", 0);
+  
+  const handleMouseLeave = (event) => {
+    slideRef.current.style.setProperty("--x", 0);
+    slideRef.current.style.setProperty("--y", 0);
   }
 
-  handleSlideClick(event) {
-    this.props.handleSlideClick(this.props.slide.index);
+  const onHandleSlideClick = (event) => {
+    handleSlideClick(slide.index);
   }
 
-  imageLoaded(event) {
+  function imageLoaded(event) {
     event.target.style.opacity = 1;
   }
+  
+  return (
+    <li
+      ref={slideRef}
+      className={classNames}
+      onClick={onHandleSlideClick}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="slide__image-wrapper">
+        <img
+          className="slide__image"
+          alt={src}
+          src={src}
+          onLoad={imageLoaded}
+        />
+      </div>
 
-  handleDetail(index) {
-    console.log("ham chay", index);
-  }
+      <article className="slide__content">
+        <h2 className="slide__headline">{headline}</h2>
+        <button
+          className="slide__action btn-detail"
+        >
+          {button}
+        </button>
+      </article>
+    </li>
+  );
+};
 
-  render() {
-    const { src, button, headline, index } = this.props.slide;
-    const current = this.props.current;
-    let classNames = "slide";
+function Slider({ heading, slides }) {
+  const [current, setCurrent] = useState(0);
 
-    if (current === index) classNames += " slide--current";
-    else if (current - 1 === index) classNames += " slide--previous";
-    else if (current + 1 === index) classNames += " slide--next";
+  const headingId = `slider-heading__${heading
+    .replace(/\s+/g, "-")
+    .toLowerCase()}`;
+  const wrapperTransform = {
+    transform: `translateX(-${current * (100 / slides.length)}%)`,
+  };
 
-    return (
-      <li
-        ref={this.slide}
-        className={classNames}
-        onClick={this.handleSlideClick}
-        onMouseMove={this.handleMouseMove}
-        onMouseLeave={this.handleMouseLeave}
-      >
-        <div className="slide__image-wrapper">
-          <img
-            className="slide__image"
-            alt={headline}
-            src={src}
-            onLoad={this.imageLoaded}
-          />
-        </div>
-
-        <article className="slide__content">
-          <h2 className="slide__headline">{headline}</h2>
-          <button
-            className="slide__action btn-detail"
-            onClick={() => {
-              this.handleDetail(index);
-            }}
-          >
-            {button}
-          </button>
-        </article>
-      </li>
-    );
-  }
-}
-
-// =========================
-// Slider
-// =========================
-
-export default class Slider extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { current: 0, onOpen: false };
-    this.handlePreviousClick = this.handlePreviousClick.bind(this);
-    this.handleNextClick = this.handleNextClick.bind(this);
-    this.handleSlideClick = this.handleSlideClick.bind(this);
-  }
-
-  handlePreviousClick() {
-    const previous = this.state.current - 1;
-
-    this.setState({
-      current: previous < 0 ? this.props.slides.length - 1 : previous,
-    });
-  }
-
-  handleNextClick() {
-    const next = this.state.current + 1;
-
-    this.setState({
-      current: next === this.props.slides.length ? 0 : next,
-    });
-  }
-
-  handleSlideClick(index) {
-    if (this.state.current !== index) {
-      this.setState({
-        current: index,
-      });
+  const handleSlideClick = (index) => {
+    if (current !== index) {
+      setCurrent(index);
     }
-  }
+  };
 
-  handleClick() {
-    this.setState({
-      onOpen: !this.state.onOpen,
-    });
-  }
-
-  render() {
-    const { current, onOpen } = this.state;
-    const { slides, heading } = this.props;
-
-    const headingId = `slider-heading__${heading
-      .replace(/\s+/g, "-")
-      .toLowerCase()}`;
-
-    const wrapperTransform = {
-      transform: `translateX(-${current * (100 / slides.length)}%)`,
-    };
-
-    return (
-      <>
-        <div className="slider" aria-labelledby={headingId}>
-          <ul className="slider__wrapper" style={wrapperTransform}>
-            {slides.map((slide) => {
-              return (
-                <Slide
-                  key={slide.index}
-                  slide={slide}
-                  current={current}
-                  handleSlideClick={this.handleSlideClick}
-                  openDetail={onOpen}
-                />
-              );
-            })}
-          </ul>
-        </div>
-
-        {onOpen && (
-          <>
-            <p>Open</p>
-          </>
-        )}
-      </>
-    );
-  }
+  return (
+    <div className="slider" aria-labelledby={headingId}>
+      <ul className="slider__wrapper" style={wrapperTransform}>
+        {slides.map((slide) => {
+          return (
+            <Slide
+              key={slide.index}
+              slide={slide}
+              current={current}
+              handleSlideClick={handleSlideClick}
+            />
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
+
+export default Slider;
