@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Carousel from "./Carousel";
 import ProblemBusiness from "./ProblemBusiness";
@@ -13,6 +13,10 @@ import BenefitAfterCourse from "./BenefitAfterCourse";
 import "./styles/styles.scss";
 
 function VisionaryLeadership() {
+  useEffect(() => {
+    window.scrollTo(0, 0);;
+  }, []);;
+
   return (
     <div>
       <Carousel />

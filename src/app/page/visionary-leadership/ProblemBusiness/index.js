@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
-import "./styles/styles.scss";
+
+import Fade from "react-reveal/Zoom";
 
 import icon01 from "assets/images/problemBusiness/icon01.png";
 import icon02 from "assets/images/problemBusiness/icon02.png";
@@ -7,6 +8,8 @@ import icon03 from "assets/images/problemBusiness/icon03.png";
 import icon04 from "assets/images/problemBusiness/icon04.png";
 import icon05 from "assets/images/problemBusiness/icon05.png";
 import icon06 from "assets/images/problemBusiness/icon06.png";
+
+import "./styles/styles.scss";
 
 const problemBusiness = [
   {
@@ -65,6 +68,7 @@ function Problem() {
     <div className="problemBusiness area-mb">
       <div className="content01">
         <div className="container wrapper-content">
+        <Fade left cascade>
           <div className="row">
             <div className="col-12 col-md-9 text-heading">
               <h2>vấn đề & nỗi lòng của những nhà kinh doanh hiện tại</h2>
@@ -80,6 +84,8 @@ function Problem() {
               </button>
             </div>
           </div>
+          </Fade>
+          
         </div>
       </div>
       

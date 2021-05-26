@@ -1,78 +1,11 @@
 @import "../../../../../assets/styles/common.scss";
 
-.benefitAfterCourse{
-    p{
-        font-size:$fs-3;
-    }
-    .content01{
-        .video{
-            width:100%;
-            // padding:10px;
-            min-height: 315px;
-        }
-        position: relative;
-        // margin-bottom:30px;
-        .contentleft{
-            padding:0;
-            margin:0;
-        }
-        div:first-child {
-            position:absolute;
-            right:10%;
-            top:50%;
-            transform: translate(10%, -50%);
-        }
-       
-        div:nth-child(2){
-            text-align:center;
-            img{
-            display:inline-flex;
-            }
-        }
-    }
-    .content02{
-         div:first-child {
-            display: flex;
-            justify-content: center;
-            align-items: left;
-            flex-direction: column;
-        }
-        div:nth-child(2){
-            text-align:center;
-            img{
-            display:inline-flex;
-            }
-        }
-        
-    }
-}
-@media screen and (max-width: 1199px) {
-    .benefitAfterCourse{
-        .contentleft{
-            min-height:350px;
-            .video{
-                height:100%;
-            }
-        }
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .benefitAfterCourse{
-        .content01{
-            position: relative;
-            div:first-child {
-                position: relative;
-                transform: unset;
-                margin-bottom:30px;
-                 padding: 0 25px;
-                 top:unset;
-                 right:unset;
-            }
-            .contentleft{
-                 padding:10px;
-            }
-           
-        }
-    }
+.wrapper-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.padding-class {
+    padding: 50px 10px;
 }

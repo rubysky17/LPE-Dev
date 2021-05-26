@@ -4,6 +4,10 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: americana;
+    src: url('../../fonts/UTM Americana.ttf');
+}
 
 
 * {
@@ -37,6 +41,24 @@ body {
     scroll-behavior: smooth;
 }
 
+h1,h2,h3,h4,h5 {
+    font-family: 'americana', sans-serif;
+
+}
+
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 18px!important;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2  {
+        font-size: 22px;
+    }
+}
 
 ::-webkit-scrollbar {
     width: 5px;
