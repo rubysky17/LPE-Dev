@@ -6,8 +6,6 @@ const customStyles = {
   content: {
     top: "50%",
     left: "50%",
-    right: "auto",
-    bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     transition: "all 0.3s",
@@ -33,9 +31,9 @@ const dayTwo = [
 
 const Slide = ({ slide, current, handleSlideClick }) => {
   const [openModal, setOpenModal] = useState(false);
-  const [content, setContent] = useState(dayOne)
-  const { src, button, headline, index } = slide;
+  const [content, setContent] = useState(dayOne);
   const slideRef = useRef();
+  const { src, button, headline, index } = slide;
 
   let classNames = "slide";
 
@@ -108,7 +106,6 @@ const Slide = ({ slide, current, handleSlideClick }) => {
       <Modal
         isOpen={openModal}
         style={customStyles}
-        contentLabel="Example Modal"
       >
         <div className="wrapper-modal">
           <div className="wrapper-button">
@@ -130,12 +127,9 @@ const Slide = ({ slide, current, handleSlideClick }) => {
   );
 };
 
-function Slider({ heading, slides }) {
+function Slider({  slides }) {
   const [current, setCurrent] = useState(0);
 
-  const headingId = `slider-heading__${heading
-    .replace(/\s+/g, "-")
-    .toLowerCase()}`;
   const wrapperTransform = {
     transform: `translateX(-${current * (100 / slides.length)}%)`,
   };
@@ -147,7 +141,7 @@ function Slider({ heading, slides }) {
   };
 
   return (
-    <div className="slider" aria-labelledby={headingId}>
+    <div className="slider" >
       <ul className="slider__wrapper" style={wrapperTransform}>
         {slides.map((slide) => {
           return (

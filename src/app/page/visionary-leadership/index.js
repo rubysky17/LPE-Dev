@@ -15,6 +15,7 @@ import BenefitAfterCourse from "./BenefitAfterCourse";
 import Footer from "app/components/footer";
 
 import "./styles/styles.scss";
+import Testimonior from "./Testimonior";
 
 function VisionaryLeadership() {
   useEffect(() => {
@@ -46,25 +47,33 @@ function VisionaryLeadership() {
       <AboutMrVas />
       <Pricing />
       <BenefitAfterCourse />
+      <Testimonior />
 
       <div className="bg-dangKy">
-        <div className="container-fluid py-5" id="dangKy">
-          <Fade left>
-            <h1 className="text-center heading-title wow fadeInUp">
-              Nhận Tư Vấn Về Khóa Học
-            </h1>
-          </Fade>
-
+        <div className="container-fluid" id="dangKy">
           <div className="row">
-            <Zoom bottom>
-              <div className="col-12 wrapper-form wow zoomInLeft">
-                <FormRegister />
+            <div className="col-6 bg-dark">
+              <div></div>
+              <Footer />
+            </div>
+            <div className="col-6">
+              <Fade left>
+                <h1 className="text-center heading-title wow fadeInUp">
+                  Nhận Tư Vấn Về Khóa Học
+                </h1>
+              </Fade>
+
+              <div className="row">
+                <Zoom bottom>
+                  <div className="col-12 wrapper-form wow zoomInLeft">
+                    <FormRegister />
+                  </div>
+                </Zoom>
               </div>
-            </Zoom>
+            </div>
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

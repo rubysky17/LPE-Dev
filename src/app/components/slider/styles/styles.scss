@@ -58,6 +58,7 @@
   width: var(--slide-size);
   height: var(--slide-size);
   margin: 0 auto;
+  overflow-x: hidden!important;
 }
 
 .slider__wrapper {

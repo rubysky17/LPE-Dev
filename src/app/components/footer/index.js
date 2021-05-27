@@ -6,6 +6,7 @@ import "./styles/styles.scss";
 function Footer() {
   return (
     <footer>
+      <div className="title">Cách tìm kiếm chúng tôi</div>
       <div className="text-center"></div>
       <Fade bottom>
         <h3 className="name">Công Ty TNHH Giáo Dục Leading Performance</h3>
@@ -26,7 +27,7 @@ function Footer() {
           Chiều: 12h45 - 16h15
         </div>
       </Fade>
-      
+
       <Fade bottom>
         <div className="f-line mr-0">
           <span className="f-line_phone">

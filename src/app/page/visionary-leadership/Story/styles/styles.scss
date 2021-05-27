@@ -79,6 +79,13 @@
     }
 }
 
+.bg-image {
+    background-image: url('../../../../../assets/images/story/bg-story.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 
 @media screen and (max-width: 768px) {
     .story{

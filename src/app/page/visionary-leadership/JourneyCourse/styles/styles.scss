@@ -125,3 +125,45 @@ $border: 1px solid #4d4d4d;
   }  
 }
 
+
+.button-day {
+  color: #fff;
+  border: none;
+  background-color: #25252d;
+  border: 1px solid #cbbd8c;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  font-weight: bold;
+  transition: all 0.3s;
+
+  &:hover {
+   background-color: #cbbd8c;
+  color: #000;
+  border: 1px solid #cbbd8c;
+  }
+
+  &.active {
+    background-color: #cbbd8c;
+    color: #000;
+    border: 1px solid #cbbd8c;
+  }
+}
+
+.wrapper-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+
+  p {
+    text-align: left;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper-text {
+    margin-top: 20px;
+  }
+}

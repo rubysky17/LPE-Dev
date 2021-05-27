@@ -4,56 +4,27 @@
     position:relative;
     background: #25252d;
    
-    p{
+    p {
         color:white;
     }
+
     .contentLeft{
-        width:50%;
-        z-index:2;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       padding: 30px 40px!important;
     }
-    .row{
-        img{
-            height:100%;
-            position: absolute;
-            right: 0%;
-            top: 50%;
-            transform: translate(0%, -50%);
-            z-index:1;
-        }
-    }
-    
-}
 
-@media screen and (max-width: 1199px) {
-    .aboutMrVas{
-        background:#1c1c24;
-        .contentLeft{
-            width:100% !important;
-            padding: 15px;
-        }
-        .row{
-            img{
-                position:unset;
-                top:unset;
-                right: unset;
-                transform:unset;
-                height:unset;
-            }
-        }
-    }
-}
-@media screen and (max-width: 992px) {
-    .aboutMrVas{
-        padding: 0!important;
-        
-        .row{
-            .img{
-                height:unset;
-            }
-        }
-    }  
-    .contentLeft {
-        margin-bottom: 20px;
-    }
-}
+  .img-vas {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
+      img {
+          width: 100%;
+          height: 100%;
+      }
+
+  }
+}

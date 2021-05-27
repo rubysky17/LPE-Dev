@@ -65,61 +65,61 @@ function Problem() {
 
   
   return (
-    <div className="problemBusiness area-mb">
+    <div className="problemBusiness">
       <div className="content01">
         <div className="container wrapper-content">
-        <Fade left cascade>
-          <div className="row">
-            <div className="col-12 col-md-9 text-heading">
-              <h2>vấn đề & nỗi lòng của những nhà kinh doanh hiện tại</h2>
-            </div>
+          <Fade left cascade>
+            <div className="row">
+              <div className="col-12 col-md-9 text-heading">
+                <h2>vấn đề & nỗi lòng của những nhà kinh doanh hiện tại</h2>
+              </div>
 
-            <div className="col-12 col-md-3 class-button">
-              <button
-                type="button"
-                className="btn-default"
-                onClick={handleToggle}
-              >
-                {!onToggle ? "Xem thêm" : "Thu gọn"}
-              </button>
+              <div className="col-12 col-md-3 class-button">
+                <button
+                  type="button"
+                  className="btn-default"
+                  onClick={handleToggle}
+                >
+                  {!onToggle ? "Xem thêm" : "Thu gọn"}
+                </button>
+              </div>
             </div>
-          </div>
           </Fade>
-          
         </div>
       </div>
-      
-      
-        <div className="content02" ref={refHeight} style={{
-            maxHeight: `${height}`
-        }}>
-          <div className="container padding-body">
-            <div className="row">
-              {problemBusiness.map((ele, index) => {
-                return (
-<div
-                    className="col-sm-12 col-md-6 col-lg-4 wrapper-detail"
-                    key={index}
-                  >
-                    <div className="icon">
-                      <img
-                        src={ele.icon}
-                        className="img-responsive"
-                        alt={ele.icon}
-                      />
-                    </div>
-                    <div className="description">
-                      <h3>{ele.title}</h3>
-                      <p>{ele.desc}</p>
-                    </div>
+
+      <div
+        className="content02"
+        ref={refHeight}
+        style={{
+          maxHeight: `${height}`,
+        }}
+      >
+        <div className="container padding-body">
+          <div className="row">
+            {problemBusiness.map((ele, index) => {
+              return (
+                <div
+                  className="col-sm-12 col-md-6 col-lg-4 wrapper-detail"
+                  key={index}
+                >
+                  <div className="icon">
+                    <img
+                      src={ele.icon}
+                      className="img-responsive"
+                      alt={ele.icon}
+                    />
                   </div>
-                  
-                );
-              })}
-            </div>
+                  <div className="description">
+                    <h3>{ele.title}</h3>
+                    <p>{ele.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
-      
+      </div>
     </div>
   );
 }

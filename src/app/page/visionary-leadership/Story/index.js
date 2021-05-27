@@ -11,7 +11,8 @@ function Story() {
   const [video, setVideo] = useState("");
 
   return (
-    <div className="story container area-mb">
+    <div className="bg-image">
+      <div className="story container py-5">
       <div className="row content01">
         <div className="col-md-6">
           <Fade left>
@@ -81,6 +82,8 @@ function Story() {
         onClose={() => setOnOpen(false)}
       />
     </div>
+    </div>
+    
   );
 }
 
