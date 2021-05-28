@@ -18,6 +18,7 @@ import Footer from "app/components/footer";
 import "./styles/styles.scss";
 
 function VisionaryLeadership() {
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -69,15 +70,14 @@ function VisionaryLeadership() {
                   </div>
                 </Zoom>
               </div>
-
-           
             </div>
             <div className="col-12 col-md-6 bg-dark footer-small">
-                    <Footer />
-                  </div>
+              <Footer />
+            </div>
           </div>
         </div>
       </div>
+      
     </>
   );
 }

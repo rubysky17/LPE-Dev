@@ -17,7 +17,10 @@ function Princing() {
           return (
             <Zoom key={index}>
               <div className="col-12 col-md-6 card-item">
+                <div className="card-shadow">
                 <img src={img} className="img-fluid img" alt={img} />
+
+                </div>
               </div>
             </Zoom>
           );

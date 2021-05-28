@@ -7,13 +7,13 @@ import "./styles/styles.scss";
 function AboutMrVas() {
   return (
     <div className="aboutMrVas">
-       <div className="container-fluid p-0">
+      <div className="container-fluid p-0">
         <div className="row">
-          <div className="col-12 col-md-6 area-pd contentLeft">
+          <div className="col-12 col-lg-6 area-pd contentLeft">
             <Zoom top cascade>
               <h2>Về MR.Vas</h2>
             </Zoom>
-            
+
             <Flip bottom>
               <p className="mt-3">
                 Mr. Vas đã có gần 30 năm dẫn dắt quân đội tại Singapore & hơn 17
@@ -47,14 +47,13 @@ function AboutMrVas() {
               </p>
             </Flip>
           </div>
-          
-          <div className="col-12 col-md-6 img-vas">
-            <img src={MrVas01}  alt={MrVas01} />
+
+          <div className="col-12 col-lg-6 img-vas">
+            <img src={MrVas01} alt={MrVas01} />
           </div>
         </div>
       </div>
     </div>
-   
   );
 }
 

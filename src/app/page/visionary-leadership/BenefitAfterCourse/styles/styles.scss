@@ -1,10 +1,10 @@
 @import "../../../../../assets/styles/common.scss";
 
 .wrapper-video {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 10px!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px !important;
 }
 
 .video-coach {
@@ -14,7 +14,7 @@
 }
 
 .wrapper-benefit {
-  padding: 0px 50px;
+  padding: 0 50px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -34,24 +34,26 @@
 }
 .benefit_list {
   margin: 50px 0;
+  font-size: 16px;
 
   .benefit_item {
     &-top {
       display: flex;
       justify-content: flex-start;
       align-items: center;
+
       i {
-        font-size: 40px;
+        font-size: 20px;
       }
     }
 
     &-icon {
       color: #cbbd8c;
-      margin-right: 10px;
+      margin-right: 8px;
     }
 
     &-text {
-      font-size: 45px;
+      font-size: 30px!important;
       font-weight: 600;
       font-family: "americana", sans-serif;
     }
@@ -63,32 +65,41 @@
   }
 }
 
-@media screen and (max-width: 1200px )  and( min-width: 768px) {
+.handleWidth {
+  width: 80%!important;
+}
+
+@media screen and ( max-width: 1028px) {
+  .handleWidth {
+    width: 100%!important;
+  }
+}
+
+@media screen and (max-width: 1200px) and( min-width: 768px) {
   .benefit_item {
     &-top {
       i {
-        font-size: 30px!important;
+        font-size: 30px !important;
       }
     }
 
     &-text {
-      font-size: 35px!important;
+      font-size: 35px !important;
     }
 
     &-bottom {
-      font-size: 16px!important;
+      font-size: 16px !important;
     }
   }
 }
 
-
 @media screen and (max-width: 992px) {
-  
-.wrapper-benefit {
-  margin-top: 20px;
-}
+  .wrapper-benefit {
+    margin-top: 20px;
+    padding-right: 50px;
+  }
 
-  .benefit_item { 
+  .benefit_item {
     margin-top: 20px;
   }
   .container-benefit {
