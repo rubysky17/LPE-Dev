@@ -12,10 +12,10 @@ import Pricing from "./Pricing";
 import AboutMrVas from "./AboutMrVas";
 import FormRegister from "./FormRegister";
 import BenefitAfterCourse from "./BenefitAfterCourse";
+import Testimonior from "./Testimonior";
 import Footer from "app/components/footer";
 
 import "./styles/styles.scss";
-import Testimonior from "./Testimonior";
 
 function VisionaryLeadership() {
   useEffect(() => {
@@ -52,11 +52,10 @@ function VisionaryLeadership() {
       <div className="bg-dangKy">
         <div className="container-fluid" id="dangKy">
           <div className="row">
-            <div className="col-6 bg-dark">
-              <div></div>
+            <div className="col-12 col-md-6 bg-dark footer-big">
               <Footer />
             </div>
-            <div className="col-6">
+            <div className="col-12 col-md-6">
               <Fade left>
                 <h1 className="text-center heading-title wow fadeInUp">
                   Nhận Tư Vấn Về Khóa Học
@@ -70,7 +69,12 @@ function VisionaryLeadership() {
                   </div>
                 </Zoom>
               </div>
+
+           
             </div>
+            <div className="col-12 col-md-6 bg-dark footer-small">
+                    <Footer />
+                  </div>
           </div>
         </div>
       </div>

@@ -2,8 +2,25 @@
 
 footer {
   text-align: left;
-  padding: 20px 10px;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+
+  h2 {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  .title-item {
+    color: #cbbd9a;
+  }
+
+  .title {
+    text-align: left;
+  }
 
   .bg-light {
     background: #fff;
@@ -16,7 +33,7 @@ footer {
 
   .name {
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
     font-size: 28px;
     margin-bottom: 16px;
     margin-top: 25px;
@@ -26,7 +43,7 @@ footer {
     font-size: 16px;
     font-weight: bold;
     color: $c-white-0;
-    text-align: center;
+    text-align: left;
     margin-bottom: 12px;
     i {
       margin-right: 5px;
@@ -135,5 +152,23 @@ footer {
         }
       }
     }
+  }
+}
+
+.footer-big {
+  display: block;
+}
+
+.footer-small {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .footer-small {
+    display: block;
+  }
+
+  .footer-big {
+    display: none;
   }
 }
