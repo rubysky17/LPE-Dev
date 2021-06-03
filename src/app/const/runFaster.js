@@ -167,7 +167,7 @@ export const courseFee = [
     id: 3,
     name: "Vé cho Early Bird",
     disabled: false,
-    outOfDate: "06/06/2021",
+    outOfDate: "07/06/2021",
     price: 1200000,
   },
 ];
