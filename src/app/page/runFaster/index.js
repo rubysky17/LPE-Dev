@@ -12,7 +12,7 @@ import "react-multi-carousel/lib/styles.css";
 import { WOW } from "wowjs";
 // media
 import sand from "../../../assets/images/sand.jpg";
-import cloud1 from "../../../assets/images/cloud2.jpg";
+import cover1 from "../../../assets/images/cover1.jpg"
 import cloud2 from "../../../assets/images/cloud1.jpg";
 import bgVideo from "../../../assets/images/bgVideo.jpg";
 import mrVas from "../../../assets/images/mrVas.png";
@@ -101,17 +101,10 @@ function RunFaster() {
           <div className="container-fluid" style={{ padding: 0 }}>
             <Slider {...settings}>
               <div className="carousel-item">
-                <img src={cloud1} alt={cloud2} className="carousel-img" />
-                <div className="dark-layout"></div>
-                <div className="carousel-text">
-                  <h1>
-                    <span className="text-1">THE STORM</span> IS COMING
-                  </h1>
-                  <p>Một cơn bão đang tới</p>
-                </div>
+                <img src={cover1} alt={cover1} className="carousel-img" />
               </div>
               <div className="carousel-item">
-                <img src={cloud2} alt={cloud1} className="carousel-img" />
+                <img src={cloud2} alt={cloud2} className="carousel-img" />
                 <div className="dark-layout"></div>
                 <div className="carousel-text">
                   <h1>
@@ -276,9 +269,11 @@ function RunFaster() {
           </div>
           {/* 4 item */}
           <div className="container mb-5">
-            <h1 className="text-center text-uppercase py-5 heading_fee wow bounceIn">Khóa học này giúp bạn</h1>
-            <div className='row'>
-              {DATA.itemIcon.map((item,index) => {
+            <h1 className="text-center text-uppercase py-5 heading_fee wow bounceIn">
+              Khóa học này giúp bạn
+            </h1>
+            <div className="row">
+              {DATA.itemIcon.map((item, index) => {
                 return (
                   <div
                     className="col-6 col-md-3 wrapperIcon wow bounceIn"
@@ -352,7 +347,7 @@ function RunFaster() {
                 {DATA.courseFee.map((item, index) => {
                   return (
                     <div
-                      className="col-12 col-md-6 col-lg-6 wow fadeInUp"
+                      className="wrapper-card col-12 col-md-12 col-lg-4 wow fadeInUp"
                       data-wow-delay="0.3s"
                       key={index}
                     >

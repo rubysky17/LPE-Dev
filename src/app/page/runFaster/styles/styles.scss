@@ -15,9 +15,6 @@
 .carousel-img {
   max-width: 100%;
   position: relative;
-
-  animation: scalePicture infinite;
-  animation-duration: 10s;
 }
 
 .dark-layout {
@@ -671,6 +668,11 @@ footer {
       width: 500px;
     }
   }
+
+  .wrapper-card {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 929px) {
@@ -718,10 +720,10 @@ footer {
     font-size: 35px;
   }
   .carousel-item {
-    height: 80vh;
+    // height: 80vh;
   }
   .carousel-img {
-    height: 80vh;
+    // height: 80vh;
   }
   .carousel-text {
     h1 {

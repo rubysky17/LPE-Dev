@@ -3,7 +3,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   margin-top: 30px;
-  padding: 60px 30px;
+  padding: 40px 30px;
   border-radius: 16px;
 
   .color-text {
@@ -50,9 +50,36 @@
     }
   }
 }
+.cardPrice_outOfDate {
+  font-size: 18px;
+  margin: 0;
+  span {
+    font-size: 20px;
+    color: #e74c3c;
+  }
+}
+.null-div {
+  height: 30px;
+}
 
+
+@media screen and (max-width: 1200px) {
+  .null-div {
+    height: 57px;
+  }
+  
+}
 @media screen and (max-width: 992px) {
   .cardPrice-container {
-    padding: 40px 20px;
+    width: 70%;
+  }
+  .null-div {
+    height: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cardPrice-container {
+    width: 100%;
   }
 }
