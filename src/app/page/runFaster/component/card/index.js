@@ -31,7 +31,7 @@ function Card({ name }) {
             Thời gian: <span>18h30 – 22h30</span>
           </p>
           <p className="card-content_text">
-            Hình thức: <span>Học truyền hình trực tiếp</span>
+            Hình thức: <span>Học online tương tác trực tiếp</span>
           </p>
         </div>
       )}

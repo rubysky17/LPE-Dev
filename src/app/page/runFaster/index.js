@@ -76,7 +76,7 @@ function RunFaster() {
   useEffect(() => {
     const wow = new WOW({
       offset: 100,
-      mobile: false,
+      mobile: true,
       live: true,
     });
 
