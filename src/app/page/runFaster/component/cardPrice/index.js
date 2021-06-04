@@ -1,7 +1,35 @@
 import React from "react";
+import axios from "axios";
+
 import "./styles/styles.scss";
 
-function CardPrice({ item }) {
+function CardPrice({ item, url }) {
+  const email = url.searchParams.get("email");
+  const name = url.searchParams.get("name");
+  const custom_register = new Date().toLocaleString();
+
+  function handleSubmit() {
+    if (name && email) {
+      axios({
+        method: "post",
+        url: "https://sheet.best/api/sheets/a5d532ed-85e2-449d-a1e1-2c909555dabd",
+        data: {
+          name,
+          email,
+          custom_register,
+        },
+      })
+        .then(function (response) {
+          if (response.status === 200) {
+            window.location.href = "https://lpe.vn/thank-you/";
+          }
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+  }
+
   return (
     <div className="cardPrice-container">
       <p className="color-text">{item.name}</p>
@@ -18,18 +46,15 @@ function CardPrice({ item }) {
         <div className="null-div"></div>
       )}
 
-      <a
-        href="https://lpe.vn/dang-ky-run-faster/"
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        className={`button-register ${item.disabled && "disabled"}`}
+        disabled={item.disabled}
+        onClick={() => {
+          handleSubmit();
+        }}
       >
-        <button
-          className={`button-register ${item.disabled && "disabled"}`}
-          disabled={item.disabled}
-        >
-          Đăng ký ngay
-        </button>
-      </a>
+        Đăng ký ngay
+      </button>
     </div>
   );
 }

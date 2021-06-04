@@ -32,6 +32,9 @@ function RunFaster() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   usePageTitle(title.toUpperCase());
+    
+  const url_string = window.location.href; 
+const url = new URL(url_string);
 
   const settings = {
     dots: true,
@@ -41,21 +44,6 @@ function RunFaster() {
     autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-  };
-
-  const classResponsive = {
-    desktop: {
-      breakpoint: { max: 2000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 768 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 768, min: 0 },
-      items: 1,
-    },
   };
 
   const stepperClass = {
@@ -123,39 +111,6 @@ function RunFaster() {
             </Slider>
           </div>
 
-          {/* logo */}
-          <div className="title-logo">
-            <p className="title">Truyền thông nói về chúng tôi</p>
-          </div>
-
-          <Carousel
-            responsive={classResponsive}
-            className="intro-clip"
-            showDots={false}
-            arrows={false}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={3000}
-          >
-            {DATA.videoArray.map((item, index) => {
-              return (
-                <div className="intro-clip_logo" key={index}>
-                  <a
-                    href={item.newLink}
-                    alt={item.newLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src={item.img}
-                      alt={item.img}
-                      className={`img-fluid ${item.className}`}
-                    />
-                  </a>
-                </div>
-              );
-            })}
-          </Carousel>
 
           {/* Carousel */}
           <div className="container video-container">
@@ -351,7 +306,7 @@ function RunFaster() {
                       data-wow-delay="0.3s"
                       key={index}
                     >
-                      <CardPrice item={item} />
+                      <CardPrice item={item} url={url}/>
                     </div>
                   );
                 })}
@@ -380,6 +335,19 @@ function RunFaster() {
               </div>
             </div>
           </section>
+
+          <section className="container">
+            <div className="row wrapper-review">
+              <div className='col-12'>
+                <h3 className='text-center my-5 wow fadeInUp'>Review khóa học</h3>
+              </div>
+              <div className='col-12   col-md-8 wow fadeInUp'>
+              <iframe width="100%" height="400" src="https://www.youtube.com/embed/Zm2NLguyEkM" title="YouTube video player" frameborder="0"></iframe>
+              </div>
+            </div>
+
+          </section>
+
           <footer>
             <div className="text-center"></div>
             <h3 className="name">Công Ty TNHH Giáo Dục Leading Performance</h3>

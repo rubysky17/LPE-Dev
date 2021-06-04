@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/run-faster">
+        <Route exact path="/run-faster-v2">
           <RunFaster />
         </Route>
       </Switch>
