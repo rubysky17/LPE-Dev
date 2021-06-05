@@ -12,7 +12,7 @@ import "react-multi-carousel/lib/styles.css";
 import { WOW } from "wowjs";
 // media
 import sand from "../../../assets/images/sand.jpg";
-import cover1 from "../../../assets/images/cover1.jpg"
+import cover1 from "../../../assets/images/cover1.jpg";
 import cloud2 from "../../../assets/images/cloud1.jpg";
 import bgVideo from "../../../assets/images/bgVideo.jpg";
 import mrVas from "../../../assets/images/mrVas.png";
@@ -25,16 +25,14 @@ import Loading from "../../components/loading";
 
 import "./styles/styles.scss";
 
-
-
 function RunFaster() {
   const title = "run faster - công ty tnhh giáo dục leading performance";
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   usePageTitle(title.toUpperCase());
-    
-  const url_string = window.location.href; 
-const url = new URL(url_string);
+
+  const url_string = window.location.href;
+  const url = new URL(url_string);
 
   const settings = {
     dots: true,
@@ -60,7 +58,7 @@ const url = new URL(url_string);
       items: 1,
     },
   };
-  
+
   useEffect(() => {
     const wow = new WOW({
       offset: 100,
@@ -111,7 +109,6 @@ const url = new URL(url_string);
             </Slider>
           </div>
 
-
           {/* Carousel */}
           <div className="container video-container">
             <div className="row wow fadeInUp" data-wow-delay="0.3s">
@@ -127,12 +124,10 @@ const url = new URL(url_string);
                   đời tương lai của mình.
                 </p>
                 <div className="row pl-3">
-                  <a
-                    href="https://lpe.vn/dang-ky-run-faster/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button className="button-register">Đăng ký</button>
+                  <a href="#hocPhi">
+                    <button className="button-register" href="#hocPhi">
+                      Đăng ký
+                    </button>
                   </a>
                 </div>
               </div>
@@ -286,7 +281,7 @@ const url = new URL(url_string);
           </div>
 
           {/* Học phí */}
-          <div className="price">
+          <div className="price" id="hocPhi">
             <div className="bg-adding"></div>
             <div className="container">
               <div className="row">
@@ -306,7 +301,7 @@ const url = new URL(url_string);
                       data-wow-delay="0.3s"
                       key={index}
                     >
-                      <CardPrice item={item} url={url}/>
+                      <CardPrice item={item} url={url} />
                     </div>
                   );
                 })}
@@ -338,14 +333,21 @@ const url = new URL(url_string);
 
           <section className="container">
             <div className="row wrapper-review">
-              <div className='col-12'>
-                <h3 className='text-center my-5 wow fadeInUp'>Review khóa học</h3>
+              <div className="col-12">
+                <h3 className="text-center my-5 wow fadeInUp">
+                  Review khóa học
+                </h3>
               </div>
-              <div className='col-12   col-md-8 wow fadeInUp'>
-              <iframe width="100%" height="400" src="https://www.youtube.com/embed/Zm2NLguyEkM" title="YouTube video player" frameborder="0"></iframe>
+              <div className="col-12   col-md-8 wow fadeInUp">
+                <iframe
+                  width="100%"
+                  height="400"
+                  src="https://www.youtube.com/embed/Zm2NLguyEkM"
+                  title="YouTube video player"
+                  frameborder="0"
+                ></iframe>
               </div>
             </div>
-
           </section>
 
           <footer>

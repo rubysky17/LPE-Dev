@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 import "./styles/styles.scss";
 
 function CardPrice({ item, url }) {
+  const [onLoading, setOnLoading] = useState(false);
+  
   const email = url.searchParams.get("email");
   const name = url.searchParams.get("name");
   const custom_register = new Date().toLocaleString();
 
   function handleSubmit() {
+    setOnLoading(true);
+    
     if (name && email) {
       axios({
         method: "post",
@@ -22,6 +26,8 @@ function CardPrice({ item, url }) {
         .then(function (response) {
           if (response.status === 200) {
             window.location.href = "https://lpe.vn/thank-you/";
+
+            setOnLoading(false)
           }
         })
         .catch(function (error) {
@@ -47,8 +53,12 @@ function CardPrice({ item, url }) {
       )}
 
       <button
-        className={`button-register ${item.disabled && "disabled"}`}
-        disabled={item.disabled}
+        className={`button-register ${item.disabled && "disabled"} ${
+          
+          onLoading && "disabled"
+        
+        }`}
+        disabled={item.disabled || onLoading}
         onClick={() => {
           handleSubmit();
         }}
