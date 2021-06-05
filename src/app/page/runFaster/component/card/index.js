@@ -12,11 +12,7 @@ function Card({ name }) {
             của chúng ta & tìm cho mình một hướng đi mới, đúng đắn, phù hợp &
             đem lại nguồn thu hiệu quả.
           </p>
-          <a
-            href="https://lpe.vn/dang-ky-run-faster/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="#hocPhi">
             <button className="card-register">Đăng ký</button>
           </a>
         </div>

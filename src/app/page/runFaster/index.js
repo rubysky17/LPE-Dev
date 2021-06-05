@@ -173,9 +173,7 @@ function RunFaster() {
                 </p>
                 <div className="row pl-3">
                   <a
-                    href="https://lpe.vn/dang-ky-run-faster/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#hocPhi"
                   >
                     <button className="button-register">Đăng ký</button>
                   </a>
@@ -331,7 +329,7 @@ function RunFaster() {
           </div>
 
           {/* Học phí */}
-          <div className="price">
+          <div className="price" id="hocPhi">
             <div className="bg-adding"></div>
             <div className="container">
               <div className="row">
