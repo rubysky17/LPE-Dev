@@ -22,14 +22,28 @@ import Card from "./component/card";
 import CardPrice from "./component/cardPrice";
 import Comment from "./component/comment";
 import Loading from "../../components/loading";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./styles/styles.scss";
 
 function RunFaster() {
   const title = "run faster - công ty tnhh giáo dục leading performance";
+  usePageTitle(title.toUpperCase());
+  
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  usePageTitle(title.toUpperCase());
+  
+  const errorAlert = () => toast.error('Đăng ký thất bại!', {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: false,
+    progress: undefined,
+    });
+
 
   const url_string = window.location.href;
   const url = new URL(url_string);
@@ -301,7 +315,7 @@ function RunFaster() {
                       data-wow-delay="0.3s"
                       key={index}
                     >
-                      <CardPrice item={item} url={url} />
+                      <CardPrice item={item} url={url} handleError={errorAlert}/>
                     </div>
                   );
                 })}
@@ -344,7 +358,7 @@ function RunFaster() {
                   height="400"
                   src="https://www.youtube.com/embed/Zm2NLguyEkM"
                   title="YouTube video player"
-                  frameborder="0"
+                  frameBorder="0"
                 ></iframe>
               </div>
             </div>
@@ -383,6 +397,11 @@ function RunFaster() {
               setIsOpen(false);
             }}
           />
+
+                    <ToastContainer
+                     
+                    />
+                    
         </>
       )}
     </>
