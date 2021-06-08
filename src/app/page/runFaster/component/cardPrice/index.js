@@ -12,10 +12,13 @@ function CardPrice({ item, url, handleError }) {
 
   const custom_register = new Date().toLocaleString();
 
-
   function handleSubmit() {
     setOnLoading(true);
-      
+
+    if (!name && !email) {
+      setOnLoading(false);
+      handleError();
+    } else {
       axios({
         method: "post",
         url: "https://sheet.best/api/sheets/a5d532ed-85e2-449d-a1e1-2c909555dabd",
@@ -28,18 +31,17 @@ function CardPrice({ item, url, handleError }) {
         .then(function (response) {
           if (response.status === 200) {
             window.location.href = "https://lpe.vn/thank-you/";
-  
+
             setOnLoading(false);
           }
         })
         .catch(function (error) {
           console.log(error);
-  
+
           setOnLoading(false);
-          handleError()
+          handleError();
         });
-    
-   
+    }
   }
 
   return (
