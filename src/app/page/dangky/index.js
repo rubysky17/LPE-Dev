@@ -171,7 +171,7 @@ function RegisterPage() {
 
               {/* Mã thông báo danh bạ */}
               {/* Nhận mã thông báo tại: https://app.getresponse.com/campaign_list.html https://app.getresponse.com/campaign_list.html */}
-              <input type="hidden" name="campaign_token" defaultValue="5a3RU" />
+              <input type="hidden" name="campaign_token" defaultValue="5PxLu" />
               {/* Trang cảm ơn (tùy chọn) */}
               <input
                 type="hidden"
