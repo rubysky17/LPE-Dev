@@ -24,7 +24,7 @@ function CardPrice({ item, url, handleError }) {
       })
         .then(function (response) {
           if (response.status === 200) {
-            window.location.href = "https://lpe.vn/thank-you/";
+           console.log(response);
           }
         })
         .catch(function (error) {
