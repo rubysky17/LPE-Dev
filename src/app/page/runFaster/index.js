@@ -30,20 +30,20 @@ import "./styles/styles.scss";
 function RunFaster() {
   const title = "run faster - công ty tnhh giáo dục leading performance";
   usePageTitle(title.toUpperCase());
-  
+
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  
-  const errorAlert = () => toast.error('Đăng ký thất bại!', {
-    position: "bottom-right",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: false,
-    progress: undefined,
-    });
 
+  const errorAlert = () =>
+    toast.error("Đăng ký thất bại!", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+    });
 
   const url_string = window.location.href;
   const url = new URL(url_string);
@@ -402,10 +402,7 @@ function RunFaster() {
             }}
           />
 
-                    <ToastContainer
-                     
-                    />
-                    
+          <ToastContainer />
         </>
       )}
     </>
