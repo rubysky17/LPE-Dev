@@ -21,7 +21,7 @@ function Card({ name }) {
       {name === "info" && (
         <div className="card-content">
           <p className="card-content_text">
-            Ngày học: <span>27.05.2021 – 28.05.2021</span>
+            Ngày học: <span>12.06.2021 – 13.06.2021</span>
           </p>
           <p className="card-content_text">
             Thời gian: <span>18h30 – 22h30</span>
