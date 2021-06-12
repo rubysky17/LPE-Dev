@@ -1,0 +1,41 @@
+.header {
+   
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    background-color: #fff;
+}
+
+.content_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    img {
+        width: 30px;
+        height: auto;
+        padding: 10px 0;
+    }
+}
+
+.menu ul {
+    display: flex;
+    margin: 0;
+
+    li {
+        list-style: none;
+        padding: 10px 20px;
+        text-transform: uppercase;
+
+        a:hover {
+            text-decoration: none;
+        }
+    }
+}
+

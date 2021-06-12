@@ -1,0 +1,120 @@
+.home {
+  background: #1d1e22;
+  color: white;
+}
+.jss110 {
+  width: 95vw;
+  height: 100%;
+
+  .jss111 {
+    width: 100%;
+    height: 48vw;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+.bg-webpage {
+  width: 40vw;
+  height: 40vw;
+  background-attachment: fixed;
+  transform: scale(1.4);
+  border-radius: 100%;
+  transition: all 1s ease;
+  background-size: cover !important;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+    url(https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg),
+    url(https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg);
+}
+
+.bg-content {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: calc(0.2 * 100vw);
+    left: calc(0.3 * 100vw);
+    text-transform: uppercase;
+    
+    h2 {
+        width: 50vw;
+        font-size: 54px!important;
+        max-width: 1000px;
+        line-height: 66px;
+    }
+ 
+}
+
+.coach {
+  display: flex;
+}
+.slider-course {
+  .slick-dots {
+    bottom: -34px;
+
+    .slick-active {
+      button {
+        &:before {
+          color: #fff;
+          opacity: 1;
+        }
+      }
+    }
+
+    li {
+      button {
+        &:before {
+          color: #fff;
+          opacity: 0.25;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .bg-content {
+    h2 {
+      width: 70vw;
+
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .bg-content {
+    top: calc(0.18 * 100vw);
+    left: calc(0.3 * 100vw);
+    h2 {
+      font-size: 35px!important;
+      width: 50vw;
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .jss110 {
+    width: 100%;
+  }
+
+  .bg-webpage {
+    border-radius: unset;
+    height: 100%;
+    width: 100vw;
+
+  }
+
+  .bg-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h2 {
+      font-size: 28px!important;
+      line-height: unset!important;
+      width: 50vw;
+    }
+  }
+}

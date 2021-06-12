@@ -1,9 +1,9 @@
-import CourseOne from "./courseOne";
 import LoginPage from "./login";
 import ErrorPage from "./error";
 
-export default {
-  CourseOne,
+const page = {
   LoginPage,
   ErrorPage,
 };
+
+export default page;

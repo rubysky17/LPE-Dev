@@ -1,0 +1,23 @@
+.content-coach {
+    margin-right: 30px;
+    text-align: center;
+    
+    &_img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    &_name {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content-coach {
+        &_img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
