@@ -28,20 +28,19 @@
 }
 
 .bg-content {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    top: calc(0.2 * 100vw);
-    left: calc(0.3 * 100vw);
-    text-transform: uppercase;
-    
-    h2 {
-        width: 50vw;
-        font-size: 54px!important;
-        max-width: 1000px;
-        line-height: 66px;
-    }
- 
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: calc(0.2 * 100vw);
+  left: calc(0.3 * 100vw);
+  text-transform: uppercase;
+
+  h2 {
+    width: 50vw;
+    font-size: 54px !important;
+    max-width: 1000px;
+    line-height: 66px;
+  }
 }
 
 .coach {
@@ -75,24 +74,20 @@
   .bg-content {
     h2 {
       width: 70vw;
-
     }
   }
 }
 
-
 @media screen and (max-width: 768px) {
-
   .bg-content {
     top: calc(0.18 * 100vw);
     left: calc(0.3 * 100vw);
     h2 {
-      font-size: 35px!important;
+      font-size: 35px !important;
       width: 50vw;
     }
   }
 }
-
 
 @media screen and (max-width: 600px) {
   .jss110 {
@@ -103,7 +98,6 @@
     border-radius: unset;
     height: 100%;
     width: 100vw;
-
   }
 
   .bg-content {
@@ -112,9 +106,49 @@
     transform: translate(-50%, -50%);
 
     h2 {
-      font-size: 28px!important;
-      line-height: unset!important;
+      font-size: 28px !important;
+      line-height: unset !important;
       width: 50vw;
+    }
+  }
+}
+
+//  test scroll vertial
+.wrapper-div {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #1d1e22;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 3px solid #1d1e22;
+  }
+
+  .item {
+    min-width: 110px;
+    height: 110px;
+    background-color: red;
+    margin-right: 15px;
+    scroll-snap-align: start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper-div {
+  -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      width: 0px;
     }
   }
 }

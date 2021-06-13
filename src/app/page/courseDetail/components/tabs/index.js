@@ -43,9 +43,11 @@ function TabBar({ ...detaiCourse }) {
           value={value}
           onChange={handleChange}
           textColor="primary"
+          indicatorColor="secondary"
           variant="scrollable"
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
+          TabIndicatorProps={{style: {background:'#feda6a'}}}
         >
           <Tab label="Thông tin" {...a11yProps(0)} />
           <Tab label="Lợi ích" {...a11yProps(1)} />

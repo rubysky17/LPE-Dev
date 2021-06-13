@@ -1,0 +1,39 @@
+a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.course-info {
+  display: flex;
+  align-items: center;
+
+  &_img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-right: 15px;
+  }
+
+  &_desc {
+    p {
+      margin: 0;
+    }
+
+    &-name {
+      margin-bottom: 5px !important;
+      font-size: 17px;
+      line-height: 22px;
+    }
+
+    &-price {
+      color: #feda6a;
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}

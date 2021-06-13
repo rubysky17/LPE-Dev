@@ -1,0 +1,30 @@
+.credit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #393f4d;
+  padding: 20px 0;
+
+  i {
+    font-size: 30px;
+  }
+
+  &-desc {
+    padding-right: 40px;
+    padding-left: 20px;
+
+    p {
+      margin: 0;
+    }
+
+    &_name {
+      font-size: 17px;
+      line-height: 22px;
+    }
+
+    &_detail {
+      color: #d4d4dc;
+      opacity: 0.5;
+    }
+  }
+}

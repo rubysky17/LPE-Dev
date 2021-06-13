@@ -1,0 +1,118 @@
+ul li {
+  list-style: none;
+}
+
+.checkout {
+  background-color: #1d1e22;
+  color: #fff;
+  padding: 50px 0;
+
+  &-head {
+    display: none;
+  }
+
+  &-body {
+    &_detail {
+      &-title {
+        margin-top: 30px;
+        color: #feda6a;
+        font-size: 18px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+      }
+    }
+
+    &_bill {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: left;
+      .bill {
+        width: 400px;
+        border-radius: 10px;
+        background-color: #393f4d;
+        padding: 20px 25px;
+
+        .bill-item {
+          border-bottom: 1px solid #737381;
+          padding: 10px 0;
+
+          p {
+            margin: 0;
+            font-size: 18px;
+            margin-left: 0px;
+            justify-content: space-between;
+          }
+
+          &.bottom {
+            border-bottom: none;
+            p {
+              margin: 0;
+              font-size: 20px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrapper-form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-top: 15px;
+  }
+
+  input {
+    width: 65%;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+
+    border-radius: 10px;
+    background-color: #333336 !important;
+    color: #fff;
+  }
+
+  .input-error {
+    border: 1px solid #ff0000;
+    background-color: rgba(255, 0, 0, 0.05) !important;
+  }
+
+  input:focus {
+    border: none;
+    outline: none;
+  }
+}
+@media screen and (max-width: 992px) {
+    .wrapper-form {
+        input {
+            width: 100%;
+        }
+    }
+    .checkout-body_bill {
+        .bill {
+            width: 100%!important;
+
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+  .checkout-head {
+    display: flex;
+  }
+}
+
+// ------------------------------------------
+
+// custom inputs
+// custom checkbox/radios
+.MuiRadio-colorSecondary.Mui-checked {
+  color: #fec843 !important;
+}
+.MuiRadio-root {
+  color: #fff !important;
+}
