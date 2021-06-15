@@ -1,7 +1,7 @@
 import Title from "app/components/title";
 import React from "react";
 
-import { courseList } from "app/const/course";
+import { courseList } from "app/const/Course";
 import Card from "app/components/card";
 import Coach from "app/components/coach";
 import Comment from "app/components/comment";

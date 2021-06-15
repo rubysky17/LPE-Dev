@@ -13,7 +13,7 @@ function Card({ id, title, description, priceNew, priceOld, picture, color }) {
           color: color ? color : "#fff",
         }}
       >
-        <div class="bg-image"></div>
+        <div className="bg-image"></div>
         <div className="content-card">
           <p className="card-title">{title}</p>
 

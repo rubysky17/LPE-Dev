@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import { courseList } from "app/const/course";
+import { courseList } from "app/const/Course";
 import PriceTag from "./components/pricetag";
 import IntroduceCourse from "./components/introducecourse";
 import FixedTag from "./components/fixedtag";
