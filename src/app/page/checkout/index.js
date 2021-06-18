@@ -3,7 +3,7 @@ import { useParams, useHistory } from "react-router-dom";
 import { useFormik } from "formik";
 import axios from "axios";
 
-import { courseList } from "app/const/Course";
+import { courseList } from "app/const/course.js";
 import CourseDetail from "./components/courseinfo";
 import CreditCard from "./components/creditcard";
 

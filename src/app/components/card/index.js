@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./styles/styles.scss";
 
-function Card({ id, title, description, priceNew, priceOld, picture, color }) {
+function Card({ id, title, picture, color }) {
   return (
     <div className="mt-4 mr-4">
       <div
@@ -18,11 +18,11 @@ function Card({ id, title, description, priceNew, priceOld, picture, color }) {
           <p className="card-title">{title}</p>
 
           <div className="content-price row my-1 mx-0">
-            <div className="col-6">
+            <div className="col-6  px-0">
               <p className="content-price_new">299.000đ</p>
               <p className="content-price_old">700.000đ</p>
             </div>
-            <div className="col-6 wrapper-btn">
+            <div className="col-6 wrapper-btn px-0">
               <Link
                 to={`/course/${id}`}
                 style={{

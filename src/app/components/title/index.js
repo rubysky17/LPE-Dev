@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./styles/styles.scss"
+
 function Title({ text, desc }) {
   return (
     <div className="wrapper title mt-5">

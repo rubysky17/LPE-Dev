@@ -1,7 +1,7 @@
 import Title from "app/components/title";
 import React from "react";
 
-import { courseList } from "app/const/Course";
+import { courseList } from "app/const/course.js";
 import Card from "app/components/card";
 import Coach from "app/components/coach";
 import Comment from "app/components/comment";
@@ -24,8 +24,8 @@ function Home() {
 
       <div className="container-fluid pb-4">
         <Title
-          text="Phổ biến nhất"
-          desc="Những khóa học phổ biến ưu chuộng nhất"
+          text="Level 1"
+          desc="Những khóa học dành cho người mới bắt đầu"
         />
 
         <div className="wrapper-div">
@@ -35,8 +35,8 @@ function Home() {
         </div>
 
         <Title
-          text="Bán chạy nhất"
-          desc="Những khóa học bán chạy nhất trong tháng"
+          text="Level 2"
+          desc="Những khóa học chỉ dành cho người hoàn thành LEVEL 1"
         />
 
         <div className="wrapper-div">
