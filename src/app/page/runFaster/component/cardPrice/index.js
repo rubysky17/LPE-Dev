@@ -24,7 +24,7 @@ function CardPrice({ item, url, handleError }) {
       })
         .then(function (response) {
           if (response.status === 200) {
-           console.log(response);
+            console.log(response);
           }
         })
         .catch(function (error) {
@@ -44,7 +44,7 @@ function CardPrice({ item, url, handleError }) {
 
       {item.outOfDate ? (
         <p className="cardPrice_outOfDate">
-          Hạn chót đến ngày <span>{item.outOfDate}</span>
+          <span>{item.outOfDate}</span>
         </p>
       ) : (
         <div className="null-div"></div>
@@ -55,12 +55,11 @@ function CardPrice({ item, url, handleError }) {
         accept-charset="utf-8"
         method="post"
       >
-        
         <input type="hidden" name="name" value={name} />
         <input type="hidden" name="email" value={email} />
         <input type="hidden" name="campaign_token" value="5u92S" />
         <input type="hidden" name="start_day" value="0" />
-        
+
         <input
           type="hidden"
           name="thankyou_url"
@@ -71,7 +70,6 @@ function CardPrice({ item, url, handleError }) {
           className={`button-register ${item.disabled && "disabled"}`}
           disabled={item.disabled}
           type="submit"
-
           onClick={() => {
             handleSubmit();
           }}

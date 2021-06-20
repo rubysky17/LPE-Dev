@@ -64,20 +64,17 @@ export const stepperDay1 = [
   {
     id: 2,
     title: "What will happen if you do not Take Action Now",
-    content:
-      "Điều gì sẽ xảy ra nếu bạn không bắt đầu hành động ngay bây giờ.",
+    content: "Điều gì sẽ xảy ra nếu bạn không bắt đầu hành động ngay bây giờ.",
   },
   {
     id: 3,
     title: "How to Eject yourself from the Storm",
-    content:
-      "Làm thế nào để đưa bản thân thoát ra khỏi Cơn bão.",
+    content: "Làm thế nào để đưa bản thân thoát ra khỏi Cơn bão.",
   },
   {
     id: 4,
     title: "What does it really mean to Run Faster",
-    content:
-      "Ý nghĩa thật sự của “Run Faster”",
+    content: "Ý nghĩa thật sự của “Run Faster”",
   },
   {
     id: 5,
@@ -91,8 +88,7 @@ export const stepperDay2 = [
   {
     id: 6,
     title: "How to Produce More & Faster",
-    content:
-      "Làm thế nào để tăng năng suất, sản xuất nhiều & nhanh hơn nữa.",
+    content: "Làm thế nào để tăng năng suất, sản xuất nhiều & nhanh hơn nữa.",
   },
   {
     id: 7,
@@ -163,13 +159,13 @@ export const courseFee = [
     disabled: false,
     price: 1500000,
   },
-  // {
-  //   id: 3,
-  //   name: "Vé cho Early Bird",
-  //   disabled: false,
-  //   outOfDate: "07/06/2021",
-  //   price: 1200000,
-  // },
+  {
+    id: 3,
+    name: "Vé cho Early Bird",
+    disabled: false,
+    outOfDate: "Số lượng giới hạn",
+    price: 1200000,
+  },
 ];
 
 export const itemIcon = [

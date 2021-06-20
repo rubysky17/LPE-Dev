@@ -12,7 +12,7 @@ import "react-multi-carousel/lib/styles.css";
 import { WOW } from "wowjs";
 // media
 import sand from "../../../assets/images/sand.jpg";
-import cover1 from "../../../assets/images/cover1.jpg";
+import cover1 from "../../../assets/images/cover1.png";
 import cloud2 from "../../../assets/images/cloud1.jpg";
 import bgVideo from "../../../assets/images/bgVideo.jpg";
 import mrVas from "../../../assets/images/mrVas.png";
@@ -311,7 +311,7 @@ function RunFaster() {
                 {DATA.courseFee.map((item, index) => {
                   return (
                     <div
-                      className="wrapper-card col-12 col-md-12 col-lg-6 wow fadeInUp"
+                      className="wrapper-card col-12 col-md-12 col-lg-4 wow fadeInUp"
                       data-wow-delay="0.3s"
                       key={index}
                     >
