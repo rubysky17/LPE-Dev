@@ -12,7 +12,7 @@ function CardPrice({ item }) {
 
       {item.outOfDate ? (
         <p className="cardPrice_outOfDate">
-          Hạn chót đến ngày <span>{item.outOfDate}</span>
+          <span>{item.outOfDate}</span>
         </p>
       ) : (
         <div className="null-div"></div>
