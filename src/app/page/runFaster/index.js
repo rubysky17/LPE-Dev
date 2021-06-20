@@ -11,11 +11,11 @@ import "react-multi-carousel/lib/styles.css";
 // WOW
 import { WOW } from "wowjs";
 // media
-import sand from "../../../assets/images/sand.jpg";
-import cover1 from "../../../assets/images/cover1.jpg"
-import cloud2 from "../../../assets/images/cloud1.jpg";
-import bgVideo from "../../../assets/images/bgVideo.jpg";
-import mrVas from "../../../assets/images/mrVas.png";
+import sand from "assets/images/sand.jpg";
+import cover1 from "assets/images/cover1.png";
+import cloud2 from "assets/images/cloud1.jpg";
+import bgVideo from "assets/images/bgVideo.jpg";
+import mrVas from "assets/images/mrVas.png";
 // component
 import Stepper from "./component/stepper";
 import Card from "./component/card";
@@ -24,8 +24,6 @@ import Comment from "./component/comment";
 import Loading from "../../components/loading";
 
 import "./styles/styles.scss";
-
-
 
 function RunFaster() {
   const title = "run faster - công ty tnhh giáo dục leading performance";
@@ -72,7 +70,7 @@ function RunFaster() {
       items: 1,
     },
   };
-  
+
   useEffect(() => {
     const wow = new WOW({
       offset: 100,
@@ -172,9 +170,7 @@ function RunFaster() {
                   đời tương lai của mình.
                 </p>
                 <div className="row pl-3">
-                  <a
-                    href="#hocPhi"
-                  >
+                  <a href="#hocPhi">
                     <button className="button-register">Đăng ký</button>
                   </a>
                 </div>
