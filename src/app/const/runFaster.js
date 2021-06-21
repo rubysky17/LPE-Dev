@@ -163,7 +163,7 @@ export const courseFee = [
     id: 3,
     name: "Vé cho Early Bird",
     disabled: false,
-    outOfDate: "Số lượng giới hạn",
+    outOfDate: "Số lượng giới hạn chỉ 20 suất",
     price: 1200000,
   },
 ];
