@@ -1,5 +1,4 @@
 @import "../../../../../assets/styles/common.scss";
-
 // Imports
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 
@@ -24,12 +23,10 @@ $main-font-weight: 300;
     align-items: center;
     .card-shadow {
       border-radius: 30px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
     .img {
       width: 300px;
-      
     }
   }
 }
