@@ -156,7 +156,7 @@ export const courseFee = [
   {
     id: 2,
     name: "Vé hỗ trợ mùa covid",
-    disabled: false,
+    disabled: true,
     price: 1500000,
   },
   {
