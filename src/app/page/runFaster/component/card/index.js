@@ -24,7 +24,7 @@ function Card({ name }) {
             Ngày học: <span>03.07.2021 – 04.07.2021</span>
           </p>
           <p className="card-content_text">
-            Thời gian: <span>18h30 – 22h30</span>
+            Thời gian: <span>18h00 – 22h00</span>
           </p>
           <p className="card-content_text">
             Hình thức: <span>Học online tương tác trực tiếp</span>
