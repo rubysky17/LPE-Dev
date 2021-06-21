@@ -1,9 +1,9 @@
 a {
-  color: white;
+  color: #000;
   text-decoration: none;
 
   &:hover {
-    color: white;
+    color: #000;
     text-decoration: none;
   }
 }
@@ -31,7 +31,7 @@ a {
     }
 
     &-price {
-      color: #feda6a;
+      color: #3777bc;
       font-size: 15px;
       line-height: 20px;
     }

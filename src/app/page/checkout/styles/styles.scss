@@ -1,10 +1,13 @@
+$c-title: #3777bc;
+$c-text: #000;
+
+$border-w: 2px;
 ul li {
   list-style: none;
 }
 
 .checkout {
-  background-color: #1d1e22;
-  color: #fff;
+  color: #333;
   padding-top: 20px;
   padding-bottom: 50px;
 
@@ -16,7 +19,7 @@ ul li {
     &_detail {
       &-title {
         margin-top: 50px;
-        color: #feda6a;
+        color: $c-title;
         font-size: 18px;
         margin-bottom: 0;
         text-transform: uppercase;
@@ -31,11 +34,11 @@ ul li {
       .bill {
         width: 400px;
         border-radius: 10px;
-        background-color: #393f4d;
         padding: 20px 25px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
         .bill-item {
-          border-bottom: 1px solid #737381;
+          border-bottom: $border-w solid $c-text;
           padding: 10px 0;
 
           p {
@@ -70,21 +73,20 @@ ul li {
   input {
     width: 65%;
     padding: 10px 15px;
-    border: none;
+    border: $border-w solid $c-text;
     outline: none;
 
     border-radius: 10px;
-    background-color: #333336 !important;
-    color: #fff;
+    color: $c-text;
   }
 
   .input-error {
-    border: 1px solid #ff0000;
+    border: $border-w solid #ff0000;
     background-color: rgba(255, 0, 0, 0.05) !important;
   }
 
   input:focus {
-    border: none;
+    border: $border-w solid $c-title !important;
     outline: none;
   }
 
@@ -115,18 +117,24 @@ ul li {
     width: 100%;
     margin: 0;
     margin-bottom: 30px;
+
     h3 {
-      color: #ffffff;
+      color: $c-text;
       font-size: 17px;
       font-weight: 500;
       line-height: 20px;
     }
+
     &_button {
       border: none;
       background: none;
-      color: #fff;
+      color: $c-text;
       font-size: 25px;
     }
+  }
+
+  .bill {
+    margin-top: 40px !important;
   }
 }
 
@@ -135,12 +143,11 @@ ul li {
 // custom inputs
 // custom checkbox/radios
 .MuiRadio-colorSecondary.Mui-checked {
-  color: #fec843 !important;
+  color: $c-title !important;
 }
 .MuiRadio-root {
-  color: #fff !important;
+  color: $c-text !important;
 }
 .MuiButton-contained.Mui-disabled {
-  color: #fff !important;
-
+  color: $c-text !important;
 }

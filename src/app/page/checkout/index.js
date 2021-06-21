@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: "#dfc987",
     },
+    marginTop: "20px",
   },
 }));
 
@@ -56,7 +57,7 @@ function Checkout() {
 
     console.log("url run", url);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSubmit, cardtype]);
 
   const handleChange = (event) => {

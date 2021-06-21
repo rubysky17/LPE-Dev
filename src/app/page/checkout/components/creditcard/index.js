@@ -3,7 +3,6 @@ import React from "react";
 import "./styles/styles.scss";
 
 function CreditCard({ type }) {
-
   const renderCard = () => {
     let result = {};
 

@@ -1,3 +1,4 @@
+$c-text-2: #333;
 .credit {
   display: flex;
   justify-content: center;
@@ -23,7 +24,7 @@
     }
 
     &_detail {
-      color: #d4d4dc;
+      color: $c-text-2;
       opacity: 0.5;
     }
   }

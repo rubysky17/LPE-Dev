@@ -1,7 +1,7 @@
 .fixed {
   display: none;
+
   .bg-tag {
-    border-top: 1px solid #393f4d;
     width: 100vw;
     bottom: 0;
     height: 80px;
@@ -30,8 +30,8 @@
     }
 
     &_btn {
-      color: #1d1e22;
-      background-color: #feda6a;
+      color: #fff;
+      background-color: #3777bc;
       border-radius: 50px;
 
       font-size: 18px;
@@ -42,9 +42,10 @@
 
       display: flex;
       justify-content: center;
+
       &:hover {
+        color: #fff;
         text-decoration: none;
-        color: #1d1e22;
       }
     }
   }

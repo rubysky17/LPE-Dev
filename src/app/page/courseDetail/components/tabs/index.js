@@ -47,7 +47,7 @@ function TabBar({ ...detaiCourse }) {
           variant="scrollable"
           scrollButtons="auto"
           aria-label="scrollable auto tabs example"
-          TabIndicatorProps={{style: {background:'#feda6a'}}}
+          TabIndicatorProps={{ style: { background: "#3777bc" } }}
         >
           <Tab label="Thông tin" {...a11yProps(0)} />
           <Tab label="Lợi ích" {...a11yProps(1)} />

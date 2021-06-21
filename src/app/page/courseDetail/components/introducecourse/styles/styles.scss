@@ -10,7 +10,6 @@
   }
 
   &-description {
-    color: #d4d4dc;
     padding: 4px 0px;
     font-size: 13px;
     font-weight: 400;
@@ -24,18 +23,18 @@
 
 .coach-intro {
   flex-direction: column;
-    
+  margin-top: 40px;
+
   .content-coach {
     text-align: left;
   }
   &-title {
-    color: #feda6a;
+    color: #3777bc;
     font-size: 15px;
     text-transform: uppercase;
     margin-top: 15px;
   }
 }
-
 
 @media screen and (max-width: 768px) {
   .introduce-description {
