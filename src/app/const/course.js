@@ -1,15 +1,16 @@
 export const courseList = {
   level1: [
     {
-      id: 1,
-      title: "Clueless about your futures? Why? What is stopping you?",
-      description: "Luyện tập yoga để khỏe đẹp mỗi ngày.",
-      priceNew: 299000,
-      priceOld: 699000,
+      id: 2,
+      title:
+        "Uncontrollable emotions destroy you and your relationship. FEAR keeping you small?",
+      description:
+        "Trong cuộc sống kỹ năng giao tiếp là chìa khóa giúp chúng ta có thể từng bước thành công trong cuộc sống.",
+      priceNew: 699000,
+      priceOld: 799000,
       coach: "giangThanh",
       picture:
-        "https://cdn2.topica.vn/191ab4fd-9c62-4494-b209-51f86a3924d3/product/6076639631b9ae0024d5dab7",
-      color: "#000000",
+        "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/6000fcd544d203002598bd5a",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis augue accumsan justo cursus ultricies et et ipsum. Maecenas leo purus, pretium in elit a, interdum pulvinar lacus. Aenean dignissim pulvinar euismod. Nunc vel sollicitudin sem. Vestibulum vehicula justo eget nisi tincidunt feugiat. Donec scelerisque, orci non pretium elementum, risus lectus efficitur turpis, quis tincidunt quam ipsum sit amet est. Donec gravida neque consectetur ante porttitor, sit amet lobortis sapien interdum.",
       benefit: [
@@ -21,16 +22,15 @@ export const courseList = {
       ],
     },
     {
-      id: 2,
-      title:
-        "Uncontrollable emotions destroy you and your relationship. FEAR keeping you small?",
-      description:
-        "Trong cuộc sống kỹ năng giao tiếp là chìa khóa giúp chúng ta có thể từng bước thành công trong cuộc sống.",
-      priceNew: 699000,
-      priceOld: 799000,
+      id: 1,
+      title: "Clueless about your futures? Why? What is stopping you?",
+      description: "Luyện tập yoga để khỏe đẹp mỗi ngày.",
+      priceNew: 300000,
+      priceOld: 350000,
       coach: "giangThanh",
       picture:
-        "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/6000fcd544d203002598bd5a",
+        "https://cdn2.topica.vn/191ab4fd-9c62-4494-b209-51f86a3924d3/product/6076639631b9ae0024d5dab7",
+      color: "#000000",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis augue accumsan justo cursus ultricies et et ipsum. Maecenas leo purus, pretium in elit a, interdum pulvinar lacus. Aenean dignissim pulvinar euismod. Nunc vel sollicitudin sem. Vestibulum vehicula justo eget nisi tincidunt feugiat. Donec scelerisque, orci non pretium elementum, risus lectus efficitur turpis, quis tincidunt quam ipsum sit amet est. Donec gravida neque consectetur ante porttitor, sit amet lobortis sapien interdum.",
       benefit: [

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import "./styles/styles.scss";
 
-function CourseDetail({ ...detailCourse }) {
+function CourseDetail({ level, ...detailCourse }) {
   return (
-    <Link to={`/course/${detailCourse.id}`}>
+    <Link to={`/course/${level}/${detailCourse.id}`}>
       <div className="course-info">
         <img
           src={detailCourse.picture}

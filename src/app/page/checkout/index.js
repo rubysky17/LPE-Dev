@@ -13,11 +13,11 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
-
-import "./styles/styles.scss";
 import { createOrderCourse } from "app/const/Payment";
 
-const useStyles = makeStyles((theme) => ({
+import "./styles/styles.scss";
+
+const useStyles = makeStyles(() => ({
   styled: {
     width: "400px",
     display: "flex",
@@ -39,24 +39,30 @@ const domestic = "DOMESTIC";
 const qr = "QR";
 
 function Checkout() {
-  const { id } = useParams();
+  let { id, level } = useParams();
   const history = useHistory();
   const classes = useStyles();
+  const [secondCourse, setSecondCourse] = useState(null);
+  const firstCourse = courseList[level].find((item) => item.id === +id);
+
   const [isSubmit, setIsSubmit] = useState(false);
   const [url, setUrl] = useState();
   const [protocol, setProtocol] = useState();
   const [cardtype, setCardtype] = useState(null);
-  const detailCourse = courseList.find((item) => item.id === +id);
 
   useEffect(() => {
     getIPLocal();
   }, []);
 
   useEffect(() => {
+    if (level === "level2") {
+      const result = courseList["level1"].find((item) => item.id === +id);
+      setSecondCourse(result);
+    }
+  }, []);
+
+  useEffect(() => {
     generateUrl();
-
-    console.log("url run", url);
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSubmit, cardtype]);
 
@@ -66,6 +72,10 @@ function Checkout() {
 
   const handleGoBack = () => {
     history.goBack();
+  };
+
+  const disCount = (newPrice, oldPrice) => {
+    return (oldPrice - newPrice).toLocaleString();
   };
 
   const choiceCard = () => {
@@ -86,7 +96,7 @@ function Checkout() {
     const uid = new Date().getTime().toString(36);
     // thông tin merch
     const merchDetail = Object.assign(
-      detailCourse,
+      firstCourse,
       { merchRef: uid },
       { typepay: cardtype }
     );
@@ -109,6 +119,7 @@ function Checkout() {
 
   const validate = (values) => {
     const errors = {};
+
     if (!values.name) {
       errors.name = "*Không được để trống";
     }
@@ -157,11 +168,16 @@ function Checkout() {
 
         <div className="row checkout-body">
           <div className="col-12 col-md-6 checkout-body_detail">
-            <CourseDetail {...detailCourse} />
+            <CourseDetail level={level} {...firstCourse} />
+
+            <div className="mt-3">
+              {secondCourse && <CourseDetail level={level} {...secondCourse} />}
+            </div>
 
             <h4 className="checkout-body_detail-title">thông tin người dùng</h4>
             <form className="wrapper-form">
               <label htmlFor="name">Tên của bạn (*)</label>
+
               <input
                 id="name"
                 name="name"
@@ -253,16 +269,26 @@ function Checkout() {
               <div className="row bill-item">
                 <p className="col-6">Giá gốc</p>
                 <p className="col-6 text-right">
-                  {detailCourse.priceNew.toLocaleString()} đ
+                  {secondCourse
+                    ? (
+                        firstCourse.priceNew + secondCourse.priceNew
+                      ).toLocaleString()
+                    : firstCourse.priceNew.toLocaleString()}
+                  đ
                 </p>
               </div>
 
               <div className="row bill-item">
                 <p className="col-6">Giá giảm</p>
                 <p className="col-6 text-right">
-                  {(
-                    detailCourse.priceOld - detailCourse.priceNew
-                  ).toLocaleString()}
+                  {secondCourse
+                    ? disCount(
+                        firstCourse.priceNew + secondCourse.priceNew,
+                        firstCourse.priceOld + secondCourse.priceOld
+                      )
+                    : (
+                        firstCourse.priceOld - firstCourse.priceNew
+                      ).toLocaleString()}
                   đ
                 </p>
               </div>
@@ -275,7 +301,12 @@ function Checkout() {
               <div className="row bill-item bottom">
                 <p className="col-6">Tổng giá trị</p>
                 <p className="col-6 text-right">
-                  {detailCourse.priceNew.toLocaleString()} đ
+                  {secondCourse
+                    ? (
+                        firstCourse.priceNew + secondCourse.priceNew
+                      ).toLocaleString()
+                    : firstCourse.priceNew.toLocaleString()}
+                  đ
                 </p>
               </div>
             </div>

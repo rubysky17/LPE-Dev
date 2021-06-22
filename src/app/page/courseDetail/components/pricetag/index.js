@@ -29,7 +29,7 @@ function PriceTag({ level, ...detailCourse }) {
         ) : (
           <Link
             className="pricetag_content-button"
-            to={`/checkout/${detailCourse.id}`}
+            to={`/checkout/${level}/${detailCourse.id}`}
           >
             Đăng ký học
           </Link>

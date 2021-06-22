@@ -1,29 +1,27 @@
 footer {
-    background-color: #26435B;
-    padding: 50px 0;
-    color: white;
-    border-top: 1px solid #393f4d;
+  background-color: #26435b;
+  padding: 50px 0;
+  color: white;
+  border-top: 1px solid #393f4d;
 }
 
-
-
 .footer-title {
-    color: #d1edf3;
-    font-size: 16px;
-    line-height: 18px;
-    margin-bottom: 5px;
-    padding-bottom: 10px;
-    text-transform: uppercase;
+  color: #d1edf3;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .footer .text {
-    font-size: 14px;
-    line-height: 25px;
-    margin: 10px 0;
+  font-size: 14px;
+  line-height: 25px;
+  margin: 10px 0;
 }
 
 @media screen and (max-width: 768px) {
-    footer {
-        padding-bottom: 80px;
-    }
+  footer {
+    padding-bottom: 100px;
+  }
 }

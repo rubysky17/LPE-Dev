@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useHistory, useParams, Link } from "react-router-dom";
 
 import { courseList } from "app/const/course.js";
 import PriceTag from "./components/pricetag";
@@ -11,13 +11,45 @@ import "./styles/styles.scss";
 
 function CourseDetail() {
   let { id, level } = useParams();
+  const history = useHistory();
+  const [secondCourse, setSecondCourse] = useState(null);
+
+  const handleGoBack = () => {
+    history.goBack();
+  };
 
   const firstCourse = courseList[level]?.find((item) => item.id === +id);
-  const secondCourse = courseList["level1"].find((item) => item.id === +id);
+
+  useEffect(() => {
+    if (level === "level2") {
+      setSecondCourse(courseList["level1"].find((item) => item.id === +id));
+    }
+  }, [level, id]);
 
   return (
-    <div className="course py-5">
+    <div className="course">
       <div className="container">
+        <div className="row checkout-head">
+          <button
+            className="checkout-head_button"
+            type="button"
+            onClick={() => {
+              handleGoBack();
+            }}
+          >
+            <i className="fal fa-chevron-left"></i>
+          </button>
+
+          <h3 className="text-center">Chi tiết khóa học</h3>
+
+          <Link
+            className="checkout-head_button"
+            type="button"
+            to={`/checkout/${level}/${id}`}
+          >
+            <i className="fal fa-chevron-right"></i>
+          </Link>
+        </div>
         <div className="row">
           <div className="col-12 col-md-8">
             <IntroduceCourse {...firstCourse} />
@@ -28,7 +60,7 @@ function CourseDetail() {
           </div>
 
           <div className="col-12" id="combo">
-            {level === "level2" && (
+            {secondCourse && (
               <>
                 <p className="coach-intro-title">Siêu ưu đãi</p>
                 <Combo course2={firstCourse} course1={secondCourse} />
@@ -37,8 +69,15 @@ function CourseDetail() {
           </div>
         </div>
       </div>
-
-      <FixedTag {...firstCourse} />
+      {!secondCourse ? (
+        <FixedTag firstCourse={firstCourse} level={level} />
+      ) : (
+        <FixedTag
+          firstCourse={firstCourse}
+          secondCourse={secondCourse}
+          level={level}
+        />
+      )}
     </div>
   );
 }
