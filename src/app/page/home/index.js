@@ -1,7 +1,7 @@
 import Title from "app/components/title";
 import React from "react";
 
-import { courseList } from "app/const/course.js";
+import { courseList, courseLevel } from "app/const/course.js";
 import Card from "app/components/card";
 import Coach from "app/components/coach";
 import Comment from "app/components/comment";
@@ -23,30 +23,21 @@ function Home() {
       </div>
 
       <div className="container-fluid pb-4">
-        <Title
-          text="Level 1"
-          desc="Những khóa học dành cho người mới bắt đầu"
-        />
+        {courseLevel?.map((level, index) => {
+          return (
+            <div key={index}>
+              <Title text={level.name} desc={level.description} />
 
-        <div className="wrapper-div">
-          {courseList?.map((course) => {
-            return <Card {...course} key={course.id} />;
-          })}
-        </div>
-
-        <Title
-          text="Level 2"
-          desc="Những khóa học chỉ dành cho người hoàn thành LEVEL 1"
-        />
-
-        <div className="wrapper-div">
-          {courseList?.map((course) => {
-            return <Card {...course} key={course.id} />;
-          })}
-        </div>
+              <div className="wrapper-div">
+                {courseList[level.levelId]?.map((course, index) => {
+                  return <Card {...course} key={index} level={level.levelId} />;
+                })}
+              </div>
+            </div>
+          );
+        })}
 
         <Title text="Coach" desc="Những Coach hàng đầu trong lĩnh vực NLP" />
-
         <div className="coach">
           <Coach
             picture="https://lpe.vn/storage/gioi-thieu/la-ha-giang-thanh/nguyen-lieu-03.png"
@@ -57,7 +48,6 @@ function Home() {
             name="Gopalan Vasanth"
           />
         </div>
-
         <Title
           text="Nhận xét của học viên"
           desc="Những học viên đánh giá như thế nào về khóa học"

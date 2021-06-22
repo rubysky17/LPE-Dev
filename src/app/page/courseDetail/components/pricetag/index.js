@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./styles/styles.scss";
 
-function PriceTag({ ...detailCourse }) {
+function PriceTag({ level, ...detailCourse }) {
   return (
     <div className="pricetag">
       <img
@@ -17,13 +17,23 @@ function PriceTag({ ...detailCourse }) {
           <p>{detailCourse.priceNew.toLocaleString()} đ</p>
           <p>{detailCourse.priceOld.toLocaleString()} đ</p>
         </div>
-
-        <Link
-          className="pricetag_content-button"
-          to={`/checkout/${detailCourse.id}`}
-        >
-          Thanh toán
-        </Link>
+        {level === "level2" ? (
+          <>
+            <a className="pricetag_content-button mb-3" href="#combo">
+              Đăng ký học
+            </a>
+            <p className="text-danger">
+              *Lưu ý: Chỉ đăng ký kèm khóa học cùng chủ đề Level 1
+            </p>
+          </>
+        ) : (
+          <Link
+            className="pricetag_content-button"
+            to={`/checkout/${detailCourse.id}`}
+          >
+            Đăng ký học
+          </Link>
+        )}
       </div>
     </div>
   );
