@@ -41,17 +41,20 @@ function RegisterPage() {
         console.log(error);
       });
   };
-
-  const getDataSubmit = () => {
+  // get param url
+  const url_string = window.location.href;
+  const url = new URL(url_string);
+  const utm_source = url.searchParams.get("utm_source");
+  
+    const getDataSubmit = () => {
     const dataSubmit = {};
     const custom_register = new Date().toLocaleString();
-
     const name = refForm.current["name"].value;
     const email = refForm.current["email"].value;
     const custom_dt = refForm.current["custom_dt"].value;
     const custom_bod = refForm.current["custom_bod"].value;
     const custom_job = refForm.current["custom_job"].value;
-
+    
     // Loop for get dataSubmit
     for (let index = 0; index < refForm.current.length; index++) {
       const { name, value } = refForm.current[index];
@@ -169,6 +172,17 @@ function RegisterPage() {
                 />
               </div>
 
+              <div className="input-container" hidden>
+                <label>Nguồn đăng ký</label>
+                <input
+                  
+                  name="custom_utm_source"
+                  type="text"
+                  placeholder="Nguồn đăng ký"
+                  value={utm_source}
+                />
+              </div>
+
               {/* Mã thông báo danh bạ */}
               {/* Nhận mã thông báo tại: https://app.getresponse.com/campaign_list.html https://app.getresponse.com/campaign_list.html */}
               <input type="hidden" name="campaign_token" defaultValue="5PxLu" />
@@ -178,6 +192,8 @@ function RegisterPage() {
                 name="thankyou_url"
                 defaultValue="https://lpe.vn/thank-you"
               />
+               {/* Forward form data to your page (optional) */}
+	            <input type="hidden" name="forward_data" value="get" />
               {/* Thêm người đăng ký vào chuỗi theo dõi với ngày được xác định (tùy chọn) */}
               <input type="hidden" name="start_day" defaultValue={0} />
               {/* Nút Người đăng ký */}
