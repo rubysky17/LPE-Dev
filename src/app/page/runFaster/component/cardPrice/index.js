@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/styles.scss";
 
-function CardPrice({ item }) {
+function CardPrice({ item , utm_source }) {
   return (
     <div className="cardPrice-container">
       <p className="color-text">{item.name}</p>
@@ -19,7 +19,7 @@ function CardPrice({ item }) {
       )}
 
       <a
-        href="https://lpe.vn/dang-ky-run-faster/"
+        href= { "https://lpe.vn/dang-ky-run-faster/?utm_source=" + utm_source}
         target="_blank"
         rel="noopener noreferrer"
       >

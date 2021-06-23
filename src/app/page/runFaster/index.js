@@ -90,6 +90,10 @@ function RunFaster() {
     };
   }, []);
 
+  const url_string = window.location.href;
+  const url = new URL(url_string);
+  const utm_source = url.searchParams.get("utm_source");
+
   return (
     <>
       {isLoading ? (
@@ -345,7 +349,7 @@ function RunFaster() {
                       data-wow-delay="0.3s"
                       key={index}
                     >
-                      <CardPrice item={item} />
+                      <CardPrice item={item} utm_source={utm_source}/>
                     </div>
                   );
                 })}
