@@ -41,10 +41,7 @@ function RegisterPage() {
         console.log(error);
       });
   };
-  // get param url
-  const url_string = window.location.href;
-  const url = new URL(url_string);
-  const utm_source = url.searchParams.get("utm_source");
+  
   
     const getDataSubmit = () => {
     const dataSubmit = {};
@@ -54,7 +51,6 @@ function RegisterPage() {
     const custom_dt = refForm.current["custom_dt"].value;
     const custom_bod = refForm.current["custom_bod"].value;
     const custom_job = refForm.current["custom_job"].value;
-    
     // Loop for get dataSubmit
     for (let index = 0; index < refForm.current.length; index++) {
       const { name, value } = refForm.current[index];
@@ -76,6 +72,11 @@ function RegisterPage() {
       }
     }
     dataSubmit["custom_register"] = custom_register;
+    // get param url
+    const url_string = window.location.href;
+    const url = new URL(url_string);
+    const utm_source = url.searchParams.get("utm_source");
+    dataSubmit["custom_utm_source"] = utm_source;
     // catching error when submit form
     if (
       !name ||
@@ -172,16 +173,7 @@ function RegisterPage() {
                 />
               </div>
 
-              <div className="input-container" hidden>
-                <label>Nguồn đăng ký</label>
-                <input
-                  
-                  name="custom_utm_source"
-                  type="text"
-                  placeholder="Nguồn đăng ký"
-                  value={utm_source}
-                />
-              </div>
+              
 
               {/* Mã thông báo danh bạ */}
               {/* Nhận mã thông báo tại: https://app.getresponse.com/campaign_list.html https://app.getresponse.com/campaign_list.html */}
