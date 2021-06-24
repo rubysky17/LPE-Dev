@@ -2,6 +2,7 @@ import Title from "app/components/title";
 import React from "react";
 
 import { courseList, courseLevel } from "app/const/course.js";
+
 import Card from "app/components/card";
 import Coach from "app/components/coach";
 import Comment from "app/components/comment";
@@ -30,7 +31,7 @@ function Home() {
 
               <div className="wrapper-div">
                 {courseList[level.levelId]?.map((course, index) => {
-                  return <Card {...course} key={index} level={level.levelId} />;
+                  return <Card key={index} {...course} level={level.levelId} />;
                 })}
               </div>
             </div>

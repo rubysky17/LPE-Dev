@@ -44,14 +44,14 @@ const createSha = (query) => {
 export const createOrderCourse = (detail, customIP) => {
   const params = {
     vpc_AccessCode: accountPayment.accessCode,
-    vpc_Amount: detail.priceNew * 100,
+    vpc_Amount: detail.price * 100,
     vpc_CardList: detail.typepay,
     vpc_Command: COMMAND,
     vpc_Currency: CURRENCY,
     vpc_Locale: LOCALE,
     vpc_MerchTxnRef: detail.merchRef,
     vpc_Merchant: accountPayment.merchantId,
-    vpc_OrderInfo: `LPE_COURSE_${detail.id}`,
+    vpc_OrderInfo: `LPE_${detail.level}_${detail.id}`,
     vpc_ReturnURL: RETURNURL,
     vpc_TicketNo: customIP,
     vpc_Version: VERSION,

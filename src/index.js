@@ -3,12 +3,13 @@ import ReactDOM from "react-dom";
 import App from "./App";
 // edit META tag
 import { Provider } from "react-redux";
-import store from "./core/redux/store/configStore";
-
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { rootReducer } from "./core/redux/reducers/rootReducer";
 import "./assets/fonts/fontawsome.min.css";
 import "./assets/styles/common.scss";
 
-
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <React.StrictMode>

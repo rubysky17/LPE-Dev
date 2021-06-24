@@ -44,6 +44,7 @@ function Checkout() {
   const classes = useStyles();
   const [secondCourse, setSecondCourse] = useState(null);
   const firstCourse = courseList[level].find((item) => item.id === +id);
+  const [price, setPrice] = useState();
 
   const [isSubmit, setIsSubmit] = useState(false);
   const [url, setUrl] = useState();
@@ -51,14 +52,32 @@ function Checkout() {
   const [cardtype, setCardtype] = useState(null);
 
   useEffect(() => {
-    getIPLocal();
-  }, []);
-
-  useEffect(() => {
     if (level === "level2") {
       const result = courseList["level1"].find((item) => item.id === +id);
       setSecondCourse(result);
     }
+  }, [level, id]);
+
+  // Checking if 1 or 2 course
+  useEffect(() => {
+    if (level === "level2") {
+      const getPrice = () => {
+        return (
+          firstCourse?.priceNew +
+          secondCourse?.priceNew -
+          firstCourse?.priceOld +
+          secondCourse?.priceOld
+        );
+      };
+
+      setPrice(getPrice);
+    } else {
+      setPrice(firstCourse.priceNew);
+    }
+  }, [level, firstCourse, secondCourse]);
+
+  useEffect(() => {
+    getIPLocal();
   }, []);
 
   useEffect(() => {
@@ -66,16 +85,16 @@ function Checkout() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSubmit, cardtype]);
 
+  const disCount = (newPrice, oldPrice) => {
+    return oldPrice - newPrice;
+  };
+
   const handleChange = (event) => {
     setCardtype(event.target.value);
   };
 
   const handleGoBack = () => {
     history.goBack();
-  };
-
-  const disCount = (newPrice, oldPrice) => {
-    return (oldPrice - newPrice).toLocaleString();
   };
 
   const choiceCard = () => {
@@ -96,9 +115,11 @@ function Checkout() {
     const uid = new Date().getTime().toString(36);
     // thông tin merch
     const merchDetail = Object.assign(
-      firstCourse,
+      { id },
+      { price },
       { merchRef: uid },
-      { typepay: cardtype }
+      { typepay: cardtype },
+      { level: level }
     );
 
     const data = createOrderCourse(merchDetail, protocol);
@@ -131,6 +152,8 @@ function Checkout() {
     ) {
       errors.detail = "*Địa chỉ email không hợp lệ";
     }
+
+    setIsSubmit(false);
 
     if (Object.keys(errors).length === 0) {
       setIsSubmit(true);
@@ -285,7 +308,7 @@ function Checkout() {
                     ? disCount(
                         firstCourse.priceNew + secondCourse.priceNew,
                         firstCourse.priceOld + secondCourse.priceOld
-                      )
+                      ).toLocaleString()
                     : (
                         firstCourse.priceOld - firstCourse.priceNew
                       ).toLocaleString()}
