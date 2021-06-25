@@ -13,7 +13,7 @@ function App() {
       <ScrollToTop />
 
       <Switch>
-        <HomeTemplate Component={Home} path="/live" />
+        <HomeTemplate Component={Home} path="/online" />
         <HomeTemplate Component={CourseDetail} path="/course/:level/:id" />
         <HomeTemplate Component={Chechkout} path="/checkout/:level/:id" />
       </Switch>
