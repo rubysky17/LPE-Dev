@@ -13,15 +13,19 @@ function ComboItem({ level, ...course }) {
       <div className="col-8 col-md-8 col-lg-10 item_desc">
         <Link to={`/course/${level}/${course.id}`}>
           <p>
-            {course.title} ({level.toUpperCase()})
+            {course?.title} ({level.toUpperCase()})
           </p>
         </Link>
 
         <p className="d-none d-sm-block">{course.description}</p>
 
         <div className="item_desc-price">
-          <span className="price-new">{course.priceNew.toLocaleString()}đ</span>
-          <span className="price-old">{course.priceOld.toLocaleString()}đ</span>
+          <span className="price-new">
+            {course?.priceNew.toLocaleString()}đ
+          </span>
+          <span className="price-old">
+            {course?.priceOld.toLocaleString()}đ
+          </span>
         </div>
       </div>
     </div>

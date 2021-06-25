@@ -10,14 +10,9 @@ import Combo from "./components/combo";
 import "./styles/styles.scss";
 
 function CourseDetail() {
-  let { id, level } = useParams();
   const history = useHistory();
+  let { id, level } = useParams();
   const [secondCourse, setSecondCourse] = useState(null);
-
-  const handleGoBack = () => {
-    history.goBack();
-  };
-
   const firstCourse = courseList[level]?.find((item) => item.id === +id);
 
   useEffect(() => {
@@ -25,6 +20,10 @@ function CourseDetail() {
       setSecondCourse(courseList["level1"].find((item) => item.id === +id));
     }
   }, [level, id]);
+
+  const handleGoBack = () => {
+    history.goBack();
+  };
 
   return (
     <div className="course">
@@ -59,17 +58,16 @@ function CourseDetail() {
             <PriceTag {...firstCourse} level={level} />
           </div>
 
-          <div className="col-12" id="combo">
-            {secondCourse && (
-              <>
-                <p className="coach-intro-title">Siêu ưu đãi</p>
-                <Combo course2={firstCourse} course1={secondCourse} />
-              </>
-            )}
-          </div>
+          {level === "level2" && !!secondCourse && (
+            <div className="col-12" id="combo">
+              <p className="coach-intro-title">Siêu ưu đãi</p>
+              <Combo course2={firstCourse} course1={secondCourse} />
+            </div>
+          )}
         </div>
       </div>
-      {!secondCourse ? (
+
+      {level !== "level2" ? (
         <FixedTag firstCourse={firstCourse} level={level} />
       ) : (
         <FixedTag

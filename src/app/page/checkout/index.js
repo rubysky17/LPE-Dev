@@ -63,12 +63,7 @@ function Checkout() {
   useEffect(() => {
     if (level === "level2") {
       const getPrice = () => {
-        return (
-          firstCourse?.priceNew +
-          secondCourse?.priceNew -
-          firstCourse?.priceOld +
-          secondCourse?.priceOld
-        );
+        return firstCourse?.priceNew + secondCourse?.priceNew;
       };
 
       setPrice(getPrice);

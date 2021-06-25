@@ -120,7 +120,7 @@ ul li {
 
 @media screen and (min-width: 1200px) {
   .checkout {
-    height: 70vh;
+    height: 90vh !important;
   }
 }
 
@@ -143,10 +143,9 @@ ul li {
   }
 }
 
-// ------------------------------------------
-
 // custom inputs
 // custom checkbox/radios
+
 .MuiRadio-colorSecondary.Mui-checked {
   color: $c-title !important;
 }

@@ -16,14 +16,14 @@ function Combo({ course1, course2 }) {
         <div className="col-12 col-md-4 wrapper-total_price">
           <p className="total-text">Tổng:</p>
           <p className="total_new">
-            {(course1.priceNew + course2.priceNew).toLocaleString()} đ
+            {(course1?.priceNew + course2?.priceNew).toLocaleString()} đ
           </p>
           <p className="total_old">
-            {(course1.priceOld + course2.priceOld).toLocaleString()} đ
+            {(course1?.priceOld + course2?.priceOld).toLocaleString()} đ
           </p>
 
           <Link
-            to={`/checkout/level2/${course2.id}`}
+            to={`/checkout/level2/${course2?.id}`}
             className="pricetag_content-button"
             style={{
               padding: "15px 0",

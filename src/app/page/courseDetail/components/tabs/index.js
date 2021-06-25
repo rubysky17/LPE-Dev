@@ -49,7 +49,7 @@ function TabBar({ ...detaiCourse }) {
           aria-label="scrollable auto tabs example"
           TabIndicatorProps={{ style: { background: "#3777bc" } }}
         >
-          <Tab label="Thông tin" {...a11yProps(0)} />
+          <Tab label="Mô tả" {...a11yProps(0)} />
           <Tab label="Lợi ích" {...a11yProps(1)} />
           <Tab label="Thảo luận" {...a11yProps(2)} />
           <Tab label="Tài liệu" {...a11yProps(3)} />

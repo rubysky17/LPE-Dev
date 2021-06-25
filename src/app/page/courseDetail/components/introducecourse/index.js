@@ -8,11 +8,14 @@ import "./styles/styles.scss";
 function IntroduceCourse({ ...detaiCourse }) {
   return (
     <>
-      <img
-        src="https://images.pexels.com/photos/5537517/pexels-photo-5537517.jpeg"
-        alt="course-cover"
-        className="img-fluid course-cover"
-      />
+      <iframe
+        width="100%"
+        height="400"
+        src={detaiCourse.video}
+        title="YouTube video player"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
 
       <div className="introduce">
         <h1 className="introduce-title">{detaiCourse.title}</h1>
