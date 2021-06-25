@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import { useFormik } from "formik";
 import axios from "axios";
 
-import { courseList } from "app/const/course.js";
+import {
+  Button,
+  FormControl,
+  FormControlLabel,
+  RadioGroup,
+  Radio,
+} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
 import CourseDetail from "./components/courseinfo";
 import CreditCard from "./components/creditcard";
-
-import Radio from "@material-ui/core/Radio";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from "@material-ui/core/FormControl";
-import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
 import { createOrderCourse } from "app/const/Payment";
+import { courseList } from "app/const/course.js";
 
 import "./styles/styles.scss";
 
@@ -91,6 +92,7 @@ function Checkout() {
 
   const handleChange = (event) => {
     setCardtype(event.target.value);
+    setIsSubmit(true);
   };
 
   const handleGoBack = () => {
@@ -122,9 +124,9 @@ function Checkout() {
       { level: level }
     );
 
-    const data = createOrderCourse(merchDetail, protocol);
+    const urlData = createOrderCourse(merchDetail, protocol);
 
-    setUrl(data);
+    setUrl(urlData);
   };
 
   const getIPLocal = async () => {
@@ -137,38 +139,6 @@ function Checkout() {
       console.log(error);
     }
   };
-
-  const validate = (values) => {
-    const errors = {};
-
-    if (!values.name) {
-      errors.name = "*Không được để trống";
-    }
-
-    if (!values.detail) {
-      errors.detail = "*Không được để trống";
-    } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.detail)
-    ) {
-      errors.detail = "*Địa chỉ email không hợp lệ";
-    }
-
-    setIsSubmit(false);
-
-    if (Object.keys(errors).length === 0) {
-      setIsSubmit(true);
-    }
-
-    return errors;
-  };
-
-  const formik = useFormik({
-    initialValues: {
-      name: "",
-      detail: "",
-    },
-    validate,
-  });
 
   return (
     <div className="checkout">
@@ -196,49 +166,6 @@ function Checkout() {
             <div className="mt-3">
               {secondCourse && <CourseDetail level={level} {...secondCourse} />}
             </div>
-
-            <h4 className="checkout-body_detail-title">thông tin người dùng</h4>
-            <form className="wrapper-form">
-              <label htmlFor="name">Tên của bạn (*)</label>
-
-              <input
-                id="name"
-                name="name"
-                type="text"
-                onBlur={formik.handleBlur}
-                onChange={formik.handleChange}
-                value={formik.values.name}
-                placeholder="Nhập tên của bạn"
-                className={
-                  formik.errors.name && formik.touched.name && "input-error"
-                }
-                autoComplete="off"
-              />
-              {formik.errors.name && formik.touched.name ? (
-                <div className="text-danger mb-0 mt-2">
-                  {formik.errors.name}
-                </div>
-              ) : null}
-
-              <label htmlFor="detail">Địa chỉ email (*)</label>
-              <input
-                id="detail"
-                name="detail"
-                onBlur={formik.handleBlur}
-                onChange={formik.handleChange}
-                value={formik.values.detail}
-                placeholder="NguyenVanA@email.com"
-                className={
-                  formik.errors.detail && formik.touched.detail && "input-error"
-                }
-                autoComplete="off"
-              />
-              {formik.errors.detail && formik.touched.detail ? (
-                <div className="text-danger mb-0 mt-2">
-                  {formik.errors.detail}
-                </div>
-              ) : null}
-            </form>
 
             <div className="payment">
               <h4 className="checkout-body_detail-title">

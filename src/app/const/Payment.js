@@ -4,7 +4,7 @@ import jsSHA from "jssha";
 const COMMAND = "pay";
 const CURRENCY = "VND";
 const LOCALE = "vn";
-const RETURNURL = "http://localhost:3000/";
+const RETURNURL = `http://localhost:3000`;
 const VERSION = 2;
 
 // domain of onepay

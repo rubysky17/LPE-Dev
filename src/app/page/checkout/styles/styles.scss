@@ -118,6 +118,12 @@ ul li {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .checkout {
+    height: 70vh;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .wrapper-form {
     input {
