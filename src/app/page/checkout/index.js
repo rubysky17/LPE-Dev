@@ -81,8 +81,13 @@ function Checkout() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSubmit, cardtype]);
 
-  const disCount = (newPrice, oldPrice) => {
-    return oldPrice - newPrice;
+  const disCount = () => {
+    return (
+      firstCourse.priceNew +
+      secondCourse.priceNew -
+      firstCourse.priceOld +
+      secondCourse.priceOld
+    );
   };
 
   const handleChange = (event) => {
@@ -159,7 +164,9 @@ function Checkout() {
             <CourseDetail level={level} {...firstCourse} />
 
             <div className="mt-3">
-              {secondCourse && <CourseDetail level={level} {...secondCourse} />}
+              {!!secondCourse && (
+                <CourseDetail level={level} {...secondCourse} />
+              )}
             </div>
 
             <div className="payment">
@@ -214,7 +221,7 @@ function Checkout() {
               <div className="row bill-item">
                 <p className="col-6">Giá gốc</p>
                 <p className="col-6 text-right">
-                  {secondCourse
+                  {!!secondCourse
                     ? (
                         firstCourse.priceNew + secondCourse.priceNew
                       ).toLocaleString()
@@ -226,11 +233,8 @@ function Checkout() {
               <div className="row bill-item">
                 <p className="col-6">Giá giảm</p>
                 <p className="col-6 text-right">
-                  {secondCourse
-                    ? disCount(
-                        firstCourse.priceNew + secondCourse.priceNew,
-                        firstCourse.priceOld + secondCourse.priceOld
-                      ).toLocaleString()
+                  {!!secondCourse
+                    ? disCount().toLocaleString()
                     : (
                         firstCourse.priceOld - firstCourse.priceNew
                       ).toLocaleString()}
@@ -246,7 +250,7 @@ function Checkout() {
               <div className="row bill-item bottom">
                 <p className="col-6">Tổng giá trị</p>
                 <p className="col-6 text-right">
-                  {secondCourse
+                  {!!secondCourse
                     ? (
                         firstCourse.priceNew + secondCourse.priceNew
                       ).toLocaleString()
