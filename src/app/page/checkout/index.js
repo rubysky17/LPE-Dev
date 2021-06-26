@@ -22,14 +22,16 @@ const useStyles = makeStyles(() => ({
   styled: {
     width: "400px",
     display: "flex",
-    backgroundColor: "#feda6a",
+    backgroundColor: "#3777bc",
     padding: "10px 0",
     borderRadius: "10px",
+    color: "#fff",
     "@media (max-width: 992px)": {
       width: "100%",
     },
     "&:hover": {
-      backgroundColor: "#dfc987",
+      backgroundColor: "#346396",
+      color: "#fff",
     },
     marginTop: "20px",
   },
@@ -83,10 +85,10 @@ function Checkout() {
 
   const disCount = () => {
     return (
+      firstCourse.priceOld -
       firstCourse.priceNew +
-      secondCourse.priceNew -
-      firstCourse.priceOld +
-      secondCourse.priceOld
+      secondCourse.priceOld -
+      secondCourse.priceNew
     );
   };
 
@@ -223,15 +225,15 @@ function Checkout() {
                 <p className="col-6 text-right">
                   {!!secondCourse
                     ? (
-                        firstCourse.priceNew + secondCourse.priceNew
+                        firstCourse.priceOld + secondCourse.priceOld
                       ).toLocaleString()
-                    : firstCourse.priceNew.toLocaleString()}
+                    : firstCourse.priceOld.toLocaleString()}
                   đ
                 </p>
               </div>
 
               <div className="row bill-item">
-                <p className="col-6">Giá giảm</p>
+                <p className="col-6">Tiết kiệm</p>
                 <p className="col-6 text-right">
                   {!!secondCourse
                     ? disCount().toLocaleString()

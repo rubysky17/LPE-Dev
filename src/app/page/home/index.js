@@ -1,6 +1,6 @@
 import React from "react";
 
-import { courseList, courseLevel } from "app/const/course.js";
+import { courseList, courseLevel, coachDetail } from "app/const/course.js";
 import { Title, Card, Coach, Comment } from "app/components";
 
 import "./styles/styles.scss";
@@ -9,15 +9,14 @@ function Home() {
   return (
     <div className="home">
       {/* Back ground for web page */}
-      <div className="jss110">
-        <div className="jss111">
-          <div className="bg-webpage"></div>
-
-          <div className="bg-content">
-            <h2>học online trực tuyến cùng LPE live</h2>
-          </div>
-        </div>
-      </div>
+      <img
+        className="container-fluid"
+        src="https://i.imgur.com/OhuGcYS.jpg"
+        alt="https://i.imgur.com/OhuGcYS.jpg"
+        style={{
+          padding: 0,
+        }}
+      />
 
       <div className="container-fluid pb-4">
         {courseLevel?.map((level, index) => {
@@ -37,15 +36,9 @@ function Home() {
         <Title text="Coach" desc="Những Coach hàng đầu trong lĩnh vực NLP" />
 
         <div className="coach">
-          <Coach
-            picture="https://lpe.vn/storage/gioi-thieu/la-ha-giang-thanh/nguyen-lieu-03.png"
-            name="La Hạ Giang Thanh"
-          />
-
-          <Coach
-            picture="https://lpe.vn/themes/default/images/img1.png"
-            name="Gopalan Vasanth"
-          />
+          {coachDetail?.map((coach, index) => {
+            return <Coach key={index} picture={coach.img} name={coach.name} />;
+          })}
         </div>
 
         <Title

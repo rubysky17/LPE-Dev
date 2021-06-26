@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
 
-import { courseList } from "app/const/course.js";
+import { courseList, coachDetail } from "app/const/course.js";
 import PriceTag from "./components/pricetag";
 import IntroduceCourse from "./components/introducecourse";
 import FixedTag from "./components/fixedtag";
@@ -12,8 +12,10 @@ import "./styles/styles.scss";
 function CourseDetail() {
   const history = useHistory();
   let { id, level } = useParams();
+
   const [secondCourse, setSecondCourse] = useState(null);
   const firstCourse = courseList[level]?.find((item) => item.id === +id);
+  const coach = coachDetail.find((coach) => coach.id === firstCourse.coach);
 
   useEffect(() => {
     if (level === "level2") {
@@ -51,7 +53,7 @@ function CourseDetail() {
         </div>
         <div className="row">
           <div className="col-12 col-md-8">
-            <IntroduceCourse {...firstCourse} />
+            <IntroduceCourse coachDetail={coach} {...firstCourse} />
           </div>
 
           <div className="col-12 col-md-4">

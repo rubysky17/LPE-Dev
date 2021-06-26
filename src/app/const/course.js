@@ -407,7 +407,7 @@ export const courseList = {
       description: "",
       priceNew: 2500000,
       priceOld: 8000000,
-      coach: "giangThanh",
+      coach: "vas",
       picture:
         "https://cdn2.topica.vn/191ab4fd-9c62-4494-b209-51f86a3924d3/product/6076639631b9ae0024d5dab7",
       content: [],
@@ -420,7 +420,7 @@ export const courseList = {
       description: "",
       priceNew: 3500000,
       priceOld: 8000000,
-      coach: "giangThanh",
+      coach: "vas",
       picture:
         "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/6000fcd544d203002598bd5a",
       content: [],
@@ -433,7 +433,7 @@ export const courseList = {
       description: "",
       priceNew: 4500000,
       priceOld: 8000000,
-      coach: "giangThanh",
+      coach: "vas",
       picture:
         "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/5fffc7fe44d203002598bb3e",
       content: [],
@@ -445,7 +445,7 @@ export const courseList = {
       description: "",
       priceNew: 5500000,
       priceOld: 8000000,
-      coach: "giangThanh",
+      coach: "vas",
       picture:
         "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/5ffff8d744d203002598bbce",
       content: [],
@@ -457,7 +457,7 @@ export const courseList = {
       description: "",
       priceNew: 6500000,
       priceOld: 8000000,
-      coach: "giangThanh",
+      coach: "vas",
       picture:
         "https://kelley-lecture-video.s3-ap-southeast-1.amazonaws.com/VI_1616249177.722_Doc-38.jpg",
       content: [],
@@ -470,7 +470,7 @@ export const courseList = {
       description: "",
       priceNew: 7500000,
       priceOld: 8000000,
-      coach: "giangThanh",
+      coach: "vas",
       picture:
         "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/6000202444d203002598bd0d",
       content: [],
@@ -498,3 +498,32 @@ export const courseLevel = [
   },
 ];
 // các khóa trong level 1 sẽ có id khóa học trùng với khóa học ở level 2
+
+export const coachDetail = [
+  {
+    id: "giangThanh",
+    name: "Ms La Hạ Giang Thanh",
+    desc: [
+      "Managing Director",
+      "NLP Master Trainer",
+      "Advanced Generative Trance Coach",
+      "Time Line Therapist",
+      "Hypnotherapist",
+      "Người tiên phong trong việc tạo nền tảng ngôn ngữ, thuật ngữ cho ngành NLP bằng tiếng Việt.",
+      "Nhà Tư Vấn Trị Liệu đã chữa lành và chuyển hoá thành công hàng trăm khách hàng đủ mọi lứa tuổi và ngành nghề.",
+      "Giám đốc Điều hành 9x trẻ tuổi và tài năng, dẫn dắt đội ngũ nhân viên trở thành con người tuyệt vời nhất của chính họ và từng bước khẳng định vị thế của ngành khoa học tư duy NLP tại Việt Nam.",
+    ],
+    img: "https://lpe.vn/storage/gioi-thieu/la-ha-giang-thanh/nguyen-lieu-03.png",
+  },
+  {
+    id: "vas",
+    name: "Vasanth Gopalan",
+    desc: [
+      "NLP Master Trainer",
+      "Chairman của Leading Performance Group tại Singapore, Malaysia, Vietnam, Thailand, Mandiver, Srilanka",
+      "30 năm kinh nghiệm đào tạo khi phục vụ cho Lực lượng vũ trang Singapore ở vai trò Sĩ Quan Tham Mưu.",
+      "18 năm là Master Trainer, huấn luyện NLP và các ngành Khoa học Tâm trí tại nhiều quốc gia trên thế giới với các chứng nhận uy tín từ Mỹ, Châu Âu.",
+    ],
+    img: "https://lpe.vn/themes/default/images/img1.png",
+  },
+];

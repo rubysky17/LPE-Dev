@@ -5,7 +5,8 @@ import Coach from "app/components/coach";
 
 import "./styles/styles.scss";
 
-function IntroduceCourse({ ...detaiCourse }) {
+function IntroduceCourse({ coachDetail, ...detaiCourse }) {
+  console.log(coachDetail);
   return (
     <>
       {detaiCourse.video && (
@@ -31,19 +32,17 @@ function IntroduceCourse({ ...detaiCourse }) {
         <div className="coach-intro">
           <p className="coach-intro-title">Giới thiệu giảng viên</p>
 
-          <Coach
-            picture="https://lpe.vn/storage/gioi-thieu/la-ha-giang-thanh/nguyen-lieu-03.png"
-            name="La Hạ Giang Thanh"
-          />
+          <Coach picture={coachDetail.img} name={coachDetail.name} />
 
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            luctus feugiat sollicitudin. Quisque dapibus ac nulla sit amet
-            finibus. Fusce tristique nulla at elementum vulputate. Sed vitae
-            ullamcorper dolor, sit amet viverra orci. Mauris id metus mattis,
-            dictum mi id, ultrices ipsum. Curabitur gravida aliquam imperdiet.
-            Nam porttitor finibus ligula, sed elementum justo malesuada ut.
-          </p>
+          <ul>
+            {coachDetail?.desc?.map((meta, index) => {
+              return (
+                <li key={index} className="mb-2">
+                  + {meta}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </>
