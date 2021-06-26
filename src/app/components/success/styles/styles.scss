@@ -1,0 +1,35 @@
+$color-status-1: #3bb54a;
+$size-icon: 80px;
+$size-circle: 150px;
+$border-width: 5px;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  .check-success {
+    width: $size-circle;
+    height: $size-circle;
+    border: $border-width solid $color-status-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    i {
+      font-size: $size-icon;
+      color: $color-status-1;
+    }
+  }
+}
+
+.content {
+  &-head {
+    color: $color-status-1;
+  }
+  &-body {
+    font-size: 24px;
+  }
+}

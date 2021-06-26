@@ -1,0 +1,35 @@
+$color-status: #dc3545;
+$size-icon: 80px;
+$size-circle: 150px;
+$border-width: 5px;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  .check-failed {
+    width: $size-circle;
+    height: $size-circle;
+    border: $border-width solid $color-status;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    i {
+      font-size: $size-icon;
+      color: $color-status;
+    }
+  }
+}
+
+.content {
+  &-head-failed {
+    color: #dc3545 !important;
+  }
+  &-body {
+    font-size: 24px;
+  }
+}
