@@ -19,7 +19,16 @@ function App() {
           Component={CourseDetail}
           path="/course/:level/:id"
         />
-        <HomeTemplate exact Component={Chechkout} path="/checkout/:level/:id" />
+        <HomeTemplate
+          exact
+          Component={Chechkout}
+          path="/checkout/:level/:id/"
+        />
+        <HomeTemplate
+          exact
+          Component={Chechkout}
+          path="/checkout/:level/:id/:subId"
+        />
       </Switch>
     </Router>
   );

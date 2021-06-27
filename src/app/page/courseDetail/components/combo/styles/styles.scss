@@ -25,3 +25,9 @@
     margin-top: 30px;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .price-new {
+    font-size: 23px !important;
+  }
+}

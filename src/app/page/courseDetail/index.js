@@ -14,6 +14,7 @@ function CourseDetail() {
   let { id, level } = useParams();
 
   const [secondCourse, setSecondCourse] = useState(null);
+  const [thirdCourse, setThirdCourse] = useState(null);
   const firstCourse = courseList[level]?.find((item) => item.id === +id);
   const coach = coachDetail.find((coach) => coach.id === firstCourse.coach);
 
@@ -22,6 +23,14 @@ function CourseDetail() {
       setSecondCourse(courseList["level1"].find((item) => item.id === +id));
     }
   }, [level, id]);
+
+  useEffect(() => {
+    if (firstCourse.hasOwnProperty("childId")) {
+      setThirdCourse(
+        courseList["level1"].find((item) => item.id === firstCourse.childId[1])
+      );
+    }
+  }, [firstCourse]);
 
   const handleGoBack = () => {
     history.goBack();
@@ -66,17 +75,17 @@ function CourseDetail() {
               <Combo course2={firstCourse} course1={secondCourse} />
             </div>
           )}
+
+          {level === "level2" && !!thirdCourse && (
+            <div className="col-12 mt-5">
+              <Combo course2={firstCourse} course1={thirdCourse} isTwo />
+            </div>
+          )}
         </div>
       </div>
 
-      {level !== "level2" ? (
+      {level !== "level2" && (
         <FixedTag firstCourse={firstCourse} level={level} />
-      ) : (
-        <FixedTag
-          firstCourse={firstCourse}
-          secondCourse={secondCourse}
-          level={level}
-        />
       )}
     </div>
   );

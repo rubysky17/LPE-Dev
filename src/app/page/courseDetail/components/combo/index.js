@@ -4,7 +4,7 @@ import ComboItem from "./components/item";
 
 import "./styles/styles.scss";
 
-function Combo({ course1, course2 }) {
+function Combo({ course1, course2, isTwo }) {
   return (
     <div className="container">
       <div className="row">
@@ -23,7 +23,11 @@ function Combo({ course1, course2 }) {
           </p>
 
           <Link
-            to={`/checkout/level2/${course2?.id}`}
+            to={
+              isTwo
+                ? `/checkout/level2/${course2?.id}/${course1?.id}`
+                : `/checkout/level2/${course2?.id}`
+            }
             className="pricetag_content-button"
             style={{
               padding: "15px 0",

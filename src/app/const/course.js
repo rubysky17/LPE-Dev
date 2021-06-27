@@ -1,10 +1,35 @@
 export const courseList = {
   level1: [
     {
+      id: 1,
+      title:
+        "Bạn chưa có định hướng cho tương lai? Tại sao? Điều gì đang ngăn cản bạn?",
+
+      priceNew: 200000,
+      priceOld: 400000,
+      coach: "giangThanh",
+      picture: "https://i.imgur.com/2MPkdJL.jpg",
+      content: [
+        "- Bạn có đang gặp phải những vấn đề sau:",
+        "+ Cảm thấy chán nản, không hứng thú với công việc mình lựa chọn.",
+        "+ Nhìn về tương lai là những mảng mây đen mù mịt, che hết cả lối đi. ",
+        "+ Bạn không cảm thấy muốn thức dậy vào mỗi buổi sáng",
+        "+ Không có động lực thoát khỏi những thói quen xấu.",
+        "+ Vẫn đang đi tìm đáp án cho câu hỏi 'Mình sống để làm gì?'",
+      ],
+      benefit: [
+        "- Khóa học này nên là sự chựa chọn của bạn vì:",
+        "+ Hiểu được nguyên nhân gốc rễ của vấn đề để thoát khỏi những cảm xúc tiêu cực trong tâm trí bấy lâu.",
+        "+ Nhìn ra những yếu tố quan trọng trong việc  định hướng để xây dựng tương lai.",
+        "+ Lấy lại cho mình nội lực mạnh mẽ thúc đẩy bản thân hướng đến những mục tiêu tốt đẹp trong tương lai.",
+      ],
+      video: "https://www.youtube.com/embed/_IOaBo7-7Co",
+    },
+    {
       id: 2,
       title:
         "Việc không kiểm soát được cảm xúc sẽ phá hủy chính bạn và các mối quan hệ của bạn. Nguyên nhân từ đâu?",
-      description: "",
+
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
@@ -27,34 +52,8 @@ export const courseList = {
       video: "https://www.youtube.com/embed/CEWjEEciwQs",
     },
     {
-      id: 1,
-      title:
-        "Bạn chưa có định hướng cho tương lai? Tại sao? Điều gì đang ngăn cản bạn?",
-      description: "",
-      priceNew: 200000,
-      priceOld: 400000,
-      coach: "giangThanh",
-      picture: "https://i.imgur.com/2MPkdJL.jpg",
-      content: [
-        "- Bạn có đang gặp phải những vấn đề sau:",
-        "+ Cảm thấy chán nản, không hứng thú với công việc mình lựa chọn.",
-        "+ Nhìn về tương lai là những mảng mây đen mù mịt, che hết cả lối đi. ",
-        "+ Bạn không cảm thấy muốn thức dậy vào mỗi buổi sáng",
-        "+ Không có động lực thoát khỏi những thói quen xấu.",
-        "+ Vẫn đang đi tìm đáp án cho câu hỏi 'Mình sống để làm gì?'",
-      ],
-      benefit: [
-        "- Khóa học này nên là sự chựa chọn của bạn vì:",
-        "+ Hiểu được nguyên nhân gốc rễ của vấn đề để thoát khỏi những cảm xúc tiêu cực trong tâm trí bấy lâu.",
-        "+ Nhìn ra những yếu tố quan trọng trong việc  định hướng để xây dựng tương lai.",
-        "+ Lấy lại cho mình nội lực mạnh mẽ thúc đẩy bản thân hướng đến những mục tiêu tốt đẹp trong tương lai.",
-      ],
-      video: "https://www.youtube.com/embed/_IOaBo7-7Co",
-    },
-    {
       id: 3,
       title: "Không thể vượt qua Trì Hoãn",
-      description: "",
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
@@ -78,32 +77,10 @@ export const courseList = {
       video: "https://www.youtube.com/embed/k8b2fiokAHc",
     },
     {
-      id: 9,
-      title: "Không thể vượt qua Sự Xao Nhãng",
-      description: "",
-      priceNew: 200000,
-      priceOld: 400000,
-      coach: "giangThanh",
-      picture: "https://i.imgur.com/ZhSgn9i.jpg",
-      content: [
-        "- Khoá học này sẽ rất cần thiết, nếu bạn đang:",
-        "+ Đặt ra mục tiêu nhưng nhanh chóng mất động lực để hoàn thành.",
-        "+ Đang làm việc này thì tâm trí lại đưa mình sang việc khác, kết quả là thường xuyên chậm trễ trong công việc.",
-        "+ Không nhất quán với mục tiêu, thường xuyên bị phân tâm, nhiều suy nghĩ tiêu cực bủa vây.",
-      ],
-      benefit: [
-        "- Vì sao bạn cần đến khóa học này?",
-        "+ Xác định rõ bạn đang mắc phải vấn đề gì dẫn đến các tình trạng xao nhãng hiện tại",
-        "+ Tìm lại cảm giác hạnh phúc thật sự khi hoàn thành nhiệm vụ của mình.",
-        "+ Tìm hiểu cách thức để vượt qua thứ đang giữ chân mình.",
-      ],
-      video: "https://www.youtube.com/embed/W6ASIS_lkhA",
-    },
-    {
       id: 4,
       title:
         "Tìm hiểu nguyên nhân khiến bạn không thể hiện được suy nghĩ của bạn ra bằng lời nói khiến các mối quan hệ trong cuộc sống trở nên khó gần hơn.",
-      description: "",
+
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
@@ -128,7 +105,7 @@ export const courseList = {
     {
       id: 5,
       title: "Thiếu Tự Tin & Giá Trị Tự Thân. Tự Phản Bội Chính Mình",
-      description: "",
+
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
@@ -153,7 +130,7 @@ export const courseList = {
       id: 6,
       title:
         "Bạn đã nghiện điện thoại thông minh và các chứng nghiện của thời đại như thế nào?",
-      description: "",
+
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
@@ -177,7 +154,7 @@ export const courseList = {
     {
       id: 7,
       title: "Hiểu về bệnh mất ngủ từ tâm trí",
-      description: "",
+
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
@@ -201,8 +178,30 @@ export const courseList = {
     },
     {
       id: 8,
+      title: "Không thể vượt qua Sự Xao Nhãng",
+
+      priceNew: 200000,
+      priceOld: 400000,
+      coach: "giangThanh",
+      picture: "https://i.imgur.com/ZhSgn9i.jpg",
+      content: [
+        "- Khoá học này sẽ rất cần thiết, nếu bạn đang:",
+        "+ Đặt ra mục tiêu nhưng nhanh chóng mất động lực để hoàn thành.",
+        "+ Đang làm việc này thì tâm trí lại đưa mình sang việc khác, kết quả là thường xuyên chậm trễ trong công việc.",
+        "+ Không nhất quán với mục tiêu, thường xuyên bị phân tâm, nhiều suy nghĩ tiêu cực bủa vây.",
+      ],
+      benefit: [
+        "- Vì sao bạn cần đến khóa học này?",
+        "+ Xác định rõ bạn đang mắc phải vấn đề gì dẫn đến các tình trạng xao nhãng hiện tại",
+        "+ Tìm lại cảm giác hạnh phúc thật sự khi hoàn thành nhiệm vụ của mình.",
+        "+ Tìm hiểu cách thức để vượt qua thứ đang giữ chân mình.",
+      ],
+      video: "https://www.youtube.com/embed/W6ASIS_lkhA",
+    },
+    {
+      id: 9,
       title: "Hiểu về bệnh hay quên từ tâm trí",
-      description: "",
+
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
@@ -230,7 +229,7 @@ export const courseList = {
       id: 1,
       title:
         "Kiến tạo tương lai của bạn, Lập kế hoạch & Biến nó thành hiện thực",
-      description: "",
+
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
@@ -254,7 +253,6 @@ export const courseList = {
       id: 2,
       title:
         "Hiểu được những Cảm Xúc Tiêu Cực đến từ đâu, Chữa Lành chúng và Kiểm Soát Cảm Xúc tốt hơn",
-      description: "",
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
@@ -281,7 +279,6 @@ export const courseList = {
       id: 3,
       title:
         "Hiểu được những hành vi tự làm hại bản thân đến từ đâu & Trải nghiệm việc chữa lành chúng",
-      description: "",
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
@@ -303,12 +300,12 @@ export const courseList = {
         "+ Xây dựng lối hành vi và lối suy nghĩ của người thành công và hạnh phúc.",
       ],
       video: "https://www.youtube.com/embed/jbkQGe99f5o",
+      childId: [3, 8],
     },
     {
       id: 4,
       title:
         "Trở Nên Lạc Quan, Hình Thành Nội Động Lực & Sống Hòa Hợp với mọi người. Giao Tiếp Tích Cực",
-      description: "",
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
@@ -334,7 +331,6 @@ export const courseList = {
     {
       id: 5,
       title: "Cách xây dựng lại Sự Tự Tin & Giá Trị Tự Thân",
-      description: "",
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
@@ -361,14 +357,19 @@ export const courseList = {
     {
       id: 6,
       title: "Loại bỏ chứng nghiện, cài đặt hành vi hữu ích và có giá trị",
-      description: "Vẽ ước mơ của bạn.",
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
       picture:
         "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/6000202444d203002598bd0d",
       content: [],
-      benefit: [],
+      benefit: [
+        "- Đến với khoá học, bạn sẽ: ",
+        "+ Biết cách loại bỏ những thứ làm gián đoạn bản thân mình làm việc.",
+        "+ Học được cách tỉnh thức để từ chối những thói quen trì hoãn, tiêu cực.",
+        "+ Đẩy lùi những điều tiêu cực, thay vào đó bởi những thói quen tốt đẹp.",
+        "+ Hứng thú hơn với những điều mang lại giá trị, lợi ích cho chính cuộc đời mình.",
+      ],
       video: "https://www.youtube.com/embed/Abi6tQKPNrU",
     },
 
@@ -376,7 +377,6 @@ export const courseList = {
       id: 7,
       title:
         "Chữa lành mọi chứng Bệnh Về Tâm. Trở thành một phiên bản tốt hơn của bạn",
-      description: "",
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
@@ -398,39 +398,53 @@ export const courseList = {
         "+ Làm chủ bí kíp kiểm soát tâm trí và cơ thể, đẩy lùi các loại bệnh do tâm bệnh mà ra.",
       ],
       video: "https://www.youtube.com/embed/gxu66jxc0DA",
+      childId: [7, 9],
     },
   ],
   level3: [
     {
       id: 1,
       title: "Sự Kết Nối Giữa Tâm Trí & Cơ Thể",
-      description: "",
       priceNew: 2500000,
       priceOld: 8000000,
       coach: "vas",
       picture:
         "https://cdn2.topica.vn/191ab4fd-9c62-4494-b209-51f86a3924d3/product/6076639631b9ae0024d5dab7",
-      content: [],
+      content: [
+        "- Bạn hiểu gì về cơ thể & tâm trí của chính mình?",
+        "+ Chúng ta có những vấn đề khác nhau trong cuộc sống, kể cả việc bạn mắc những căn bệnh, các hội chứng tâm lý khác nhau, nguyên nhân chung nhất của chúng đều xuất phát từ tâm trí.",
+        "+ Cơ thể bạn và tâm trí bạn là thể thống nhất với nhau, luôn có mối liên kết chặt chẽ.",
+        "+ Những điều ẩn sâu bên trong bạn thật sự không muốn làm, cơ thể bạn sẽ không thể nào hoàn tất điều đó.",
+        "+ Khi bạn mang trong mình những trải nghiệm tiêu cực, hành vi & tư duy của bạn sẽ bị chi phối mạnh mẽ bởi những trải nghiệm đó.",
+        "Tại sao có những người lại làm được những điều phi thường, ngược lại có người thì hoàn toàn không biết mình sống để làm gì? Vậy mối liên kết ở đây là gì?",
+        "Nếu bạn có thể hiểu được sự kết nối giữa Ý thức, Vô thức & các Trường năng lượng xung quanh mình. Bạn sẽ hiểu được cách vận hành của nó và biến nó trở thành nguồn lực cho chính mình.",
+      ],
       benefit: [],
       video: "https://www.youtube.com/embed/92ZP8onjjqE",
     },
     {
       id: 2,
       title: "Giao Tiếp Hiệu quả",
-      description: "",
       priceNew: 3500000,
       priceOld: 8000000,
       coach: "vas",
       picture:
         "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/6000fcd544d203002598bd5a",
-      content: [],
+      content: [
+        "Tại sao chúng ta cần phải giao tiếp với Vô Thức của mình?",
+        "+ Vô thức bên trong mỗi người có những quyền năng rất lớn lao, nếu bạn biết tận dụng nó, bạn không còn là một người tầm thường trong những vòng xoáy của cuộc sống.",
+        "+ Biết cách giao tiếp với vô thức bạn sẽ làm mọi thứ dễ dàng hơn, đẩy lùi những điều tiêu cực, và chắc hẳn cơ thể bạn sẽ không còn mất thời gian cho những vấn đề quấy nhiễu tác động bên ngoài.",
+        "+ Học cách giao tiếp với vô thức, để bạn, bao gồm vô thức & cơ thể của mình, tất cả hoà làm một & trở nên tốt đẹp hơn.",
+        "+ Để tạo nguồn lực mạnh mẽ từ bên trong & thu hút những trường năng lượng vần vũ khắp nơi.",
+        "- Khi biết cách giao tiếp với chính mình, bạn cũng sẽ biết được bản thân cần làm gì để giao tiếp với người khác, thuyết phục người khác & hoà hợp các khía cạnh cuộc sống.",
+      ],
       benefit: [],
+      video: "https://www.youtube.com/embed/53BkV9nVzmk",
     },
     {
       id: 3,
       title:
         "Giao Tiếp với Tâm Trí Vô Thức - Kích Hoạt Những Nguồn Lực Từ Bên Trong",
-      description: "",
       priceNew: 4500000,
       priceOld: 8000000,
       coach: "vas",
@@ -438,11 +452,11 @@ export const courseList = {
         "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/5fffc7fe44d203002598bb3e",
       content: [],
       benefit: [],
+      video: "https://www.youtube.com/embed/53BkV9nVzmk",
     },
     {
       id: 4,
       title: "Kích Hoạt 5 Giác Quan Bên Trong - Hình Dung Tưởng Tượng",
-      description: "",
       priceNew: 5500000,
       priceOld: 8000000,
       coach: "vas",
@@ -450,11 +464,11 @@ export const courseList = {
         "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/5ffff8d744d203002598bbce",
       content: [],
       benefit: [],
+      video: "https://www.youtube.com/embed/XSd0m5iaNdg",
     },
     {
       id: 5,
       title: "Kiểm Soát Căng Thẳng",
-      description: "",
       priceNew: 6500000,
       priceOld: 8000000,
       coach: "vas",
@@ -462,12 +476,12 @@ export const courseList = {
         "https://kelley-lecture-video.s3-ap-southeast-1.amazonaws.com/VI_1616249177.722_Doc-38.jpg",
       content: [],
       benefit: [],
+      video: "https://www.youtube.com/embed/tAeXc_yfGjo",
     },
     {
       id: 6,
       title:
         "Giá Trị & Sức Mạnh của việc Coaching bằng NLP. Cách trở thành người Coach Chuyên Nghiệp",
-      description: "",
       priceNew: 7500000,
       priceOld: 8000000,
       coach: "vas",
@@ -475,6 +489,7 @@ export const courseList = {
         "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/6000202444d203002598bd0d",
       content: [],
       benefit: [],
+      video: "https://www.youtube.com/embed/bD2TqBYpfCg",
     },
   ],
 };

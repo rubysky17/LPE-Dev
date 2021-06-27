@@ -6,7 +6,6 @@ import Coach from "app/components/coach";
 import "./styles/styles.scss";
 
 function IntroduceCourse({ coachDetail, ...detaiCourse }) {
-  console.log(coachDetail);
   return (
     <>
       {detaiCourse.video && (

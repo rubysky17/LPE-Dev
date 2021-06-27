@@ -42,14 +42,13 @@ const domestic = "DOMESTIC";
 const qr = "QR";
 
 function Checkout() {
-  let { id, level } = useParams();
+  let { id, level, subId } = useParams();
   const history = useHistory();
   const classes = useStyles();
   const [secondCourse, setSecondCourse] = useState(null);
   const firstCourse = courseList[level].find((item) => item.id === +id);
   const [price, setPrice] = useState();
 
-  const [isSubmit, setIsSubmit] = useState(false);
   const [url, setUrl] = useState();
   const [protocol, setProtocol] = useState();
   const [cardtype, setCardtype] = useState(null);
@@ -60,6 +59,13 @@ function Checkout() {
       setSecondCourse(result);
     }
   }, [level, id]);
+
+  useEffect(() => {
+    if (level === "level2" && subId) {
+      const result = courseList["level1"].find((item) => item.id === +subId);
+      setSecondCourse(result);
+    }
+  }, [subId, level, id]);
 
   // Checking if 1 or 2 course
   useEffect(() => {
@@ -81,7 +87,7 @@ function Checkout() {
   useEffect(() => {
     generateUrl();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isSubmit, cardtype]);
+  }, [cardtype]);
 
   const disCount = () => {
     return (
@@ -94,7 +100,6 @@ function Checkout() {
 
   const handleChange = (event) => {
     setCardtype(event.target.value);
-    setIsSubmit(true);
   };
 
   const handleGoBack = () => {
@@ -120,6 +125,7 @@ function Checkout() {
     // thông tin merch
     const merchDetail = Object.assign(
       { id },
+      { subId: subId ? subId : "0" },
       { price },
       { merchRef: uid },
       { typepay: cardtype },
@@ -266,7 +272,7 @@ function Checkout() {
               variant="contained"
               className={classes.styled}
               href={url}
-              disabled={!isSubmit || !cardtype}
+              disabled={!cardtype}
             >
               Tiếp tục
             </Button>
