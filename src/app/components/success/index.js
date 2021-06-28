@@ -6,7 +6,7 @@ function Success({ price, infoBill }) {
   return (
     <div className="wrapper content container">
       <div className="check-success">
-        <i class="fas fa-check"></i>
+        <i className="fas fa-check"></i>
       </div>
       <div className="text-center">
         <h2 className="mt-4 content-head">Thanh toán của bạn đã thành công</h2>

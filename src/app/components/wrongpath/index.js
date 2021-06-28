@@ -14,7 +14,7 @@ function Wrongpath() {
           color: "white",
         }}
       >
-        Opps! Hình như bạn truy cập sai đường dẫn
+        Giao dịch đang được xử lý
       </h1>
 
       <a className="btn btn-danger mt-4" href="https://lpe.vn/">
