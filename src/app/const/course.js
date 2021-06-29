@@ -247,8 +247,7 @@ export const courseList = {
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture:
-        "https://cdn2.topica.vn/191ab4fd-9c62-4494-b209-51f86a3924d3/product/6076639631b9ae0024d5dab7",
+      picture: "https://i.imgur.com/Tyd64EK.jpg",
       content: [
         '- "Lập kế hoạch cho tương lai" là điều không hề dễ dàng?',
         "+ Sẽ không phải là vấn đề nếu như bạn biết cách thực hiện nó.",
@@ -270,8 +269,7 @@ export const courseList = {
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture:
-        "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/6000fcd544d203002598bd5a",
+      picture: "https://i.imgur.com/ynHPrtV.jpg",
       content: [
         "- Khi một người biết cách kiểm soát cảm xúc:",
         "+ Người đó sẽ kiểm soát được phần lớn hành vi, tư duy & tâm trạng của họ trong từng khoảnh khắc mỗi ngày.",
@@ -296,8 +294,7 @@ export const courseList = {
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture:
-        "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/5fffc7fe44d203002598bb3e",
+      picture: "https://i.imgur.com/pAtVmOH.jpg",
       content: [
         "- Lợi ích từ việc xây dựng hành vi tích cực cho bản thân?",
         "+ Dễ dàng hòa nhập và kết nối với cộng đồng bằng tư duy tích cực, lành mạnh.",
@@ -319,12 +316,11 @@ export const courseList = {
     {
       id: 4,
       title:
-        "Trở Nên Lạc Quan, Hình Thành Nội Động Lực & Sống Hòa Hợp với mọi người. Giao Tiếp Tích Cực",
+        "Giao Tiếp Tích Cực - Trở Nên Lạc Quan, Hình Thành Nội Động Lực & Sống Hòa Hợp với mọi người.",
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture:
-        "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/5ffff8d744d203002598bbce",
+      picture: "https://i.imgur.com/mUiaztm.jpg",
       content: [
         "- Giao tiếp tốt sẽ mang lại cho bạn điều gì?",
         "+ Là việc có thể tự tin nói ra những cảm xúc và suy nghĩ của mình trọn vẹn và đầy đủ ý.",
@@ -348,8 +344,7 @@ export const courseList = {
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture:
-        "https://kelley-lecture-video.s3-ap-southeast-1.amazonaws.com/VI_1616249177.722_Doc-38.jpg",
+      picture: "https://i.imgur.com/PgVsRoS.jpg",
       content: [
         "- Lợi ích của việc xây dựng giá trị bản thân là gì?",
         "+ Thấu hiểu bản chất của việc tự hào và khiêm tốn không để bản thân dẫn đến tự kiêu và tự mãn.",
@@ -367,15 +362,13 @@ export const courseList = {
       ],
       video: "https://www.youtube.com/embed/tyQ7PQOtf9A",
     },
-
     {
       id: 6,
       title: "Loại bỏ chứng nghiện, cài đặt hành vi hữu ích và có giá trị",
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture:
-        "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/6000202444d203002598bd0d",
+      picture: "https://i.imgur.com/kC3bvZz.jpg",
       content: [],
       benefit: [
         "- Đến với khoá học, bạn sẽ: ",
@@ -386,7 +379,6 @@ export const courseList = {
       ],
       video: "https://www.youtube.com/embed/Abi6tQKPNrU",
     },
-
     {
       id: 7,
       title:
@@ -394,8 +386,7 @@ export const courseList = {
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture:
-        "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/5fffad6f44d203002598bacd",
+      picture: "https://i.imgur.com/SCDtsKX.jpg",
       content: [
         "- Tại sao bạn cần nâng cấp bản thân trở nên tốt hơn:",
         "+ Để có nguồn năng lượng tuyệt vời từ bên trong, không bị tác động bởi những điều tiêu cực.",
@@ -434,7 +425,7 @@ export const courseList = {
         "Nếu bạn có thể hiểu được sự kết nối giữa Ý thức, Vô thức & các Trường năng lượng xung quanh mình. Bạn sẽ hiểu được cách vận hành của nó và biến nó trở thành nguồn lực cho chính mình.",
       ],
       benefit: [],
-      video: "https://www.youtube.com/embed/92ZP8onjjqE",
+      video: "https://www.youtube.com/embed/4RYy1TdfvVU",
     },
     {
       id: 2,
@@ -464,7 +455,14 @@ export const courseList = {
       coach: "vas",
       picture:
         "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/5fffc7fe44d203002598bb3e",
-      content: [],
+      content: [
+        "Tại sao chúng ta cần phải giao tiếp với Vô Thức của mình?",
+        "+ Vô thức bên trong mỗi người có những quyền năng rất lớn lao, nếu bạn biết tận dụng nó, bạn không còn là một người tầm thường trong những vòng xoáy của cuộc sống.",
+        "+ Biết cách giao tiếp với vô thức bạn sẽ làm mọi thứ dễ dàng hơn, đẩy lùi những điều tiêu cực, và chắc hẳn cơ thể bạn sẽ không còn mất thời gian cho những vấn đề quấy nhiễu tác động bên ngoài.",
+        "+ Học cách giao tiếp với vô thức, để bạn, bao gồm vô thức & cơ thể của mình, tất cả hoà làm một & trở nên tốt đẹp hơn.",
+        "+ Để tạo nguồn lực mạnh mẽ từ bên trong & thu hút những trường năng lượng vần vũ khắp nơi.",
+        "- Khi biết cách giao tiếp với chính mình, bạn cũng sẽ biết được bản thân cần làm gì để giao tiếp với người khác, thuyết phục người khác & hoà hợp các khía cạnh cuộc sống.",
+      ],
       benefit: [],
       video: "https://www.youtube.com/embed/53BkV9nVzmk",
     },
@@ -476,8 +474,20 @@ export const courseList = {
       coach: "vas",
       picture:
         "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/5ffff8d744d203002598bbce",
-      content: [],
-      benefit: [],
+      content: [
+        "- Bạn đang thật sự sống hay chỉ đang tồn tại? Hãy dành 1 phút để tự trả lời cho mình 04 câu hỏi sau:",
+        "+ Bạn cất công đi học rồi đi làm là để kiếm sống qua ngày? ",
+        "+ Bạn cảm thấy cuộc sống của mình không hề có điều thú vị, đôi khi cảm thấy bế tắc?",
+        "+ Bạn không thật sự làm chủ cuộc đời mình? Luôn phải nghe theo sự sắp đặt của người khác?",
+        "+ Bạn rất ngại đổi mới một điều gì đó, thường giữ mình ở trong vùng an toàn nhất định?",
+        "+ Để đạt được những điều tuyệt vời hơn trong cuộc sống, bạn cần phải học cách để thay đổi cách vận hành não bộ & tư duy của mình. ",
+      ],
+      benefit: [
+        "- Tại khoá học này, bạn sẽ:",
+        "+ Học cách kích hoạt & phát triển sự sáng tạo của não phải.",
+        "+ Học cách để kích hoạt trí tưởng tượng và thực hiện quy trình đưa bạn đến những tư duy, ý tưởng mới. ",
+        "+ Học cách để trở thành chính bạn, nhưng một phiên bản tuyệt vời hơn. ",
+      ],
       video: "https://www.youtube.com/embed/XSd0m5iaNdg",
     },
     {
@@ -488,7 +498,14 @@ export const courseList = {
       coach: "vas",
       picture:
         "https://kelley-lecture-video.s3-ap-southeast-1.amazonaws.com/VI_1616249177.722_Doc-38.jpg",
-      content: [],
+      content: [
+        "Stress có thật sự là điều tồi tệ?",
+        "Đôi khi stress lại chính là thứ thúc đẩy bản thân mỗi người để bộc lộ ra khả năng ẩn giấu bên trong. Và đôi khi, chính stress là thước đo cho sự mạnh mẽ, linh hoạt,... là những nội lực bên trong bạn.",
+        "Áp lực thi cử, áp lực doanh số, deadline,... tất cả những loại áp lực căng thẳng đó rất nhiều lúc đã khiến chúng ta trở nên tốt hơn, tự nâng cấp lên chính bản thân mình.",
+        "Nhưng, không phải cũng có thể hiểu về mặt tích cực của Stress.",
+        "Vậy, làm sao để biết Stress như thế nào là tốt?",
+        "Làm thế nào để quản lý Stress? ",
+      ],
       benefit: [],
       video: "https://www.youtube.com/embed/tAeXc_yfGjo",
     },
@@ -501,8 +518,18 @@ export const courseList = {
       coach: "vas",
       picture:
         "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/6000202444d203002598bd0d",
-      content: [],
-      benefit: [],
+      content: [
+        "- Bạn có biết cách để kiếm tiền từ NLP?",
+        "- Coaching không chỉ là để giúp đỡ cho bản thân và cộng đồng. Coach có thể trở thành một nghề cho chính bạn, nếu bạn thật sự mong muốn cống hiến và am hiểu về nó.",
+      ],
+      benefit: [
+        "- Lợi ích của một người có khả năng Coaching:",
+        "+ Giúp cho người thân, bạn bè xung quanh mình vượt qua vấn đề tiêu cực họ đang mắc kẹt.",
+        "+ Biết cách để sống tích cực, biết điều gì sẽ tốt và có lợi cho mình.",
+        "+ Thấu hiểu được bản thân mình, tự chữa lành và kiểm soảt các hành vi hay cảm xúc tác động vào chính mình.",
+        "+ Biết cách vận hành của não bộ và cơ thể để kiểm soát bản thân theo một quỹ đạo đúng hướng.",
+        "+ Hiểu được nguyên nhân tiềm tàng cho các vấn đề xảy ra trên cơ thể mình, đặc biệt là vấn đề bệnh tật, tìm được cách thức để vượt qua mà hầu như không sử dụng đến thuốc.",
+      ],
       video: "https://www.youtube.com/embed/bD2TqBYpfCg",
     },
   ],
