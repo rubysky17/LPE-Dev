@@ -1,6 +1,20 @@
 export const courseList = {
   level1: [
     {
+      id: 10000,
+      title: "Mua thử !!!!",
+      priceNew: 10000,
+      priceOld: 99999999,
+      coach: "giangThanh",
+      picture: "https://didongmango.com/media/news/0106_3.png",
+      content: [
+        "Môi trường kiểm thử tính năng thanh toán",
+        "Đơn hàng không có thật",
+      ],
+      benefit: [],
+      video: "https://www.youtube.com/embed/qiI4XNUoiyg",
+    },
+    {
       id: 1,
       title:
         "Bạn chưa có định hướng cho tương lai? Tại sao? Điều gì đang ngăn cản bạn?",
@@ -513,7 +527,6 @@ export const courseLevel = [
   },
 ];
 // các khóa trong level 1 sẽ có id khóa học trùng với khóa học ở level 2
-
 export const coachDetail = [
   {
     id: "giangThanh",

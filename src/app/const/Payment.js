@@ -8,13 +8,13 @@ const RETURNURL = "https://lpe.vn/status/";
 const VERSION = 2;
 
 // domain of onepay
-const urlPayment = "https://mtf.onepay.vn/paygate/vpcpay.op?";
+const urlPayment = "https://onepay.vn/paygate/vpcpay.op?";
 
 // account payment
 const accountPayment = {
-  merchantId: "TESTONEPAY",
-  accessCode: "6BEB2546",
-  hashCode: "6D0870CDE5F24F34F3915FB0045120DB",
+  merchantId: "LPETEAM",
+  accessCode: "0E5EBDCA",
+  hashCode: "1A61B629F718BCFF4C4D9C21506E6DE6",
 };
 
 export const objectToQuery = (object) => {

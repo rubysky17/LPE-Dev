@@ -112,8 +112,8 @@ function Checkout() {
         return "Thanh toán bằng thẻ Visa, Master, JCB,..";
       case domestic:
         return "Nội địa ATM Cards";
-      case qr:
-        return "QR code";
+      // case qr:
+      //   return "QR code";
       default:
         return "Chưa chọn";
     }
@@ -202,12 +202,12 @@ function Checkout() {
                       labelPlacement="start"
                     />
 
-                    <FormControlLabel
+                    {/* <FormControlLabel
                       value={qr}
                       control={<Radio />}
                       label={<CreditCard type="qr" />}
                       labelPlacement="start"
-                    />
+                    /> */}
                   </RadioGroup>
                 </FormControl>
               </div>

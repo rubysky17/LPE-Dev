@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { HomeTemplate } from "app/template/homeTemplate";
 
 import Home from "app/page/home";
@@ -14,21 +14,26 @@ function App() {
 
       <Switch>
         <HomeTemplate exact Component={Home} path="/" />
+
         <HomeTemplate
           exact
           Component={CourseDetail}
           path="/course/:level/:id"
         />
+
         <HomeTemplate
           exact
           Component={Chechkout}
           path="/checkout/:level/:id/"
         />
+
         <HomeTemplate
           exact
           Component={Chechkout}
           path="/checkout/:level/:id/:subId"
         />
+
+        <Route path="*" component={Home} />
       </Switch>
     </Router>
   );
