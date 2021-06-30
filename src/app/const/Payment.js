@@ -51,7 +51,7 @@ export const createOrderCourse = (detail, customIP) => {
     vpc_Locale: LOCALE,
     vpc_MerchTxnRef: detail.merchRef,
     vpc_Merchant: accountPayment.merchantId,
-    vpc_OrderInfo: `LPE_${detail.level}_${detail.id}_${detail.subId}`,
+    vpc_OrderInfo: `${detail.level}_${detail.id}_${detail.subId}`,
     vpc_ReturnURL: RETURNURL,
     vpc_TicketNo: customIP,
     vpc_Version: VERSION,

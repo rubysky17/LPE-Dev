@@ -10,6 +10,7 @@ import {
   Radio,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { useFormik } from "formik";
 
 import CourseDetail from "./components/courseinfo";
 import CreditCard from "./components/creditcard";
@@ -40,6 +41,7 @@ const useStyles = makeStyles(() => ({
 const international = "INTERNATIONAL";
 const domestic = "DOMESTIC";
 const qr = "QR";
+const regex = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
 
 function Checkout() {
   let { id, level, subId } = useParams();
@@ -48,10 +50,11 @@ function Checkout() {
   const [secondCourse, setSecondCourse] = useState(null);
   const firstCourse = courseList[level].find((item) => item.id === +id);
   const [price, setPrice] = useState();
-
+  const [isSubmit, setIsSubmit] = useState(false);
   const [url, setUrl] = useState();
   const [protocol, setProtocol] = useState();
   const [cardtype, setCardtype] = useState(null);
+  const [infoUser, setInfoUser] = useState({});
 
   useEffect(() => {
     if (level === "level2") {
@@ -122,6 +125,7 @@ function Checkout() {
   const generateUrl = () => {
     // Tạo uid (primary key) cho đơn hàng
     const uid = new Date().getTime().toString(36);
+
     // thông tin merch
     const merchDetail = Object.assign(
       { id },
@@ -147,6 +151,50 @@ function Checkout() {
       console.log(error);
     }
   };
+
+  const validate = (values) => {
+    const errors = {};
+
+    if (!values.name) {
+      errors.name = "*Không được để trống";
+    }
+
+    if (!values.phone) {
+      errors.phone = "*Không được để trống";
+    } else if (isNaN(values.phone) || !values.phone.match(regex)) {
+      errors.phone = "*Số điện thoại không hợp lệ";
+    }
+
+    if (!values.email) {
+      errors.email = "*Không được để trống";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+    ) {
+      errors.email = "*Địa chỉ email không hợp lệ";
+    }
+
+    setIsSubmit(false);
+
+    if (Object.keys(errors).length === 0) {
+      setInfoUser({
+        name: values.name,
+        phone: values.phone,
+        email: values.email,
+      });
+      setIsSubmit(true);
+    }
+
+    return errors;
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      phone: "",
+      email: "",
+    },
+    validate,
+  });
 
   return (
     <div className="checkout">
@@ -176,6 +224,69 @@ function Checkout() {
                 <CourseDetail level={level} {...secondCourse} />
               )}
             </div>
+
+            <form className="wrapper-form">
+              <label htmlFor="name">Tên của bạn (*)</label>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                value={formik.values.name}
+                placeholder="Nhập tên của bạn"
+                className={
+                  formik.errors.name && formik.touched.name && "input-error"
+                }
+                autoComplete="off"
+              />
+              {formik.errors.name && formik.touched.name && (
+                <div className="text-danger mb-0 mt-2">
+                  {formik.errors.name}
+                </div>
+              )}
+
+              <label htmlFor="detail">Số điện thoại (*)</label>
+              <input
+                id="phone"
+                name="phone"
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                value={formik.values.phone}
+                placeholder="093XXXXXXX"
+                className={
+                  formik.errors.phone && formik.touched.phone && "input-error"
+                }
+                autoComplete="off"
+              />
+
+              {formik.errors.phone && formik.touched.phone && (
+                <div className="text-danger mb-0 mt-2">
+                  {formik.errors.phone}
+                </div>
+              )}
+
+              <label htmlFor="detail">Địa chỉ Email (*)</label>
+              <input
+                id="email"
+                name="email"
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                value={formik.values.email}
+                placeholder="john.doe@gmail.com"
+                className={
+                  formik.errors.email && formik.touched.email && "input-error"
+                }
+                autoComplete="off"
+              />
+
+              {formik.errors.email && formik.touched.email && (
+                <div className="text-danger mb-0 mt-2">
+                  {formik.errors.email}
+                </div>
+              )}
+            </form>
 
             <div className="payment">
               <h4 className="checkout-body_detail-title">
@@ -272,7 +383,7 @@ function Checkout() {
               variant="contained"
               className={classes.styled}
               href={url}
-              disabled={!cardtype}
+              disabled={!isSubmit || !cardtype}
             >
               Tiếp tục
             </Button>
