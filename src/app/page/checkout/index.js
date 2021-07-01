@@ -55,6 +55,7 @@ function Checkout() {
   const [protocol, setProtocol] = useState();
   const [cardtype, setCardtype] = useState(null);
   const [infoUser, setInfoUser] = useState({});
+  const [unixId, setUnixId] = useState("");
 
   useEffect(() => {
     if (level === "level2") {
@@ -125,7 +126,7 @@ function Checkout() {
   const generateUrl = () => {
     // Tạo uid (primary key) cho đơn hàng
     const uid = new Date().getTime().toString(36);
-
+    setUnixId(uid);
     // thông tin merch
     const merchDetail = Object.assign(
       { id },
@@ -139,6 +140,35 @@ function Checkout() {
     const urlData = createOrderCourse(merchDetail, protocol);
 
     setUrl(urlData);
+  };
+
+  const handleSubmit = async () => {
+    const dataSubmit = {
+      name: infoUser.name,
+      phone: infoUser.phone,
+      email: infoUser.email,
+      timestamp: unixId,
+      infobill: `${level}_${id}_${subId ? subId : "0"}`,
+    };
+
+    axios({
+      method: "post",
+      url: "https://lpe.vn/php-react/add-onlinecourse.php",
+      data: dataSubmit,
+      headers: {
+        "Content-Type": "multipart/form-data",
+        "Access-Control-Allow-Origin": "*",
+      },
+    })
+      .then((res) => {
+        if (res.success === 1) {
+          window.open(
+            url,
+            "_blank" // <- This is what makes it open in a new window.
+          );
+        }
+      })
+      .catch((err) => console.log(err));
   };
 
   const getIPLocal = async () => {
@@ -382,7 +412,10 @@ function Checkout() {
             <Button
               variant="contained"
               className={classes.styled}
-              href={url}
+              // href={url}
+              onClick={() => {
+                handleSubmit(infoUser);
+              }}
               disabled={!isSubmit || !cardtype}
             >
               Tiếp tục
