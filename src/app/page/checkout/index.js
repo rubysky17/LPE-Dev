@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
+import firebase from "firebase";
 
 import {
   Button,
@@ -8,6 +9,7 @@ import {
   FormControlLabel,
   RadioGroup,
   Radio,
+  Checkbox,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useFormik } from "formik";
@@ -41,7 +43,25 @@ const useStyles = makeStyles(() => ({
 const international = "INTERNATIONAL";
 const domestic = "DOMESTIC";
 const qr = "QR";
+
 const regex = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+
+// var firebaseConfig = {
+//   apiKey: "AIzaSyBYGUD-zs8tEvMH_syknBxgCP8JaLsPWEc",
+//   authDomain: "lpeonline.firebaseapp.com",
+//   projectId: "lpeonline",
+//   storageBucket: "lpeonline.appspot.com",
+//   messagingSenderId: "415840596423",
+//   appId: "1:415840596423:web:c3644420adf1ffe6b6a9e2"
+// };
+
+firebase.initializeApp({
+  apiKey: "AIzaSyBYGUD-zs8tEvMH_syknBxgCP8JaLsPWEc",
+  authDomain: "lpeonline.firebaseapp.com",
+  projectId: "lpeonline",
+});
+
+var db = firebase.firestore();
 
 function Checkout() {
   let { id, level, subId } = useParams();
@@ -56,6 +76,7 @@ function Checkout() {
   const [cardtype, setCardtype] = useState(null);
   const [infoUser, setInfoUser] = useState({});
   const [unixId, setUnixId] = useState("");
+  const [checkPolicy, setCheckPolicy] = useState(false);
 
   useEffect(() => {
     if (level === "level2") {
@@ -106,6 +127,10 @@ function Checkout() {
     setCardtype(event.target.value);
   };
 
+  const handleCheckbox = (event) => {
+    setCheckPolicy(event.target.checked);
+  };
+
   const handleGoBack = () => {
     history.goBack();
   };
@@ -144,31 +169,25 @@ function Checkout() {
 
   const handleSubmit = async () => {
     const dataSubmit = {
-      name: infoUser.name,
-      phone: infoUser.phone,
       email: infoUser.email,
+      phone: infoUser.phone,
       timestamp: unixId,
+      name: infoUser.name,
       infobill: `${level}_${id}_${subId ? subId : "0"}`,
     };
 
-    axios({
-      method: "post",
-      url: "https://lpe.vn/php-react/add-onlinecourse.php",
-      data: dataSubmit,
-      headers: {
-        "Content-Type": "multipart/form-data",
-        "Access-Control-Allow-Origin": "*",
-      },
-    })
-      .then((res) => {
-        if (res.success === 1) {
-          window.open(
-            url,
-            "_blank" // <- This is what makes it open in a new window.
-          );
-        }
+    db.collection("users")
+      .add(dataSubmit)
+      .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+        window.open(
+          url,
+          "_blank" // <- This is what makes it open in a new window.
+        );
       })
-      .catch((err) => console.log(err));
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      });
   };
 
   const getIPLocal = async () => {
@@ -318,6 +337,25 @@ function Checkout() {
               )}
             </form>
 
+            {/* policy */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                marginTop: "10px",
+              }}
+            >
+              <Checkbox
+                checked={checkPolicy}
+                color="primary"
+                onChange={handleCheckbox}
+                className="pl-0"
+              />
+              <p className="m-0">
+                Tôi chấp nhận điều khoản và chính sách của LPE
+              </p>
+            </div>
+
             <div className="payment">
               <h4 className="checkout-body_detail-title">
                 chọn phương thức thanh toán
@@ -412,11 +450,10 @@ function Checkout() {
             <Button
               variant="contained"
               className={classes.styled}
-              // href={url}
               onClick={() => {
                 handleSubmit(infoUser);
               }}
-              disabled={!isSubmit || !cardtype}
+              disabled={!isSubmit || !checkPolicy || !cardtype}
             >
               Tiếp tục
             </Button>

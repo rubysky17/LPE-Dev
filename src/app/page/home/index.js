@@ -1,6 +1,11 @@
 import React from "react";
 
-import { courseList, courseLevel, coachDetail } from "app/const/course.js";
+import {
+  courseList,
+  courseLevel,
+  coachDetail,
+  testimonials,
+} from "app/const/course.js";
 import { Title, Card, Coach, Comment } from "app/components";
 
 import "./styles/styles.scss";
@@ -47,17 +52,13 @@ function Home() {
         />
 
         <div className="row testimonial pb-5">
-          <div className="col-12 col-md-4">
-            <Comment />
-          </div>
-
-          <div className="col-12 col-md-4">
-            <Comment />
-          </div>
-
-          <div className="col-12 col-md-4">
-            <Comment />
-          </div>
+          {testimonials.map((person, index) => {
+            return (
+              <div className="col-12 col-md-4">
+                <Comment {...person} key={index} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

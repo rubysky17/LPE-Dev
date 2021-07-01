@@ -413,8 +413,7 @@ export const courseList = {
       priceNew: 2500000,
       priceOld: 8000000,
       coach: "vas",
-      picture:
-        "https://cdn2.topica.vn/191ab4fd-9c62-4494-b209-51f86a3924d3/product/6076639631b9ae0024d5dab7",
+      picture: "https://i.imgur.com/U5dCrFw.jpg",
       content: [
         "- Bạn hiểu gì về cơ thể & tâm trí của chính mình?",
         "+ Chúng ta có những vấn đề khác nhau trong cuộc sống, kể cả việc bạn mắc những căn bệnh, các hội chứng tâm lý khác nhau, nguyên nhân chung nhất của chúng đều xuất phát từ tâm trí.",
@@ -433,8 +432,7 @@ export const courseList = {
       priceNew: 3500000,
       priceOld: 8000000,
       coach: "vas",
-      picture:
-        "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/6000fcd544d203002598bd5a",
+      picture: "https://i.imgur.com/HdVrKZB.jpg",
       content: [
         "Tại sao chúng ta cần phải giao tiếp với Vô Thức của mình?",
         "+ Vô thức bên trong mỗi người có những quyền năng rất lớn lao, nếu bạn biết tận dụng nó, bạn không còn là một người tầm thường trong những vòng xoáy của cuộc sống.",
@@ -453,8 +451,7 @@ export const courseList = {
       priceNew: 4500000,
       priceOld: 8000000,
       coach: "vas",
-      picture:
-        "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/5fffc7fe44d203002598bb3e",
+      picture: "https://i.imgur.com/M4QufEr.jpg",
       content: [
         "Tại sao chúng ta cần phải giao tiếp với Vô Thức của mình?",
         "+ Vô thức bên trong mỗi người có những quyền năng rất lớn lao, nếu bạn biết tận dụng nó, bạn không còn là một người tầm thường trong những vòng xoáy của cuộc sống.",
@@ -472,8 +469,7 @@ export const courseList = {
       priceNew: 5500000,
       priceOld: 8000000,
       coach: "vas",
-      picture:
-        "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/5ffff8d744d203002598bbce",
+      picture: "https://i.imgur.com/3nbyQz1.jpg",
       content: [
         "- Bạn đang thật sự sống hay chỉ đang tồn tại? Hãy dành 1 phút để tự trả lời cho mình 04 câu hỏi sau:",
         "+ Bạn cất công đi học rồi đi làm là để kiếm sống qua ngày? ",
@@ -496,8 +492,7 @@ export const courseList = {
       priceNew: 6500000,
       priceOld: 8000000,
       coach: "vas",
-      picture:
-        "https://kelley-lecture-video.s3-ap-southeast-1.amazonaws.com/VI_1616249177.722_Doc-38.jpg",
+      picture: "https://i.imgur.com/drO6t40.jpg",
       content: [
         "Stress có thật sự là điều tồi tệ?",
         "Đôi khi stress lại chính là thứ thúc đẩy bản thân mỗi người để bộc lộ ra khả năng ẩn giấu bên trong. Và đôi khi, chính stress là thước đo cho sự mạnh mẽ, linh hoạt,... là những nội lực bên trong bạn.",
@@ -516,8 +511,7 @@ export const courseList = {
       priceNew: 7500000,
       priceOld: 8000000,
       coach: "vas",
-      picture:
-        "https://cdn2.topica.vn/99e8262a-7b95-4050-a1a0-d6977c9d98ed/product/6000202444d203002598bd0d",
+      picture: "https://i.imgur.com/pPVDWMw.jpg",
       content: [
         "- Bạn có biết cách để kiếm tiền từ NLP?",
         "- Coaching không chỉ là để giúp đỡ cho bản thân và cộng đồng. Coach có thể trở thành một nghề cho chính bạn, nếu bạn thật sự mong muốn cống hiến và am hiểu về nó.",
@@ -580,5 +574,32 @@ export const coachDetail = [
       "18 năm là Master Trainer, huấn luyện NLP và các ngành Khoa học Tâm trí tại nhiều quốc gia trên thế giới với các chứng nhận uy tín từ Mỹ, Châu Âu.",
     ],
     img: "https://lpe.vn/themes/default/images/img1.png",
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Nguyễn Thị Ngọc",
+    job: "Nhân viên kế toán",
+    avatar: "https://randomuser.me/api/portraits/women/80.jpg",
+    comment:
+      "Đây là website giúp tôi có thể học được nhiều thứ và phát triển bản thân hơn nữa. Tôi cảm thấy bản thân mình mạnh mẽ hơn trước rất nhiều từ khi biết đến LPE live. Mong LPE sẽ phát triển hơn nữa trong tương lai sắp tới.",
+  },
+  {
+    id: 2,
+    name: "Trần Mạnh Ninh",
+    job: "Giám đốc kinh doanh",
+    avatar: "https://randomuser.me/api/portraits/men/4.jpg",
+    comment:
+      "Tôi rất thích những khoá học từ LPE, nó giúp tôi tìm và giải quyết những vấn đề từ kinh doanh cho đến hàn gắn mối quan hệ. Vợ chồng tôi bất hoà trong hơn 2 năm, nhưng may mắn tìm thấy khóa học Online từ LPE mà giờ đây chúng tôi đã có thể dễ dàng chia sẻ cùng nhau. Tôi sẽ tiếp tục rủ vợ học cùng để thay đổi nhiều hơn nữa.",
+  },
+  {
+    id: 3,
+    name: "Ngô Hoàng Yến Vy",
+    job: "Nhân viên thư ký",
+    avatar: "https://randomuser.me/api/portraits/women/51.jpg",
+    comment:
+      "Thật may mắn khi biết được khóa học phát triển bản thân trong giai đoạn áp lực này. Các khóa học mang đến cho tôi những giải pháp hiệu quả trong việc cắt đứt những suy nghĩ tiêu cực đối với người khác. Tôi hiện tại đã có thể vui vẻ hơn trước và sẽ tiếp tục học để hoàn thiện mình hơn nữa. Cảm ơn vì đã có những chương trình Online cho người bận rộn như tôi.",
   },
 ];
