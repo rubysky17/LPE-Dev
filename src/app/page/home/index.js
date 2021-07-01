@@ -52,10 +52,10 @@ function Home() {
         />
 
         <div className="row testimonial pb-5">
-          {testimonials.map((person, index) => {
+          {testimonials.map((person) => {
             return (
               <div className="col-12 col-md-4">
-                <Comment {...person} key={index} />
+                <Comment {...person} key={person.id} />
               </div>
             );
           })}

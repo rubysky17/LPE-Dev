@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
-
+// import data from scratsh
 import { courseList, coachDetail } from "app/const/course.js";
-import PriceTag from "./components/pricetag";
+// import components
 import IntroduceCourse from "./components/introducecourse";
-import FixedTag from "./components/fixedtag";
+import PriceTag from "./components/pricetag";
 import Combo from "./components/combo";
+import FixedTag from "./components/fixedtag";
 
 import "./styles/styles.scss";
 
 function CourseDetail() {
-  const history = useHistory();
   let { id, level } = useParams();
+  const history = useHistory();
 
   const [secondCourse, setSecondCourse] = useState(null);
   const [thirdCourse, setThirdCourse] = useState(null);

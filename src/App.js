@@ -6,6 +6,7 @@ import Home from "app/page/home";
 import CourseDetail from "app/page/courseDetail";
 import Chechkout from "app/page/checkout";
 import ScrollToTop from "app/components/scrolltotop";
+import ErrorPage from "app/page/error";
 
 function App() {
   return (
@@ -32,8 +33,7 @@ function App() {
           Component={Chechkout}
           path="/checkout/:level/:id/:subId"
         />
-
-        <Route path="*" component={Home} />
+        <Route path="*" component={ErrorPage} />
       </Switch>
     </Router>
   );

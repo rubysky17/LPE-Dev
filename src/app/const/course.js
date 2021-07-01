@@ -532,17 +532,17 @@ export const courseList = {
 export const courseLevel = [
   {
     levelId: "level1",
-    name: "Level 1",
+    name: "Level 1: từ 18h-20h (dự kiến ngày trong tuần)",
     description:
       "Understand the problem, Where do you get it from, why do you need to solve it?",
   },
   {
     levelId: "level2",
-    name: "Level 2",
+    name: "Level 2: từ 20h- 22h (dự kiến ngày trong tuần)",
     description: "How to solve the Problem & take responsibility",
   },
   {
-    levelId: "level3",
+    levelId: "level3: từ 9h00-28h (dự kiến ngày cuối tuần)",
     name: "Level 3",
     description: "How to solve the Problem & take responsibility",
   },
