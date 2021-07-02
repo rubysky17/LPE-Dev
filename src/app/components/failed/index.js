@@ -15,7 +15,7 @@ function Failed({ status }) {
         <h2 className="mt-4 content-head-failed">
           Thanh toán của bạn thất bại
         </h2>
-        <p className="mt-4 content-body">{statusMgs.message}</p>
+        <p className="mt-4 content-body">{statusMgs?.message}</p>
 
         <a className="btn btn-danger mt-1" href="https://lpe.vn/">
           Trở về trang chủ

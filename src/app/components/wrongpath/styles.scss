@@ -1,0 +1,24 @@
+.wrapper-wrongpath {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  img {
+    width: 30%;
+    height: auto;
+  }
+  .text {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper-wrongpath {
+    img {
+      width: 100%;
+    }
+  }
+}

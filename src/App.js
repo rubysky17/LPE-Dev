@@ -3,6 +3,7 @@ import Failed from "app/components/failed";
 import Success from "app/components/success";
 import Wrongpath from "app/components/wrongpath";
 import { compareSecurity } from "app/const/CheckParams";
+import InProgress from "app/components/inprogress";
 
 function App() {
   const [params, setParams] = useState("");
@@ -24,7 +25,7 @@ function App() {
 
   const renderComponent = () => {
     if (params === "") {
-      return <h1>Sai đường dẫn</h1>;
+      return <Wrongpath />;
     }
 
     if (compareSecurity(params, hashSecurity)) {
@@ -34,7 +35,7 @@ function App() {
         <Failed status={status} />
       );
     } else {
-      return <Wrongpath />;
+      return <InProgress />;
     }
   };
 
