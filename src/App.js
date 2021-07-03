@@ -7,6 +7,7 @@ import CourseDetail from "app/page/courseDetail";
 import Chechkout from "app/page/checkout";
 import ScrollToTop from "app/components/scrolltotop";
 import ErrorPage from "app/page/error";
+import QueryPage from "app/page/query";
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
           Component={Chechkout}
           path="/checkout/:level/:id/:subId"
         />
+
+        <HomeTemplate exact Component={QueryPage} path="/truyvan" />
         <Route path="*" component={ErrorPage} />
       </Switch>
     </Router>

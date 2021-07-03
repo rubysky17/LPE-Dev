@@ -1,20 +1,6 @@
 export const courseList = {
   level1: [
     {
-      id: 10000,
-      title: "Mua thử !!!!",
-      priceNew: 10000,
-      priceOld: 99999999,
-      coach: "giangThanh",
-      picture: "https://didongmango.com/media/news/0106_3.png",
-      content: [
-        "Môi trường kiểm thử tính năng thanh toán",
-        "Đơn hàng không có thật",
-      ],
-      benefit: [],
-      video: "https://www.youtube.com/embed/qiI4XNUoiyg",
-    },
-    {
       id: 1,
       title:
         "Bạn chưa có định hướng cho tương lai? Tại sao? Điều gì đang ngăn cản bạn?",
@@ -542,8 +528,8 @@ export const courseLevel = [
     description: "How to solve the Problem & take responsibility",
   },
   {
-    levelId: "level3: từ 9h00-28h (dự kiến ngày cuối tuần)",
-    name: "Level 3",
+    levelId: "level3",
+    name: "Level 3: từ 9h00-18h (dự kiến ngày cuối tuần)",
     description: "How to solve the Problem & take responsibility",
   },
 ];

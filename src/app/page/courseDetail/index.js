@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useHistory, useParams, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 // import data from scratsh
 import { courseList, coachDetail } from "app/const/course.js";
 // import components
@@ -12,7 +12,6 @@ import "./styles/styles.scss";
 
 function CourseDetail() {
   let { id, level } = useParams();
-  const history = useHistory();
 
   const [secondCourse, setSecondCourse] = useState(null);
   const [thirdCourse, setThirdCourse] = useState(null);
@@ -33,23 +32,13 @@ function CourseDetail() {
     }
   }, [firstCourse]);
 
-  const handleGoBack = () => {
-    history.goBack();
-  };
-
   return (
     <div className="course">
       <div className="container">
         <div className="row checkout-head">
-          <button
-            className="checkout-head_button"
-            type="button"
-            onClick={() => {
-              handleGoBack();
-            }}
-          >
+          <Link className="checkout-head_button" type="button" to="/">
             <i className="fal fa-chevron-left"></i>
-          </button>
+          </Link>
 
           <h3 className="text-center">Chi tiết khóa học</h3>
 

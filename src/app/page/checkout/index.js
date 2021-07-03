@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import firebase from "firebase";
+import { db } from "app/const/firebase";
 
 import {
   Button,
@@ -46,26 +46,8 @@ const qr = "QR";
 
 const regex = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
 
-// var firebaseConfig = {
-//   apiKey: "AIzaSyBYGUD-zs8tEvMH_syknBxgCP8JaLsPWEc",
-//   authDomain: "lpeonline.firebaseapp.com",
-//   projectId: "lpeonline",
-//   storageBucket: "lpeonline.appspot.com",
-//   messagingSenderId: "415840596423",
-//   appId: "1:415840596423:web:c3644420adf1ffe6b6a9e2"
-// };
-
-firebase.initializeApp({
-  apiKey: "AIzaSyBYGUD-zs8tEvMH_syknBxgCP8JaLsPWEc",
-  authDomain: "lpeonline.firebaseapp.com",
-  projectId: "lpeonline",
-});
-
-var db = firebase.firestore();
-
 function Checkout() {
   let { id, level, subId } = useParams();
-  const history = useHistory();
   const classes = useStyles();
   const [secondCourse, setSecondCourse] = useState(null);
   const firstCourse = courseList[level].find((item) => item.id === +id);
@@ -131,10 +113,6 @@ function Checkout() {
     setCheckPolicy(event.target.checked);
   };
 
-  const handleGoBack = () => {
-    history.goBack();
-  };
-
   const choiceCard = () => {
     switch (cardtype) {
       case international:
@@ -180,10 +158,7 @@ function Checkout() {
       .add(dataSubmit)
       .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
-        window.open(
-          url,
-          "_blank" // <- This is what makes it open in a new window.
-        );
+        window.open(url, "_self");
       })
       .catch((error) => {
         console.error("Error adding document: ", error);
@@ -249,15 +224,13 @@ function Checkout() {
     <div className="checkout">
       <div className="container">
         <div className="row checkout-head">
-          <button
+          <Link
             className="checkout-head_button"
             type="button"
-            onClick={() => {
-              handleGoBack();
-            }}
+            to={`/course/${level}/${id}`}
           >
             <i className="fal fa-chevron-left"></i>
-          </button>
+          </Link>
 
           <h3 className="text-center">Thanh toán</h3>
 
