@@ -17,7 +17,7 @@ function Failed({ status }) {
         </h2>
         <p className="mt-4 content-body">{statusMgs?.message}</p>
 
-        <a className="btn btn-danger mt-1" href="https://lpe.vn/">
+        <a className="btn btn-danger mt-1" href="https://lpeonline.vn">
           Trở về trang chủ
         </a>
       </div>

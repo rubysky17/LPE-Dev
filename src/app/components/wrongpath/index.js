@@ -12,7 +12,7 @@ function Wrongpath() {
       <p className="text">
         Truy cập của bạn có thể bị lỗi hoặc không tìm thấy nội dung
       </p>
-      <a className="btn btn-secondary px-3 py-2" href="https://lpe.vn">
+      <a className="btn btn-secondary px-3 py-2" href="https://lpeonline.vn">
         Đi tới trang chủ
       </a>
     </div>

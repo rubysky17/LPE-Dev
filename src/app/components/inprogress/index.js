@@ -19,7 +19,7 @@ function InProgress() {
         Giao dịch đang được xử lý
       </h1>
 
-      <a className="btn btn-primary mt-4" href="https://lpe.vn/">
+      <a className="btn btn-primary mt-4" href="https://lpeonline.vn">
         Trở lại trang chủ
       </a>
     </div>

@@ -39,7 +39,7 @@ function Success({ price, infoBill, timeStamp }) {
             của chúng tôi.
           </p>
 
-          <a className="btn btn-success mt-1" href="https://lpe.vn/">
+          <a className="btn btn-success mt-1" href="https://lpeonline.vn">
             Trở về trang chủ
           </a>
         </div>
