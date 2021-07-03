@@ -8,16 +8,14 @@ import "./styles/styles.scss";
 function IntroduceCourse({ coachDetail, ...detaiCourse }) {
   return (
     <>
-      {detaiCourse.video && (
-        <iframe
-          width="100%"
-          height="400"
-          src={detaiCourse.video}
-          title="YouTube video player"
-          frameBorder="0"
-          allowFullScreen
-        ></iframe>
-      )}
+      <iframe
+        width="100%"
+        height="400"
+        src={detaiCourse.video}
+        title="YouTube video player"
+        frameBorder="0"
+        allowFullScreen
+      ></iframe>
 
       <div className="introduce">
         <h1 className="introduce-title">{detaiCourse.title}</h1>

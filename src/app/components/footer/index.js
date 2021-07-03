@@ -45,7 +45,7 @@ function Footer() {
             </p>
 
             <p className="text">
-              <i class="fal fa-clock mr-2"></i>
+              <i className="fal fa-clock mr-2"></i>
               Thời gian làm việc: Sáng: 7h30 - 12h00 | Chiều: 13h00 - 16h30
             </p>
 

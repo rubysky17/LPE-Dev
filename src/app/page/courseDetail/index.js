@@ -7,6 +7,7 @@ import IntroduceCourse from "./components/introducecourse";
 import PriceTag from "./components/pricetag";
 import Combo from "./components/combo";
 import FixedTag from "./components/fixedtag";
+import { Card, Title } from "app/components";
 
 import "./styles/styles.scss";
 
@@ -18,6 +19,12 @@ function CourseDetail() {
   const firstCourse = courseList[level]?.find((item) => item.id === +id);
   const coach = coachDetail.find((coach) => coach.id === firstCourse.coach);
 
+  const [suggestCourse, setSuggestCourse] = useState(null);
+  useEffect(() => {
+    if (level === "level1") {
+      setSuggestCourse(courseList["level2"].find((item) => item.id === +id));
+    }
+  }, [level, id]);
   useEffect(() => {
     if (level === "level2") {
       setSecondCourse(courseList["level1"].find((item) => item.id === +id));
@@ -69,6 +76,13 @@ function CourseDetail() {
           {level === "level2" && !!thirdCourse && (
             <div className="col-12 mt-5">
               <Combo course2={firstCourse} course1={thirdCourse} isTwo />
+            </div>
+          )}
+
+          {level === "level1" && !!suggestCourse && (
+            <div className="col-12">
+              <Title text="Gợi ý khóa học level 2" />
+              <Card {...suggestCourse} level="level2" />
             </div>
           )}
         </div>

@@ -8,6 +8,7 @@ import Chechkout from "app/page/checkout";
 import ScrollToTop from "app/components/scrolltotop";
 import ErrorPage from "app/page/error";
 import QueryPage from "app/page/query";
+import CourseDetail3 from "app/page/courseDetail3";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
 
       <Switch>
         <HomeTemplate exact Component={Home} path="/" />
+
+        <HomeTemplate exact Component={CourseDetail3} path="/course/level3/1" />
 
         <HomeTemplate
           exact
