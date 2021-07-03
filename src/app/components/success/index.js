@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { db } from "app/const/firebase";
 
 import "./styles/styles.scss";
 
-function Success({ price, infoBill }) {
+function Success({ price, infoBill, timeStamp }) {
+  useEffect(() => {
+    const dataSubmit = {
+      uid: timeStamp,
+    };
+    db.collection("timestamp")
+      .add(dataSubmit)
+      .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+      })
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      });
+  }, [timeStamp]);
+
   return (
     <div className="wrapper-content container">
       <div className="bill">

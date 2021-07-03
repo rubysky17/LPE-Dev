@@ -13,6 +13,7 @@ function App() {
   const status = url.searchParams.get("vpc_TxnResponseCode");
   const price = url.searchParams.get("vpc_Amount");
   const infoBill = url.searchParams.get("vpc_OrderInfo");
+  const timeStamp = url.searchParams.get("vpc_MerchTxnRef");
   const hashSecurity = url.searchParams.get("vpc_SecureHash");
 
   useEffect(() => {
@@ -30,7 +31,7 @@ function App() {
 
     if (compareSecurity(params, hashSecurity)) {
       return status === "0" ? (
-        <Success price={price} infoBill={infoBill} />
+        <Success price={price} infoBill={infoBill} timeStamp={timeStamp} />
       ) : (
         <Failed status={status} />
       );
