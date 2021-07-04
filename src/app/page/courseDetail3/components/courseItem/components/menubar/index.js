@@ -11,6 +11,7 @@ import "./styles/styles.scss";
 const useStyles = makeStyles(() => ({
   root: {
     width: "100%",
+    fontSize: "3rem",
   },
 }));
 

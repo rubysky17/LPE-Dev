@@ -498,22 +498,9 @@ export const level3Detail = [
         ],
         video: "https://www.youtube.com/embed/4RYy1TdfvVU",
       },
+
       {
         id: 2,
-        title: "Giao Tiếp Hiệu quả",
-        coach: "vas",
-        content: [
-          "Tại sao chúng ta cần phải giao tiếp với Vô Thức của mình?",
-          "+ Vô thức bên trong mỗi người có những quyền năng rất lớn lao, nếu bạn biết tận dụng nó, bạn không còn là một người tầm thường trong những vòng xoáy của cuộc sống.",
-          "+ Biết cách giao tiếp với vô thức bạn sẽ làm mọi thứ dễ dàng hơn, đẩy lùi những điều tiêu cực, và chắc hẳn cơ thể bạn sẽ không còn mất thời gian cho những vấn đề quấy nhiễu tác động bên ngoài.",
-          "+ Học cách giao tiếp với vô thức, để bạn, bao gồm vô thức & cơ thể của mình, tất cả hoà làm một & trở nên tốt đẹp hơn.",
-          "+ Để tạo nguồn lực mạnh mẽ từ bên trong & thu hút những trường năng lượng vần vũ khắp nơi.",
-          "- Khi biết cách giao tiếp với chính mình, bạn cũng sẽ biết được bản thân cần làm gì để giao tiếp với người khác, thuyết phục người khác & hoà hợp các khía cạnh cuộc sống.",
-        ],
-        video: "https://www.youtube.com/embed/53BkV9nVzmk",
-      },
-      {
-        id: 3,
         title:
           "Giao Tiếp với Tâm Trí Vô Thức - Kích Hoạt Những Nguồn Lực Từ Bên Trong",
         coach: "vas",
@@ -528,7 +515,7 @@ export const level3Detail = [
         video: "https://www.youtube.com/embed/53BkV9nVzmk",
       },
       {
-        id: 4,
+        id: 3,
         title: "Kích Hoạt 5 Giác Quan Bên Trong - Hình Dung Tưởng Tượng",
         coach: "vas",
         content: [
@@ -546,7 +533,7 @@ export const level3Detail = [
         video: "https://www.youtube.com/embed/XSd0m5iaNdg",
       },
       {
-        id: 5,
+        id: 4,
         title: "Kiểm Soát Căng Thẳng",
         coach: "vas",
         content: [
@@ -560,7 +547,7 @@ export const level3Detail = [
         video: "https://www.youtube.com/embed/tAeXc_yfGjo",
       },
       {
-        id: 6,
+        id: 5,
         title:
           "Giá Trị & Sức Mạnh của việc Coaching bằng NLP. Cách trở thành người Coach Chuyên Nghiệp",
         coach: "vas",

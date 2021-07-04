@@ -1,7 +1,6 @@
 import React from "react";
 
 function InfoItem({ info }) {
-  console.log(info);
   return (
     <div>
       <div className="introduce mb-4">
@@ -10,11 +9,12 @@ function InfoItem({ info }) {
 
       <iframe
         width="100%"
-        height="400"
+        height="550"
         src={info.video}
         title="YouTube video player"
         frameBorder="0"
         allowFullScreen
+        className="config-height"
       ></iframe>
 
       <div className="info">

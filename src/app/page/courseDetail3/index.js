@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 // import data from scratsh
 import { courseList, coachDetail } from "app/const/course.js";
 // import components
-import PriceTag from "../courseDetail/components/pricetag";
 import FixedTag from "../courseDetail/components/fixedtag";
 
 import "./styles/styles.scss";
 import CourseItem from "./components/courseItem";
+import ComboItem from "../courseDetail/components/combo/components/item";
+import { Title } from "app/components";
 
+import "./styles/styles.scss";
 const level = "level3";
 const id = 1;
 
@@ -36,18 +38,43 @@ function CourseDetail3() {
         </div>
 
         <div className="row">
-          <div className="col-12 col-md-8">
-            {/* <IntroduceCourse coachDetail={coach} {...firstCourse} /> */}
+          <div className="col-12 col-md-12">
             <CourseItem coachDetail={coach} {...firstCourse} />
           </div>
+        </div>
 
-          <div className="col-12 col-md-4">
-            <PriceTag {...firstCourse} level={level} />
+        <Title text="Thanh toán" />
+
+        <div className="container">
+          <div className="row">
+            <div className="col-12 col-md-8">
+              <ComboItem {...firstCourse} level="level3" />
+            </div>
+
+            <div className="col-12 col-md-4 wrapper-total_price">
+              <p className="total-text">Tổng:</p>
+              <p className="total_new">
+                {(firstCourse?.priceNew).toLocaleString()} đ
+              </p>
+              <p className="total_old">
+                {(firstCourse?.priceOld).toLocaleString()} đ
+              </p>
+
+              <Link
+                to={`/checkout/level3/${firstCourse?.id}`}
+                className="pricetag_content-button"
+                style={{
+                  padding: "15px 0",
+                }}
+              >
+                Thanh toán
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
-      <FixedTag firstCourse={firstCourse} level={level} />
+      {/* <FixedTag firstCourse={firstCourse} level={level} /> */}
     </div>
   );
 }

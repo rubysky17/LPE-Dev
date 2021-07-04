@@ -12,3 +12,12 @@
 .MuiSvgIcon-root {
   fill: unset !important;
 }
+.MuiSvgIcon-fontSizeSmall {
+  font-size: 3rem !important;
+}
+
+@media screen and (max-width: 769px) {
+  .config-height {
+    max-height: 400px;
+  }
+}

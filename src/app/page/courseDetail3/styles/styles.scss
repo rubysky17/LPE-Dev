@@ -1,0 +1,9 @@
+@media screen and (max-width: 400px) {
+  .item_desc-price {
+    flex-direction: column !important;
+    .price-old {
+      align-self: unset;
+      padding-left: 0px;
+    }
+  }
+}

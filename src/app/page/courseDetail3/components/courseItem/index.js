@@ -6,10 +6,6 @@ import MenuBar from "./components/menubar";
 function CourseItem({ coachDetail, ...detaiCourse }) {
   return (
     <div className="introduce">
-      <h1 className="introduce-title">{detaiCourse.title}</h1>
-
-      <p className="introduce-description">{detaiCourse.description}</p>
-
       <div className="introduce_menu">
         <MenuBar {...detaiCourse} />
       </div>
