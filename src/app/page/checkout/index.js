@@ -13,6 +13,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useFormik } from "formik";
+import dateFormat from "dateformat";
 
 import CourseDetail from "./components/courseinfo";
 import CreditCard from "./components/creditcard";
@@ -48,6 +49,7 @@ const regex = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
 
 function Checkout() {
   let { id, level, subId } = useParams();
+
   const classes = useStyles();
   const [secondCourse, setSecondCourse] = useState(null);
   const firstCourse = courseList[level].find((item) => item.id === +id);
@@ -119,8 +121,8 @@ function Checkout() {
         return "Thanh toán bằng thẻ Visa, Master, JCB,..";
       case domestic:
         return "Nội địa ATM Cards";
-      // case qr:
-      //   return "QR code";
+      case qr:
+        return "QR code";
       default:
         return "Chưa chọn";
     }
@@ -146,13 +148,18 @@ function Checkout() {
   };
 
   const handleSubmit = async () => {
+    const now = new Date();
+
     const dataSubmit = {
       email: infoUser.email,
+      date: dateFormat("dd-MM-yyyy, hh:mm TT", now),
       phone: infoUser.phone,
       timestamp: unixId,
       name: infoUser.name,
       infobill: `${level}_${id}_${subId ? subId : "0"}`,
     };
+
+    setIsSubmit(false);
 
     db.collection("users")
       .add(dataSubmit)
@@ -354,12 +361,12 @@ function Checkout() {
                       labelPlacement="start"
                     />
 
-                    {/* <FormControlLabel
+                    <FormControlLabel
                       value={qr}
                       control={<Radio />}
                       label={<CreditCard type="qr" />}
                       labelPlacement="start"
-                    /> */}
+                    />
                   </RadioGroup>
                 </FormControl>
               </div>
@@ -428,7 +435,7 @@ function Checkout() {
               }}
               disabled={!isSubmit || !checkPolicy || !cardtype}
             >
-              Tiếp tục
+              Tiếp tục thanh toán
             </Button>
           </div>
         </div>
