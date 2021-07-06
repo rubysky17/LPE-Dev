@@ -19,6 +19,7 @@ const useStyles = makeStyles({
 function QueryPage() {
   const classes = useStyles();
   const row = [
+    { name: "Thời gian" },
     { name: "Tên khách hàng" },
     { name: "Email" },
     { name: "Đơn hàng" },
@@ -107,6 +108,9 @@ function QueryPage() {
                 {dataTable &&
                   dataTable.map((row) => (
                     <TableRow key={row.name}>
+                      <TableCell component="th" scope="row">
+                        {row.date}
+                      </TableCell>
                       <TableCell component="th" scope="row">
                         {row.name}
                       </TableCell>
