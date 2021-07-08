@@ -413,7 +413,7 @@ export const courseLevel = [
   },
   {
     levelId: "level2",
-    name: "Level 2: từ 20h- 22h (dự kiến ngày trong tuần)",
+    name: "Level 2: từ 18h- 22h (dự kiến ngày trong tuần)",
     description: "How to solve the Problem & take responsibility",
   },
   {
