@@ -152,7 +152,7 @@ function Checkout() {
 
     const dataSubmit = {
       email: infoUser.email,
-      date: dateFormat("dd-MM-yyyy, hh:mm TT", now),
+      date: dateFormat("dd-mm-yyyy, hh:MM TT", now),
       phone: infoUser.phone,
       timestamp: unixId,
       name: infoUser.name,
