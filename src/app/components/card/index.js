@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useProgressiveImage from "core/hooks/useProgressiveImage";
 
 import "./styles/styles.scss";
 
 function Card({ level, ...course }) {
   const { picture, title, id, priceNew, priceOld } = course;
+
+  const imgBg = useProgressiveImage(picture);
+
+  const loading =
+    "https://i.pinimg.com/originals/49/db/58/49db58121197c490352b4ab3d978b6b0.gif";
 
   return (
     <div className="mt-4 mr-4">
@@ -12,7 +18,7 @@ function Card({ level, ...course }) {
         className="wrapper-card"
         style={{
           color: "#fff",
-          backgroundImage: `url(${picture})`,
+          backgroundImage: `url(${imgBg || loading})`,
         }}
       >
         <div className="overlay"></div>
