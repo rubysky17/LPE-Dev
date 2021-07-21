@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import {
   courseList,
@@ -20,9 +21,18 @@ function Home() {
           className="container-fluid p-0"
           width="100%"
           // height="100%"
-          src="https://i.imgur.com/OhuGcYS.jpg"
-          alt="https://i.imgur.com/OhuGcYS.jpg"
+          src="https://lpe.vn/lpeonline/background.jpg"
+          alt="https://lpe.vn/lpeonline/background.jpg"
         />
+
+        <Link
+          to="/quiz/question1"
+          style={{
+            textDecoration: "none",
+          }}
+        >
+          <button className="btn btn-success">Làm bài trắc nghiệm</button>
+        </Link>
 
         <div className="container-fluid pb-4">
           {courseLevel?.map((level, index) => {
@@ -40,6 +50,11 @@ function Home() {
               </div>
             );
           })}
+
+          <Title
+            text="Bài trắc nghiệm"
+            desc="Bài trắc nghiệm tìm hiểu tính cách của bạn"
+          />
 
           <Title text="Coach" desc="Những Coach hàng đầu trong lĩnh vực NLP" />
 

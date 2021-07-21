@@ -9,6 +9,7 @@ import ScrollToTop from "app/components/scrolltotop";
 import ErrorPage from "app/page/error";
 import QueryPage from "app/page/query";
 import CourseDetail3 from "app/page/courseDetail3";
+import QuizPage from "app/page/quiz";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         />
 
         <HomeTemplate exact Component={QueryPage} path="/truyvan" />
+        <Route path="/quiz/:question" component={QuizPage} />
         <Route path="*" component={ErrorPage} />
       </Switch>
     </Router>

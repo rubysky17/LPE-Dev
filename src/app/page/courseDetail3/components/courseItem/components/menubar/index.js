@@ -5,7 +5,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import { makeStyles } from "@material-ui/core/styles";
 import InfoItem from "../infoitem";
-import { coachDetail, level3Detail } from "app/const/course";
+import { level3Detail } from "app/const/course";
 
 import "./styles/styles.scss";
 const useStyles = makeStyles(() => ({

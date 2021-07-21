@@ -1,19 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 // import data from scratsh
 import { courseList, coachDetail } from "app/const/course.js";
-// import components
-import FixedTag from "../courseDetail/components/fixedtag";
 
-import "./styles/styles.scss";
+// import components
 import CourseItem from "./components/courseItem";
 import ComboItem from "../courseDetail/components/combo/components/item";
 import { Title } from "app/components";
 
 import "./styles/styles.scss";
+
 const level = "level3";
 const id = 1;
-
 function CourseDetail3() {
   const firstCourse = courseList[level]?.find((item) => item.id === id);
   const coach = coachDetail.find((coach) => coach.id === firstCourse.coach);
