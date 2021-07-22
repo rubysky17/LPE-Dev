@@ -82,7 +82,39 @@ header {
 @media screen and (max-width: 992px) {
   .answer-q {
     margin-bottom: 20px;
-    height: 120px !important;
+    min-height: unset !important;
+    flex-direction: row !important;
+    justify-content: unset !important;
+
+    img {
+      width: 40px !important;
+    }
+
+    .text-quiz {
+      text-align: left;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        font-size: 24px;
+      }
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 552px) {
+  .text-quiz {
+    text-align: left;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -116,4 +148,17 @@ header {
   .quiz-progress {
     width: 80% !important;
   }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.quiz-animation {
+  animation: opacity 1.7s;
 }

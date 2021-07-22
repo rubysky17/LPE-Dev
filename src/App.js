@@ -40,7 +40,9 @@ function App() {
         />
 
         <HomeTemplate exact Component={QueryPage} path="/truyvan" />
+
         <Route path="/quiz/:question" component={QuizPage} />
+
         <Route path="*" component={ErrorPage} />
       </Switch>
     </Router>

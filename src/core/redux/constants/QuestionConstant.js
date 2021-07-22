@@ -1,0 +1,2 @@
+export const SUBMIT_QUESTION = "SUBMIT_QUESTION";
+export const FETCH_QUESTION = "FETCH_QUESTION";

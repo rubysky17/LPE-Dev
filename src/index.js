@@ -3,13 +3,22 @@ import ReactDOM from "react-dom";
 import App from "./App";
 // edit META tag
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import { rootReducer } from "./core/redux/reducers/rootReducer";
+
 import "./assets/fonts/fontawsome.min.css";
 import "./assets/styles/common.scss";
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+// config store redux
+const composeEnhancers =
+  typeof window === "object" && window["__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"]
+    ? window["__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"]({})
+    : compose;
+
+const enhancer = composeEnhancers(applyMiddleware(thunk));
+
+const store = createStore(rootReducer, enhancer);
 
 ReactDOM.render(
   <React.StrictMode>
