@@ -26,6 +26,10 @@
       p:first-child {
         font-size: 23px;
       }
+
+      p:last-child {
+        color: #b8b8b8;
+      }
     }
   }
 
@@ -33,6 +37,34 @@
     p {
       margin: 0;
     }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .comment-person_info p:first-child {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .comment-person_img {
+    margin: 0;
+  }
+  .comment-person {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 552px) {
+  .comment-person {
+    flex-direction: row !important;
+    justify-content: unset;
+    text-align: left;
+  }
+  .comment-person_img {
+    margin-right: 20px;
   }
 }
 

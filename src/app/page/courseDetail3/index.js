@@ -2,10 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import data from scratsh
 import { courseList, coachDetail } from "app/const/course.js";
-// import components
-import FixedTag from "../courseDetail/components/fixedtag";
 
-import "./styles/styles.scss";
 import CourseItem from "./components/courseItem";
 import ComboItem from "../courseDetail/components/combo/components/item";
 import { Title } from "app/components";
@@ -73,8 +70,6 @@ function CourseDetail3() {
           </div>
         </div>
       </div>
-
-      {/* <FixedTag firstCourse={firstCourse} level={level} /> */}
     </div>
   );
 }

@@ -7,9 +7,9 @@ import {
   testimonials,
 } from "app/const/course.js";
 import { Title, Card, Coach, Comment } from "app/components";
+import LazyLoadImg from "app/components/lazyLoadImg";
 
 import "./styles/styles.scss";
-import LazyLoadImg from "app/components/lazyLoadImg";
 
 function Home() {
   return (
@@ -58,11 +58,7 @@ function Home() {
 
           <div className="row testimonial pb-5">
             {testimonials.map((person) => {
-              return (
-                <div className="col-12 col-md-4">
-                  <Comment {...person} key={person.id} />
-                </div>
-              );
+              return <Comment {...person} key={person.id} />;
             })}
           </div>
         </div>

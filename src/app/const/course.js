@@ -8,7 +8,7 @@ export const courseList = {
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/2MPkdJL.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level1-1.jpg",
       content: [
         "- Bạn có đang gặp phải những vấn đề sau:",
         "+ Cảm thấy chán nản, không hứng thú với công việc mình lựa chọn.",
@@ -33,7 +33,7 @@ export const courseList = {
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/VuHmEWp.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level1-2.jpg",
       content: [
         "- Những dấu hiệu của chứng rối loạn cảm xúc:",
         "+ Thường xuyên mất kiểm soát trong cảm xúc, buồn vui thất thường.",
@@ -57,7 +57,7 @@ export const courseList = {
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/lwYc1MQ.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level1-3.jpg",
       content: [
         "- Khoá học này sẽ rất cần thiết, nếu bạn đang:",
         "+ Đặt mục tiêu nhưng hiếm khi nào hoàn thành được.",
@@ -84,7 +84,7 @@ export const courseList = {
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/rIyHkm6.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level1-4.jpg",
       content: [
         "- Bạn có phải là người giao tiếp kém?",
         "+ Luôn gặp vấn để trong việc kết thân, làm quen với những người xung quanh.",
@@ -109,7 +109,7 @@ export const courseList = {
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/RVH7Wud.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level1-5.jpg",
 
       content: [
         "- Khóa học này rất cần thiết, nếu bạn đang:",
@@ -134,7 +134,7 @@ export const courseList = {
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/CIG0Dhs.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level1-6.jpg",
       content: [
         "- Khóa học này rất cần thiết, nếu bạn đang:",
         "+ Dành quá nhiều thời gian trong ngày để sử dụng smart phone.",
@@ -158,7 +158,7 @@ export const courseList = {
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/yKC5H5U.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level1-7.jpg",
       content: [
         "- Người mất ngủ thường cảm thấy:",
         "+ Sợ hãi và ám ảnh vì đến giờ ngủ lại không ngủ được.",
@@ -183,7 +183,7 @@ export const courseList = {
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/ZhSgn9i.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level1-8.jpg",
       content: [
         "- Khoá học này sẽ rất cần thiết, nếu bạn đang:",
         "+ Đặt ra mục tiêu nhưng nhanh chóng mất động lực để hoàn thành.",
@@ -205,7 +205,7 @@ export const courseList = {
       priceNew: 200000,
       priceOld: 400000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/9Yhg7sK.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level1-9.jpg",
       content: [
         "- Chứng hay quên đã cản trở bạn như thế nào?",
         "+ Dễ quên những vấn đề bất chợt, vừa nhớ lại quên ngay trong phút chốc.",
@@ -233,7 +233,7 @@ export const courseList = {
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/Tyd64EK.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level2-1.jpg",
       content: [
         '- "Lập kế hoạch cho tương lai" là điều không hề dễ dàng?',
         "+ Sẽ không phải là vấn đề nếu như bạn biết cách thực hiện nó.",
@@ -255,7 +255,7 @@ export const courseList = {
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/ynHPrtV.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level2-2.jpg",
       content: [
         "- Khi một người biết cách kiểm soát cảm xúc:",
         "+ Người đó sẽ kiểm soát được phần lớn hành vi, tư duy & tâm trạng của họ trong từng khoảnh khắc mỗi ngày.",
@@ -280,7 +280,7 @@ export const courseList = {
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/pAtVmOH.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level2-3.jpg",
       content: [
         "- Lợi ích từ việc xây dựng hành vi tích cực cho bản thân?",
         "+ Dễ dàng hòa nhập và kết nối với cộng đồng bằng tư duy tích cực, lành mạnh.",
@@ -306,7 +306,7 @@ export const courseList = {
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/mUiaztm.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level2-4.jpg",
       content: [
         "- Giao tiếp tốt sẽ mang lại cho bạn điều gì?",
         "+ Là việc có thể tự tin nói ra những cảm xúc và suy nghĩ của mình trọn vẹn và đầy đủ ý.",
@@ -330,7 +330,7 @@ export const courseList = {
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/PgVsRoS.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level2-5.jpg",
       content: [
         "- Lợi ích của việc xây dựng giá trị bản thân là gì?",
         "+ Thấu hiểu bản chất của việc tự hào và khiêm tốn không để bản thân dẫn đến tự kiêu và tự mãn.",
@@ -354,7 +354,7 @@ export const courseList = {
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/kC3bvZz.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level2-6.jpg",
       content: [],
       benefit: [
         "- Đến với khoá học, bạn sẽ: ",
@@ -372,7 +372,7 @@ export const courseList = {
       priceNew: 400000,
       priceOld: 800000,
       coach: "giangThanh",
-      picture: "https://i.imgur.com/SCDtsKX.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level2-7.jpg",
       content: [
         "- Tại sao bạn cần nâng cấp bản thân trở nên tốt hơn:",
         "+ Để có nguồn năng lượng tuyệt vời từ bên trong, không bị tác động bởi những điều tiêu cực.",
@@ -399,7 +399,7 @@ export const courseList = {
       priceNew: 2500000,
       priceOld: 8000000,
       coach: "vas",
-      picture: "https://i.imgur.com/U5dCrFw.jpg",
+      picture: "https://lpe.vn/lpeonline/pictures/level3.jpg",
     },
   ],
 };
@@ -437,7 +437,7 @@ export const coachDetail = [
       "Nhà Tư Vấn Trị Liệu đã chữa lành và chuyển hoá thành công hàng trăm khách hàng đủ mọi lứa tuổi và ngành nghề.",
       "Giám đốc Điều hành 9x trẻ tuổi và tài năng, dẫn dắt đội ngũ nhân viên trở thành con người tuyệt vời nhất của chính họ và từng bước khẳng định vị thế của ngành khoa học tư duy NLP tại Việt Nam.",
     ],
-    img: "https://i.imgur.com/AWSdwXt.jpg",
+    img: "https://lpe.vn/lpeonline/pictures/giangthanh.jpg",
   },
   {
     id: "vas",
