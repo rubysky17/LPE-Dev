@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { WOW } from "wowjs";
+
 // import assets
-import { menu, program, flipCardCourse1, flipCardCourse2, picture  } from "./data";
+import {
+  menu,
+  program,
+  flipCardCourse1,
+  flipCardCourse2,
+  picture,
+} from "./data";
 import bio from "assets/images/bio.png";
 import logo from "assets/images/lahagiangthanh.png";
 import thuNgo from "assets/images/thuNgo.gif";
@@ -320,7 +327,7 @@ function BeautyFromWomen() {
               })}
 
               <div className="col-12">
-                  <p  className="text-level wow fadeInUp ">Level 2</p>
+                <p className="text-level wow fadeInUp ">Level 2</p>
 
                 <img
                   src={khoa2}
@@ -396,8 +403,34 @@ function BeautyFromWomen() {
             <h1 className="text-center heading-title wow fadeInUp mb-4">
               Khóa học
             </h1>
-            <div className="row wow fadeInLeft">
-              <img src={hocPhi} alt={hocPhi} className="img-fluid img-fee" />
+
+            {/* Gia moi se cong bo */}
+            <div>
+              <h3 className="text-center my-3">
+                Giá mới cho chương trình cuối năm 2021 sẽ được công bố tại buổi
+                học ngày 31/10
+              </h3>
+            </div>
+
+            <div className="wow fadeInLeft">
+              <img src={hocPhi} alt={hocPhi} className="img-fluid" />
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "20px",
+              }}
+            >
+              <a
+                href="https://lpeonline.vn/dang-ky-khoa-hoc-bfw"
+                target="_blank"
+                rel="noreferrer"
+                className="checkout-bfw-button"
+              >
+                Thanh toán khóa học ngay
+              </a>
             </div>
           </div>
 

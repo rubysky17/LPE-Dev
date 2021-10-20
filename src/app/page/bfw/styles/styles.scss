@@ -254,7 +254,7 @@ footer {
 }
 
 .letter-title {
-  font-family: 'Signwriter', sans-serif;
+  font-family: "Signwriter", sans-serif;
   font-size: 90px;
   color: #696969;
   &.thank-you {
@@ -283,7 +283,6 @@ footer {
     width: 100%;
     height: auto;
   }
-
 }
 .course {
   h1 {
@@ -358,8 +357,7 @@ footer {
 }
 .back-face {
   &.purple {
-    background: $c-lightPurple-1!important;
-
+    background: $c-lightPurple-1 !important;
   }
 }
 
@@ -599,17 +597,16 @@ i.fab {
 
 @media screen and (max-width: 768px) {
   .img-logo {
-    height: 40px!important;
+    height: 40px !important;
   }
 }
 
 .bg-xinChao {
   margin-bottom: 20px;
-  
 }
 
 .heading-title {
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
   font-size: 50px;
   text-transform: uppercase;
   font-weight: 700;
@@ -622,12 +619,11 @@ i.fab {
   }
 }
 
-@media screen  and (max-width: 470px) {
+@media screen and (max-width: 470px) {
   .letter-title {
     font-size: 60px;
   }
 }
-
 
 @media screen and (max-width: 768px) {
   .heading-title {
@@ -643,11 +639,10 @@ i.fab {
   .heading-title {
     font-size: 35px;
   }
-
 }
 
 .img-gif_big {
-display: block;
+  display: block;
 }
 
 .img-gif_small {
@@ -656,7 +651,7 @@ display: block;
 
 @media screen and (max-width: 992px) {
   .img-gif_big {
-display: none;
+    display: none;
   }
   .img-gif_small {
     display: flex;
@@ -669,43 +664,40 @@ display: none;
     }
   }
   .thank-text {
-    font-size: 50px!important;
+    font-size: 50px !important;
     padding: 0 20px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .img-fee {
-    height: 140px!important;
-  }
   .thank-text {
-    font-size: 40px!important;
+    font-size: 40px !important;
     padding: 0 20px;
   }
 
   .quote {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
 }
 
 .heading-writer {
-  font-family: 'Signwriter', sans-serif;
+  font-family: "Signwriter", sans-serif;
   color: #696969;
   font-size: 70px;
 
   .margin-text {
-    margin: 50px!important;
+    margin: 50px !important;
   }
 }
 
 .text-level {
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
   font-weight: 600;
   margin-top: 30px;
 }
 
 .quote {
-  font-size: 25px!important;
+  font-size: 25px !important;
 }
 
 .img-khoa_1 {
@@ -717,13 +709,26 @@ display: none;
   font-size: 30px;
   margin-top: 40px;
 }
-@media screen and (max-width: 552px) {
-  
-.text-thank {
+
+.checkout-bfw-button {
+  background-color: #ffd5cd;
+  padding: 10px 50px;
+
+  text-decoration: none !important;
+  color: #1d1e22;
   font-size: 20px;
-}
+
+  &:hover {
+    color: #1d1e22;
+  }
 }
 
-.text-level  {
+@media screen and (max-width: 552px) {
+  .text-thank {
+    font-size: 20px;
+  }
+}
+
+.text-level {
   font-size: 26px;
 }
