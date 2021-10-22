@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { WOW } from "wowjs";
-
+import ModalVideo from "react-modal-video";
 // import assets
 import {
   menu,
@@ -9,6 +9,7 @@ import {
   flipCardCourse2,
   picture,
 } from "./data";
+
 import bio from "assets/images/bio.png";
 import logo from "assets/images/lahagiangthanh.png";
 import thuNgo from "assets/images/thuNgo.gif";
@@ -25,6 +26,7 @@ import "./styles/styles.scss";
 function BeautyFromWomen() {
   const [toggle, setToggle] = useState(false);
   const [onLoading, setOnLoading] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleLoading = setTimeout(() => {
@@ -43,6 +45,10 @@ function BeautyFromWomen() {
 
     wow.init();
   }, [onLoading]);
+
+  const handleOpenVideo = () => {
+    setIsOpen(true);
+  };
 
   return (
     <>
@@ -368,8 +374,17 @@ function BeautyFromWomen() {
           {/* Bio */}
           <div className="container my-5" id="bio">
             <div className="row wrapper-bio">
-              <div className="col-12 col-md-6 wow fadeInLeft">
+              <div className="col-12 col-md-6 wow fadeInLeft picture-bio">
                 <img src={bio} alt={bio} className="img-fluid" />
+
+                <div className="play-video_bio">
+                  <i
+                    className="fas fa-play-circle"
+                    onClick={() => {
+                      handleOpenVideo();
+                    }}
+                  ></i>
+                </div>
               </div>
               <div className="col-12 col-md-6 wow fadeInRight">
                 <h2 className="text-center mb-3">Ms. La Hạ Giang Thanh</h2>
@@ -406,10 +421,15 @@ function BeautyFromWomen() {
 
             {/* Gia moi se cong bo */}
             <div>
-              <h3 className="text-center my-3">
+              <p
+                className="text-center mb-4 text-success"
+                style={{
+                  fontSize: "30px",
+                }}
+              >
                 Giá mới cho chương trình cuối năm 2021 sẽ được công bố tại buổi
                 học ngày 31/10
-              </h3>
+              </p>
             </div>
 
             <div className="wow fadeInLeft">
@@ -423,14 +443,13 @@ function BeautyFromWomen() {
                 marginTop: "20px",
               }}
             >
-              <a
-                href="https://lpeonline.vn/dang-ky-khoa-hoc-bfw"
-                target="_blank"
-                rel="noreferrer"
+              <p
+                // href="https://lpeonline.vn/dang-ky-khoa-hoc-bfw"
+                // href="#"
                 className="checkout-bfw-button"
               >
                 Thanh toán khóa học ngay
-              </a>
+              </p>
             </div>
           </div>
 
@@ -496,6 +515,14 @@ function BeautyFromWomen() {
               </span>
             </div>
           </footer>
+
+          <ModalVideo
+            channel="youtube"
+            autoplay
+            isOpen={isOpen}
+            videoId="fAkvJPXMfjU"
+            onClose={() => setIsOpen(false)}
+          />
         </>
       )}
     </>

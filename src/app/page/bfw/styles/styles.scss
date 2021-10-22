@@ -711,15 +711,17 @@ i.fab {
 }
 
 .checkout-bfw-button {
-  background-color: #ffd5cd;
+  background-color: #732867;
   padding: 10px 50px;
 
   text-decoration: none !important;
-  color: #1d1e22;
+  color: #fff;
   font-size: 20px;
 
+  border-radius: 20px;
+
   &:hover {
-    color: #1d1e22;
+    color: #fff;
   }
 }
 
@@ -731,4 +733,26 @@ i.fab {
 
 .text-level {
   font-size: 26px;
+}
+
+.picture-bio {
+  position: relative;
+
+  .play-video_bio {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+    font-size: 60px;
+
+    color: #ffb1a3;
+    transition: all 0.3s;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
 }
